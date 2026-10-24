@@ -46,7 +46,7 @@ const ROADMAP = [
     phase: "Phase 1",
     title: "内容底座",
     status: "已完成",
-    body: "26 个名场面、6 个章节、时间线、检索、详情页、分享卡、PWA manifest、Live 数据页，以及带日历订阅的 Match Center。目标：让一个球迷在 30 秒内找到他想看的瞬间，并且不错过下一场。",
+    body: "36 个名场面、6 个章节、时间线、检索、详情页、分享卡、PWA manifest、Live 数据页，以及带日历订阅的 Match Center。目标：让一个球迷在 30 秒内找到他想看的瞬间，并且不错过下一场。",
   },
   {
     phase: "Phase 2",
@@ -193,7 +193,7 @@ export default function AboutPage() {
           <div className="data-note">
             <h3>当前数据的边界</h3>
             <p>
-              这是一份策展式样本，不是完整数据库。26 条记录覆盖了职业生涯的关键坐标，
+              这是一份策展式样本，不是完整数据库。36 条记录覆盖了职业生涯的关键坐标，
               但远未穷尽所有比赛和进球。收录标准偏向“有叙事价值、可被验证、能代表一个阶段”。
               当前策展数据截至 2025 年 6 月。最新赛季、最近比赛、C 罗进球分钟
               和里程碑由 Live 数据层承载：GitHub Actions 每 6 小时自动同步；
