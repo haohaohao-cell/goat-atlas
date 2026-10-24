@@ -2010,5 +2010,370 @@
         "url": "https://en.wikipedia.org/wiki/2010%E2%80%9311_UEFA_Champions_League_knockout_phase"
       }
     ]
+  },
+  {
+    "id": "m57",
+    "slug": "sevilla-7-3-2013",
+    "date": "2013-10-30",
+    "title": "7-3 塞维利亚，帽子戏法",
+    "titleEn": "Seven-three, and a hat-trick",
+    "kind": "goal",
+    "club": "Real Madrid",
+    "clubZh": "皇马",
+    "competition": "西甲",
+    "opponent": "Sevilla",
+    "venue": "Santiago Bernabéu",
+    "city": "Madrid",
+    "score": "7-3",
+    "summary": "皇马7-3塞维利亚，C罗上演帽子戏法，贝尔梅开二度。",
+    "context": "2013年10月30日，皇马在伯纳乌7-3击败塞维利亚。C罗打进三球，贝尔梅开二度，本泽马也有进球。这场比赛是“BBC”组合早期最疯狂的一次火力展示。",
+    "why": "2013年夏天贝尔加盟后，皇马的前场第一次同时拥有C罗、贝尔和本泽马。7-3是这套组合最直接的宣言。",
+    "tags": [
+      "goal",
+      "real-madrid",
+      "la-liga",
+      "sevilla",
+      "bbc"
+    ],
+    "featured": false,
+    "era": "madrid",
+    "stat": {
+      "label": "进球",
+      "value": "3"
+    },
+    "sources": [
+      {
+        "label": "2013–14 La Liga — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/2013%E2%80%9314_La_Liga"
+      }
+    ]
+  },
+  {
+    "id": "m58",
+    "slug": "bayern-4-0-2014",
+    "date": "2014-04-29",
+    "title": "安联球场，4-0 拜仁",
+    "titleEn": "Four in Munich",
+    "kind": "goal",
+    "club": "Real Madrid",
+    "clubZh": "皇马",
+    "competition": "欧冠半决赛",
+    "opponent": "Bayern Munich",
+    "venue": "Allianz Arena",
+    "city": "Munich",
+    "score": "4-0",
+    "summary": "欧冠半决赛次回合，皇马4-0拜仁，C罗梅开二度，总比分5-0晋级。",
+    "context": "2014年4月29日，皇马在安联球场4-0击败拜仁，总比分5-0淘汰卫冕冠军。C罗打进两球，拉莫斯也梅开二度。这场比赛几乎提前宣告了皇马第十座欧冠的到来。",
+    "why": "在拜仁的主场4-0，是皇马“欧冠十冠”之路上最具统治力的一夜，也是C罗当年欧冠淘汰赛火力的集中展示。",
+    "tags": [
+      "goal",
+      "real-madrid",
+      "champions-league",
+      "bayern"
+    ],
+    "featured": false,
+    "era": "madrid",
+    "stat": {
+      "label": "进球",
+      "value": "2"
+    },
+    "sources": [
+      {
+        "label": "2013–14 UEFA Champions League — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/2013%E2%80%9314_UEFA_Champions_League"
+      }
+    ]
+  },
+  {
+    "id": "m59",
+    "slug": "super-cup-2014",
+    "date": "2014-08-12",
+    "title": "欧洲超级杯，梅开二度",
+    "titleEn": "The Super Cup double",
+    "kind": "trophy",
+    "club": "Real Madrid",
+    "clubZh": "皇马",
+    "competition": "欧洲超级杯",
+    "opponent": "Sevilla",
+    "venue": "Cardiff City Stadium",
+    "city": "Cardiff",
+    "score": "2-0",
+    "summary": "欧洲超级杯决赛，C罗梅开二度，皇马2-0塞维利亚夺冠。",
+    "context": "2014年8月12日，欧洲超级杯在加的夫进行。皇马凭借C罗的两粒进球2-0击败塞维利亚，拿下第十冠之后的又一座奖杯。C罗在新赛季开始前就把状态拉满。",
+    "why": "这是皇马2014年五冠征程的第一站，也是C罗在“第十冠”之后继续加码的证明。",
+    "tags": [
+      "trophy",
+      "real-madrid",
+      "super-cup",
+      "sevilla"
+    ],
+    "featured": false,
+    "era": "madrid",
+    "stat": {
+      "label": "进球",
+      "value": "2"
+    },
+    "sources": [
+      {
+        "label": "2014 UEFA Super Cup — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/2014_UEFA_Super_Cup"
+      }
+    ]
+  },
+  {
+    "id": "m60",
+    "slug": "wolfsburg-3-0-2016",
+    "date": "2016-04-12",
+    "title": "沃尔夫斯堡，帽子戏法逆转",
+    "titleEn": "The Wolfsburg comeback",
+    "kind": "goal",
+    "club": "Real Madrid",
+    "clubZh": "皇马",
+    "competition": "欧冠1/4决赛",
+    "opponent": "Wolfsburg",
+    "venue": "Santiago Bernabéu",
+    "city": "Madrid",
+    "score": "3-0",
+    "summary": "欧冠1/4决赛次回合，C罗帽子戏法，皇马3-0沃尔夫斯堡，总比分3-2逆转。",
+    "context": "首回合皇马客场0-2落败，回到伯纳乌必须至少赢两球。C罗在第16、17和77分钟连入三球，皇马3-0完成逆转，总比分3-2晋级。这是C罗皇马生涯最经典的欧冠逆转之一。",
+    "why": "0-2落后时，皇马需要有人把不可能变成比分。C罗用帽子戏法给出了答案。",
+    "tags": [
+      "goal",
+      "real-madrid",
+      "champions-league",
+      "wolfsburg",
+      "comeback"
+    ],
+    "featured": false,
+    "era": "madrid",
+    "stat": {
+      "label": "进球",
+      "value": "3"
+    },
+    "sources": [
+      {
+        "label": "2015–16 UEFA Champions League knockout phase — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/2015%E2%80%9316_UEFA_Champions_League_knockout_phase"
+      }
+    ]
+  },
+  {
+    "id": "m61",
+    "slug": "club-world-cup-2016",
+    "date": "2016-12-18",
+    "title": "世俱杯决赛，帽子戏法",
+    "titleEn": "A hat-trick in Yokohama",
+    "kind": "trophy",
+    "club": "Real Madrid",
+    "clubZh": "皇马",
+    "competition": "世俱杯决赛",
+    "opponent": "Kashima Antlers",
+    "venue": "International Stadium Yokohama",
+    "city": "Yokohama",
+    "score": "4-2（加时）",
+    "summary": "世俱杯决赛，C罗帽子戏法，皇马加时4-2击败鹿岛鹿角夺冠。",
+    "context": "2016年12月18日，世俱杯决赛在横滨进行。皇马与鹿岛鹿角常规时间2-2战平，C罗在加时赛再入两球，完成帽子戏法，皇马4-2夺冠。",
+    "why": "这是C罗在2016年的最后一座奖杯，也是他把“决赛先生”标签延伸到世俱杯的一夜。",
+    "tags": [
+      "trophy",
+      "real-madrid",
+      "club-world-cup",
+      "kashima"
+    ],
+    "featured": false,
+    "era": "madrid",
+    "stat": {
+      "label": "进球",
+      "value": "3"
+    },
+    "sources": [
+      {
+        "label": "2016 FIFA Club World Cup final — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/2016_FIFA_Club_World_Cup_final"
+      }
+    ]
+  },
+  {
+    "id": "m62",
+    "slug": "bayern-4-2-2017",
+    "date": "2017-04-18",
+    "title": "拜仁，帽子戏法",
+    "titleEn": "Another Bayern hat-trick",
+    "kind": "goal",
+    "club": "Real Madrid",
+    "clubZh": "皇马",
+    "competition": "欧冠1/4决赛",
+    "opponent": "Bayern Munich",
+    "venue": "Santiago Bernabéu",
+    "city": "Madrid",
+    "score": "4-2（加时）",
+    "summary": "欧冠1/4决赛次回合，C罗帽子戏法，皇马加时4-2拜仁，总比分6-3晋级。",
+    "context": "2017年4月18日，皇马在伯纳乌迎战拜仁。双方常规时间战平，比赛进入加时。C罗在加时赛再入两球，完成帽子戏法，皇马4-2取胜，总比分6-3晋级。",
+    "why": "这是C罗对拜仁的又一次淘汰赛统治，也是皇马2017年欧冠卫冕之路最艰难的一关。",
+    "tags": [
+      "goal",
+      "real-madrid",
+      "champions-league",
+      "bayern",
+      "hat-trick"
+    ],
+    "featured": false,
+    "era": "madrid",
+    "stat": {
+      "label": "进球",
+      "value": "3"
+    },
+    "sources": [
+      {
+        "label": "2016–17 UEFA Champions League knockout phase — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/2016%E2%80%9317_UEFA_Champions_League_knockout_phase"
+      }
+    ]
+  },
+  {
+    "id": "m63",
+    "slug": "atletico-3-0-2017",
+    "date": "2017-05-02",
+    "title": "马竞，帽子戏法",
+    "titleEn": "A derby hat-trick",
+    "kind": "goal",
+    "club": "Real Madrid",
+    "clubZh": "皇马",
+    "competition": "欧冠半决赛",
+    "opponent": "Atlético Madrid",
+    "venue": "Santiago Bernabéu",
+    "city": "Madrid",
+    "score": "3-0",
+    "summary": "欧冠半决赛首回合，C罗帽子戏法，皇马3-0马竞。",
+    "context": "2017年5月2日，欧冠半决赛首回合，皇马在伯纳乌3-0击败马竞。C罗包办三球，几乎用一场比赛结束了系列赛的悬念。",
+    "why": "在马德里德比的欧冠半决赛里戴帽，是C罗皇马生涯最直接的“大场面”证明之一。",
+    "tags": [
+      "goal",
+      "real-madrid",
+      "champions-league",
+      "atletico",
+      "hat-trick"
+    ],
+    "featured": false,
+    "era": "madrid",
+    "stat": {
+      "label": "进球",
+      "value": "3"
+    },
+    "sources": [
+      {
+        "label": "2016–17 UEFA Champions League knockout phase — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/2016%E2%80%9317_UEFA_Champions_League_knockout_phase"
+      }
+    ]
+  },
+  {
+    "id": "m64",
+    "slug": "club-world-cup-2017",
+    "date": "2017-12-16",
+    "title": "世俱杯，任意球定胜",
+    "titleEn": "The free-kick in Abu Dhabi",
+    "kind": "trophy",
+    "club": "Real Madrid",
+    "clubZh": "皇马",
+    "competition": "世俱杯决赛",
+    "opponent": "Grêmio",
+    "venue": "Zayed Sports City Stadium",
+    "city": "Abu Dhabi",
+    "score": "1-0",
+    "summary": "世俱杯决赛，C罗任意球破门，皇马1-0格雷米奥夺冠。",
+    "context": "2017年12月16日，世俱杯决赛在阿布扎比进行。皇马与格雷米奥僵持到第53分钟，C罗用一脚任意球打破僵局，皇马1-0夺冠，完成世俱杯卫冕。",
+    "why": "这是C罗在2017年的第五座奖杯，也是他再次在决赛里用一脚定胜负。",
+    "tags": [
+      "trophy",
+      "real-madrid",
+      "club-world-cup",
+      "gremio"
+    ],
+    "featured": false,
+    "era": "madrid",
+    "stat": {
+      "label": "进球",
+      "value": "1"
+    },
+    "sources": [
+      {
+        "label": "2017 FIFA Club World Cup final — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/2017_FIFA_Club_World_Cup_final"
+      }
+    ]
+  },
+  {
+    "id": "m65",
+    "slug": "psg-3-1-2018",
+    "date": "2018-02-14",
+    "title": "欧冠，3-1 巴黎",
+    "titleEn": "Two past PSG",
+    "kind": "goal",
+    "club": "Real Madrid",
+    "clubZh": "皇马",
+    "competition": "欧冠1/8决赛",
+    "opponent": "Paris Saint-Germain",
+    "venue": "Santiago Bernabéu",
+    "city": "Madrid",
+    "score": "3-1",
+    "summary": "欧冠1/8决赛首回合，C罗梅开二度，皇马3-1巴黎圣日耳曼。",
+    "context": "2018年2月14日，皇马在伯纳乌迎战巴黎圣日耳曼。C罗打进两球，包括一粒点球，皇马3-1取胜。这场比赛让皇马在淘汰赛里占得先机。",
+    "why": "面对内马尔和姆巴佩领衔的巴黎，C罗用两个进球提醒欧洲：皇马仍然是欧冠淘汰赛的标杆。",
+    "tags": [
+      "goal",
+      "real-madrid",
+      "champions-league",
+      "psg"
+    ],
+    "featured": false,
+    "era": "madrid",
+    "stat": {
+      "label": "进球",
+      "value": "2"
+    },
+    "sources": [
+      {
+        "label": "2017–18 UEFA Champions League knockout phase — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/2017%E2%80%9318_UEFA_Champions_League_knockout_phase"
+      }
+    ]
+  },
+  {
+    "id": "m66",
+    "slug": "juventus-1-3-2018",
+    "date": "2018-04-11",
+    "title": "都灵，点球晋级",
+    "titleEn": "The penalty in Turin",
+    "kind": "moment",
+    "club": "Real Madrid",
+    "clubZh": "皇马",
+    "competition": "欧冠1/4决赛",
+    "opponent": "Juventus",
+    "venue": "Allianz Stadium",
+    "city": "Turin",
+    "score": "1-3（总比分4-3）",
+    "summary": "欧冠1/4决赛次回合，C罗第97分钟点球破门，皇马总比分4-3淘汰尤文。",
+    "context": "首回合皇马主场3-0取胜，次回合却在都灵0-3落后，总比分被追成3-3。补时第97分钟，C罗顶住压力罚入点球，皇马以总比分4-3晋级。进球后他脱衣庆祝，吃到黄牌。",
+    "why": "这是C罗皇马生涯最戏剧化的晋级之一：从几乎出局到点球定生死，只用了一脚。",
+    "tags": [
+      "moment",
+      "real-madrid",
+      "champions-league",
+      "juventus",
+      "penalty"
+    ],
+    "featured": false,
+    "era": "madrid",
+    "stat": {
+      "label": "点球",
+      "value": "第97分钟"
+    },
+    "sources": [
+      {
+        "label": "2017–18 UEFA Champions League knockout phase — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/2017%E2%80%9318_UEFA_Champions_League_knockout_phase"
+      }
+    ]
   }
 ]
