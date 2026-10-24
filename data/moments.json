@@ -1286,5 +1286,370 @@
         "url": "https://en.wikipedia.org/wiki/2009_UEFA_Champions_League_final"
       }
     ]
+  },
+  {
+    "id": "m37",
+    "slug": "real-madrid-debut-2009",
+    "date": "2009-08-29",
+    "title": "伯纳乌首秀，点球开局",
+    "titleEn": "A debut from the spot",
+    "kind": "goal",
+    "club": "Real Madrid",
+    "clubZh": "皇马",
+    "competition": "西甲",
+    "opponent": "Deportivo La Coruña",
+    "venue": "Santiago Bernabéu",
+    "city": "Madrid",
+    "score": "3-2",
+    "summary": "西甲首轮，C罗在伯纳乌首秀罚入点球，皇马3-2击败拉科鲁尼亚。",
+    "context": "2009年8月29日，C罗在伯纳乌完成皇马正式比赛首秀。他在第35分钟罚入点球，打开自己的皇马进球账户。皇马最终3-2击败拉科鲁尼亚，9000万英镑先生的第一次亮相没有让人失望。",
+    "why": "从曼联7号到皇马9号，首秀进球让“银河战舰二期”的期待第一次落地。",
+    "tags": [
+      "goal",
+      "real-madrid",
+      "la-liga",
+      "debut"
+    ],
+    "featured": false,
+    "era": "madrid",
+    "stat": {
+      "label": "首秀",
+      "value": "进球"
+    },
+    "sources": [
+      {
+        "label": "Ronaldo in winning start for Real — BBC",
+        "url": "http://news.bbc.co.uk/sport2/hi/football/europe/8229070.stm"
+      }
+    ]
+  },
+  {
+    "id": "m38",
+    "slug": "zurich-2009-brace",
+    "date": "2009-09-15",
+    "title": "欧冠首秀，梅开二度",
+    "titleEn": "A European brace",
+    "kind": "goal",
+    "club": "Real Madrid",
+    "clubZh": "皇马",
+    "competition": "欧冠小组赛",
+    "opponent": "Zürich",
+    "venue": "Letzigrund",
+    "city": "Zürich",
+    "score": "5-2",
+    "summary": "欧冠首秀对阵苏黎世，C罗梅开二度，皇马5-2大胜。",
+    "context": "2009年9月15日，皇马在欧冠小组赛客场5-2击败苏黎世。C罗打进两球，其中包括一脚标志性的远距离任意球。欧冠首秀就梅开二度，他把自己在曼联的欧洲火力直接带到了马德里。",
+    "why": "首秀进球之后，欧冠首秀再次双响。C罗没有经历适应期，他直接把皇马的进攻上限抬高了一档。",
+    "tags": [
+      "goal",
+      "real-madrid",
+      "champions-league",
+      "zurich"
+    ],
+    "featured": false,
+    "era": "madrid",
+    "stat": {
+      "label": "进球",
+      "value": "2"
+    },
+    "sources": [
+      {
+        "label": "2009–10 UEFA Champions League group stage — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/2009%E2%80%9310_UEFA_Champions_League_group_stage"
+      }
+    ]
+  },
+  {
+    "id": "m39",
+    "slug": "tottenham-4-0-2011",
+    "date": "2011-04-05",
+    "title": "欧冠，4-0 热刺",
+    "titleEn": "Four past Tottenham",
+    "kind": "goal",
+    "club": "Real Madrid",
+    "clubZh": "皇马",
+    "competition": "欧冠1/4决赛",
+    "opponent": "Tottenham Hotspur",
+    "venue": "Santiago Bernabéu",
+    "city": "Madrid",
+    "score": "4-0",
+    "summary": "欧冠1/4决赛首回合，皇马4-0热刺，C罗破门。",
+    "context": "2011年4月5日，皇马在伯纳乌迎战热刺。阿德巴约梅开二度，迪马利亚扩大比分，C罗在终场前用一脚劲射锁定4-0。这场大胜几乎提前结束了系列赛。",
+    "why": "这是穆里尼奥时代皇马在欧冠淘汰赛最完整的一场压制，也是C罗第一次在皇马欧冠淘汰赛里连续制造比分。",
+    "tags": [
+      "goal",
+      "real-madrid",
+      "champions-league",
+      "tottenham"
+    ],
+    "featured": false,
+    "era": "madrid",
+    "stat": {
+      "label": "比分",
+      "value": "4-0"
+    },
+    "sources": [
+      {
+        "label": "2010–11 UEFA Champions League knockout phase — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/2010%E2%80%9311_UEFA_Champions_League_knockout_phase"
+      }
+    ]
+  },
+  {
+    "id": "m40",
+    "slug": "clasico-3-1-2011",
+    "date": "2011-12-10",
+    "title": "国家德比，3-1",
+    "titleEn": "The Clásico breakthrough",
+    "kind": "goal",
+    "club": "Real Madrid",
+    "clubZh": "皇马",
+    "competition": "西甲",
+    "opponent": "Barcelona",
+    "venue": "Santiago Bernabéu",
+    "city": "Madrid",
+    "score": "3-1",
+    "summary": "西甲国家德比，皇马3-1击败巴萨，C罗破门。",
+    "context": "2011年12月10日，皇马在伯纳乌迎战巴萨。本泽马开场闪电破门，C罗在第22分钟扩大比分，皇马最终3-1取胜。这是穆里尼奥时代皇马第一次在联赛国家德比中击败巴萨。",
+    "why": "对巴萨的胜利不只是三分。它让皇马从“挑战者”变成“可以正面击败巴萨的冠军”。",
+    "tags": [
+      "goal",
+      "real-madrid",
+      "la-liga",
+      "barcelona",
+      "clasico"
+    ],
+    "featured": false,
+    "era": "madrid",
+    "stat": {
+      "label": "进球",
+      "value": "1"
+    },
+    "sources": [
+      {
+        "label": "2011–12 La Liga — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/2011%E2%80%9312_La_Liga"
+      }
+    ]
+  },
+  {
+    "id": "m41",
+    "slug": "bayern-2012-heartbreak",
+    "date": "2012-04-25",
+    "title": "伯纳乌点球夜，梦碎拜仁",
+    "titleEn": "Heartbreak against Bayern",
+    "kind": "moment",
+    "club": "Real Madrid",
+    "clubZh": "皇马",
+    "competition": "欧冠半决赛",
+    "opponent": "Bayern Munich",
+    "venue": "Santiago Bernabéu",
+    "city": "Madrid",
+    "score": "2-1（点球1-3）",
+    "summary": "C罗梅开二度，皇马2-1拜仁，总比分3-3，点球大战1-3出局。",
+    "context": "2012年4月25日，欧冠半决赛次回合，皇马在伯纳乌2-1击败拜仁，总比分3-3进入点球大战。C罗在常规时间梅开二度，但点球大战中罚失，皇马最终1-3出局。那是他皇马生涯最接近欧冠的一次，也是最疼的一次。",
+    "why": "这场失利把“欧冠第十冠”的执念推到了顶点。两年后，皇马终于在里斯本完成它。",
+    "tags": [
+      "moment",
+      "real-madrid",
+      "champions-league",
+      "bayern",
+      "heartbreak"
+    ],
+    "featured": false,
+    "era": "madrid",
+    "stat": {
+      "label": "进球",
+      "value": "2"
+    },
+    "sources": [
+      {
+        "label": "Shoot-out joy for Bayern — RTÉ",
+        "url": "https://www.rte.ie/sport/soccer/2012/0425/318506-shoot-out-joy-for-bayern-munich/"
+      }
+    ]
+  },
+  {
+    "id": "m42",
+    "slug": "supercopa-2012",
+    "date": "2012-08-29",
+    "title": "超级杯，客场进球",
+    "titleEn": "The Supercopa on away goals",
+    "kind": "trophy",
+    "club": "Real Madrid",
+    "clubZh": "皇马",
+    "competition": "西班牙超级杯",
+    "opponent": "Barcelona",
+    "venue": "Santiago Bernabéu",
+    "city": "Madrid",
+    "score": "2-1（总比分4-4，客场进球）",
+    "summary": "皇马2-1巴萨，总比分4-4，凭客场进球夺得西班牙超级杯。",
+    "context": "2012年8月29日，西班牙超级杯次回合在伯纳乌进行。首回合皇马客场2-3落败，次回合伊瓜因和C罗各入一球，皇马2-1取胜，总比分4-4，凭客场进球夺冠。",
+    "why": "这是C罗皇马生涯第一座西班牙超级杯，也是他在国家德比压力下拿到的又一座奖杯。",
+    "tags": [
+      "trophy",
+      "real-madrid",
+      "barcelona",
+      "supercopa"
+    ],
+    "featured": false,
+    "era": "madrid",
+    "stat": {
+      "label": "冠军",
+      "value": "超级杯"
+    },
+    "sources": [
+      {
+        "label": "2012 Supercopa de España — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/2012_Supercopa_de_Espa%C3%B1a"
+      }
+    ]
+  },
+  {
+    "id": "m43",
+    "slug": "man-utd-1-1-2013",
+    "date": "2013-02-13",
+    "title": "欧冠重逢，头球破旧主",
+    "titleEn": "A header against his old club",
+    "kind": "goal",
+    "club": "Real Madrid",
+    "clubZh": "皇马",
+    "competition": "欧冠1/8决赛",
+    "opponent": "Manchester United",
+    "venue": "Santiago Bernabéu",
+    "city": "Madrid",
+    "score": "1-1",
+    "summary": "欧冠1/8决赛首回合，C罗头球破门，皇马1-1曼联。",
+    "context": "2013年2月13日，C罗第一次以对手身份在欧冠面对曼联。维尔贝克先为曼联破门，C罗在第30分钟接迪马利亚传中头球扳平。进球后他没有庆祝，只是抬手致意。",
+    "why": "这是他离开曼联后第一次在正式比赛面对旧主。进球和沉默，把“回家”的复杂情绪留在了伯纳乌。",
+    "tags": [
+      "goal",
+      "real-madrid",
+      "champions-league",
+      "man-utd"
+    ],
+    "featured": false,
+    "era": "madrid",
+    "stat": {
+      "label": "进球",
+      "value": "1"
+    },
+    "sources": [
+      {
+        "label": "2012–13 UEFA Champions League knockout phase — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/2012%E2%80%9313_UEFA_Champions_League_knockout_phase"
+      }
+    ]
+  },
+  {
+    "id": "m44",
+    "slug": "old-trafford-2013",
+    "date": "2013-03-05",
+    "title": "老特拉福德，制胜球",
+    "titleEn": "The winner at Old Trafford",
+    "kind": "goal",
+    "club": "Real Madrid",
+    "clubZh": "皇马",
+    "competition": "欧冠1/8决赛",
+    "opponent": "Manchester United",
+    "venue": "Old Trafford",
+    "city": "Manchester",
+    "score": "2-1",
+    "summary": "重返老特拉福德，C罗打入制胜球，皇马2-1淘汰曼联。",
+    "context": "2013年3月5日，欧冠1/8决赛次回合，皇马客场挑战曼联。纳尼被红牌罚下后，皇马连入两球：莫德里奇远射扳平，C罗在第69分钟接伊瓜因传中打进反超球。皇马2-1获胜，总比分3-2晋级。",
+    "why": "在曾经的主场，用进球淘汰旧主。C罗没有庆祝，但老特拉福德知道这意味着什么。",
+    "tags": [
+      "goal",
+      "real-madrid",
+      "champions-league",
+      "man-utd",
+      "old-trafford"
+    ],
+    "featured": false,
+    "era": "madrid",
+    "stat": {
+      "label": "进球",
+      "value": "1"
+    },
+    "sources": [
+      {
+        "label": "2012–13 UEFA Champions League knockout phase — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/2012%E2%80%9313_UEFA_Champions_League_knockout_phase"
+      }
+    ]
+  },
+  {
+    "id": "m45",
+    "slug": "barcelona-3-1-2013",
+    "date": "2013-02-26",
+    "title": "国王杯，诺坎普双响",
+    "titleEn": "A brace at Camp Nou",
+    "kind": "goal",
+    "club": "Real Madrid",
+    "clubZh": "皇马",
+    "competition": "国王杯半决赛",
+    "opponent": "Barcelona",
+    "venue": "Camp Nou",
+    "city": "Barcelona",
+    "score": "3-1",
+    "summary": "国王杯半决赛次回合，C罗梅开二度，皇马3-1巴萨，总比分4-2晋级。",
+    "context": "2013年2月26日，国王杯半决赛次回合在诺坎普进行。C罗第13分钟罚入点球，第57分钟再入一球，瓦拉内头球锁定3-1。皇马总比分4-2淘汰巴萨，晋级决赛。",
+    "why": "在诺坎普梅开二度，是C罗皇马生涯对巴萨最直接的宣言之一。国家德比的个人叙事，从这一天开始彻底改写。",
+    "tags": [
+      "goal",
+      "real-madrid",
+      "copa-del-rey",
+      "barcelona",
+      "camp-nou"
+    ],
+    "featured": false,
+    "era": "madrid",
+    "stat": {
+      "label": "进球",
+      "value": "2"
+    },
+    "sources": [
+      {
+        "label": "Ronaldo double helps sink Barcelona — RTÉ",
+        "url": "https://www.rte.ie/sport/soccer/2013/0226/369748-ronaldo-double-helps-sink-barcelona/"
+      }
+    ]
+  },
+  {
+    "id": "m46",
+    "slug": "copa-final-2013",
+    "date": "2013-05-17",
+    "title": "国王杯决赛，马德里德比失利",
+    "titleEn": "The Copa final defeat",
+    "kind": "moment",
+    "club": "Real Madrid",
+    "clubZh": "皇马",
+    "competition": "国王杯决赛",
+    "opponent": "Atlético Madrid",
+    "venue": "Santiago Bernabéu",
+    "city": "Madrid",
+    "score": "1-2（加时）",
+    "summary": "国王杯决赛，C罗破门，皇马加时1-2不敌马竞。",
+    "context": "2013年5月17日，国王杯决赛在伯纳乌上演马德里德比。C罗第14分钟头球破门，迭戈·科斯塔扳平，米兰达在加时赛第98分钟头球绝杀。皇马1-2失利，马竞在同城对手的主场捧杯。",
+    "why": "这是马竞对皇马长期压制的一次预演，也是C罗皇马生涯里最刺痛的决赛之一。",
+    "tags": [
+      "moment",
+      "real-madrid",
+      "copa-del-rey",
+      "atletico",
+      "heartbreak"
+    ],
+    "featured": false,
+    "era": "madrid",
+    "stat": {
+      "label": "结果",
+      "value": "亚军"
+    },
+    "sources": [
+      {
+        "label": "2013 Copa del Rey final — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/2013_Copa_del_Rey_final"
+      }
+    ]
   }
 ]
