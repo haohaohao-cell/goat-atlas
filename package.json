@@ -19,6 +19,7 @@
     "typecheck": "next typegen && tsc --noEmit",
     "sync:live": "node scripts/sync-live.mjs",
     "sync:milestones": "node scripts/sync-milestones.mjs",
+    "bot": "node scripts/bot.mjs",
     "validate": "node scripts/validate-data.mjs"
   },
   "dependencies": {

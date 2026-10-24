@@ -3,6 +3,8 @@ name: Deploy GitHub Pages
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - "data/bot-state.json"
   schedule:
     - cron: "0 */6 * * *"
   workflow_dispatch:

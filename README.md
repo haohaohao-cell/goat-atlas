@@ -62,6 +62,7 @@ C 罗是第一号展馆；数据结构从第一天起就是多球员设计。
 - **历史上的今天**：日期精确匹配才叫 On This Day，没有匹配就展示“今日坐标”
 - **里程碑追踪**：职业生涯 1000 球（每 6 小时自动同步，当前 981 = 俱乐部 835 + 国家队 146）、国家队 150 球、250 场、Al-Nassr 联赛 120 球/场等进度
 - **多语言入口**：英文 / 葡语 overview（页脚入口，非全站翻译）
+- **Bot 通知**：Telegram / Discord 的每日摘要与赛前提醒，GitHub Actions 定时发送
 - **来源标注**：每条记录至少一个可点击来源
 - **PWA**：可添加到主屏幕，带 manifest 和图标
 - **响应式**：手机、平板、桌面一套代码
@@ -148,6 +149,7 @@ data/
   quiz.json                # 每日问答题库
   compare.json             # GOAT 对比指标
   milestones.json          # 里程碑目标与当前进度
+  bot-state.json           # Bot 已发送状态（不触发 Pages 部署）
 lib/
   data.ts                  # 数据加载、排序、关联
   live.ts                  # Live 数据加载
@@ -163,6 +165,7 @@ scripts/
   sync-live.mjs            # API-Football / Wikipedia → data/live.json
   sync-milestones.mjs      # Wikipedia 生涯统计表 → data/milestones.json
   generate-calendar.mjs    # data/live.json → public/matches.ics
+  bot.mjs                  # Telegram / Discord 每日摘要与赛前提醒
   generate-assets.py       # 生成 OG 图和 PWA 图标（可选）
 ```
 
@@ -256,7 +259,7 @@ gh secret set API_FOOTBALL_KEY --repo haohaohao-cell/goat-atlas
 
 ## 赛前提醒怎么工作
 
-免费方案不依赖 Telegram / Discord / 微信机器人，而是用系统日历：
+日历路径不依赖 Telegram / Discord / 微信机器人，而是用系统日历；想要群通知，见下一节 Bot：
 
 1. `scripts/generate-calendar.mjs` 从 `data/live.json` 的 `fixtures` 生成 `public/matches.ics`。
 2. 用户下载文件，或把 `https://haohaohao-cell.github.io/goat-atlas/matches.ics` 添加到 Google Calendar。
@@ -264,6 +267,48 @@ gh secret set API_FOOTBALL_KEY --repo haohaohao-cell/goat-atlas
 4. 页面上的赛后战报由每 6 小时的 Live 同步更新。
 
 这条路径没有账号体系、没有服务器、没有推送费用，缺点是不是“进球后几十秒”的实时推送。
+
+## Bot 通知怎么开
+
+Bot 是可选层，不配置也能正常部署。它复用同一套数据，不另写内容。
+
+- **每天 00:00 UTC（北京 08:00）**：一条 Today / 1000 球进度摘要。
+- **每 6 小时**：检查未来 48 小时内的比赛，赛前发一次提醒。
+- **状态**：`data/bot-state.json` 记录已发送的日期/比赛，避免重复；这个文件的提交不会触发 Pages 重新部署。
+
+### 1. Telegram
+
+1. 找 `@BotFather` 创建 bot，拿到 `TELEGRAM_BOT_TOKEN`。
+2. 给 bot 发一条消息，然后访问  
+   `https://api.telegram.org/bot<TOKEN>/getUpdates`  
+   找到 `chat.id`，填入 `TELEGRAM_CHAT_ID`。
+3. 在 GitHub 仓库 **Settings → Secrets and variables → Actions** 添加这两个 secret。
+
+### 2. Discord（可选）
+
+在频道 **Integrations → Webhooks** 创建 webhook，把 URL 填入 `DISCORD_WEBHOOK_URL`。
+
+### 3. 测试
+
+在 Actions 里手动运行 **Bot notifications**：
+
+- `mode = daily`
+- `dry_run = true`
+
+日志里会打印消息，不会真的发送。确认格式后再关掉 dry run。
+
+本地测试：
+
+```bash
+BOT_DRY_RUN=1 BOT_MODE=daily node scripts/bot.mjs
+BOT_DRY_RUN=1 BOT_MODE=check BOT_TODAY=2026-10-28 node scripts/bot.mjs
+```
+
+`BOT_TODAY` 只用于测试，不会写进线上数据。
+
+### 4. 不配置会怎样
+
+没有 `TELEGRAM_BOT_TOKEN` / `TELEGRAM_CHAT_ID` / `DISCORD_WEBHOOK_URL` 时，脚本只打印“未配置”，不会报错、不会写状态。整个站点和自动同步继续正常工作。
 
 ## “历史上的今天”怎么不硬编
 
