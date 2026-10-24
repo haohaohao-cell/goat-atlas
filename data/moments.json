@@ -1651,5 +1651,364 @@
         "url": "https://en.wikipedia.org/wiki/2013_Copa_del_Rey_final"
       }
     ]
+  },
+  {
+    "id": "m47",
+    "slug": "mourinho-arrives-2010",
+    "date": "2010-05-31",
+    "title": "穆里尼奥入主",
+    "titleEn": "The Special One arrives",
+    "kind": "moment",
+    "club": "Real Madrid",
+    "clubZh": "皇马",
+    "competition": "教练任命",
+    "city": "Madrid",
+    "summary": "穆里尼奥成为皇马主帅，开启与巴萨全面对抗的2010-11赛季。",
+    "context": "2010年5月31日，皇马宣布穆里尼奥出任主教练。刚刚带领国际米兰赢得三冠王的葡萄牙人，带着“特别的一个”的标签来到伯纳乌。他的任务很明确：把皇马从巴萨的阴影里拉出来。",
+    "why": "这是皇马一个时代的起点。穆里尼奥带来了对抗巴萨的方法，也带来了C罗职业生涯最锋利的一段进球期。",
+    "tags": [
+      "real-madrid",
+      "mourinho",
+      "era"
+    ],
+    "featured": false,
+    "era": "madrid",
+    "stat": {
+      "label": "时代",
+      "value": "穆里尼奥"
+    },
+    "sources": [
+      {
+        "label": "2010–11 Real Madrid CF season — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/2010%E2%80%9311_Real_Madrid_CF_season"
+      }
+    ]
+  },
+  {
+    "id": "m48",
+    "slug": "portugal-north-korea-2010",
+    "date": "2010-06-21",
+    "title": "世界杯，7-0 朝鲜",
+    "titleEn": "Seven past North Korea",
+    "kind": "goal",
+    "club": "Portugal",
+    "clubZh": "葡萄牙",
+    "competition": "世界杯小组赛",
+    "opponent": "North Korea",
+    "venue": "Cape Town Stadium",
+    "city": "Cape Town",
+    "score": "7-0",
+    "summary": "世界杯小组赛，葡萄牙7-0大胜朝鲜，C罗破门。",
+    "context": "2010年6月21日，南非世界杯小组赛，葡萄牙在开普敦7-0击败朝鲜。C罗在比赛中打进一球，并参与了多次进攻。这是葡萄牙在世界杯历史上最酣畅的一场胜利之一。",
+    "why": "在皇马的第一个赛季结束后，C罗把状态带到了世界杯。这场7-0也是他葡萄牙队长时期最轻松的一个夜晚。",
+    "tags": [
+      "goal",
+      "portugal",
+      "world-cup",
+      "north-korea"
+    ],
+    "featured": false,
+    "era": "madrid",
+    "stat": {
+      "label": "进球",
+      "value": "1"
+    },
+    "sources": [
+      {
+        "label": "Portugal 7-0 North Korea — BBC",
+        "url": "http://news.bbc.co.uk/sport2/mobile/football/world_cup_2010/8752361.stm"
+      }
+    ]
+  },
+  {
+    "id": "m49",
+    "slug": "mallorca-0-0-2010",
+    "date": "2010-08-29",
+    "title": "穆里尼奥的西甲首秀",
+    "titleEn": "Mourinho's first league game",
+    "kind": "moment",
+    "club": "Real Madrid",
+    "clubZh": "皇马",
+    "competition": "西甲",
+    "opponent": "Mallorca",
+    "venue": "Iberostar Stadium",
+    "city": "Palma",
+    "score": "0-0",
+    "summary": "穆里尼奥执教皇马的首场西甲，球队客场0-0战平马略卡。",
+    "context": "2010年8月29日，皇马在新赛季西甲首轮客场对阵马略卡。穆里尼奥的球队控球占优，但没能破门，最终0-0收场。C罗打满全场，皇马的“穆氏时代”从一场闷平开始。",
+    "why": "一个时代的第一页不一定是胜利。这场0-0是穆里尼奥皇马生涯的起点，也是后来那支强硬球队的原始底片。",
+    "tags": [
+      "real-madrid",
+      "la-liga",
+      "mourinho",
+      "debut"
+    ],
+    "featured": false,
+    "era": "madrid",
+    "stat": {
+      "label": "首秀",
+      "value": "西甲"
+    },
+    "sources": [
+      {
+        "label": "2010–11 Real Madrid CF season — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/2010%E2%80%9311_Real_Madrid_CF_season"
+      }
+    ]
+  },
+  {
+    "id": "m50",
+    "slug": "ajax-2-0-2010",
+    "date": "2010-09-15",
+    "title": "欧冠开门红",
+    "titleEn": "A European opening night",
+    "kind": "moment",
+    "club": "Real Madrid",
+    "clubZh": "皇马",
+    "competition": "欧冠小组赛",
+    "opponent": "Ajax",
+    "venue": "Santiago Bernabéu",
+    "city": "Madrid",
+    "score": "2-0",
+    "summary": "欧冠小组赛首轮，皇马2-0阿贾克斯，穆里尼奥时代欧冠开门红。",
+    "context": "2010年9月15日，皇马在伯纳乌迎来欧冠小组赛首个对手阿贾克斯。穆里尼奥的球队2-0取胜，C罗在左路的冲击贯穿全场。这是皇马该赛季欧冠征程的第一步。",
+    "why": "穆里尼奥的皇马在欧冠从一场干净的主场胜利开始。后来他们一路走到半决赛，这条线从这里出发。",
+    "tags": [
+      "real-madrid",
+      "champions-league",
+      "ajax",
+      "mourinho"
+    ],
+    "featured": false,
+    "era": "madrid",
+    "stat": {
+      "label": "比分",
+      "value": "2-0"
+    },
+    "sources": [
+      {
+        "label": "2010–11 UEFA Champions League group stage — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/2010%E2%80%9311_UEFA_Champions_League_group_stage"
+      }
+    ]
+  },
+  {
+    "id": "m51",
+    "slug": "racing-6-1-2010",
+    "date": "2010-10-23",
+    "title": "大四喜，6-1 桑坦德",
+    "titleEn": "Four goals in a rout",
+    "kind": "goal",
+    "club": "Real Madrid",
+    "clubZh": "皇马",
+    "competition": "西甲",
+    "opponent": "Racing Santander",
+    "venue": "Santiago Bernabéu",
+    "city": "Madrid",
+    "score": "6-1",
+    "summary": "C罗上演大四喜，皇马6-1大胜桑坦德竞技。",
+    "context": "2010年10月23日，皇马在伯纳乌6-1击败桑坦德竞技。C罗一人打进四球，把自己的射门欲望变成了比分。这是他在皇马第一次单场打进四球。",
+    "why": "穆里尼奥的皇马开始把机会变成进球，而C罗开始把“进球机器”从一个比喻变成统计表上的事实。",
+    "tags": [
+      "goal",
+      "real-madrid",
+      "la-liga",
+      "four-goals"
+    ],
+    "featured": false,
+    "era": "madrid",
+    "stat": {
+      "label": "进球",
+      "value": "4"
+    },
+    "sources": [
+      {
+        "label": "Ronaldo scores four in Real rout — BBC",
+        "url": "http://news.bbc.co.uk/sport2/hi/football/europe/9121629.stm"
+      }
+    ]
+  },
+  {
+    "id": "m52",
+    "slug": "athletic-5-1-2010",
+    "date": "2010-11-20",
+    "title": "帽子戏法，5-1 毕尔巴鄂",
+    "titleEn": "A hat-trick at the Bernabéu",
+    "kind": "goal",
+    "club": "Real Madrid",
+    "clubZh": "皇马",
+    "competition": "西甲",
+    "opponent": "Athletic Bilbao",
+    "venue": "Santiago Bernabéu",
+    "city": "Madrid",
+    "score": "5-1",
+    "summary": "C罗上演帽子戏法，皇马5-1大胜毕尔巴鄂竞技。",
+    "context": "2010年11月20日，皇马在伯纳乌5-1击败毕尔巴鄂竞技。C罗打进三球，继续把西甲射手榜变成自己的个人赛道。那个赛季，他在联赛打进40球。",
+    "why": "从大四喜到帽子戏法，C罗在一个月内两次把比赛变成个人表演。皇马的进攻开始围绕他的终结能力运转。",
+    "tags": [
+      "goal",
+      "real-madrid",
+      "la-liga",
+      "hat-trick"
+    ],
+    "featured": false,
+    "era": "madrid",
+    "stat": {
+      "label": "进球",
+      "value": "3"
+    },
+    "sources": [
+      {
+        "label": "Ronaldo hat-trick gives Real edge — ABC",
+        "url": "https://www.abc.net.au/news/2010-11-21/ronaldo-hat-trick-gives-real-edge/2345044"
+      }
+    ]
+  },
+  {
+    "id": "m53",
+    "slug": "barcelona-5-0-2010",
+    "date": "2010-11-29",
+    "title": "国家德比，0-5",
+    "titleEn": "The night Barcelona ran riot",
+    "kind": "moment",
+    "club": "Real Madrid",
+    "clubZh": "皇马",
+    "competition": "西甲",
+    "opponent": "Barcelona",
+    "venue": "Camp Nou",
+    "city": "Barcelona",
+    "score": "0-5",
+    "summary": "国家德比，皇马客场0-5惨败巴萨，穆里尼奥遭遇执教皇马最痛的一夜。",
+    "context": "2010年11月29日，西甲国家德比在诺坎普进行。巴萨5-0击败皇马，哈维、佩德罗、比利亚和赫弗伦先后破门。皇马全场被动，C罗也没能找到改变比赛的方式。",
+    "why": "这场0-5是穆里尼奥时代皇马必须跨过的心理门槛。它直接定义了之后几年国家德比的对抗强度。",
+    "tags": [
+      "moment",
+      "real-madrid",
+      "la-liga",
+      "barcelona",
+      "heartbreak"
+    ],
+    "featured": false,
+    "era": "madrid",
+    "stat": {
+      "label": "结果",
+      "value": "0-5"
+    },
+    "sources": [
+      {
+        "label": "2010–11 La Liga — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/2010%E2%80%9311_La_Liga"
+      }
+    ]
+  },
+  {
+    "id": "m54",
+    "slug": "levante-8-0-2010",
+    "date": "2010-12-22",
+    "title": "国王杯，8-0 莱万特",
+    "titleEn": "Eight past Levante",
+    "kind": "goal",
+    "club": "Real Madrid",
+    "clubZh": "皇马",
+    "competition": "国王杯1/8决赛",
+    "opponent": "Levante",
+    "venue": "Santiago Bernabéu",
+    "city": "Madrid",
+    "score": "8-0",
+    "summary": "国王杯8-0莱万特，C罗破门，皇马用一场屠杀扫清首回合压力。",
+    "context": "2010年12月22日，皇马在国王杯1/8决赛首回合主场8-0击败莱万特。本泽马和C罗领衔进攻，皇马几乎每一次推进都能制造威胁。这场比赛也成了穆里尼奥时代轮换阵容的一次展示。",
+    "why": "8-0不是常态，但它说明了那支皇马在低强度比赛里的残酷程度。C罗的进球则继续把个人数据推向夸张。",
+    "tags": [
+      "goal",
+      "real-madrid",
+      "copa-del-rey",
+      "levante"
+    ],
+    "featured": false,
+    "era": "madrid",
+    "stat": {
+      "label": "比分",
+      "value": "8-0"
+    },
+    "sources": [
+      {
+        "label": "Benzema, Ronaldo lead Real romp — ABC",
+        "url": "https://www.abc.net.au/news/2010-12-23/benzema-ronaldo-lead-real-romp/1884168"
+      }
+    ]
+  },
+  {
+    "id": "m55",
+    "slug": "clasico-1-1-2011",
+    "date": "2011-04-16",
+    "title": "国家德比，1-1",
+    "titleEn": "A penalty, a draw",
+    "kind": "goal",
+    "club": "Real Madrid",
+    "clubZh": "皇马",
+    "competition": "西甲",
+    "opponent": "Barcelona",
+    "venue": "Santiago Bernabéu",
+    "city": "Madrid",
+    "score": "1-1",
+    "summary": "国家德比1-1，C罗点球扳平，梅西点球破门。",
+    "context": "2011年4月16日，皇马在伯纳乌迎战巴萨。梅西第53分钟点球破门，C罗第82分钟点球扳平。这是C罗第一次在国家德比中进球，也是那个赛季皇马对巴萨为数不多的正面回应。",
+    "why": "从0-5到1-1，皇马没有完成复仇，但C罗开始在国家德比里留下自己的名字。",
+    "tags": [
+      "goal",
+      "real-madrid",
+      "la-liga",
+      "barcelona",
+      "clasico"
+    ],
+    "featured": false,
+    "era": "madrid",
+    "stat": {
+      "label": "进球",
+      "value": "1"
+    },
+    "sources": [
+      {
+        "label": "Real Madrid 1-1 Barcelona — BBC",
+        "url": "http://news.bbc.co.uk/sport2/hi/football/europe/9460486.stm"
+      }
+    ]
+  },
+  {
+    "id": "m56",
+    "slug": "barcelona-0-2-2011",
+    "date": "2011-04-27",
+    "title": "欧冠半决赛，梅西之夜",
+    "titleEn": "Messi at the Bernabéu",
+    "kind": "moment",
+    "club": "Real Madrid",
+    "clubZh": "皇马",
+    "competition": "欧冠半决赛",
+    "opponent": "Barcelona",
+    "venue": "Santiago Bernabéu",
+    "city": "Madrid",
+    "score": "0-2",
+    "summary": "欧冠半决赛首回合，皇马0-2巴萨，梅西梅开二度。",
+    "context": "2011年4月27日，欧冠半决赛首回合在伯纳乌进行。梅西在第76分钟和第87分钟连入两球，巴萨2-0取胜。皇马在主场失去了晋级主动权，最终被淘汰。",
+    "why": "这是梅西在伯纳乌最著名的个人表演之一，也是穆里尼奥皇马在欧冠路上最沉重的一次碰壁。",
+    "tags": [
+      "moment",
+      "real-madrid",
+      "champions-league",
+      "barcelona",
+      "heartbreak"
+    ],
+    "featured": false,
+    "era": "madrid",
+    "stat": {
+      "label": "结果",
+      "value": "0-2"
+    },
+    "sources": [
+      {
+        "label": "2010–11 UEFA Champions League knockout phase — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/2010%E2%80%9311_UEFA_Champions_League_knockout_phase"
+      }
+    ]
   }
 ]
