@@ -180,7 +180,7 @@ pnpm dev
 配置 API key：
 
 ```bash
-gh secret set API_FOOTBALL_KEY --repo <owner>/goat-atlas
+gh secret set API_FOOTBALL_KEY --repo haohaohao-cell/goat-atlas
 ```
 
 或者在 GitHub 仓库的 **Settings → Secrets and variables → Actions** 中添加 `API_FOOTBALL_KEY`。
