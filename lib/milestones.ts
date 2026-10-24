@@ -25,7 +25,9 @@ export function milestoneProgress(milestone: Milestone): {
 }
 
 export function sortedMilestones(): Milestone[] {
-  return [...milestones.items].sort(
-    (a, b) => milestoneProgress(a).remaining - milestoneProgress(b).remaining,
-  );
+  return [...milestones.items].sort((a, b) => {
+    if (a.featured && !b.featured) return -1;
+    if (b.featured && !a.featured) return 1;
+    return milestoneProgress(a).remaining - milestoneProgress(b).remaining;
+  });
 }

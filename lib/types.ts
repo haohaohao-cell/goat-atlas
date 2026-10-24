@@ -180,6 +180,11 @@ export interface CompareData {
   metrics: CompareMetric[];
 }
 
+export interface MilestoneBreakdown {
+  label: string;
+  value: number;
+}
+
 export interface Milestone {
   id: string;
   title: string;
@@ -189,6 +194,8 @@ export interface Milestone {
   unit: string;
   description: string;
   source: string;
+  featured?: boolean;
+  breakdown?: MilestoneBreakdown[];
 }
 
 export interface MilestonesData {

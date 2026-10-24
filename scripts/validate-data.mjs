@@ -185,6 +185,17 @@ for (const milestone of milestones.items ?? []) {
     errors.push(`Invalid milestone range: ${milestone.id}`);
   }
   if (!milestone.source) errors.push(`Milestone ${milestone.id} missing source`);
+  if (milestone.breakdown) {
+    const sum = milestone.breakdown.reduce(
+      (total, item) => total + item.value,
+      0,
+    );
+    if (sum !== milestone.current) {
+      errors.push(
+        `Milestone ${milestone.id} breakdown ${sum} != current ${milestone.current}`,
+      );
+    }
+  }
 }
 
 if (errors.length) {

@@ -169,6 +169,15 @@ const milestoneSchema = z.object({
   unit: z.string().min(1),
   description: z.string().min(1),
   source: z.string().min(1),
+  featured: z.boolean().optional(),
+  breakdown: z
+    .array(
+      z.object({
+        label: z.string().min(1),
+        value: z.number().nonnegative(),
+      }),
+    )
+    .optional(),
 });
 
 export const milestonesSchema = z.object({

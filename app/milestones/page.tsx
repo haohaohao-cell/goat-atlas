@@ -12,7 +12,7 @@ import { absoluteUrl, withBasePath } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Milestones · 里程碑追踪",
   description:
-    "C 罗的国家队进球、国家队出场、Al-Nassr 联赛进球和联赛出场里程碑进度。只追踪可核实数据。",
+    "C 罗职业生涯 1000 球进度：俱乐部 836 + 国家队 146 = 982，还差 18 球。另含国家队与 Al-Nassr 里程碑。",
   alternates: { canonical: absoluteUrl("/milestones/") },
 };
 
@@ -20,6 +20,14 @@ export default function MilestonesPage() {
   const items = sortedMilestones();
   const next = items[0];
   const nextProgress = milestoneProgress(next);
+  const career = milestones.items.find(
+    (milestone) => milestone.id === "career-1000-goals",
+  );
+  const breakdownTotal =
+    career?.breakdown?.reduce((total, item) => total + item.value, 0) ?? 0;
+  const internationalTotal =
+    career?.breakdown?.find((item) => item.label === "Portugal")?.value ?? 0;
+  const clubTotal = breakdownTotal - internationalTotal;
 
   return (
     <>
@@ -29,9 +37,9 @@ export default function MilestonesPage() {
             MILESTONE WATCH <span>·</span> AS OF {milestones.asOf}
           </div>
           <h1>
-            还差几球，
+            还差 {nextProgress.remaining} {next.unit}，
             <br />
-            <span>就到下一个整数。</span>
+            <span>就到 {next.target}。</span>
           </h1>
           <div className="page-hero-bottom">
             <p>
@@ -109,17 +117,45 @@ export default function MilestonesPage() {
               })}
             </div>
 
+            {career?.breakdown ? (
+              <div className="career-ledger">
+                <div className="career-ledger-head">
+                  <div>
+                    <p className="eyebrow">CAREER LEDGER</p>
+                    <h2>
+                      {career.current} = 俱乐部 {clubTotal} + 国家队{" "}
+                      {internationalTotal}
+                    </h2>
+                  </div>
+                  <span>SUM {breakdownTotal}</span>
+                </div>
+                <div className="career-ledger-grid">
+                  {career.breakdown.map((item) => (
+                    <div key={item.label}>
+                      <span>{item.label}</span>
+                      <strong>{item.value}</strong>
+                    </div>
+                  ))}
+                </div>
+                <div className="career-ledger-foot">
+                  <span>Total senior goals</span>
+                  <strong>{career.current}</strong>
+                  <em>还差 {career.target - career.current} 球到 1000</em>
+                </div>
+              </div>
+            ) : null}
+
             <div className="milestone-method">
               <p className="eyebrow">SOURCE & METHOD</p>
-              <h2>为什么没有“1000 球”？</h2>
+              <h2>为什么是 982？</h2>
               <p>
-                因为生涯总进球没有一个稳定、统一口径的实时来源。这里只追踪
-                Wikipedia infobox 能核实的国家队和俱乐部联赛累计数据，
-                不估算、不预测达成日期。
+                俱乐部 836 球 + 国家队 146 球 = 982 球。俱乐部部分包含
+                Sporting CP、曼联（两段）、皇马、尤文和 Al-Nassr 的正式比赛；
+                只使用 Wikipedia 生涯统计表口径，不估算、不预测日期。
               </p>
               <p>
-                当前数据截至 {formatDate(milestones.asOf)}。如果你有更权威的来源，
-                欢迎带着链接来改。
+                1000 球还差 18 球。不同来源可能有不同统计口径，所以这里把拆分摊开，
+                而不是只给一个总数。当前数据截至 {formatDate(milestones.asOf)}。
               </p>
             </div>
           </div>

@@ -60,7 +60,7 @@ C 罗是第一号展馆；数据结构从第一天起就是多球员设计。
 - **每日问答**：每天 5 题，答题解析、连续天数、结果分享卡
 - **GOAT 对比器**：6 个可核实指标，默认权重公开，权重可调
 - **历史上的今天**：日期精确匹配才叫 On This Day，没有匹配就展示“今日坐标”
-- **里程碑追踪**：国家队 150 球、250 场、Al-Nassr 联赛 120 球/场等进度
+- **里程碑追踪**：职业生涯 1000 球（当前 982 = 俱乐部 836 + 国家队 146）、国家队 150 球、250 场、Al-Nassr 联赛 120 球/场等进度
 - **多语言入口**：英文 / 葡语 overview（页脚入口，非全站翻译）
 - **来源标注**：每条记录至少一个可点击来源
 - **PWA**：可添加到主屏幕，带 manifest 和图标
@@ -250,7 +250,7 @@ gh secret set API_FOOTBALL_KEY --repo haohaohao-cell/goat-atlas
 - Wikipedia 回退只提供联赛/国家队总量和比赛结果；助攻、分钟、逐场事件要等 API-Football 付费套餐。
 - 自动数据只进入 Live 页，**不会自动改写 Atlas 里的策展故事**。新里程碑值得长期收藏时，再由编辑整理进 `moments.json`。
 - 数据源默认是 [API-Football](https://www.api-football.com/)，回退源是 [Wikipedia](https://en.wikipedia.org/wiki/Cristiano_Ronaldo)。球员 ID 固定为 `874`，可用 `API_FOOTBALL_PLAYER_ID` / `API_FOOTBALL_SEASON` 覆盖。
-- 里程碑页面只追踪可核实的国家队 / 俱乐部联赛累计数据，不估算生涯总进球，也不预测达成日期。
+- 里程碑页面使用 Wikipedia 生涯统计表口径：俱乐部 836 球 + 国家队 146 球 = **982 球**，距离 1000 球还差 18 球。拆分公开，不预测达成日期；不同来源口径可能不同。
 
 ## 赛前提醒怎么工作
 

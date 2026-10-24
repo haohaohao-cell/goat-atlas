@@ -4895,6 +4895,104 @@ svg {
   height: 11px;
 }
 
+.career-ledger {
+  margin-top: 18px;
+  padding: 24px;
+  border: 1px solid var(--line-strong);
+  background:
+    radial-gradient(circle at 100% 0%, rgba(227, 189, 106, 0.08), transparent 45%),
+    var(--panel);
+}
+
+.career-ledger-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.career-ledger-head h2 {
+  margin-top: 10px;
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.career-ledger-head > span {
+  color: var(--muted-2);
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+.career-ledger-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: 22px;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.career-ledger-grid > div {
+  display: flex;
+  min-height: 66px;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 12px;
+  background: var(--panel);
+}
+
+.career-ledger-grid span {
+  color: var(--muted-2);
+  font-size: 8px;
+  line-height: 1.4;
+}
+
+.career-ledger-grid strong {
+  color: var(--gold);
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 0.8;
+}
+
+.career-ledger-foot {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+
+.career-ledger-foot > span {
+  color: var(--muted-2);
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.career-ledger-foot strong {
+  color: var(--gold);
+  font-family: var(--font-display);
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 0.8;
+}
+
+.career-ledger-foot em {
+  margin-left: auto;
+  color: var(--muted);
+  font-size: 10px;
+  font-style: normal;
+}
+
 .milestone-method {
   margin-top: 18px;
   padding: 24px;
@@ -6647,6 +6745,32 @@ svg {
     font-size: 28px;
   }
 
+  .career-ledger {
+    padding: 18px;
+  }
+
+  .career-ledger-head {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .career-ledger-head h2 {
+    font-size: 27px;
+  }
+
+  .career-ledger-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .career-ledger-foot {
+    flex-wrap: wrap;
+  }
+
+  .career-ledger-foot em {
+    width: 100%;
+    margin-left: 0;
+  }
+
   .milestones-aside {
     display: flex;
   }
@@ -6677,6 +6801,10 @@ svg {
   .localized-era-grid,
   .localized-moment-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .career-ledger-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 

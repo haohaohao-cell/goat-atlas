@@ -1,7 +1,27 @@
 {
   "asOf": "2026-10-24",
-  "note": "只追踪 Wikipedia infobox 可核实的俱乐部联赛 / 国家队累计数据；不估算生涯总进球，也不预测达成日期。",
+  "note": "只追踪 Wikipedia 生涯统计表 / 国家队页面可核实的数据；俱乐部与国家队拆分公开，不估算、不预测达成日期。",
   "items": [
+    {
+      "id": "career-1000-goals",
+      "title": "职业生涯 1000 球",
+      "category": "Career",
+      "current": 982,
+      "target": 1000,
+      "unit": "球",
+      "featured": true,
+      "description": "俱乐部 836 球 + 国家队 146 球 = 982 球。距离 1000 球还差 18 球。",
+      "source": "https://en.wikipedia.org/wiki/Cristiano_Ronaldo#Career_statistics",
+      "breakdown": [
+        { "label": "Sporting CP", "value": 5 },
+        { "label": "Man United 2003–09", "value": 118 },
+        { "label": "Real Madrid", "value": 450 },
+        { "label": "Juventus", "value": 101 },
+        { "label": "Man United 2021–22", "value": 27 },
+        { "label": "Al-Nassr", "value": 135 },
+        { "label": "Portugal", "value": 146 }
+      ]
+    },
     {
       "id": "portugal-150-goals",
       "title": "国家队 150 球",
