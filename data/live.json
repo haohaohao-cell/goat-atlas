@@ -1,10 +1,10 @@
 {
   "updatedAt": "2026-10-23T15:44:00.000Z",
-  "checkedAt": "2026-10-24T09:56:13.023Z",
+  "checkedAt": "2026-10-24T10:13:05.260Z",
   "provider": "Wikipedia (fallback)",
   "status": "fallback",
   "season": "2026-27",
-  "note": "API-Football 免费套餐不覆盖当前赛季，当前使用 Wikipedia 的当前生涯数据与最近比赛回退；联赛数据为 Wikipedia infobox 口径。",
+  "note": "免费方案使用 Wikipedia：提供当前生涯总量、赛果、进球者和分钟，不含助攻；联赛总量为 Wikipedia infobox 口径。",
   "sourceUrl": "https://en.wikipedia.org/wiki/Cristiano_Ronaldo",
   "stats": [
     {
@@ -28,6 +28,7 @@
       "score": "3-1",
       "result": "W",
       "goals": 0,
+      "ronaldoGoals": [],
       "venue": "Majmaah Sports City Stadium",
       "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
     },
@@ -38,6 +39,7 @@
       "score": "1-0",
       "result": "W",
       "goals": 0,
+      "ronaldoGoals": [],
       "venue": "Al-Awwal Park",
       "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
     },
@@ -47,7 +49,14 @@
       "opponent": "Al-Diriyah",
       "score": "3-0",
       "result": "W",
-      "goals": 2,
+      "goals": 1,
+      "ronaldoGoals": [
+        {
+          "minute": "23",
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
       "venue": "Al-Awwal Park",
       "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
     },
@@ -58,6 +67,7 @@
       "score": "1-1",
       "result": "D",
       "goals": 0,
+      "ronaldoGoals": [],
       "venue": "Prince Mohamed bin Fahd Stadium",
       "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
     },
@@ -67,7 +77,14 @@
       "opponent": "Abha",
       "score": "2-1",
       "result": "W",
-      "goals": 2,
+      "goals": 1,
+      "ronaldoGoals": [
+        {
+          "minute": "22",
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
       "venue": "Al-Awwal Park",
       "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
     },
@@ -78,6 +95,7 @@
       "score": "1-2",
       "result": "L",
       "goals": 0,
+      "ronaldoGoals": [],
       "venue": "King Abdullah Sports City Stadium",
       "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
     },
@@ -87,7 +105,14 @@
       "opponent": "Al Taawoun",
       "score": "2-1",
       "result": "W",
-      "goals": 2,
+      "goals": 1,
+      "ronaldoGoals": [
+        {
+          "minute": "50",
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
       "venue": "Al-Awwal Park",
       "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
     },
@@ -98,6 +123,7 @@
       "score": "3-2",
       "result": "W",
       "goals": 0,
+      "ronaldoGoals": [],
       "venue": "Al-Ettifaq Club Stadium",
       "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
     },
@@ -107,7 +133,14 @@
       "opponent": "Al-Riyadh",
       "score": "4-0",
       "result": "W",
-      "goals": 2,
+      "goals": 1,
+      "ronaldoGoals": [
+        {
+          "minute": "83",
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
       "venue": "Prince Turki bin Abdulaziz Stadium",
       "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
     },
@@ -118,6 +151,7 @@
       "score": "4-1",
       "result": "W",
       "goals": 0,
+      "ronaldoGoals": [],
       "venue": "Prince Turki bin Abdulaziz Stadium",
       "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
     }
@@ -126,22 +160,22 @@
     {
       "date": "2026-10-09",
       "title": "对阵 Al-Diriyah 进球",
-      "detail": "Pro League · 3-0 · 2 球"
+      "detail": "Pro League · 3-0 · 1 球（23'）"
     },
     {
       "date": "2026-09-09",
       "title": "对阵 Abha 进球",
-      "detail": "Pro League · 2-1 · 2 球"
+      "detail": "Pro League · 2-1 · 1 球（22'）"
     },
     {
       "date": "2026-08-28",
       "title": "对阵 Al Taawoun 进球",
-      "detail": "Pro League · 2-1 · 2 球"
+      "detail": "Pro League · 2-1 · 1 球（50'）"
     },
     {
       "date": "2026-08-21",
       "title": "对阵 Al-Riyadh 进球",
-      "detail": "Pro League · 4-0 · 2 球"
+      "detail": "Pro League · 4-0 · 1 球（83'）"
     }
   ]
 }

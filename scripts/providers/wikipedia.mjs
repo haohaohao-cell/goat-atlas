@@ -174,6 +174,33 @@ function sectionAt(text, index) {
   return cleanWiki(headings.at(-1)?.[2] ?? "");
 }
 
+function parseRonaldoGoals(goalsText) {
+  return goalsText
+    .split(/<br\s*\/?>/i)
+    .filter((chunk) => /Ronaldo/i.test(chunk))
+    .flatMap((chunk) => {
+      const templates = [...chunk.matchAll(/\{\{goal\|([^}]*)\}\}/gi)];
+
+      if (!templates.length) {
+        return [{ minute: null, penalty: false, ownGoal: false }];
+      }
+
+      return templates.map((template) => {
+        const [minute, ...notes] = template[1]
+          .split("|")
+          .map((value) => value.trim());
+        const note = notes.join(" ").toLowerCase();
+
+        return {
+          minute: minute || null,
+          penalty: note.includes("pen"),
+          ownGoal: note.includes("o.g") || note.includes("own"),
+        };
+      });
+    })
+    .filter((goal) => !goal.ownGoal);
+}
+
 function parseSeasonMatches(seasonWikitext, sourceUrl, now = new Date()) {
   return extractTemplates(seasonWikitext, "Football box collapsible")
     .map(({ block, start }) => {
@@ -190,7 +217,8 @@ function parseSeasonMatches(seasonWikitext, sourceUrl, now = new Date()) {
       const goalsText = alNassrIsHome
         ? (fields.goals1 ?? "")
         : (fields.goals2 ?? "");
-      const goals = (goalsText.match(/Ronaldo/gi) ?? []).length;
+      const ronaldoGoals = parseRonaldoGoals(goalsText);
+      const goals = ronaldoGoals.length;
       const rawScore = (fields.score ?? "").replace("–", "-");
       const [homeGoals, awayGoals] = rawScore
         .split("-")
@@ -213,6 +241,7 @@ function parseSeasonMatches(seasonWikitext, sourceUrl, now = new Date()) {
         score,
         result,
         goals,
+        ronaldoGoals,
         venue: cleanWiki(fields.stadium ?? "") || undefined,
         sourceUrl,
       };
@@ -276,13 +305,21 @@ export function parseWikipediaWikitext(
   const latest = recentMatches
     .filter((match) => match.goals > 0)
     .slice(0, 4)
-    .map((match) => ({
-      date: match.date,
-      title: `对阵 ${match.opponent} 进球`,
-      detail: `${match.competition} · ${match.score}${
-        match.goals > 1 ? ` · ${match.goals} 球` : ""
-      }`,
-    }));
+    .map((match) => {
+      const minutes = (match.ronaldoGoals ?? [])
+        .map((goal) => goal.minute)
+        .filter(Boolean);
+
+      return {
+        date: match.date,
+        title: `对阵 ${match.opponent} 进球`,
+        detail: `${match.competition} · ${match.score} · ${match.goals} 球${
+          minutes.length
+            ? `（${minutes.map((minute) => `${minute}'`).join("、")}）`
+            : ""
+        }`,
+      };
+    });
 
   return {
     provider: "Wikipedia (fallback)",
@@ -295,7 +332,7 @@ export function parseWikipediaWikitext(
     recentMatches,
     latest,
     club: club.name,
-    note: "API-Football 免费套餐不覆盖当前赛季，当前使用 Wikipedia 的当前生涯数据与最近比赛回退；联赛数据为 Wikipedia infobox 口径。",
+    note: "免费方案使用 Wikipedia：提供当前生涯总量、赛果、进球者和分钟，不含助攻；联赛总量为 Wikipedia infobox 口径。",
   };
 }
 

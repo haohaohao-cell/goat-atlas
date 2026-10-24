@@ -86,6 +86,12 @@ const liveStatSchema = z.object({
   minutes: z.number().nonnegative().optional(),
 });
 
+const liveGoalSchema = z.object({
+  minute: z.string().nullable(),
+  penalty: z.boolean(),
+  ownGoal: z.boolean(),
+});
+
 const liveMatchSchema = z.object({
   date: z.string().min(1),
   competition: z.string().min(1),
@@ -93,6 +99,7 @@ const liveMatchSchema = z.object({
   score: z.string().min(1),
   result: z.enum(["W", "D", "L"]),
   goals: z.number().nonnegative(),
+  ronaldoGoals: z.array(liveGoalSchema).optional(),
   venue: z.string().optional(),
   sourceUrl: z.string().optional(),
 });

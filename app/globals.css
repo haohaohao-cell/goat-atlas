@@ -3046,7 +3046,7 @@ svg {
 
 .match-row {
   display: grid;
-  grid-template-columns: 88px minmax(0, 1fr) 78px 68px;
+  grid-template-columns: 88px minmax(0, 1fr) 78px 96px;
   gap: 16px;
   align-items: center;
   padding: 16px 0;
@@ -3121,7 +3121,25 @@ svg {
 }
 
 .match-goals {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
   text-align: right;
+}
+
+.goal-label {
+  color: var(--muted-2);
+  font-family: var(--font-mono);
+  font-size: 7px;
+  letter-spacing: 0.1em;
+}
+
+.goal-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 3px;
 }
 
 .goal-pill {
@@ -3131,6 +3149,15 @@ svg {
   border-radius: 999px;
   color: var(--gold);
   font-size: 8px;
+  white-space: nowrap;
+}
+
+.live-table-note {
+  padding: 10px 14px;
+  border-top: 1px solid var(--line);
+  color: var(--muted-2);
+  font-size: 9px;
+  line-height: 1.6;
 }
 
 .muted-pill {
@@ -4162,7 +4189,12 @@ svg {
 
   .match-goals {
     grid-column: 1 / -1;
+    align-items: flex-start;
     text-align: left;
+  }
+
+  .goal-list {
+    justify-content: flex-start;
   }
 
   .milestone-row {

@@ -92,6 +92,12 @@ export interface LiveStat {
   minutes?: number;
 }
 
+export interface LiveGoal {
+  minute: string | null;
+  penalty: boolean;
+  ownGoal: boolean;
+}
+
 export interface LiveMatch {
   date: string;
   competition: string;
@@ -99,6 +105,7 @@ export interface LiveMatch {
   score: string;
   result: "W" | "D" | "L";
   goals: number;
+  ronaldoGoals?: LiveGoal[];
   venue?: string;
   sourceUrl?: string;
 }

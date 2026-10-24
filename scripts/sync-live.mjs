@@ -119,12 +119,24 @@ async function syncFromApiFootball(existing) {
       const goalsAgainst = isHome
         ? (fixture.goals?.away ?? 0)
         : (fixture.goals?.home ?? 0);
-      const goals = (fixture.events ?? []).filter(
+      const goalEvents = (fixture.events ?? []).filter(
         (event) =>
           Number(event.player?.id) === PLAYER_ID &&
           event.type === "Goal" &&
           event.detail !== "Own Goal",
-      ).length;
+      );
+      const ronaldoGoals = goalEvents.map((event) => {
+        const elapsed = event.time?.elapsed;
+        const extra = event.time?.extra;
+        return {
+          minute:
+            elapsed != null
+              ? `${elapsed}${extra != null ? `+${extra}` : ""}`
+              : null,
+          penalty: event.detail === "Penalty",
+          ownGoal: false,
+        };
+      });
 
       return {
         date: String(fixture.fixture?.date ?? "").slice(0, 10),
@@ -134,7 +146,8 @@ async function syncFromApiFootball(existing) {
           : (fixture.teams?.home?.name ?? "Unknown opponent"),
         score: `${fixture.goals?.home ?? "-"}-${fixture.goals?.away ?? "-"}`,
         result: resultFor(goalsFor, goalsAgainst),
-        goals,
+        goals: ronaldoGoals.length,
+        ronaldoGoals,
         venue: fixture.fixture?.venue?.name ?? undefined,
         sourceUrl: "https://www.api-football.com/",
       };
@@ -147,13 +160,21 @@ async function syncFromApiFootball(existing) {
   const generatedLatest = recentMatches
     .filter((match) => match.goals > 0)
     .slice(0, 4)
-    .map((match) => ({
-      date: match.date,
-      title: `对阵 ${match.opponent} 进球`,
-      detail: `${match.competition} · ${match.score}${
-        match.goals > 1 ? ` · ${match.goals} 球` : ""
-      }`,
-    }));
+    .map((match) => {
+      const minutes = (match.ronaldoGoals ?? [])
+        .map((goal) => goal.minute)
+        .filter(Boolean);
+
+      return {
+        date: match.date,
+        title: `对阵 ${match.opponent} 进球`,
+        detail: `${match.competition} · ${match.score} · ${match.goals} 球${
+          minutes.length
+            ? `（${minutes.map((minute) => `${minute}'`).join("、")}）`
+            : ""
+        }`,
+      };
+    });
 
   return {
     updatedAt: new Date().toISOString(),

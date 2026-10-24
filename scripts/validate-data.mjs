@@ -105,6 +105,26 @@ for (const match of live.recentMatches ?? []) {
   if (!["W", "D", "L"].includes(match.result)) {
     errors.push(`Invalid live match result: ${match.result}`);
   }
+  if (match.ronaldoGoals !== undefined) {
+    if (!Array.isArray(match.ronaldoGoals)) {
+      errors.push(`Invalid ronaldoGoals: ${match.opponent}`);
+    } else {
+      if (match.goals !== match.ronaldoGoals.length) {
+        errors.push(`Goal count mismatch: ${match.opponent}`);
+      }
+      for (const goal of match.ronaldoGoals) {
+        if (
+          goal.minute !== null &&
+          typeof goal.minute !== "string"
+        ) {
+          errors.push(`Invalid goal minute: ${match.opponent}`);
+        }
+        if (typeof goal.penalty !== "boolean" || typeof goal.ownGoal !== "boolean") {
+          errors.push(`Invalid goal flags: ${match.opponent}`);
+        }
+      }
+    }
+  }
 }
 
 if (errors.length) {

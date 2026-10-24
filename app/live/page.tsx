@@ -93,6 +93,11 @@ export default function LivePage() {
                       ))}
                     </tbody>
                   </table>
+                  {live.status === "fallback" ? (
+                    <p className="live-table-note">
+                      免费方案：进球与赛果可用；助攻、分钟暂不提供。
+                    </p>
+                  ) : null}
                 </div>
               ) : (
                 <div className="live-empty">
@@ -135,9 +140,26 @@ export default function LivePage() {
                       </div>
                       <div className="match-goals">
                         {match.goals > 0 ? (
-                          <span className="goal-pill">
-                            {match.goals} 球
-                          </span>
+                          <>
+                            <span className="goal-label">C罗</span>
+                            <div className="goal-list">
+                              {match.ronaldoGoals?.length ? (
+                                match.ronaldoGoals.map((goal, index) => (
+                                  <span
+                                    className="goal-pill"
+                                    key={`${goal.minute ?? "na"}-${index}`}
+                                  >
+                                    {goal.minute ? `${goal.minute}'` : "进球"}
+                                    {goal.penalty ? " 点" : ""}
+                                  </span>
+                                ))
+                              ) : (
+                                <span className="goal-pill">
+                                  {match.goals} 球
+                                </span>
+                              )}
+                            </div>
+                          </>
                         ) : (
                           <span className="muted-pill">未进球</span>
                         )}
