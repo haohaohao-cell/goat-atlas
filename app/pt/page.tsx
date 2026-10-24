@@ -3,7 +3,9 @@ import { LocalizedHome } from "@/components/LocalizedHome";
 import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "GOAT Atlas | Atlas da carreira de Cristiano Ronaldo",
+  title: {
+    absolute: "GOAT Atlas | Atlas da carreira de Cristiano Ronaldo",
+  },
   description:
     "Um atlas aberto e com fontes sobre a carreira de Cristiano Ronaldo: 26 momentos, seis capítulos, dados ao vivo e lembretes de jogos.",
   alternates: {
