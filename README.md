@@ -6,7 +6,8 @@
 
 🔗 **Live site:** <https://haohaohao-cell.github.io/goat-atlas/>  
 🌐 **English:** <https://haohaohao-cell.github.io/goat-atlas/en/> · **Português:** <https://haohaohao-cell.github.io/goat-atlas/pt/>  
-💻 **Repository:** <https://github.com/haohaohao-cell/goat-atlas>
+💻 **Repository:** <https://github.com/haohaohao-cell/goat-atlas>  
+📘 **Handoff:** [HANDOFF.md](HANDOFF.md)
 
 `Next.js 16` · `TypeScript` · `86 moments` · `6 chapters` · `78 sources` · `MIT + CC BY-SA 4.0`
 
