@@ -105,7 +105,7 @@ export default function LivePage() {
                   <div>
                     <h3>等待数据源</h3>
                     <p>
-                      当前展示的是 2025 年 6 月的策展快照。配置{" "}
+                      当前展示的是 2026 年 7 月的策展快照。配置{" "}
                       <code>API_FOOTBALL_KEY</code> 后，这里会自动出现最新赛季数据。
                     </p>
                   </div>

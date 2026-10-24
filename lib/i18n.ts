@@ -31,10 +31,10 @@ export interface LocalizedHomeCopy {
 
 export const localizedHome: Record<Locale, LocalizedHomeCopy> = {
   en: {
-    eyebrow: "UNOFFICIAL FAN ATLAS · 2003—2025",
+    eyebrow: "UNOFFICIAL FAN ATLAS · 2003—2026",
     kicker: "THE CAREER OF",
     name: "Cristiano Ronaldo",
-    lede: "From Madeira to the world stage. 26 defining moments, six chapters, and a source for every claim.",
+    lede: "From Madeira to the world stage. 86 defining moments, six chapters, and a source for every claim.",
     primary: "Open the Atlas",
     secondary: "Read the story",
     proof: ["moments", "chapters", "sources"],
@@ -45,7 +45,7 @@ export const localizedHome: Record<Locale, LocalizedHomeCopy> = {
       {
         index: "01",
         title: "Atlas",
-        body: "Search 26 defining moments by chapter, type, opponent or keyword.",
+        body: "Search 86 defining moments by chapter, type, opponent or keyword.",
         href: "/atlas",
         cta: "Explore",
       },
@@ -96,10 +96,10 @@ export const localizedHome: Record<Locale, LocalizedHomeCopy> = {
     languageNote: "English overview · Chinese-first data",
   },
   pt: {
-    eyebrow: "ATLAS NÃO OFICIAL · 2003—2025",
+    eyebrow: "ATLAS NÃO OFICIAL · 2003—2026",
     kicker: "A CARREIRA DE",
     name: "Cristiano Ronaldo",
-    lede: "Da Madeira ao topo do mundo. 26 momentos, seis capítulos e uma fonte para cada afirmação.",
+    lede: "Da Madeira ao topo do mundo. 86 momentos, seis capítulos e uma fonte para cada afirmação.",
     primary: "Abrir o Atlas",
     secondary: "Ler a história",
     proof: ["momentos", "capítulos", "fontes"],
@@ -111,7 +111,7 @@ export const localizedHome: Record<Locale, LocalizedHomeCopy> = {
       {
         index: "01",
         title: "Atlas",
-        body: "Pesquise 26 momentos por capítulo, tipo, adversário ou palavra-chave.",
+        body: "Pesquise 86 momentos por capítulo, tipo, adversário ou palavra-chave.",
         href: "/atlas",
         cta: "Explorar",
       },
