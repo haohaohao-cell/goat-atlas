@@ -1,0 +1,90 @@
+{
+  "asOf": "2026-10-24",
+  "note": "只比较可核实、相对稳定的职业生涯指标。默认等权，权重由你调整；这不是客观真理，而是一面镜子。",
+  "players": [
+    {
+      "id": "ronaldo",
+      "name": "Cristiano Ronaldo",
+      "nameZh": "C罗",
+      "country": "Portugal",
+      "accent": "gold",
+      "sources": [
+        {
+          "label": "Cristiano Ronaldo — Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Cristiano_Ronaldo"
+        }
+      ]
+    },
+    {
+      "id": "messi",
+      "name": "Lionel Messi",
+      "nameZh": "梅西",
+      "country": "Argentina",
+      "accent": "blue",
+      "sources": [
+        {
+          "label": "Lionel Messi — Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Lionel_Messi"
+        }
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "id": "ballon-dor",
+      "label": "金球奖",
+      "short": "Ballon d'Or",
+      "unit": "座",
+      "defaultWeight": 15,
+      "values": { "ronaldo": 5, "messi": 8 },
+      "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
+    },
+    {
+      "id": "ucl-titles",
+      "label": "欧冠冠军",
+      "short": "UEFA Champions League",
+      "unit": "座",
+      "defaultWeight": 15,
+      "values": { "ronaldo": 5, "messi": 4 },
+      "source": "https://en.wikipedia.org/wiki/UEFA_Champions_League"
+    },
+    {
+      "id": "world-cup",
+      "label": "世界杯冠军",
+      "short": "FIFA World Cup",
+      "unit": "座",
+      "defaultWeight": 15,
+      "values": { "ronaldo": 0, "messi": 1 },
+      "source": "https://en.wikipedia.org/wiki/FIFA_World_Cup"
+    },
+    {
+      "id": "golden-shoe",
+      "label": "欧洲金靴",
+      "short": "European Golden Shoe",
+      "unit": "座",
+      "defaultWeight": 15,
+      "values": { "ronaldo": 4, "messi": 6 },
+      "source": "https://en.wikipedia.org/wiki/European_Golden_Shoe"
+    },
+    {
+      "id": "ucl-goals",
+      "label": "欧冠历史进球",
+      "short": "UCL all-time goals",
+      "unit": "球",
+      "defaultWeight": 15,
+      "values": { "ronaldo": 140, "messi": 129 },
+      "source": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "note": "截至 2024-25 赛季"
+    },
+    {
+      "id": "international-goals",
+      "label": "国家队进球",
+      "short": "International goals",
+      "unit": "球",
+      "defaultWeight": 15,
+      "values": { "ronaldo": 146, "messi": 126 },
+      "source": "https://en.wikipedia.org/wiki/List_of_international_goals_scored_by_Cristiano_Ronaldo",
+      "note": "截至 2026 年 10 月"
+    }
+  ]
+}

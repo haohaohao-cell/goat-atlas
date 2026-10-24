@@ -126,6 +126,14 @@ export function SparkIcon(props: IconProps) {
   );
 }
 
+export function CheckIcon(props: IconProps) {
+  return (
+    <svg {...base(props)}>
+      <path d="m5 12 4.5 4.5L19 7" />
+    </svg>
+  );
+}
+
 export function CalendarIcon(props: IconProps) {
   return (
     <svg {...base(props)}>

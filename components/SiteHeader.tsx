@@ -12,6 +12,7 @@ const NAV = [
   { href: "/story", label: "Story", cn: "故事" },
   { href: "/live", label: "Live", cn: "动态" },
   { href: "/matches", label: "Matches", cn: "赛程" },
+  { href: "/play", label: "Play", cn: "玩法" },
   { href: "/about", label: "About", cn: "关于" },
 ];
 

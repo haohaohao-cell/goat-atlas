@@ -120,6 +120,46 @@ const liveMilestoneSchema = z.object({
   detail: z.string().min(1),
 });
 
+export const quizQuestionSchema = z.object({
+  id: z.string().min(1),
+  question: z.string().min(1),
+  options: z.array(z.string().min(1)).length(4),
+  answer: z.number().int().min(0).max(3),
+  explanation: z.string().min(1),
+  source: z.string().min(1),
+  difficulty: z.enum(["easy", "medium", "hard"]),
+  tags: z.array(z.string().min(1)).min(1),
+});
+
+export const quizQuestionsSchema = z.array(quizQuestionSchema).min(1);
+
+const comparePlayerSchema = z.object({
+  id: z.string().min(1),
+  name: z.string().min(1),
+  nameZh: z.string().min(1),
+  country: z.string().min(1),
+  accent: z.enum(["gold", "blue"]),
+  sources: z.array(sourceSchema).min(1),
+});
+
+const compareMetricSchema = z.object({
+  id: z.string().min(1),
+  label: z.string().min(1),
+  short: z.string().min(1),
+  unit: z.string().min(1),
+  defaultWeight: z.number().nonnegative(),
+  values: z.record(z.string(), z.number()),
+  source: z.string().min(1),
+  note: z.string().optional(),
+});
+
+export const compareSchema = z.object({
+  asOf: z.string().min(1),
+  note: z.string().min(1),
+  players: z.array(comparePlayerSchema).length(2),
+  metrics: z.array(compareMetricSchema).min(1),
+});
+
 export const liveSchema = z.object({
   updatedAt: z.string().min(1),
   checkedAt: z.string().min(1),

@@ -28,13 +28,13 @@ const ROADMAP = [
     phase: "01",
     title: "Atlas 内容底座",
     detail: "时间线、名场面检索、来源标注、分享卡、Live 数据层、赛程日历。",
-    status: "现在",
+    status: "已完成",
   },
   {
     phase: "02",
     title: "每日问答 + 球员对比",
-    detail: "单人可玩的互动，先让用户玩起来，再谈社区。",
-    status: "下一步",
+    detail: "5 题连击、结果分享卡、可调权重的 GOAT 对比器。",
+    status: "现在",
   },
   {
     phase: "03",

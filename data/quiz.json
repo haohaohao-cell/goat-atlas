@@ -1,0 +1,202 @@
+[
+  {
+    "id": "q01",
+    "question": "2008 年欧冠决赛，曼联在点球大战中击败了哪支球队？",
+    "options": ["切尔西", "利物浦", "阿森纳", "巴塞罗那"],
+    "answer": 0,
+    "explanation": "莫斯科雨夜，曼联与切尔西 1-1 战平，点球大战 6-5 取胜。C 罗在点球大战中罚失，但特里滑倒、范德萨扑出阿内尔卡的点球。",
+    "source": "https://en.wikipedia.org/wiki/2008_UEFA_Champions_League_final",
+    "difficulty": "easy",
+    "tags": ["欧冠", "曼联"]
+  },
+  {
+    "id": "q02",
+    "question": "2016 年欧洲杯决赛，葡萄牙击败了哪个对手？",
+    "options": ["德国", "法国", "西班牙", "意大利"],
+    "answer": 1,
+    "explanation": "法兰西大球场，葡萄牙加时 1-0 击败法国，埃德尔在第 109 分钟打进制胜球。C 罗因伤提前离场，但在场边指挥队友。",
+    "source": "https://en.wikipedia.org/wiki/UEFA_Euro_2016_final",
+    "difficulty": "easy",
+    "tags": ["欧洲杯", "葡萄牙"]
+  },
+  {
+    "id": "q03",
+    "question": "2018 年世界杯小组赛，C 罗上演帽子戏法，对手是谁？",
+    "options": ["葡萄牙", "摩洛哥", "西班牙", "伊朗"],
+    "answer": 2,
+    "explanation": "葡萄牙 3-3 西班牙，C 罗打进点球、远射和终场前任意球，一个人包办葡萄牙全部进球。",
+    "source": "https://en.wikipedia.org/wiki/2018_FIFA_World_Cup_Group_B",
+    "difficulty": "easy",
+    "tags": ["世界杯", "西班牙"]
+  },
+  {
+    "id": "q04",
+    "question": "2019 年欧冠 1/8 决赛，尤文首回合 0-2 落后，次回合 C 罗帽子戏法逆转了谁？",
+    "options": ["马德里竞技", "阿贾克斯", "皇家马德里", "拜仁慕尼黑"],
+    "answer": 0,
+    "explanation": "首回合尤文客场 0-2 负于马竞。回到都灵，C 罗第 27、49 分钟头球破门，第 86 分钟点球命中，尤文 3-0 逆转晋级。",
+    "source": "https://en.wikipedia.org/wiki/2018%E2%80%9319_UEFA_Champions_League_knockout_phase",
+    "difficulty": "medium",
+    "tags": ["欧冠", "尤文", "逆转"]
+  },
+  {
+    "id": "q05",
+    "question": "2021 年 C 罗回归曼联后的首秀，对手是哪支球队？",
+    "options": ["曼城", "利物浦", "切尔西", "纽卡斯尔联"],
+    "answer": 3,
+    "explanation": "2021 年 9 月 11 日，C 罗时隔 12 年重返曼联首秀对阵纽卡斯尔，梅开二度，曼联 4-1 取胜。",
+    "source": "https://en.wikipedia.org/wiki/2021%E2%80%9322_Manchester_United_F.C._season",
+    "difficulty": "medium",
+    "tags": ["曼联", "回归"]
+  },
+  {
+    "id": "q06",
+    "question": "C 罗职业生涯第 900 球，是对阵哪支国家队打进的？",
+    "options": ["瑞典", "克罗地亚", "西班牙", "加纳"],
+    "answer": 1,
+    "explanation": "2024 年 9 月 5 日，欧国联葡萄牙对阵克罗地亚，C 罗在光明球场打进职业生涯第 900 球。",
+    "source": "https://www.abc.net.au/news/2024-09-06/football-san-marino-win-cristiano-ronaldo-900th-career-goal/104318750",
+    "difficulty": "medium",
+    "tags": ["葡萄牙", "900球"]
+  },
+  {
+    "id": "q07",
+    "question": "C 罗第一次赢得金球奖是在哪一年？",
+    "options": ["2006", "2007", "2008", "2009"],
+    "answer": 2,
+    "explanation": "2008 年 12 月 2 日，C 罗凭借 2007-08 赛季的 42 球和欧冠冠军，赢得职业生涯第一座金球奖。",
+    "source": "https://en.wikipedia.org/wiki/2008_Ballon_d%27Or",
+    "difficulty": "easy",
+    "tags": ["金球奖"]
+  },
+  {
+    "id": "q08",
+    "question": "2014 年欧冠决赛，皇马 4-1 击败的对手是谁？",
+    "options": ["马德里竞技", "巴塞罗那", "拜仁慕尼黑", "多特蒙德"],
+    "answer": 0,
+    "explanation": "里斯本光明球场，拉莫斯第 93 分钟头球绝平，皇马加时赛 4-1 击败马竞，夺得队史第十座欧冠。C 罗在最后时刻点球命中。",
+    "source": "https://en.wikipedia.org/wiki/2014_UEFA_Champions_League_final",
+    "difficulty": "medium",
+    "tags": ["欧冠", "皇马"]
+  },
+  {
+    "id": "q09",
+    "question": "2017 年欧冠决赛，皇马 4-1 击败的对手是谁？",
+    "options": ["拜仁慕尼黑", "尤文图斯", "马德里竞技", "利物浦"],
+    "answer": 1,
+    "explanation": "加的夫千禧球场，C 罗梅开二度，皇马 4-1 击败尤文，成为欧冠改制后第一支成功卫冕的球队。",
+    "source": "https://en.wikipedia.org/wiki/2017_UEFA_Champions_League_final",
+    "difficulty": "medium",
+    "tags": ["欧冠", "皇马"]
+  },
+  {
+    "id": "q10",
+    "question": "2025 年欧国联决赛，葡萄牙点球击败了哪支球队？",
+    "options": ["法国", "德国", "西班牙", "克罗地亚"],
+    "answer": 2,
+    "explanation": "2025 年 6 月 8 日，葡萄牙与西班牙 2-2 战平，点球大战 5-3 取胜，第二次夺得欧国联冠军。C 罗在决赛中破门。",
+    "source": "https://en.wikipedia.org/wiki/2025_UEFA_Nations_League_finals",
+    "difficulty": "medium",
+    "tags": ["葡萄牙", "欧国联"]
+  },
+  {
+    "id": "q11",
+    "question": "2004 年欧洲杯决赛，葡萄牙在主场输给了哪支球队？",
+    "options": ["希腊", "法国", "西班牙", "意大利"],
+    "answer": 0,
+    "explanation": "里斯本光明球场，希腊 1-0 击败葡萄牙，创造欧洲杯历史上最大的奇迹之一。19 岁的 C 罗赛后泪洒球场。",
+    "source": "https://en.wikipedia.org/wiki/UEFA_Euro_2004_final",
+    "difficulty": "medium",
+    "tags": ["欧洲杯", "葡萄牙"]
+  },
+  {
+    "id": "q12",
+    "question": "2003 年 C 罗的曼联首秀，对手是哪支球队？",
+    "options": ["埃弗顿", "博尔顿", "富勒姆", "布莱克本"],
+    "answer": 1,
+    "explanation": "2003 年 8 月 16 日，C 罗在曼联 4-0 博尔顿的比赛中第 61 分钟替补登场，完成老特拉福德首秀。",
+    "source": "https://en.wikipedia.org/wiki/Cristiano_Ronaldo",
+    "difficulty": "hard",
+    "tags": ["曼联", "首秀"]
+  },
+  {
+    "id": "q13",
+    "question": "2011 年国王杯决赛，C 罗头球绝杀的对手是谁？",
+    "options": ["巴塞罗那", "马德里竞技", "塞维利亚", "毕尔巴鄂竞技"],
+    "answer": 0,
+    "explanation": "梅斯塔利亚球场，加时赛第 103 分钟，迪马利亚传中，C 罗头球破门，皇马 1-0 击败巴萨。",
+    "source": "https://en.wikipedia.org/wiki/2011_Copa_del_Rey_final",
+    "difficulty": "medium",
+    "tags": ["国王杯", "皇马"]
+  },
+  {
+    "id": "q14",
+    "question": "2018 年 C 罗在欧冠上演惊天倒钩，对手是哪支球队？",
+    "options": ["拜仁慕尼黑", "罗马", "尤文图斯", "利物浦"],
+    "answer": 2,
+    "explanation": "2018 年 4 月 3 日，皇马客场对阵尤文，C 罗在禁区边缘腾空倒钩，皮球直挂死角，都灵主场球迷起立鼓掌。",
+    "source": "https://en.wikipedia.org/wiki/2017%E2%80%9318_UEFA_Champions_League",
+    "difficulty": "easy",
+    "tags": ["欧冠", "倒钩"]
+  },
+  {
+    "id": "q15",
+    "question": "2016 年欧冠决赛，C 罗罚入制胜点球，对手是谁？",
+    "options": ["马德里竞技", "拜仁慕尼黑", "曼城", "巴黎圣日耳曼"],
+    "answer": 0,
+    "explanation": "米兰圣西罗，皇马与马竞 1-1 战平。点球大战第五轮，C 罗罚入制胜点球，皇马 5-4 取胜。",
+    "source": "https://en.wikipedia.org/wiki/2016_UEFA_Champions_League_final",
+    "difficulty": "medium",
+    "tags": ["欧冠", "皇马"]
+  },
+  {
+    "id": "q16",
+    "question": "2022 年世界杯，C 罗在葡萄牙的首场小组赛对手是谁？",
+    "options": ["乌拉圭", "韩国", "葡萄牙", "加纳"],
+    "answer": 3,
+    "explanation": "2022 年 11 月 24 日，葡萄牙 3-2 加纳。C 罗点球破门，成为首位在五届世界杯都有进球的球员。",
+    "source": "https://en.wikipedia.org/wiki/2022_FIFA_World_Cup_Group_H",
+    "difficulty": "medium",
+    "tags": ["世界杯", "葡萄牙"]
+  },
+  {
+    "id": "q17",
+    "question": "2023 年 C 罗加盟了哪家沙特俱乐部？",
+    "options": ["利雅得新月", "吉达联合", "利雅得胜利", "吉达国民"],
+    "answer": 2,
+    "explanation": "2022 年 12 月 30 日，利雅得胜利宣布 C 罗加盟，他开启了职业生涯的亚洲篇章。",
+    "source": "https://en.wikipedia.org/wiki/Al_Nassr_FC",
+    "difficulty": "easy",
+    "tags": ["利雅得胜利", "转会"]
+  },
+  {
+    "id": "q18",
+    "question": "2008 年欧冠决赛在哪个城市进行？",
+    "options": ["伦敦", "莫斯科", "罗马", "雅典"],
+    "answer": 1,
+    "explanation": "2008 年欧冠决赛在莫斯科卢日尼基球场进行，曼联在雨夜点球击败切尔西。",
+    "source": "https://en.wikipedia.org/wiki/2008_UEFA_Champions_League_final",
+    "difficulty": "medium",
+    "tags": ["欧冠", "莫斯科"]
+  },
+  {
+    "id": "q19",
+    "question": "2011-12 赛季，皇马以多少分夺得西甲冠军？",
+    "options": ["90", "95", "100", "102"],
+    "answer": 2,
+    "explanation": "2011-12 赛季，皇马以 100 分结束西甲，打破巴萨此前创造的 99 分纪录。C 罗单赛季联赛打入 46 球。",
+    "source": "https://en.wikipedia.org/wiki/2011%E2%80%9312_La_Liga",
+    "difficulty": "medium",
+    "tags": ["西甲", "皇马"]
+  },
+  {
+    "id": "q20",
+    "question": "2013 年金球奖得主是谁？",
+    "options": ["C 罗", "梅西", "里贝里", "伊涅斯塔"],
+    "answer": 0,
+    "explanation": "2014 年 1 月 13 日，C 罗在苏黎世获得 2013 年金球奖，击败梅西和里贝里，领奖时激动落泪。",
+    "source": "https://en.wikipedia.org/wiki/2013_Ballon_d%27Or",
+    "difficulty": "medium",
+    "tags": ["金球奖"]
+  }
+]

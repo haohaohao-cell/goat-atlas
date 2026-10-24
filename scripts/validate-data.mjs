@@ -6,6 +6,8 @@ const read = (name) =>
 const player = read("player.json");
 const moments = read("moments.json");
 const live = read("live.json");
+const quiz = read("quiz.json");
+const compare = read("compare.json");
 
 const errors = [];
 const required = [
@@ -135,6 +137,35 @@ for (const match of live.recentMatches ?? []) {
       }
     }
   }
+}
+
+const quizIds = new Set();
+for (const [index, question] of quiz.entries()) {
+  if (quizIds.has(question.id)) errors.push(`Duplicate quiz id: ${question.id}`);
+  quizIds.add(question.id);
+  if (!Array.isArray(question.options) || question.options.length !== 4) {
+    errors.push(`Quiz ${question.id} must have 4 options`);
+  }
+  if (
+    !Number.isInteger(question.answer) ||
+    question.answer < 0 ||
+    question.answer >= (question.options?.length ?? 0)
+  ) {
+    errors.push(`Quiz ${question.id} has invalid answer index`);
+  }
+  for (const field of ["question", "explanation", "source"]) {
+    if (!question[field]) errors.push(`Quiz ${question.id} missing "${field}"`);
+  }
+}
+
+const compareIds = new Set((compare.players ?? []).map((player) => player.id));
+for (const metric of compare.metrics ?? []) {
+  for (const playerId of compareIds) {
+    if (typeof metric.values?.[playerId] !== "number") {
+      errors.push(`Compare metric ${metric.id} missing value for ${playerId}`);
+    }
+  }
+  if (!metric.source) errors.push(`Compare metric ${metric.id} missing source`);
 }
 
 if (errors.length) {

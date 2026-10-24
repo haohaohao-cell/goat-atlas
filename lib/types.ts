@@ -139,3 +139,43 @@ export interface LiveData {
   fixtures: LiveFixture[];
   latest: LiveMilestone[];
 }
+
+export type QuizDifficulty = "easy" | "medium" | "hard";
+
+export interface QuizQuestion {
+  id: string;
+  question: string;
+  options: string[];
+  answer: number;
+  explanation: string;
+  source: string;
+  difficulty: QuizDifficulty;
+  tags: string[];
+}
+
+export interface ComparePlayer {
+  id: string;
+  name: string;
+  nameZh: string;
+  country: string;
+  accent: "gold" | "blue";
+  sources: Source[];
+}
+
+export interface CompareMetric {
+  id: string;
+  label: string;
+  short: string;
+  unit: string;
+  defaultWeight: number;
+  values: Record<string, number>;
+  source: string;
+  note?: string;
+}
+
+export interface CompareData {
+  asOf: string;
+  note: string;
+  players: ComparePlayer[];
+  metrics: CompareMetric[];
+}

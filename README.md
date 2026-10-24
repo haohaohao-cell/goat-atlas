@@ -21,6 +21,12 @@
 
 ![Match Center](docs/matches.webp)
 
+| Play 玩法 | GOAT 对比器 |
+| --- | --- |
+| ![Play](docs/play.webp) | ![Compare](docs/compare.webp) |
+
+![Daily Quiz](docs/quiz.webp)
+
 ---
 
 ## 为什么做这个
@@ -44,6 +50,8 @@ C 罗是第一号展馆；数据结构从第一天起就是多球员设计。
 - **Live 数据**：最新赛季、最近比赛、C 罗进球分钟、里程碑；免费方案已启用，GitHub Actions 每 6 小时自动同步
 - **Match Center**：近期赛程、赛后战报、赛前提醒
 - **日历订阅**：`matches.ics` 可导入 Google Calendar / Apple Calendar / Outlook
+- **每日问答**：每天 5 题，答题解析、连续天数、结果分享卡
+- **GOAT 对比器**：6 个可核实指标，默认等权，权重可调
 - **来源标注**：每条记录至少一个可点击来源
 - **PWA**：可添加到主屏幕，带 manifest 和图标
 - **响应式**：手机、平板、桌面一套代码
@@ -102,6 +110,9 @@ app/
   story/page.tsx           # 故事模式
   live/page.tsx            # Live 数据、最近比赛、同步状态
   matches/page.tsx         # 赛程、赛后战报、日历提醒
+  play/page.tsx            # 玩法入口
+  quiz/page.tsx            # 每日 5 题
+  compare/page.tsx         # GOAT 对比器
   about/page.tsx           # 项目、数据原则、路线图
   manifest.ts              # PWA manifest
   sitemap.ts / robots.ts   # SEO
@@ -110,6 +121,8 @@ components/
   StoryExperience.tsx      # 滚动叙事 + 章节导航
   ShareCard.tsx            # 分享卡导出
   MatchCalendarActions.tsx # 日历下载 / 订阅链接复制
+  QuizGame.tsx             # 每日问答、连击、结果卡
+  CompareTool.tsx          # 加权对比器
   MomentCard.tsx
   EraCard.tsx
 components/Icons.tsx
@@ -117,9 +130,13 @@ data/
   player.json              # 球员、俱乐部、章节
   moments.json             # 26 条名场面记录
   live.json                # 最新赛季 / 比赛 / 同步状态
+  quiz.json                # 每日问答题库
+  compare.json             # GOAT 对比指标
 lib/
   data.ts                  # 数据加载、排序、关联
   live.ts                  # Live 数据加载
+  quiz.ts                  # 每日出题
+  compare.ts               # 对比数据加载
   schemas.ts               # Zod schema
   types.ts
 scripts/
@@ -239,9 +256,9 @@ gh secret set API_FOOTBALL_KEY --repo haohaohao-cell/goat-atlas
 | 阶段 | 内容 | 状态 |
 | --- | --- | --- |
 | Phase 1 | 内容底座：时间线、检索、详情、来源、分享卡 | ✅ 已完成 |
-| Phase 1.5 | Live 数据层 + 6 小时自动同步 | ✅ 骨架完成，配置 key 后启用 |
-| Phase 2 | 每日问答、球员对比、更多语言 | 下一步 |
-| Phase 3 | “历史上的今天”、里程碑提醒 bot | 计划中 |
+| Phase 1.5 | Live 数据层 + 6 小时自动同步 | ✅ 免费方案已启用 |
+| Phase 2 | 每日问答、GOAT 对比器 | ✅ 已完成 |
+| Phase 3 | “历史上的今天”、里程碑提醒 bot、更多语言 | 下一步 |
 | Phase 4 | 球迷社区（先用 GitHub Discussions / 现成社群） | 等待时机 |
 
 完整说明见 [About 页面](app/about/page.tsx) 和 [CONTRIBUTING.md](CONTRIBUTING.md)。
