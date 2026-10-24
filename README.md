@@ -39,7 +39,7 @@ C 罗是第一号展馆；数据结构从第一天起就是多球员设计。
 - **Story 故事模式**：六个章节，从里斯本到利雅得
 - **详情页**：比分、时间、球场、背景故事、为什么重要、来源链接
 - **分享卡**：一键生成 4:5 图片，支持 Web Share / 下载 / 复制链接
-- **Live 数据**：最新赛季、最近比赛、里程碑；支持 GitHub Actions 每 6 小时自动同步
+- **Live 数据**：最新赛季、最近比赛、里程碑；免费方案已启用，GitHub Actions 每 6 小时自动同步
 - **来源标注**：每条记录至少一个可点击来源
 - **PWA**：可添加到主屏幕，带 manifest 和图标
 - **响应式**：手机、平板、桌面一套代码
@@ -170,6 +170,8 @@ pnpm dev
 详细说明见 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
 ## Live 数据怎么更新
+
+**当前默认是免费方案：API-Football 免费版 → 自动回退 Wikipedia。** 不需要付费订阅，也不影响每 6 小时更新。
 
 `data/live.json` 是唯一的自动数据入口。`.github/workflows/deploy-pages.yml` 会：
 

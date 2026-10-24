@@ -191,6 +191,16 @@ export default function LivePage() {
                   <dd>{live.provider}</dd>
                 </div>
                 <div>
+                  <dt>Plan</dt>
+                  <dd>
+                    {live.status === "fallback"
+                      ? "Free · Wikipedia"
+                      : live.status === "live"
+                        ? "API-Football"
+                        : "Snapshot"}
+                  </dd>
+                </div>
+                <div>
                   <dt>Season</dt>
                   <dd>{live.season}</dd>
                 </div>
