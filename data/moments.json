@@ -2375,5 +2375,373 @@
         "url": "https://en.wikipedia.org/wiki/2017%E2%80%9318_UEFA_Champions_League_knockout_phase"
       }
     ]
+  },
+  {
+    "id": "m67",
+    "slug": "juventus-man-utd-2018",
+    "date": "2018-11-07",
+    "title": "欧冠重逢，攻破旧主",
+    "titleEn": "A goal against his old club",
+    "kind": "goal",
+    "club": "Juventus",
+    "clubZh": "尤文图斯",
+    "competition": "欧冠小组赛",
+    "opponent": "Manchester United",
+    "venue": "Allianz Stadium",
+    "city": "Turin",
+    "score": "1-2",
+    "summary": "欧冠小组赛，C罗攻破曼联球门，尤文主场1-2被逆转。",
+    "context": "2018年11月7日，C罗离开曼联后第一次在正式比赛面对旧主。他在禁区内凌空抽射破门，尤文一度1-0领先。但曼联在最后时刻由马塔任意球破门，并迫使桑德罗自摆乌龙，2-1完成逆转。C罗进球后没有庆祝。",
+    "why": "这是C罗与曼联故事的第一次“对手版本”。进球、沉默、被逆转，一场比赛把复杂情绪全部装了进去。",
+    "tags": [
+      "goal",
+      "juventus",
+      "champions-league",
+      "man-utd"
+    ],
+    "featured": false,
+    "era": "turin",
+    "stat": {
+      "label": "进球",
+      "value": "1"
+    },
+    "sources": [
+      {
+        "label": "2018–19 UEFA Champions League group stage — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/2018%E2%80%9319_UEFA_Champions_League_group_stage"
+      }
+    ]
+  },
+  {
+    "id": "m68",
+    "slug": "genoa-2-1-2019",
+    "date": "2019-10-30",
+    "title": "第93分钟，点球绝杀",
+    "titleEn": "The 93rd-minute penalty",
+    "kind": "goal",
+    "club": "Juventus",
+    "clubZh": "尤文图斯",
+    "competition": "意甲",
+    "opponent": "Genoa",
+    "venue": "Allianz Stadium",
+    "city": "Turin",
+    "score": "2-1",
+    "minute": "90+3'",
+    "summary": "意甲对阵热那亚，C罗第93分钟点球绝杀，尤文2-1取胜。",
+    "context": "2019年10月30日，尤文在主场迎战热那亚。比赛进入补时仍是1-1，C罗在最后时刻罚入点球，帮助十人应战的尤文2-1取胜。这个进球把“关键先生”的剧本写到了最后一秒。",
+    "why": "在尤文时期，C罗不再只是反击终结者，他一次次在僵局里用点球和抢点把比赛拖回自己这边。",
+    "tags": [
+      "goal",
+      "juventus",
+      "serie-a",
+      "genoa",
+      "penalty"
+    ],
+    "featured": false,
+    "era": "turin",
+    "stat": {
+      "label": "进球",
+      "value": "第93分钟"
+    },
+    "sources": [
+      {
+        "label": "Juventus 2-1 Genoa — OneFootball",
+        "url": "https://onefootball.com/en/news/juventus-2-1-genoa-ronaldo-penalty-gives-10-man-champions-late-winner-27837116"
+      }
+    ]
+  },
+  {
+    "id": "m69",
+    "slug": "cagliari-4-0-2020",
+    "date": "2020-01-06",
+    "title": "意甲首个帽子戏法",
+    "titleEn": "The first Serie A hat-trick",
+    "kind": "goal",
+    "club": "Juventus",
+    "clubZh": "尤文图斯",
+    "competition": "意甲",
+    "opponent": "Cagliari",
+    "venue": "Allianz Stadium",
+    "city": "Turin",
+    "score": "4-0",
+    "summary": "意甲对阵卡利亚里，C罗上演帽子戏法，尤文4-0大胜。",
+    "context": "2020年1月6日，尤文主场4-0击败卡利亚里。C罗在下半场连入三球，完成自己在意甲的第一个帽子戏法。35岁的他，依然能在五大联赛里用一场比赛带走三个进球。",
+    "why": "从英超、西甲到意甲，C罗在三个联赛都完成了帽子戏法。这个夜晚，是他适应意甲完成的最后一块拼图。",
+    "tags": [
+      "goal",
+      "juventus",
+      "serie-a",
+      "cagliari",
+      "hat-trick"
+    ],
+    "featured": false,
+    "era": "turin",
+    "stat": {
+      "label": "进球",
+      "value": "3"
+    },
+    "sources": [
+      {
+        "label": "2019–20 Juventus F.C. season — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/2019%E2%80%9320_Juventus_F.C._season"
+      }
+    ]
+  },
+  {
+    "id": "m70",
+    "slug": "serie-a-title-2020",
+    "date": "2020-07-26",
+    "title": "意甲九连冠",
+    "titleEn": "Nine in a row",
+    "kind": "trophy",
+    "club": "Juventus",
+    "clubZh": "尤文图斯",
+    "competition": "意甲",
+    "opponent": "Sampdoria",
+    "venue": "Allianz Stadium",
+    "city": "Turin",
+    "score": "2-0",
+    "summary": "尤文2-0桑普多利亚，提前两轮夺得意甲冠军，完成九连冠。",
+    "context": "2020年7月26日，尤文在主场2-0击败桑普多利亚，提前两轮锁定2019-20赛季意甲冠军。这是尤文连续第九个联赛冠军，也是C罗加盟后的第二座意甲奖杯。",
+    "why": "C罗在尤文的第一个联赛冠军是2018-19，第二个是2019-20。九连冠是俱乐部王朝的延续，也是他个人奖杯柜里不太一样的一页。",
+    "tags": [
+      "trophy",
+      "juventus",
+      "serie-a",
+      "sampdoria"
+    ],
+    "featured": false,
+    "era": "turin",
+    "stat": {
+      "label": "冠军",
+      "value": "意甲"
+    },
+    "sources": [
+      {
+        "label": "Juventus win ninth successive Serie A title — RTÉ",
+        "url": "https://www.rte.ie/sport/soccer/2020/0726/1155644-juventus-win-ninth-successive-serie-a-title/"
+      }
+    ]
+  },
+  {
+    "id": "m71",
+    "slug": "lyon-2-1-2020",
+    "date": "2020-08-07",
+    "title": "梅开二度，仍差一球",
+    "titleEn": "Two goals, one short",
+    "kind": "moment",
+    "club": "Juventus",
+    "clubZh": "尤文图斯",
+    "competition": "欧冠1/8决赛",
+    "opponent": "Lyon",
+    "venue": "Allianz Stadium",
+    "city": "Turin",
+    "score": "2-1（总比分2-2，客场进球出局）",
+    "summary": "欧冠1/8决赛次回合，C罗梅开二度，尤文2-1里昂，总比分2-2因客场进球出局。",
+    "context": "首回合尤文客场0-1落败。次回合回到都灵，C罗先罚入点球，又用一脚远射破门，尤文2-1取胜。但里昂凭借客场进球晋级，尤文总比分2-2被淘汰。C罗的两球没能改变结局。",
+    "why": "这是C罗尤文时期最典型的“个人赢了、球队输了”的比赛。两粒进球足够精彩，却不够晋级。",
+    "tags": [
+      "moment",
+      "juventus",
+      "champions-league",
+      "lyon",
+      "heartbreak"
+    ],
+    "featured": false,
+    "era": "turin",
+    "stat": {
+      "label": "进球",
+      "value": "2"
+    },
+    "sources": [
+      {
+        "label": "2019–20 UEFA Champions League knockout phase — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/2019%E2%80%9320_UEFA_Champions_League_knockout_phase"
+      }
+    ]
+  },
+  {
+    "id": "m72",
+    "slug": "portugal-hungary-2021",
+    "date": "2021-06-15",
+    "title": "欧洲杯，3-0 匈牙利",
+    "titleEn": "Late double in Budapest",
+    "kind": "goal",
+    "club": "Portugal",
+    "clubZh": "葡萄牙",
+    "competition": "欧洲杯小组赛",
+    "opponent": "Hungary",
+    "venue": "Puskás Aréna",
+    "city": "Budapest",
+    "score": "3-0",
+    "summary": "欧洲杯小组赛，C罗梅开二度，葡萄牙3-0匈牙利。",
+    "context": "2021年6月15日，欧洲杯F组，葡萄牙在布达佩斯3-0击败匈牙利。C罗在第87分钟罚入点球，补时阶段再入一球，完成梅开二度，并成为欧洲杯历史最佳射手。",
+    "why": "36岁的C罗在欧洲杯上再次把“年龄”变成背景音。两个进球，一个纪录，一场开门红。",
+    "tags": [
+      "goal",
+      "portugal",
+      "euro",
+      "hungary"
+    ],
+    "featured": false,
+    "era": "turin",
+    "stat": {
+      "label": "进球",
+      "value": "2"
+    },
+    "sources": [
+      {
+        "label": "Hungary 0-3 Portugal — UEFA",
+        "url": "https://www.uefa.com/uefaeuro/history/news/026a-128701020958-fdd14ccc3a2c-1000--hungary-0-3-portugal-record-breaking-ronaldo-s-late-double-seal/"
+      }
+    ]
+  },
+  {
+    "id": "m73",
+    "slug": "portugal-france-2021",
+    "date": "2021-06-23",
+    "title": "欧洲杯，2-2 法国",
+    "titleEn": "Two penalties against France",
+    "kind": "goal",
+    "club": "Portugal",
+    "clubZh": "葡萄牙",
+    "competition": "欧洲杯小组赛",
+    "opponent": "France",
+    "venue": "Puskás Aréna",
+    "city": "Budapest",
+    "score": "2-2",
+    "summary": "欧洲杯小组赛，C罗两罚点球，葡萄牙2-2法国。",
+    "context": "2021年6月23日，欧洲杯F组，葡萄牙在布达佩斯2-2战平法国。C罗两次罚入点球，把自己的国家队进球数继续推高。葡萄牙以小组第三出线，C罗则继续领跑射手榜。",
+    "why": "在死亡之组里，C罗用两个点球把葡萄牙送进淘汰赛。这不是最漂亮的比赛，却是最典型的大赛生存方式。",
+    "tags": [
+      "goal",
+      "portugal",
+      "euro",
+      "france",
+      "penalty"
+    ],
+    "featured": false,
+    "era": "turin",
+    "stat": {
+      "label": "进球",
+      "value": "2"
+    },
+    "sources": [
+      {
+        "label": "UEFA Euro 2020 Group F — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/UEFA_Euro_2020_Group_F"
+      }
+    ]
+  },
+  {
+    "id": "m74",
+    "slug": "villarreal-2-1-2021",
+    "date": "2021-09-29",
+    "title": "第95分钟，绝杀比利亚雷亚尔",
+    "titleEn": "The 95th-minute winner",
+    "kind": "goal",
+    "club": "Manchester United",
+    "clubZh": "曼联",
+    "competition": "欧冠小组赛",
+    "opponent": "Villarreal",
+    "venue": "Old Trafford",
+    "city": "Manchester",
+    "score": "2-1",
+    "minute": "90+5'",
+    "summary": "欧冠小组赛，C罗第95分钟绝杀，曼联2-1比利亚雷亚尔。",
+    "context": "2021年9月29日，曼联在欧冠小组赛主场迎战比利亚雷亚尔。双方1-1僵持到补时，C罗在第95分钟接林加德传球转身抽射破门，老特拉福德再次为“回家”的7号沸腾。",
+    "why": "回归曼联后的第二个月，C罗就用一记补时绝杀提醒所有人：他仍然是最会在最后时刻出现的人。",
+    "tags": [
+      "goal",
+      "man-utd",
+      "champions-league",
+      "villarreal"
+    ],
+    "featured": false,
+    "era": "manchester-2",
+    "stat": {
+      "label": "进球",
+      "value": "第95分钟"
+    },
+    "sources": [
+      {
+        "label": "Man Utd 2-1 Villarreal — UEFA",
+        "url": "https://www.uefa.com/uefachampionsleague/match/2032730--man-utd-vs-villarreal/events/"
+      }
+    ]
+  },
+  {
+    "id": "m75",
+    "slug": "tottenham-3-2-2022",
+    "date": "2022-03-12",
+    "title": "对热刺，帽子戏法",
+    "titleEn": "A hat-trick against Tottenham",
+    "kind": "goal",
+    "club": "Manchester United",
+    "clubZh": "曼联",
+    "competition": "英超",
+    "opponent": "Tottenham Hotspur",
+    "venue": "Old Trafford",
+    "city": "Manchester",
+    "score": "3-2",
+    "summary": "英超对阵热刺，C罗上演帽子戏法，曼联3-2取胜。",
+    "context": "2022年3月12日，曼联在老特拉福德3-2击败热刺。C罗包办曼联三球，其中包括一记禁区外远射。37岁的他，用帽子戏法把球队从争四的泥潭里拉了出来。",
+    "why": "这是C罗回归曼联后最完整的一次个人表演，也是他职业生涯后期“仍然能carry一场比赛”的证据。",
+    "tags": [
+      "goal",
+      "man-utd",
+      "premier-league",
+      "tottenham",
+      "hat-trick"
+    ],
+    "featured": false,
+    "era": "manchester-2",
+    "stat": {
+      "label": "进球",
+      "value": "3"
+    },
+    "sources": [
+      {
+        "label": "2021–22 Premier League — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/2021%E2%80%9322_Premier_League"
+      }
+    ]
+  },
+  {
+    "id": "m76",
+    "slug": "morocco-2022-exit",
+    "date": "2022-12-10",
+    "title": "世界杯，0-1 摩洛哥",
+    "titleEn": "The World Cup ends",
+    "kind": "moment",
+    "club": "Portugal",
+    "clubZh": "葡萄牙",
+    "competition": "世界杯1/4决赛",
+    "opponent": "Morocco",
+    "venue": "Al Thumama Stadium",
+    "city": "Doha",
+    "score": "0-1",
+    "summary": "世界杯1/4决赛，葡萄牙0-1摩洛哥出局，C罗替补登场未能改写比分。",
+    "context": "2022年12月10日，卡塔尔世界杯1/4决赛，葡萄牙对阵摩洛哥。摩洛哥凭借恩内斯里的头球1-0取胜，成为第一支晋级世界杯四强的非洲球队。C罗下半场替补登场，但没能阻止葡萄牙出局。",
+    "why": "这可能是C罗最后一届世界杯。终场哨响后他含泪离场，一个时代国家队的世界杯故事在卡塔尔结束。",
+    "tags": [
+      "moment",
+      "portugal",
+      "world-cup",
+      "morocco",
+      "heartbreak"
+    ],
+    "featured": false,
+    "era": "riyadh",
+    "stat": {
+      "label": "结果",
+      "value": "八强"
+    },
+    "sources": [
+      {
+        "label": "2022 FIFA World Cup knockout stage — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/2022_FIFA_World_Cup_knockout_stage"
+      }
+    ]
   }
 ]

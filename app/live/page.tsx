@@ -174,7 +174,7 @@ export default function LivePage() {
                     <h3>等待下一场比赛</h3>
                     <p>
                       同步任务还没有接入实时比赛数据。你仍然可以在 Atlas
-                      里查看已经整理好的 66 个名场面。
+                      里查看已经整理好的 76 个名场面。
                     </p>
                   </div>
                 </div>

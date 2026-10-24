@@ -8,7 +8,7 @@
 🌐 **English:** <https://haohaohao-cell.github.io/goat-atlas/en/> · **Português:** <https://haohaohao-cell.github.io/goat-atlas/pt/>  
 💻 **Repository:** <https://github.com/haohaohao-cell/goat-atlas>
 
-`Next.js 16` · `TypeScript` · `66 moments` · `6 chapters` · `58 sources` · `MIT + CC BY-SA 4.0`
+`Next.js 16` · `TypeScript` · `76 moments` · `6 chapters` · `68 sources` · `MIT + CC BY-SA 4.0`
 
 ![GOAT Atlas preview](docs/preview.webp)
 
@@ -50,7 +50,7 @@ C 罗是第一号展馆；数据结构从第一天起就是多球员设计。
 
 ## 现在有什么
 
-- **Atlas 检索**：按章节、类型、对手、关键词筛选 66 个名场面
+- **Atlas 检索**：按章节、类型、对手、关键词筛选 76 个名场面
 - **Story 故事模式**：六个章节，从里斯本到利雅得
 - **详情页**：比分、时间、球场、背景故事、为什么重要、来源链接
 - **分享卡**：一键生成 4:5 图片，支持 Web Share / 下载 / 复制链接
@@ -143,7 +143,7 @@ components/
 components/Icons.tsx
 data/
   player.json              # 球员、俱乐部、章节
-  moments.json             # 66 条名场面记录
+  moments.json             # 76 条名场面记录
   live.json                # 最新赛季 / 比赛 / 同步状态
   quiz.json                # 每日问答题库
   compare.json             # GOAT 对比指标
@@ -172,7 +172,7 @@ scripts/
 
 1. **纠错**：日期、比分、对手、球场、来源有误。
 2. **补充来源**：给已有记录加更权威的链接。
-3. **新增名场面**：尤其是被现有 66 条忽略的节点。
+3. **新增名场面**：尤其是被现有 76 条忽略的节点。
 
 流程：
 
@@ -269,14 +269,14 @@ gh secret set API_FOOTBALL_KEY --repo haohaohao-cell/goat-atlas
 
 - 只有 `data/moments.json` 里存在同月同日记录时，才显示“历史上的今天”。
 - 没有精确匹配时，页面会明确写“今天没有收录”，然后展示一个按日期确定的“今日坐标”。
-- 当前 66 条数据决定命中率不会高；随着 Atlas 变厚，这个页面会越来越有内容。
+- 当前 76 条数据决定命中率不会高；随着 Atlas 变厚，这个页面会越来越有内容。
 - 分享卡、详情页和来源链接都复用同一套数据，不另写一份。
 
 ## 多语言现在到哪一步
 
 - **入口页 only**：英文 `/en/`、葡语 `/pt/` overview，页脚有轻量入口；Header 语言切换已撤掉。
 - **hreflang only on entry pages**：只有 `/en/`、`/pt/` 输出多语言 alternate，中文深页不再声明英文版。
-- **仍以中文为主**：66 条名场面的长文、问答题库、故事叙述目前是中文。
+- **仍以中文为主**：76 条名场面的长文、问答题库、故事叙述目前是中文。
 - **不直接机翻上线**：深度内容需要逐条校对，避免把错误翻译写进“有出处”的 Atlas。
 - 目前冻结翻译，优先扩充 Atlas 数据，而不是堆更多空页面。
 
@@ -286,7 +286,7 @@ gh secret set API_FOOTBALL_KEY --repo haohaohao-cell/goat-atlas
 - **策展数据**：[CC BY-SA 4.0](DATA-LICENSE.md)
 - **第三方内容**：来源链接指向的页面、商标、比赛画面归各自权利人所有
 
-数据不是完整数据库，而是一份策展式样本：66 条记录覆盖职业生涯关键坐标，远未穷尽所有比赛和进球。每条记录尽量保留可核验来源，欢迎纠错。
+数据不是完整数据库，而是一份策展式样本：76 条记录覆盖职业生涯关键坐标，远未穷尽所有比赛和进球。每条记录尽量保留可核验来源，欢迎纠错。
 
 ## Roadmap
 
