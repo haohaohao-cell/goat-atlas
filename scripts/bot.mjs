@@ -186,11 +186,22 @@ async function deliver(text, label) {
     return false;
   }
 
+  const configured = Boolean(
+    (process.env.TELEGRAM_BOT_TOKEN?.trim() &&
+      process.env.TELEGRAM_CHAT_ID?.trim()) ||
+      process.env.DISCORD_WEBHOOK_URL?.trim(),
+  );
+  if (!configured) {
+    console.log(
+      "No bot channels configured. Set TELEGRAM_BOT_TOKEN + TELEGRAM_CHAT_ID or DISCORD_WEBHOOK_URL.",
+    );
+    return false;
+  }
+
   const results = await Promise.allSettled([
     sendTelegram(text),
     sendDiscord(text),
   ]);
-  let configured = false;
   let delivered = false;
 
   for (const result of results) {
@@ -198,15 +209,10 @@ async function deliver(text, label) {
       console.warn(`Bot delivery failed: ${result.reason.message}`);
       continue;
     }
-    configured ||= result.value.configured;
     delivered ||= result.value.ok;
   }
 
-  if (!configured) {
-    console.log(
-      "No bot channels configured. Set TELEGRAM_BOT_TOKEN + TELEGRAM_CHAT_ID or DISCORD_WEBHOOK_URL.",
-    );
-  } else if (!delivered) {
+  if (!delivered) {
     console.warn("Bot message was not delivered.");
   }
 
