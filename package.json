@@ -1,0 +1,31 @@
+{
+  "name": "goat-atlas",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@11.28.5",
+  "description": "An open, source-backed career atlas for Cristiano Ronaldo — and eventually every footballer.",
+  "scripts": {
+    "dev": "next dev --webpack",
+    "build": "next build --webpack",
+    "start": "next start",
+    "typegen": "next typegen",
+    "typecheck": "next typegen && tsc --noEmit",
+    "validate": "node scripts/validate-data.mjs"
+  },
+  "dependencies": {
+    "html-to-image": "^1.11.13",
+    "next": "16.4.3",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.9.0"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  }
+}

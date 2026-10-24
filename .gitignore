@@ -1,0 +1,38 @@
+# dependencies
+node_modules/
+.pnpm-store/
+.pnp
+.pnp.*
+
+# local preview artifacts
+.screenshots/
+
+# next.js
+.next/
+out/
+build/
+dist/
+
+# production
+.vercel/
+
+# local env
+.env
+.env.local
+.env.*.local
+
+# editor / os
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts

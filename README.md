@@ -1,0 +1,203 @@
+# GOAT Atlas
+
+### 一个可检索、可追溯、可分享的 C 罗职业生涯图鉴
+
+**An open, source-backed career atlas for Cristiano Ronaldo — and eventually every footballer.**
+
+`Next.js 16` · `TypeScript` · `26 moments` · `6 chapters` · `23 sources` · `MIT + CC BY-SA 4.0`
+
+![GOAT Atlas preview](docs/preview.webp)
+
+| Atlas 检索 | Story 故事 |
+| --- | --- |
+| ![Atlas](docs/atlas.webp) | ![Story](docs/story.webp) |
+
+<p align="center">
+  <img src="docs/share-card.webp" alt="分享卡" width="320" />
+</p>
+
+---
+
+## 为什么做这个
+
+球迷不缺集锦，缺的是一张能反复查看、可以验证、还能继续补充的地图。
+
+- **集锦在短视频里**，看完就滑走，找不到上下文。
+- **数据在表格里**，很全，但没有故事。
+- **故事在评论区里**，很热闹，但常常没有出处。
+
+GOAT Atlas 把名场面、数据、上下文和来源放在同一个页面上。你可以把它当成一部可滚动的传记，也可以把它当成一个可检索的数据库。
+
+C 罗是第一号展馆；数据结构从第一天起就是多球员设计。
+
+## 现在有什么
+
+- **Atlas 检索**：按章节、类型、对手、关键词筛选 26 个名场面
+- **Story 故事模式**：六个章节，从里斯本到利雅得
+- **详情页**：比分、时间、球场、背景故事、为什么重要、来源链接
+- **分享卡**：一键生成 4:5 图片，支持 Web Share / 下载 / 复制链接
+- **来源标注**：每条记录至少一个可点击来源
+- **PWA**：可添加到主屏幕，带 manifest 和图标
+- **响应式**：手机、平板、桌面一套代码
+- **静态优先**：所有页面构建时生成，部署成本接近于零
+
+## 为什么是网站，不是 App 或小程序
+
+结论：**Web 是核心，小程序是渠道，App 是后置选项。**
+
+| 形态 | 角色 | 原因 |
+| --- | --- | --- |
+| Web + PWA | 现在 | SEO、分享、迭代速度、GitHub 用户直接打开 |
+| 小程序 | 之后 | 适合国内传播，但需要主体资质、审核，且与开源生态割裂 |
+| 原生 App | 最后 | 成本最高，等留存验证后再用 Capacitor / Expo 套壳 |
+
+一套数据层，多个展示壳。不要一开始写三套代码。
+
+## 快速开始
+
+要求：Node.js >= 20.9。
+
+```bash
+pnpm install
+pnpm dev
+```
+
+打开 `http://localhost:3000`。
+
+没有 pnpm 也可以用 npm：
+
+```bash
+npm install
+npm run dev
+```
+
+常用命令：
+
+```bash
+pnpm validate    # 校验 data/*.json
+pnpm typecheck   # TypeScript 类型检查
+pnpm build       # 生产构建
+pnpm start       # 启动生产服务
+```
+
+> 构建默认使用 webpack（`next build --webpack`）。原因是 Next 16 + pnpm 在部分 Windows 环境下 Turbopack 解析 `next` 链接会失败；等上游稳定后可以切回 Turbopack。
+
+## 项目结构
+
+```text
+app/
+  page.tsx                 # 首页
+  atlas/page.tsx           # Atlas 检索
+  atlas/[slug]/page.tsx    # 名场面详情
+  story/page.tsx           # 故事模式
+  about/page.tsx           # 项目、数据原则、路线图
+  manifest.ts              # PWA manifest
+  sitemap.ts / robots.ts   # SEO
+components/
+  AtlasExplorer.tsx        # 搜索 + 筛选（客户端）
+  StoryExperience.tsx      # 滚动叙事 + 章节导航
+  ShareCard.tsx            # 分享卡导出
+  MomentCard.tsx
+  EraCard.tsx
+components/Icons.tsx
+data/
+  player.json              # 球员、俱乐部、章节
+  moments.json             # 26 条名场面记录
+lib/
+  data.ts                  # 数据加载、排序、关联
+  schemas.ts               # Zod schema
+  types.ts
+scripts/
+  validate-data.mjs        # CI 数据校验
+  generate-assets.py       # 生成 OG 图和 PWA 图标（可选）
+```
+
+## 数据贡献
+
+最需要的三类贡献：
+
+1. **纠错**：日期、比分、对手、球场、来源有误。
+2. **补充来源**：给已有记录加更权威的链接。
+3. **新增名场面**：尤其是被现有 26 条忽略的节点。
+
+流程：
+
+```bash
+# 1. 修改 data/moments.json
+# 2. 跑校验
+pnpm validate
+# 3. 本地确认页面
+pnpm dev
+# 4. 提 PR
+```
+
+一条记录至少需要：
+
+```json
+{
+  "slug": "ucl-2008-final",
+  "date": "2008-05-21",
+  "title": "莫斯科雨夜，首夺欧冠",
+  "kind": "trophy",
+  "era": "manchester-1",
+  "summary": "一句话说清楚发生了什么。",
+  "context": "更完整的背景叙述。",
+  "why": "为什么这个瞬间值得被记住。",
+  "tags": ["trophy", "champions-league"],
+  "sources": [
+    { "label": "2008 UEFA Champions League final — Wikipedia", "url": "https://..." }
+  ]
+}
+```
+
+质量标准：
+
+- 日期使用 `YYYY-MM-DD`
+- 至少一个可点击来源
+- 区分**事实**（比分、时间）和**叙事**（为什么重要）
+- 不确定的内容标注“待核实”，不要编
+- 不搬运未授权的比赛照片或转播画面
+
+详细说明见 [CONTRIBUTING.md](CONTRIBUTING.md)。
+
+## 数据与许可
+
+- **代码**：[MIT](LICENSE)
+- **策展数据**：[CC BY-SA 4.0](DATA-LICENSE.md)
+- **第三方内容**：来源链接指向的页面、商标、比赛画面归各自权利人所有
+
+数据不是完整数据库，而是一份策展式样本：26 条记录覆盖职业生涯关键坐标，远未穷尽所有比赛和进球。每条记录尽量保留可核验来源，欢迎纠错。
+
+## Roadmap
+
+| 阶段 | 内容 | 状态 |
+| --- | --- | --- |
+| Phase 1 | 内容底座：时间线、检索、详情、来源、分享卡 | ✅ 已完成 |
+| Phase 2 | 每日问答、球员对比、更多语言 | 下一步 |
+| Phase 3 | “历史上的今天”、里程碑提醒 bot | 计划中 |
+| Phase 4 | 球迷社区（先用 GitHub Discussions / 现成社群） | 等待时机 |
+
+完整说明见 [About 页面](app/about/page.tsx) 和 [CONTRIBUTING.md](CONTRIBUTING.md)。
+
+## 部署
+
+推荐 Vercel：
+
+1. 把仓库导入 Vercel。
+2. Framework 选择 Next.js，构建命令保持 `pnpm build`。
+3. 设置环境变量：
+
+```bash
+NEXT_PUBLIC_SITE_URL=https://your-domain.com
+NEXT_PUBLIC_GITHUB_URL=https://github.com/your-name/goat-atlas
+```
+
+`NEXT_PUBLIC_GITHUB_URL` 可选；不设置时页面不会显示 GitHub 入口。
+
+## 免责声明
+
+这是一个非官方球迷项目，与 Cristiano Ronaldo、任何俱乐部、联赛或足协均无隶属关系。站内不使用官方标志、赛事转播画面或未授权照片。数据仅供参考，欢迎带着来源纠错。
+
+---
+
+如果这个项目对你有用，欢迎 star、提 issue，或者只是把它发给一个懂球的朋友。

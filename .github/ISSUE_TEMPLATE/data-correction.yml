@@ -1,0 +1,62 @@
+name: Data correction
+description: 报告一条记录里的事实错误，或补充更权威的来源
+title: "[Data] "
+labels: ["data", "correction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢纠错。请尽量附上可点击的来源，而不是“我记得”。
+  - type: input
+    id: moment
+    attributes:
+      label: 哪条记录
+      description: 标题或 slug，例如 `ucl-2008-final`
+      placeholder: ucl-2008-final
+    validations:
+      required: true
+  - type: dropdown
+    id: field
+    attributes:
+      label: 哪个字段
+      options:
+        - 日期
+        - 比分
+        - 对手
+        - 球场 / 城市
+        - 出场时间 / 进球时间
+        - 数据统计
+        - 文字叙述
+        - 来源链接
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: 现在写的是什么
+      placeholder: 当前的值或原文
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: 应该是什么
+      placeholder: 正确的值或建议改写
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: 来源链接
+      description: Wikipedia、官方比赛报告、UEFA/FIFA 页面等
+      placeholder: https://...
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: 补充说明
+      description: 可选。比如不同来源之间的差异。
+    validations:
+      required: false

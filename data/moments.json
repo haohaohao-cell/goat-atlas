@@ -1,0 +1,726 @@
+[
+  {
+    "id": "m01",
+    "slug": "sporting-manchester-friendly",
+    "date": "2003-08-06",
+    "title": "一场友谊赛，改变了一切",
+    "titleEn": "The night Manchester came calling",
+    "kind": "moment",
+    "club": "Sporting CP",
+    "clubZh": "葡萄牙体育",
+    "competition": "友谊赛",
+    "opponent": "Manchester United",
+    "venue": "Estádio José Alvalade",
+    "city": "Lisbon",
+    "score": "3-1",
+    "summary": "18岁的C罗在里斯本撕裂曼联防线，弗格森赛后下定决心把他带到老特拉福德。",
+    "context": "2003年夏天，曼联在葡萄牙进行季前备战，与葡萄牙体育踢了一场友谊赛。C罗在边路的连续变向和速度让曼联后卫吃尽苦头，葡萄牙体育3-1取胜。赛后，弗格森和球员们在返程飞机上讨论的只有一件事：必须签下这个年轻人。",
+    "why": "这是C罗与曼联故事的起点，也是他第一次让欧洲豪门真正注意到自己。",
+    "tags": ["sporting", "man-utd", "origin", "friendly"],
+    "featured": false,
+    "era": "lisbon",
+    "stat": { "label": "年龄", "value": "18岁" },
+    "sources": [
+      {
+        "label": "Cristiano Ronaldo — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Cristiano_Ronaldo"
+      }
+    ]
+  },
+  {
+    "id": "m02",
+    "slug": "man-utd-debut",
+    "date": "2003-08-16",
+    "title": "老特拉福德首秀",
+    "titleEn": "A debut at the Theatre of Dreams",
+    "kind": "debut",
+    "club": "Manchester United",
+    "clubZh": "曼联",
+    "competition": "英超",
+    "opponent": "Bolton Wanderers",
+    "venue": "Old Trafford",
+    "city": "Manchester",
+    "score": "4-0",
+    "minute": "61'",
+    "summary": "替补登场，用一次次的踩单车和变向点燃老特拉福德，曼联4-0大胜博尔顿。",
+    "context": "2003年8月16日，C罗在曼联对阵博尔顿的英超比赛中第61分钟替补登场。彼时曼联已经3-0领先，但全场仍在等待这个18岁少年的表演。他每一次拿球都能引发看台惊呼，一次助攻和一次造点让首秀变成宣言。",
+    "why": "从这一天起，曼联的7号有了新的主人，英超也开始习惯一个来自马德拉的名字。",
+    "tags": ["debut", "man-utd", "premier-league", "old-trafford"],
+    "featured": false,
+    "era": "manchester-1",
+    "stat": { "label": "年龄", "value": "18岁" },
+    "sources": [
+      {
+        "label": "Cristiano Ronaldo — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Cristiano_Ronaldo"
+      }
+    ]
+  },
+  {
+    "id": "m03",
+    "slug": "fa-cup-2004",
+    "date": "2004-05-22",
+    "title": "第一座奖杯",
+    "titleEn": "The first silverware",
+    "kind": "trophy",
+    "club": "Manchester United",
+    "clubZh": "曼联",
+    "competition": "足总杯决赛",
+    "opponent": "Millwall",
+    "venue": "Millennium Stadium",
+    "city": "Cardiff",
+    "score": "3-0",
+    "minute": "44'",
+    "summary": "足总杯决赛头球首开纪录，C罗赢得曼联生涯第一座冠军奖杯。",
+    "context": "2004年5月22日，曼联在加的夫千禧球场3-0击败米尔沃尔。C罗在第44分钟头球破门，为球队打开胜利之门。这是他加盟曼联后的第一座奖杯，也是他职业生涯冠军清单的第一行。",
+    "why": "从这一天开始，冠军成为他职业生涯最稳定的注脚。",
+    "tags": ["trophy", "fa-cup", "man-utd"],
+    "featured": false,
+    "era": "manchester-1",
+    "stat": { "label": "冠军", "value": "足总杯" },
+    "sources": [
+      {
+        "label": "2004 FA Cup final — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/2004_FA_Cup_final"
+      }
+    ]
+  },
+  {
+    "id": "m04",
+    "slug": "euro-2004-final",
+    "date": "2004-07-04",
+    "title": "光明球场的眼泪",
+    "titleEn": "Tears in Lisbon",
+    "kind": "moment",
+    "club": "Portugal",
+    "clubZh": "葡萄牙",
+    "competition": "欧洲杯决赛",
+    "opponent": "Greece",
+    "venue": "Estádio da Luz",
+    "city": "Lisbon",
+    "score": "0-1",
+    "summary": "19岁的C罗在主场欧洲杯决赛中目睹葡萄牙0-1负于希腊，泪洒光明球场。",
+    "context": "2004年欧洲杯决赛在里斯本光明球场进行，葡萄牙对阵黑马希腊。希腊凭借查理斯特亚斯的头球1-0取胜，创造欧洲杯历史上最大的奇迹之一。终场哨响，19岁的C罗跪地痛哭，那一幕成为他国家队生涯最早的注脚。",
+    "why": "失败比胜利更早教会他国家队意味着什么；十二年后，他等到了属于自己的欧洲杯。",
+    "tags": ["portugal", "euro", "heartbreak", "lisbon"],
+    "featured": false,
+    "era": "manchester-1",
+    "stat": { "label": "年龄", "value": "19岁" },
+    "sources": [
+      {
+        "label": "UEFA Euro 2004 final — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/UEFA_Euro_2004_final"
+      }
+    ]
+  },
+  {
+    "id": "m05",
+    "slug": "world-cup-2006-england",
+    "date": "2006-07-01",
+    "title": "点球淘汰英格兰",
+    "titleEn": "The wink and the winner",
+    "kind": "moment",
+    "club": "Portugal",
+    "clubZh": "葡萄牙",
+    "competition": "世界杯1/4决赛",
+    "opponent": "England",
+    "venue": "Veltins-Arena",
+    "city": "Gelsenkirchen",
+    "score": "0-0（点球3-1）",
+    "summary": "世界杯1/4决赛，C罗罚入制胜点球，葡萄牙点球大战淘汰英格兰。",
+    "context": "2006年德国世界杯1/4决赛，葡萄牙与英格兰120分钟互交白卷。点球大战中，C罗最后一个出场并稳稳罚入，葡萄牙3-1晋级。比赛中鲁尼被红牌罚下，C罗眨眼的一幕引发巨大争议，也让他成为英格兰媒体口诛笔伐的对象。",
+    "why": "这是他第一次在世界杯淘汰赛承担最后一罚，也是他与英格兰足球复杂关系的开端。",
+    "tags": ["portugal", "world-cup", "england", "penalty"],
+    "featured": false,
+    "era": "manchester-1",
+    "stat": { "label": "点球", "value": "制胜" },
+    "sources": [
+      {
+        "label": "2006 FIFA World Cup knockout stage — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/2006_FIFA_World_Cup_knockout_stage"
+      }
+    ]
+  },
+  {
+    "id": "m06",
+    "slug": "ucl-2008-final",
+    "date": "2008-05-21",
+    "title": "莫斯科雨夜，首夺欧冠",
+    "titleEn": "Moscow, and the first Champions League",
+    "kind": "trophy",
+    "club": "Manchester United",
+    "clubZh": "曼联",
+    "competition": "欧冠决赛",
+    "opponent": "Chelsea",
+    "venue": "Luzhniki Stadium",
+    "city": "Moscow",
+    "score": "1-1（点球6-5）",
+    "minute": "26'",
+    "summary": "头球首开纪录，曼联在莫斯科雨夜点球击败切尔西，C罗第一次捧起欧冠奖杯。",
+    "context": "2008年5月21日，欧冠决赛在莫斯科卢日尼基球场进行。C罗第26分钟头球破门，为曼联取得领先。切尔西由兰帕德扳平，比赛进入点球大战。C罗在点球大战中罚失，但特里滑倒、范德萨扑出阿内尔卡的点球，曼联6-5取胜。",
+    "why": "这座欧冠让他集齐英超、欧冠和个人荣誉，也让2008年成为他第一次真正意义上的巅峰。",
+    "tags": ["trophy", "champions-league", "man-utd", "moscow"],
+    "featured": true,
+    "era": "manchester-1",
+    "stat": { "label": "冠军", "value": "欧冠" },
+    "sources": [
+      {
+        "label": "2008 UEFA Champions League final — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/2008_UEFA_Champions_League_final"
+      }
+    ]
+  },
+  {
+    "id": "m07",
+    "slug": "ballon-dor-2008",
+    "date": "2008-12-02",
+    "title": "第一座金球奖",
+    "titleEn": "The first Ballon d'Or",
+    "kind": "award",
+    "club": "Manchester United",
+    "clubZh": "曼联",
+    "competition": "金球奖",
+    "venue": "Paris",
+    "city": "Paris",
+    "summary": "凭借2007-08赛季的42球和欧冠冠军，C罗赢得职业生涯第一座金球奖。",
+    "context": "2008年12月2日，《法国足球》公布金球奖得主，C罗以压倒性优势当选。那个赛季他为曼联各项赛事打入42球，帮助球队夺得英超和欧冠双冠王。领奖时他说，这只是开始。",
+    "why": "从这一夜起，他正式进入梅西与C罗双雄并立的时代。",
+    "tags": ["award", "ballon-dor", "man-utd"],
+    "featured": false,
+    "era": "manchester-1",
+    "stat": { "label": "金球", "value": "第1座" },
+    "sources": [
+      {
+        "label": "2008 Ballon d'Or — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/2008_Ballon_d%27Or"
+      }
+    ]
+  },
+  {
+    "id": "m08",
+    "slug": "real-madrid-transfer",
+    "date": "2009-06-11",
+    "title": "8000万英镑，转会皇马",
+    "titleEn": "The world-record move to Madrid",
+    "kind": "moment",
+    "club": "Real Madrid",
+    "clubZh": "皇家马德里",
+    "competition": "转会",
+    "venue": "Santiago Bernabéu",
+    "city": "Madrid",
+    "summary": "曼联接受皇马8000万英镑的世界纪录报价，C罗穿上白色球衣，开启伯纳乌时代。",
+    "context": "2009年6月11日，曼联宣布接受皇家马德里对C罗8000万英镑的报价，刷新当时的世界转会费纪录。7月6日，C罗在伯纳乌正式亮相，超过8万名球迷到场。他把曼联的7号留在身后，在皇马继续选择7号。",
+    "why": "这是现代足球最具标志性的转会之一，也是C罗从英超巨星走向全球偶像的转折点。",
+    "tags": ["transfer", "real-madrid", "world-record"],
+    "featured": false,
+    "era": "madrid",
+    "stat": { "label": "转会费", "value": "£80m" },
+    "sources": [
+      {
+        "label": "Cristiano Ronaldo — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Cristiano_Ronaldo"
+      }
+    ]
+  },
+  {
+    "id": "m09",
+    "slug": "copa-del-rey-2011",
+    "date": "2011-04-20",
+    "title": "国王杯决赛，头球绝杀巴萨",
+    "titleEn": "The Copa del Rey winner",
+    "kind": "trophy",
+    "club": "Real Madrid",
+    "clubZh": "皇家马德里",
+    "competition": "国王杯决赛",
+    "opponent": "Barcelona",
+    "venue": "Mestalla",
+    "city": "Valencia",
+    "score": "1-0",
+    "minute": "103'",
+    "summary": "加时赛第103分钟头球破门，皇马1-0击败巴萨，C罗赢得皇马生涯首座重要奖杯。",
+    "context": "2011年4月20日，国王杯决赛在梅斯塔利亚球场进行。常规时间双方互交白卷，加时赛第103分钟，迪马利亚传中，C罗高高跃起头球破门。皇马1-0击败巴萨，夺得球队三年来的第一座冠军。",
+    "why": "这粒进球终结了皇马对巴萨的冠军荒，也让C罗在最重要的舞台上证明了自己。",
+    "tags": ["trophy", "copa-del-rey", "real-madrid", "barcelona"],
+    "featured": false,
+    "era": "madrid",
+    "stat": { "label": "冠军", "value": "国王杯" },
+    "sources": [
+      {
+        "label": "2011 Copa del Rey final — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/2011_Copa_del_Rey_final"
+      }
+    ]
+  },
+  {
+    "id": "m10",
+    "slug": "la-liga-100-points",
+    "date": "2012-05-13",
+    "title": "100分，西甲之王",
+    "titleEn": "A hundred points",
+    "kind": "trophy",
+    "club": "Real Madrid",
+    "clubZh": "皇家马德里",
+    "competition": "西甲",
+    "venue": "Santiago Bernabéu",
+    "city": "Madrid",
+    "summary": "皇马以创纪录的100分夺得西甲冠军，C罗单赛季联赛打入46球。",
+    "context": "2011-12赛季，皇马在穆里尼奥带领下以100分结束西甲，打破巴萨此前创造的99分纪录。C罗在联赛中打入46球，各项赛事达到60球。那个赛季的皇马快攻如风，C罗、本泽马和伊瓜因组成的三叉戟席卷西甲。",
+    "why": "这是C罗在皇马的第一座西甲冠军，也是他个人数据与团队荣誉第一次完美重合。",
+    "tags": ["trophy", "la-liga", "real-madrid", "record"],
+    "featured": false,
+    "era": "madrid",
+    "stat": { "label": "积分", "value": "100" },
+    "sources": [
+      {
+        "label": "2011-12 La Liga — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/2011%E2%80%9312_La_Liga"
+      }
+    ]
+  },
+  {
+    "id": "m11",
+    "slug": "ballon-dor-2013",
+    "date": "2014-01-13",
+    "title": "第二座金球奖，泪洒苏黎世",
+    "titleEn": "The second Ballon d'Or",
+    "kind": "award",
+    "club": "Real Madrid",
+    "clubZh": "皇家马德里",
+    "competition": "金球奖",
+    "venue": "Kongresshaus",
+    "city": "Zurich",
+    "summary": "时隔五年再夺金球奖，C罗在领奖台上激动落泪。",
+    "context": "2014年1月13日，C罗在苏黎世获得2013年金球奖，击败梅西和里贝里。领奖时他罕见地哽咽，提到家人和团队。那个赛季他刚刚从伤病中恢复，却以惊人的效率重新夺回个人荣誉。",
+    "why": "这座奖杯让他走出2009年后的低谷，重新回到世界第一人的讨论中心。",
+    "tags": ["award", "ballon-dor", "real-madrid"],
+    "featured": false,
+    "era": "madrid",
+    "stat": { "label": "金球", "value": "第2座" },
+    "sources": [
+      {
+        "label": "2013 Ballon d'Or — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/2013_Ballon_d%27Or"
+      }
+    ]
+  },
+  {
+    "id": "m12",
+    "slug": "la-decima",
+    "date": "2014-05-24",
+    "title": "第十座欧冠，里斯本圆梦",
+    "titleEn": "La Décima in Lisbon",
+    "kind": "trophy",
+    "club": "Real Madrid",
+    "clubZh": "皇家马德里",
+    "competition": "欧冠决赛",
+    "opponent": "Atlético Madrid",
+    "venue": "Estádio da Luz",
+    "city": "Lisbon",
+    "score": "4-1",
+    "minute": "120'",
+    "summary": "加时赛点球锁定胜局，皇马4-1击败马竞，夺得队史第十座欧冠。",
+    "context": "2014年欧冠决赛在里斯本光明球场进行，皇马对阵马竞。戈丁头球为马竞取得领先，拉莫斯在第93分钟头球绝平，把比赛拖入加时。加时赛中贝尔、马塞洛和C罗连入三球，C罗在最后时刻点球命中，比分定格为4-1。",
+    "why": "La Décima 是皇马等待十二年的执念，而C罗在里斯本——他职业生涯开始的地方——举起了奖杯。",
+    "tags": ["trophy", "champions-league", "real-madrid", "lisbon"],
+    "featured": false,
+    "era": "madrid",
+    "stat": { "label": "冠军", "value": "欧冠第10冠" },
+    "sources": [
+      {
+        "label": "2014 UEFA Champions League final — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/2014_UEFA_Champions_League_final"
+      }
+    ]
+  },
+  {
+    "id": "m13",
+    "slug": "five-goals-granada",
+    "date": "2015-04-05",
+    "title": "单场五球，9-1格拉纳达",
+    "titleEn": "Five goals in one night",
+    "kind": "goal",
+    "club": "Real Madrid",
+    "clubZh": "皇家马德里",
+    "competition": "西甲",
+    "opponent": "Granada",
+    "venue": "Santiago Bernabéu",
+    "city": "Madrid",
+    "score": "9-1",
+    "summary": "C罗在伯纳乌单场独中五元，皇马9-1横扫格拉纳达。",
+    "context": "2015年4月5日，皇马在伯纳乌迎战格拉纳达。C罗在比赛中打入五球，成为西甲历史上少数单场打进五球的球员之一。皇马最终9-1大胜，C罗的射门转化率和跑位在那晚达到夸张的程度。",
+    "why": "这是C罗“进球机器”属性最极端的一次展示，也是他皇马生涯火力最盛的注脚之一。",
+    "tags": ["goal", "la-liga", "real-madrid", "five-goals"],
+    "featured": false,
+    "era": "madrid",
+    "stat": { "label": "进球", "value": "5" },
+    "sources": [
+      {
+        "label": "2014-15 La Liga — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/2014%E2%80%9315_La_Liga"
+      }
+    ]
+  },
+  {
+    "id": "m14",
+    "slug": "ucl-2016-final",
+    "date": "2016-05-28",
+    "title": "米兰点球夜，再夺欧冠",
+    "titleEn": "Milan, another European crown",
+    "kind": "trophy",
+    "club": "Real Madrid",
+    "clubZh": "皇家马德里",
+    "competition": "欧冠决赛",
+    "opponent": "Atlético Madrid",
+    "venue": "San Siro",
+    "city": "Milan",
+    "score": "1-1（点球5-4）",
+    "summary": "欧冠决赛点球大战，C罗最后一罚命中，皇马5-4击败马竞。",
+    "context": "2016年欧冠决赛在米兰圣西罗进行，皇马与马竞1-1战平。点球大战前四轮双方战成3-3，第五轮C罗顶住压力罚入，皇马5-4取胜，夺得队史第十一座欧冠。",
+    "why": "这是C罗第一次在欧冠决赛点球大战中罚入制胜球，也是皇马三连冠的起点。",
+    "tags": ["trophy", "champions-league", "real-madrid", "penalty"],
+    "featured": false,
+    "era": "madrid",
+    "stat": { "label": "点球", "value": "制胜" },
+    "sources": [
+      {
+        "label": "2016 UEFA Champions League final — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/2016_UEFA_Champions_League_final"
+      }
+    ]
+  },
+  {
+    "id": "m15",
+    "slug": "euro-2016",
+    "date": "2016-07-10",
+    "title": "欧洲杯，葡萄牙的夏天",
+    "titleEn": "The summer Portugal waited for",
+    "kind": "trophy",
+    "club": "Portugal",
+    "clubZh": "葡萄牙",
+    "competition": "欧洲杯决赛",
+    "opponent": "France",
+    "venue": "Stade de France",
+    "city": "Saint-Denis",
+    "score": "1-0",
+    "summary": "C罗受伤离场后在边线指挥，葡萄牙加时1-0击败法国，首夺欧洲杯。",
+    "context": "2016年7月10日，欧洲杯决赛在法兰西大球场进行。C罗在上半场因伤被换下，泪流满面。但他在加时赛中回到场边，像教练一样鼓励队友。第109分钟，埃德尔远射破门，葡萄牙1-0击败法国，夺得队史第一座大赛冠军。",
+    "why": "这是葡萄牙足球最重要的夜晚，也是C罗国家队生涯的第一座大赛奖杯。",
+    "tags": ["trophy", "portugal", "euro", "france"],
+    "featured": true,
+    "era": "madrid",
+    "stat": { "label": "冠军", "value": "欧洲杯" },
+    "sources": [
+      {
+        "label": "UEFA Euro 2016 final — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/UEFA_Euro_2016_final"
+      }
+    ]
+  },
+  {
+    "id": "m16",
+    "slug": "ucl-2017-final",
+    "date": "2017-06-03",
+    "title": "加的夫梅开二度，欧冠卫冕",
+    "titleEn": "Back-to-back in Cardiff",
+    "kind": "trophy",
+    "club": "Real Madrid",
+    "clubZh": "皇家马德里",
+    "competition": "欧冠决赛",
+    "opponent": "Juventus",
+    "venue": "Millennium Stadium",
+    "city": "Cardiff",
+    "score": "4-1",
+    "summary": "欧冠决赛梅开二度，皇马4-1击败尤文，成为欧冠改制后首支卫冕球队。",
+    "context": "2017年欧冠决赛在加的夫千禧球场进行，皇马对阵尤文。C罗在第20分钟和第64分钟各入一球，皇马最终4-1取胜，成为欧冠改制后第一支成功卫冕的球队。C罗以12球蝉联欧冠金靴。",
+    "why": "这场比赛让皇马从“十年一冠”变成“王朝”，也让C罗的欧冠统治力达到顶峰。",
+    "tags": ["trophy", "champions-league", "real-madrid", "juventus"],
+    "featured": false,
+    "era": "madrid",
+    "stat": { "label": "进球", "value": "2" },
+    "sources": [
+      {
+        "label": "2017 UEFA Champions League final — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/2017_UEFA_Champions_League_final"
+      }
+    ]
+  },
+  {
+    "id": "m17",
+    "slug": "bicycle-kick-turin",
+    "date": "2018-04-03",
+    "title": "都灵倒钩，全场起立",
+    "titleEn": "The bicycle kick in Turin",
+    "kind": "goal",
+    "club": "Real Madrid",
+    "clubZh": "皇家马德里",
+    "competition": "欧冠1/4决赛",
+    "opponent": "Juventus",
+    "venue": "Allianz Stadium",
+    "city": "Turin",
+    "score": "3-0",
+    "minute": "64'",
+    "summary": "一记惊天倒钩攻破布冯把守的球门，都灵主场球迷起立鼓掌。",
+    "context": "2018年4月3日，欧冠1/4决赛首回合，皇马客场对阵尤文。第64分钟，卡瓦哈尔传中，C罗在禁区边缘腾空倒钩，皮球直挂死角。布冯毫无反应，都灵安联球场的尤文球迷也为这粒进球起立鼓掌。",
+    "why": "这是C罗职业生涯最具观赏性的进球之一，也是对手球迷为他鼓掌的罕见时刻。",
+    "tags": ["goal", "champions-league", "real-madrid", "juventus", "bicycle-kick"],
+    "featured": false,
+    "era": "madrid",
+    "stat": { "label": "进球方式", "value": "倒钩" },
+    "sources": [
+      {
+        "label": "2017-18 UEFA Champions League — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/2017%E2%80%9318_UEFA_Champions_League"
+      }
+    ]
+  },
+  {
+    "id": "m18",
+    "slug": "world-cup-hat-trick-spain",
+    "date": "2018-06-15",
+    "title": "世界杯帽子戏法，绝平西班牙",
+    "titleEn": "The hat-trick against Spain",
+    "kind": "goal",
+    "club": "Portugal",
+    "clubZh": "葡萄牙",
+    "competition": "世界杯小组赛",
+    "opponent": "Spain",
+    "venue": "Fisht Olympic Stadium",
+    "city": "Sochi",
+    "score": "3-3",
+    "minute": "88'",
+    "summary": "对阵西班牙上演帽子戏法，第88分钟任意球绝平，3-3。",
+    "context": "2018年世界杯小组赛，葡萄牙对阵西班牙。C罗先是在第4分钟造点并罚入，随后远射造成德赫亚失误，又在第88分钟用一记电梯任意球完成帽子戏法，把比分定格为3-3。这是他世界杯生涯最经典的一战。",
+    "why": "一个人对抗整支西班牙，这场比赛几乎浓缩了C罗的所有武器：点球、远射、任意球和不服输。",
+    "tags": ["goal", "portugal", "world-cup", "spain", "hat-trick"],
+    "featured": true,
+    "era": "madrid",
+    "stat": { "label": "进球", "value": "3" },
+    "sources": [
+      {
+        "label": "2018 FIFA World Cup Group B — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/2018_FIFA_World_Cup_Group_B"
+      }
+    ]
+  },
+  {
+    "id": "m19",
+    "slug": "juventus-transfer",
+    "date": "2018-07-10",
+    "title": "告别伯纳乌，前往都灵",
+    "titleEn": "Arrivederci, Madrid",
+    "kind": "moment",
+    "club": "Juventus",
+    "clubZh": "尤文图斯",
+    "competition": "转会",
+    "venue": "Allianz Stadium",
+    "city": "Turin",
+    "summary": "皇马宣布C罗转会尤文图斯，九年伯纳乌生涯定格在438场450球。",
+    "context": "2018年7月10日，皇马官方宣布C罗转会尤文图斯，转会费约1亿欧元。九年间，他为皇马出场438次，打入450球，赢得4座欧冠、2座西甲、2座国王杯等荣誉。尤文希望他能带来等待多年的欧冠。",
+    "why": "这是C罗离开舒适区的又一次选择，也是皇马一个时代的结束。",
+    "tags": ["transfer", "juventus", "real-madrid"],
+    "featured": false,
+    "era": "turin",
+    "stat": { "label": "皇马进球", "value": "450" },
+    "sources": [
+      {
+        "label": "Cristiano Ronaldo — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Cristiano_Ronaldo"
+      }
+    ]
+  },
+  {
+    "id": "m20",
+    "slug": "atletico-comeback",
+    "date": "2019-03-12",
+    "title": "都灵之夜，帽子戏法逆转马竞",
+    "titleEn": "The comeback against Atlético",
+    "kind": "goal",
+    "club": "Juventus",
+    "clubZh": "尤文图斯",
+    "competition": "欧冠1/8决赛",
+    "opponent": "Atlético Madrid",
+    "venue": "Allianz Stadium",
+    "city": "Turin",
+    "score": "3-0",
+    "summary": "首回合0-2落后，次回合C罗帽子戏法，尤文3-0逆转马竞。",
+    "context": "2019年欧冠1/8决赛首回合，尤文客场0-2负于马竞。次回合回到都灵，C罗在第27分钟头球破门，第49分钟再次头球得手，第86分钟点球命中，完成帽子戏法。尤文3-0取胜，总比分3-2逆转晋级。",
+    "why": "这是C罗欧冠生涯最经典的逆转之一，也让尤文球迷第一次真正感受到他的“欧冠DNA”。",
+    "tags": ["goal", "champions-league", "juventus", "atletico", "comeback"],
+    "featured": false,
+    "era": "turin",
+    "stat": { "label": "进球", "value": "3" },
+    "sources": [
+      {
+        "label": "2018-19 UEFA Champions League knockout phase — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/2018%E2%80%9319_UEFA_Champions_League_knockout_phase"
+      }
+    ]
+  },
+  {
+    "id": "m21",
+    "slug": "100-international-goals",
+    "date": "2020-09-08",
+    "title": "国家队100球",
+    "titleEn": "A hundred for Portugal",
+    "kind": "goal",
+    "club": "Portugal",
+    "clubZh": "葡萄牙",
+    "competition": "欧国联",
+    "opponent": "Sweden",
+    "venue": "Friends Arena",
+    "city": "Solna",
+    "score": "2-0",
+    "summary": "对阵瑞典梅开二度，C罗成为首位为国家队打入100球的欧洲球员。",
+    "context": "2020年9月8日，欧国联葡萄牙客场对阵瑞典。C罗在比赛中打入两球，国家队进球数达到100球，成为首位达成这一里程碑的欧洲球员。他距离阿里·代伊的世界纪录又近了一步。",
+    "why": "从2004年欧洲杯的眼泪，到100球，他把国家队生涯变成了一条不断刷新上限的曲线。",
+    "tags": ["goal", "portugal", "nations-league", "record"],
+    "featured": false,
+    "era": "turin",
+    "stat": { "label": "国家队进球", "value": "100" },
+    "sources": [
+      {
+        "label": "2020-21 UEFA Nations League — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/2020%E2%80%9321_UEFA_Nations_League"
+      }
+    ]
+  },
+  {
+    "id": "m22",
+    "slug": "return-old-trafford",
+    "date": "2021-09-11",
+    "title": "回家，首秀梅开二度",
+    "titleEn": "The return to Old Trafford",
+    "kind": "goal",
+    "club": "Manchester United",
+    "clubZh": "曼联",
+    "competition": "英超",
+    "opponent": "Newcastle United",
+    "venue": "Old Trafford",
+    "city": "Manchester",
+    "score": "4-1",
+    "summary": "回归曼联首秀，C罗梅开二度，老特拉福德再次为他沸腾。",
+    "context": "2021年夏天，C罗时隔12年重返曼联。9月11日对阵纽卡斯尔，他首发出场。上半场补时阶段，他补射破门；下半场又用一脚低射完成梅开二度。曼联4-1取胜，老特拉福德全场高唱他的名字。",
+    "why": "这是足球世界里最浪漫的“回家”剧本之一，也是C罗与曼联故事的最后一章高光。",
+    "tags": ["goal", "man-utd", "premier-league", "return"],
+    "featured": true,
+    "era": "manchester-2",
+    "stat": { "label": "进球", "value": "2" },
+    "sources": [
+      {
+        "label": "2021-22 Manchester United season — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/2021%E2%80%9322_Manchester_United_F.C._season"
+      }
+    ]
+  },
+  {
+    "id": "m23",
+    "slug": "five-world-cups",
+    "date": "2022-11-24",
+    "title": "五届世界杯，五届进球",
+    "titleEn": "Five World Cups, five goals",
+    "kind": "goal",
+    "club": "Portugal",
+    "clubZh": "葡萄牙",
+    "competition": "世界杯小组赛",
+    "opponent": "Ghana",
+    "venue": "Stadium 974",
+    "city": "Doha",
+    "score": "3-2",
+    "minute": "65'",
+    "summary": "点球破门，C罗成为首位在五届世界杯都有进球的球员。",
+    "context": "2022年卡塔尔世界杯小组赛，葡萄牙对阵加纳。C罗在第65分钟罚入点球，成为历史上第一位在五届世界杯都有进球的球员。葡萄牙最终3-2取胜，但他在淘汰赛阶段逐渐失去首发位置。",
+    "why": "这项纪录把“longevity”写进了世界杯历史，也提醒人们他横跨了整整五个时代。",
+    "tags": ["goal", "portugal", "world-cup", "record"],
+    "featured": false,
+    "era": "riyadh",
+    "stat": { "label": "纪录", "value": "5届世界杯" },
+    "sources": [
+      {
+        "label": "2022 FIFA World Cup Group H — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/2022_FIFA_World_Cup_Group_H"
+      }
+    ]
+  },
+  {
+    "id": "m24",
+    "slug": "al-nassr",
+    "date": "2022-12-30",
+    "title": "加盟利雅得胜利",
+    "titleEn": "A new chapter in Riyadh",
+    "kind": "moment",
+    "club": "Al Nassr",
+    "clubZh": "利雅得胜利",
+    "competition": "转会",
+    "venue": "Mrsool Park",
+    "city": "Riyadh",
+    "summary": "C罗加盟沙特球队利雅得胜利，开启职业生涯的亚洲篇章。",
+    "context": "2022年12月30日，利雅得胜利宣布C罗加盟，合同为期两年半。这是沙特联赛历史上最具影响力的签约之一，也让整个联赛的关注度迅速上升。C罗在亮相仪式上表示，他的目标不只是进球，还有帮助沙特足球成长。",
+    "why": "这次转会改变了外界对沙特联赛的认知，也为C罗的职业生涯打开了完全不同的下半场。",
+    "tags": ["transfer", "al-nassr", "saudi-arabia"],
+    "featured": false,
+    "era": "riyadh",
+    "stat": { "label": "联赛", "value": "沙特职业联赛" },
+    "sources": [
+      {
+        "label": "Al Nassr FC — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Al_Nassr_FC"
+      }
+    ]
+  },
+  {
+    "id": "m25",
+    "slug": "900-goals",
+    "date": "2024-09-05",
+    "title": "第900球",
+    "titleEn": "Goal number 900",
+    "kind": "goal",
+    "club": "Portugal",
+    "clubZh": "葡萄牙",
+    "competition": "欧国联",
+    "opponent": "Croatia",
+    "venue": "Estádio da Luz",
+    "city": "Lisbon",
+    "score": "2-1",
+    "summary": "对阵克罗地亚破门，C罗成为足坛历史上首位打进900球的球员。",
+    "context": "2024年9月5日，欧国联葡萄牙对阵克罗地亚。C罗在第34分钟接门德斯传中破门，打进职业生涯第900球。比赛在里斯本光明球场进行——20年前，他曾在这里输掉欧洲杯决赛。",
+    "why": "900球不只是一个数字，它把二十多年的巅峰、伤病、转会和自律压缩进了同一个瞬间。",
+    "tags": ["goal", "portugal", "nations-league", "900"],
+    "featured": true,
+    "era": "riyadh",
+    "stat": { "label": "进球", "value": "900" },
+    "sources": [
+      {
+        "label": "Ronaldo nets 900th career goal — ABC News",
+        "url": "https://www.abc.net.au/news/2024-09-06/football-san-marino-win-cristiano-ronaldo-900th-career-goal/104318750"
+      }
+    ]
+  },
+  {
+    "id": "m26",
+    "slug": "nations-league-2025",
+    "date": "2025-06-08",
+    "title": "欧国联冠军，国家队第二冠",
+    "titleEn": "Nations League, again",
+    "kind": "trophy",
+    "club": "Portugal",
+    "clubZh": "葡萄牙",
+    "competition": "欧国联决赛",
+    "opponent": "Spain",
+    "venue": "Munich Football Arena",
+    "city": "Munich",
+    "score": "2-2（点球5-3）",
+    "summary": "决赛破门，葡萄牙点球击败西班牙，第二次夺得欧国联冠军。",
+    "context": "2025年6月8日，欧国联决赛在慕尼黑进行，葡萄牙对阵西班牙。双方2-2战平，C罗在比赛中破门。点球大战葡萄牙5-3取胜，继2019年后第二次夺得欧国联冠军。",
+    "why": "在40岁的年纪，他仍然能在国家队决赛里进球并举起奖杯，这就是他职业生涯最固执的注脚。",
+    "tags": ["trophy", "portugal", "nations-league", "spain"],
+    "featured": true,
+    "era": "riyadh",
+    "stat": { "label": "冠军", "value": "欧国联" },
+    "sources": [
+      {
+        "label": "2025 UEFA Nations League finals — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/2025_UEFA_Nations_League_finals"
+      }
+    ]
+  }
+]

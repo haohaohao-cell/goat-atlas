@@ -1,0 +1,84 @@
+{
+  "id": "cristiano-ronaldo",
+  "name": "Cristiano Ronaldo",
+  "nameZh": "克里斯蒂亚诺·罗纳尔多",
+  "shortName": "C罗",
+  "nickname": "CR7",
+  "tagline": "从马德拉到世界之巅",
+  "intro": "从马德拉岛的少年，到五座金球、五座欧冠、一座欧洲杯。这里不是又一个致敬页，而是一张可以检索、可以追溯、可以分享的职业生涯地图。",
+  "birthDate": "1985-02-05",
+  "birthPlace": "Funchal, Madeira, Portugal",
+  "position": "前锋",
+  "clubs": [
+    { "name": "Sporting CP", "nameZh": "葡萄牙体育", "years": "2002—2003" },
+    { "name": "Manchester United", "nameZh": "曼联", "years": "2003—2009" },
+    { "name": "Real Madrid", "nameZh": "皇家马德里", "years": "2009—2018" },
+    { "name": "Juventus", "nameZh": "尤文图斯", "years": "2018—2021" },
+    { "name": "Manchester United", "nameZh": "曼联", "years": "2021—2022" },
+    { "name": "Al Nassr", "nameZh": "利雅得胜利", "years": "2023—" }
+  ],
+  "honours": [
+    "5× 金球奖",
+    "5× 欧冠冠军",
+    "1× 欧洲杯冠军",
+    "2× 欧国联冠军",
+    "7× 联赛冠军",
+    "4× 欧洲金靴"
+  ],
+  "eras": [
+    {
+      "id": "lisbon",
+      "index": "01",
+      "label": "Lisbon",
+      "name": "里斯本",
+      "range": "2002—2003",
+      "club": "Sporting CP",
+      "description": "马德拉少年进入葡萄牙体育青训，用一场对阵曼联的友谊赛敲开豪门大门。"
+    },
+    {
+      "id": "manchester-1",
+      "index": "02",
+      "label": "Manchester",
+      "name": "梦剧场",
+      "range": "2003—2009",
+      "club": "Manchester United",
+      "description": "从踩单车的少年到金球先生，他在弗格森手下完成了第一次进化。"
+    },
+    {
+      "id": "madrid",
+      "index": "03",
+      "label": "Madrid",
+      "name": "伯纳乌",
+      "range": "2009—2018",
+      "club": "Real Madrid",
+      "description": "438场450球，四座欧冠，无数逆转。白衣七年，他把进球变成了日常。"
+    },
+    {
+      "id": "turin",
+      "index": "04",
+      "label": "Turin",
+      "name": "都灵",
+      "range": "2018—2021",
+      "club": "Juventus",
+      "description": "离开舒适区，挑战意甲。对马竞的帽子戏法，证明他仍然为大场面而生。"
+    },
+    {
+      "id": "manchester-2",
+      "index": "05",
+      "label": "Return",
+      "name": "回家",
+      "range": "2021—2022",
+      "club": "Manchester United",
+      "description": "十二年后重返老特拉福德，首秀梅开二度，为这段故事写下最后的浪漫。"
+    },
+    {
+      "id": "riyadh",
+      "index": "06",
+      "label": "Riyadh",
+      "name": "利雅得与远方",
+      "range": "2022—2025",
+      "club": "Al Nassr / Portugal",
+      "description": "世界杯五届进球、900球里程碑、欧国联冠军。40岁之后，他仍在刷新纪录。"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+export type MomentKind = "goal" | "trophy" | "award" | "debut" | "moment";
+
+export interface Source {
+  label: string;
+  url: string;
+}
+
+export interface MomentStat {
+  label: string;
+  value: string;
+}
+
+export interface Moment {
+  id: string;
+  slug: string;
+  date: string;
+  title: string;
+  titleEn: string;
+  kind: MomentKind;
+  club: string;
+  clubZh: string;
+  competition: string;
+  opponent?: string;
+  venue?: string;
+  city?: string;
+  score?: string;
+  minute?: string;
+  summary: string;
+  context: string;
+  why: string;
+  tags: string[];
+  featured: boolean;
+  era: string;
+  stat?: MomentStat;
+  sources: Source[];
+}
+
+export interface Era {
+  id: string;
+  index: string;
+  label: string;
+  name: string;
+  range: string;
+  club: string;
+  description: string;
+}
+
+export interface Club {
+  name: string;
+  nameZh: string;
+  years: string;
+}
+
+export interface Player {
+  id: string;
+  name: string;
+  nameZh: string;
+  shortName: string;
+  nickname: string;
+  tagline: string;
+  intro: string;
+  birthDate: string;
+  birthPlace: string;
+  position: string;
+  clubs: Club[];
+  honours: string[];
+  eras: Era[];
+}
+
+export interface AtlasStats {
+  moments: number;
+  eras: number;
+  sources: number;
+  clubs: number;
+  goalMoments: number;
+  yearStart: number;
+  yearEnd: number;
+}
+
+export interface EraWithMoments extends Era {
+  moments: Moment[];
+}
