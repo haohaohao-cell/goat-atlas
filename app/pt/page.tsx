@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     absolute: "GOAT Atlas | Atlas da carreira de Cristiano Ronaldo",
   },
   description:
-    "Um atlas aberto e com fontes sobre a carreira de Cristiano Ronaldo: 76 momentos, seis capítulos, dados ao vivo e lembretes de jogos.",
+    "Um atlas aberto e com fontes sobre a carreira de Cristiano Ronaldo: 86 momentos, seis capítulos, dados ao vivo e lembretes de jogos.",
   alternates: {
     canonical: absoluteUrl("/pt/"),
     languages: {
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     siteName: "GOAT Atlas",
     title: "GOAT Atlas | Atlas da carreira de Cristiano Ronaldo",
     description:
-      "Um atlas aberto e com fontes sobre a carreira de Cristiano Ronaldo: 76 momentos, seis capítulos, dados ao vivo e lembretes de jogos.",
+      "Um atlas aberto e com fontes sobre a carreira de Cristiano Ronaldo: 86 momentos, seis capítulos, dados ao vivo e lembretes de jogos.",
     images: [{ url: absoluteUrl("/og.png"), width: 1200, height: 630 }],
   },
   twitter: {

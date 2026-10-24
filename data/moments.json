@@ -2743,5 +2743,358 @@
         "url": "https://en.wikipedia.org/wiki/2022_FIFA_World_Cup_knockout_stage"
       }
     ]
+  },
+  {
+    "id": "m77",
+    "slug": "al-nassr-debut-2023",
+    "date": "2023-01-22",
+    "title": "Al Nassr 首秀",
+    "titleEn": "The Saudi debut",
+    "kind": "debut",
+    "club": "Al Nassr",
+    "clubZh": "利雅得胜利",
+    "competition": "沙特联赛",
+    "opponent": "Al-Ettifaq",
+    "venue": "Mrsool Park",
+    "city": "Riyadh",
+    "score": "1-0",
+    "summary": "C罗迎来 Al Nassr 首秀，球队1-0击败 Al-Ettifaq。",
+    "context": "2023年1月22日，C罗在利雅得迎来 Al Nassr 生涯首场正式比赛。虽然他没有进球，但每一次触球都让主场沸腾。Al Nassr 1-0取胜，沙特联赛从此进入“C罗时代”。",
+    "why": "这是欧洲之外最大牌球星的一次落地。首秀没有进球，但关注度、转播和防守强度都从此改变。",
+    "tags": [
+      "debut",
+      "al-nassr",
+      "saudi-pro-league"
+    ],
+    "featured": false,
+    "era": "riyadh",
+    "stat": {
+      "label": "首秀",
+      "value": "Al Nassr"
+    },
+    "sources": [
+      {
+        "label": "Ronaldo makes Al Nassr debut — BBC",
+        "url": "https://www.bbc.com/sport/football/64368434"
+      }
+    ]
+  },
+  {
+    "id": "m78",
+    "slug": "first-al-nassr-goal-2023",
+    "date": "2023-02-03",
+    "title": "Al Nassr 首球",
+    "titleEn": "The first Saudi goal",
+    "kind": "goal",
+    "club": "Al Nassr",
+    "clubZh": "利雅得胜利",
+    "competition": "沙特联赛",
+    "opponent": "Al-Fateh",
+    "venue": "Prince Abdullah bin Jalawi Stadium",
+    "city": "Al-Hasa",
+    "score": "2-2",
+    "summary": "对阵 Al-Fateh，C罗补时点球破门，打进 Al Nassr 生涯首球。",
+    "context": "2023年2月3日，Al Nassr 客场对阵 Al-Fateh。比赛尾声，C罗顶住压力罚入点球，帮助球队2-2战平对手。这是他为 Al Nassr 打进的第一球，也是沙特生涯真正的起点。",
+    "why": "首秀之后，首球来得并不轻松。一个补时点球，把“他还能不能进球”的疑问暂时按了下去。",
+    "tags": [
+      "goal",
+      "al-nassr",
+      "saudi-pro-league",
+      "first"
+    ],
+    "featured": false,
+    "era": "riyadh",
+    "stat": {
+      "label": "首球",
+      "value": "Al Nassr"
+    },
+    "sources": [
+      {
+        "label": "Ronaldo opens Al Nassr account — RTÉ",
+        "url": "https://www.rte.ie/sport/soccer/2023/0204/1353749-ronaldo-opens-his-account-for-al-nassr/"
+      }
+    ]
+  },
+  {
+    "id": "m79",
+    "slug": "arab-club-cup-2023",
+    "date": "2023-08-12",
+    "title": "阿拉伯俱乐部冠军杯",
+    "titleEn": "The first trophy in Saudi Arabia",
+    "kind": "trophy",
+    "club": "Al Nassr",
+    "clubZh": "利雅得胜利",
+    "competition": "阿拉伯俱乐部冠军杯决赛",
+    "opponent": "Al-Hilal",
+    "venue": "King Fahd Sports City Stadium",
+    "city": "Taif",
+    "score": "2-1（加时）",
+    "summary": "决赛梅开二度，C罗帮助 Al Nassr 加时2-1击败 Al-Hilal，夺得沙特生涯首冠。",
+    "context": "2023年8月12日，阿拉伯俱乐部冠军杯决赛，Al Nassr 对阵同城对手 Al-Hilal。C罗打进两球，包括加时赛的制胜球，Al Nassr 2-1取胜。这是C罗在沙特的第一座冠军奖杯。",
+    "why": "从首秀到首冠，只用了不到七个月。这个奖杯不是欧洲级别的荣誉，却是C罗沙特篇章真正的开场。",
+    "tags": [
+      "trophy",
+      "al-nassr",
+      "arab-club-cup",
+      "al-hilal"
+    ],
+    "featured": false,
+    "era": "riyadh",
+    "stat": {
+      "label": "冠军",
+      "value": "阿拉伯冠军杯"
+    },
+    "sources": [
+      {
+        "label": "Ronaldo wins first Al Nassr title — Azertag",
+        "url": "https://azertag.az/en/xeber/Ronaldo_wins_first_title_at_Al_Nassr_with_brace_in_Arab_Club_Champions_Cup_final-2727610"
+      }
+    ]
+  },
+  {
+    "id": "m80",
+    "slug": "portugal-poland-2024",
+    "date": "2024-11-15",
+    "title": "国家队胜场纪录",
+    "titleEn": "The most international wins",
+    "kind": "goal",
+    "club": "Portugal",
+    "clubZh": "葡萄牙",
+    "competition": "欧国联",
+    "opponent": "Poland",
+    "venue": "Estádio do Dragão",
+    "city": "Porto",
+    "score": "5-1",
+    "summary": "欧国联5-1波兰，C罗梅开二度，成为国家队历史胜场最多的球员。",
+    "context": "2024年11月15日，葡萄牙在波尔图5-1击败波兰。C罗打进两球，包括一记倒钩。凭借这场胜利，他超越塞尔吉奥·拉莫斯，成为国家队历史上获胜场次最多的球员。",
+    "why": "国家队的纪录不只是进球，还有赢球。C罗把“最多胜场”也收进了自己的名字下面。",
+    "tags": [
+      "goal",
+      "portugal",
+      "nations-league",
+      "poland",
+      "record"
+    ],
+    "featured": false,
+    "era": "riyadh",
+    "stat": {
+      "label": "纪录",
+      "value": "国家队胜场"
+    },
+    "sources": [
+      {
+        "label": "Portugal 5-1 Poland — Sports Mole",
+        "url": "https://www.sportsmole.co.uk/football/portugal/uefa-nations-league/news/still-rewriting-history-ronaldo-breaks-international-record-in-portugal-win_558229.html"
+      }
+    ]
+  },
+  {
+    "id": "m81",
+    "slug": "700-club-wins-2025",
+    "date": "2025-01-30",
+    "title": "700 场俱乐部胜利",
+    "titleEn": "Seven hundred club wins",
+    "kind": "goal",
+    "club": "Al Nassr",
+    "clubZh": "利雅得胜利",
+    "competition": "沙特联赛",
+    "opponent": "Al Raed",
+    "venue": "King Abdullah Sport City Stadium",
+    "city": "Buraidah",
+    "score": "2-1",
+    "summary": "客场2-1 Al Raed，C罗打进一球，成为首位达成700场俱乐部胜利的球员。",
+    "context": "2025年1月30日，Al Nassr 客场2-1击败 Al Raed。C罗在比赛中进球，同时达成职业生涯第700场俱乐部胜利，成为历史上第一位做到这一点的球员。",
+    "why": "700场胜利横跨 Sporting、曼联、皇马、尤文和 Al Nassr。它比单个进球更能说明职业生涯的长度。",
+    "tags": [
+      "goal",
+      "al-nassr",
+      "saudi-pro-league",
+      "record"
+    ],
+    "featured": false,
+    "era": "riyadh",
+    "stat": {
+      "label": "纪录",
+      "value": "700胜"
+    },
+    "sources": [
+      {
+        "label": "Ronaldo reaches 700 club wins — TBS News",
+        "url": "https://www.tbsnews.net/sports/ronaldo-becomes-first-player-reach-700-club-victories-1057216"
+      }
+    ]
+  },
+  {
+    "id": "m82",
+    "slug": "100th-al-nassr-goal-2025",
+    "date": "2025-08-23",
+    "title": "Al Nassr 第100球",
+    "titleEn": "One hundred for Al Nassr",
+    "kind": "goal",
+    "club": "Al Nassr",
+    "clubZh": "利雅得胜利",
+    "competition": "沙特超级杯决赛",
+    "opponent": "Al-Ahli",
+    "summary": "C罗罚入点球，打进 Al Nassr 生涯第100球，成为首位为四家俱乐部打进100球的球员。",
+    "context": "2025年8月23日，沙特超级杯决赛，Al Nassr 对阵 Al-Ahli。C罗罚入点球，打进自己为 Al Nassr 的第100球，成为历史上首位为四家不同俱乐部打进100球的球员。Al-Ahli 最终点球获胜，但这一夜属于C罗的里程碑。",
+    "why": "Sporting、曼联、皇马、Al Nassr——四个俱乐部，四个100球。这个纪录把“在不同联赛都能进球”变成了硬指标。",
+    "tags": [
+      "goal",
+      "al-nassr",
+      "saudi-super-cup",
+      "100"
+    ],
+    "featured": false,
+    "era": "riyadh",
+    "stat": {
+      "label": "纪录",
+      "value": "四队100球"
+    },
+    "sources": [
+      {
+        "label": "Ronaldo's 100 Al Nassr goals — Olympics.com",
+        "url": "https://www.olympics.com/en/news/cristiano-ronaldo-al-nassr-fc-club-total-goals"
+      }
+    ]
+  },
+  {
+    "id": "m83",
+    "slug": "saudi-league-title-2026",
+    "date": "2026-05-21",
+    "title": "沙特联赛冠军",
+    "titleEn": "The Saudi league title",
+    "kind": "trophy",
+    "club": "Al Nassr",
+    "clubZh": "利雅得胜利",
+    "competition": "沙特联赛",
+    "opponent": "Damac",
+    "venue": "Al-Awwal Park",
+    "city": "Riyadh",
+    "score": "4-1",
+    "summary": "C罗梅开二度，Al Nassr 4-1击败 Damac，夺得2025-26沙特联赛冠军。",
+    "context": "2026年5月21日，沙特联赛最后一轮，Al Nassr 主场对阵 Damac。C罗梅开二度，帮助球队取胜并锁定2025-26赛季联赛冠军。这是 Al Nassr 七年来的第一座沙特联赛冠军，也是C罗沙特生涯最重要的团队荣誉。",
+    "why": "从“来沙特养老”的质疑，到举起联赛冠军，C罗用三个赛季把 Al Nassr 重新带回顶点。",
+    "tags": [
+      "trophy",
+      "al-nassr",
+      "saudi-pro-league",
+      "title"
+    ],
+    "featured": false,
+    "era": "riyadh",
+    "stat": {
+      "label": "冠军",
+      "value": "沙特联赛"
+    },
+    "sources": [
+      {
+        "label": "Ronaldo lifts Saudi league title — Saudi Gazette",
+        "url": "https://saudigazette.com.sa/article/661519/sports/cristiano-ronaldo-leads-al-nassr-to-first-saudi-title-in-seven-years"
+      }
+    ]
+  },
+  {
+    "id": "m84",
+    "slug": "world-cup-uzbekistan-2026",
+    "date": "2026-06-23",
+    "title": "六届世界杯，六届进球",
+    "titleEn": "Six World Cups, six tournaments scored in",
+    "kind": "goal",
+    "club": "Portugal",
+    "clubZh": "葡萄牙",
+    "competition": "世界杯小组赛",
+    "opponent": "Uzbekistan",
+    "score": "5-0",
+    "summary": "世界杯5-0乌兹别克斯坦，C罗梅开二度，成为首位在六届世界杯进球的球员。",
+    "context": "2026年6月23日，世界杯小组赛，葡萄牙5-0击败乌兹别克斯坦。C罗打进两球，成为历史上第一位在六届世界杯都有进球的球员，同时超越尤西比奥，成为葡萄牙世界杯历史射手王。",
+    "why": "从2006到2026，六届世界杯，六次进球。这个纪录把职业生涯的长度拉到了别人无法复制的位置。",
+    "tags": [
+      "goal",
+      "portugal",
+      "world-cup",
+      "uzbekistan",
+      "record"
+    ],
+    "featured": false,
+    "era": "riyadh",
+    "stat": {
+      "label": "纪录",
+      "value": "六届世界杯"
+    },
+    "sources": [
+      {
+        "label": "Ronaldo scores in six World Cups — AP",
+        "url": "https://apnews.com/article/ronaldo-world-cup-score-b511151c5a78afb738e8249c07d30aef"
+      }
+    ]
+  },
+  {
+    "id": "m85",
+    "slug": "world-cup-croatia-2026",
+    "date": "2026-07-02",
+    "title": "世界杯淘汰赛首球",
+    "titleEn": "The first knockout goal",
+    "kind": "goal",
+    "club": "Portugal",
+    "clubZh": "葡萄牙",
+    "competition": "世界杯1/16决赛",
+    "opponent": "Croatia",
+    "score": "2-1",
+    "summary": "世界杯1/16决赛，C罗点球破门，葡萄牙2-1淘汰克罗地亚。",
+    "context": "2026年7月2日，世界杯1/16决赛，葡萄牙对阵克罗地亚。C罗罚入点球，打进自己世界杯淘汰赛阶段的第一球。葡萄牙2-1取胜，晋级16强。",
+    "why": "世界杯淘汰赛进球，是C罗荣誉簿里长期缺失的一格。41岁的他终于把它补上了。",
+    "tags": [
+      "goal",
+      "portugal",
+      "world-cup",
+      "croatia"
+    ],
+    "featured": false,
+    "era": "riyadh",
+    "stat": {
+      "label": "进球",
+      "value": "1"
+    },
+    "sources": [
+      {
+        "label": "Portugal 2-1 Croatia — ESPN",
+        "url": "https://www.espn.com/soccer/story/_/id/49253213/portugal-ronaldo-survive-late-scare-croatia-world-cup"
+      }
+    ]
+  },
+  {
+    "id": "m86",
+    "slug": "world-cup-spain-2026",
+    "date": "2026-07-06",
+    "title": "世界杯，0-1 西班牙",
+    "titleEn": "The last World Cup night",
+    "kind": "moment",
+    "club": "Portugal",
+    "clubZh": "葡萄牙",
+    "competition": "世界杯1/8决赛",
+    "opponent": "Spain",
+    "score": "0-1",
+    "summary": "世界杯1/8决赛，葡萄牙0-1西班牙出局，梅里诺补时绝杀。",
+    "context": "2026年7月6日，世界杯1/8决赛，葡萄牙对阵西班牙。双方僵持到补时，梅里诺打进绝杀球，葡萄牙0-1出局。C罗没能改写比分，世界杯故事再次停在淘汰赛。",
+    "why": "这可能是C罗最后一届世界杯。六届世界杯、无数纪录，最后仍以一场0-1结束。",
+    "tags": [
+      "moment",
+      "portugal",
+      "world-cup",
+      "spain",
+      "heartbreak"
+    ],
+    "featured": false,
+    "era": "riyadh",
+    "stat": {
+      "label": "结果",
+      "value": "16强"
+    },
+    "sources": [
+      {
+        "label": "Portugal 0-1 Spain — FIFA",
+        "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/portugal-spain-match-report-highlights"
+      }
+    ]
   }
 ]
