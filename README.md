@@ -19,6 +19,8 @@
 | --- | --- |
 | ![Live](docs/live.webp) | ![分享卡](docs/share-card.webp) |
 
+![Match Center](docs/matches.webp)
+
 ---
 
 ## 为什么做这个
@@ -40,6 +42,8 @@ C 罗是第一号展馆；数据结构从第一天起就是多球员设计。
 - **详情页**：比分、时间、球场、背景故事、为什么重要、来源链接
 - **分享卡**：一键生成 4:5 图片，支持 Web Share / 下载 / 复制链接
 - **Live 数据**：最新赛季、最近比赛、C 罗进球分钟、里程碑；免费方案已启用，GitHub Actions 每 6 小时自动同步
+- **Match Center**：近期赛程、赛后战报、赛前提醒
+- **日历订阅**：`matches.ics` 可导入 Google Calendar / Apple Calendar / Outlook
 - **来源标注**：每条记录至少一个可点击来源
 - **PWA**：可添加到主屏幕，带 manifest 和图标
 - **响应式**：手机、平板、桌面一套代码
@@ -80,9 +84,10 @@ npm run dev
 ```bash
 pnpm validate    # 校验 data/*.json
 pnpm typecheck   # TypeScript 类型检查
-pnpm build       # 生产构建
+pnpm build       # 生产构建（会生成 matches.ics）
 pnpm start       # 启动生产服务
-pnpm sync:live   # 从 API-Football 同步 Live 数据（需要 API key）
+pnpm calendar    # 单独生成 public/matches.ics
+pnpm sync:live   # 同步 Live 数据（API-Football / Wikipedia 回退）
 ```
 
 > 构建默认使用 webpack（`next build --webpack`）。原因是 Next 16 + pnpm 在部分 Windows 环境下 Turbopack 解析 `next` 链接会失败；等上游稳定后可以切回 Turbopack。
@@ -96,6 +101,7 @@ app/
   atlas/[slug]/page.tsx    # 名场面详情
   story/page.tsx           # 故事模式
   live/page.tsx            # Live 数据、最近比赛、同步状态
+  matches/page.tsx         # 赛程、赛后战报、日历提醒
   about/page.tsx           # 项目、数据原则、路线图
   manifest.ts              # PWA manifest
   sitemap.ts / robots.ts   # SEO
@@ -103,6 +109,7 @@ components/
   AtlasExplorer.tsx        # 搜索 + 筛选（客户端）
   StoryExperience.tsx      # 滚动叙事 + 章节导航
   ShareCard.tsx            # 分享卡导出
+  MatchCalendarActions.tsx # 日历下载 / 订阅链接复制
   MomentCard.tsx
   EraCard.tsx
 components/Icons.tsx
@@ -117,7 +124,8 @@ lib/
   types.ts
 scripts/
   validate-data.mjs        # CI 数据校验
-  sync-live.mjs            # API-Football → data/live.json
+  sync-live.mjs            # API-Football / Wikipedia → data/live.json
+  generate-calendar.mjs    # data/live.json → public/matches.ics
   generate-assets.py       # 生成 OG 图和 PWA 图标（可选）
 ```
 
@@ -206,6 +214,17 @@ gh secret set API_FOOTBALL_KEY --repo haohaohao-cell/goat-atlas
 - Wikipedia 回退只提供联赛/国家队总量和比赛结果；助攻、分钟、逐场事件要等 API-Football 付费套餐。
 - 自动数据只进入 Live 页，**不会自动改写 Atlas 里的策展故事**。新里程碑值得长期收藏时，再由编辑整理进 `moments.json`。
 - 数据源默认是 [API-Football](https://www.api-football.com/)，回退源是 [Wikipedia](https://en.wikipedia.org/wiki/Cristiano_Ronaldo)。球员 ID 固定为 `874`，可用 `API_FOOTBALL_PLAYER_ID` / `API_FOOTBALL_SEASON` 覆盖。
+
+## 赛前提醒怎么工作
+
+免费方案不依赖 Telegram / Discord / 微信机器人，而是用系统日历：
+
+1. `scripts/generate-calendar.mjs` 从 `data/live.json` 的 `fixtures` 生成 `public/matches.ics`。
+2. 用户下载文件，或把 `https://haohaohao-cell.github.io/goat-atlas/matches.ics` 添加到 Google Calendar。
+3. 日历 App 在赛前 1 天和 12 小时（有开球时间时再加 1 小时）提醒。
+4. 页面上的赛后战报由每 6 小时的 Live 同步更新。
+
+这条路径没有账号体系、没有服务器、没有推送费用，缺点是不是“进球后几十秒”的实时推送。
 
 ## 数据与许可
 

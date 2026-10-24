@@ -46,7 +46,7 @@ const ROADMAP = [
     phase: "Phase 1",
     title: "内容底座",
     status: "已完成",
-    body: "26 个名场面、6 个章节、时间线、检索、详情页、分享卡、PWA manifest，以及 Live 数据页。目标：让一个球迷在 30 秒内找到他想看的瞬间。",
+    body: "26 个名场面、6 个章节、时间线、检索、详情页、分享卡、PWA manifest、Live 数据页，以及带日历订阅的 Match Center。目标：让一个球迷在 30 秒内找到他想看的瞬间，并且不错过下一场。",
   },
   {
     phase: "Phase 2",

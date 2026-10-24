@@ -3323,6 +3323,308 @@ svg {
   background: var(--bg-soft);
 }
 
+/* Match center */
+
+.matches-hero {
+  background:
+    radial-gradient(circle at 82% 24%, rgba(227, 189, 106, 0.075), transparent 28rem),
+    radial-gradient(circle at 0% 100%, rgba(158, 43, 37, 0.06), transparent 24rem);
+}
+
+.matches-hero h1 span {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(242, 236, 224, 0.48);
+}
+
+.matches-section {
+  padding: 76px 0 110px;
+}
+
+.match-center-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 64px;
+  align-items: start;
+}
+
+.match-center-main {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.match-block {
+  padding-bottom: 42px;
+  border-bottom: 1px solid var(--line);
+}
+
+.match-block:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.match-block-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.match-block-head h2 {
+  margin-top: 10px;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.4vw, 3.4rem);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.next-match-label {
+  padding-bottom: 4px;
+  color: var(--gold);
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: 0.12em;
+  white-space: nowrap;
+}
+
+.fixture-list {
+  border-top: 1px solid var(--line);
+}
+
+.fixture-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr) 72px;
+  gap: 18px;
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.fixture-row.is-next {
+  padding-left: 14px;
+  background: linear-gradient(90deg, rgba(227, 189, 106, 0.06), transparent 70%);
+}
+
+.fixture-row.is-next::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  bottom: 16px;
+  left: 0;
+  width: 2px;
+  background: var(--gold);
+}
+
+.fixture-date {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.fixture-date strong {
+  color: var(--gold);
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 0.9;
+}
+
+.fixture-date span,
+.fixture-date em {
+  color: var(--muted-2);
+  font-family: var(--font-mono);
+  font-size: 7px;
+  font-style: normal;
+  letter-spacing: 0.12em;
+}
+
+.fixture-date em {
+  color: var(--gold);
+}
+
+.fixture-main > span {
+  color: var(--muted-2);
+  font-family: var(--font-mono);
+  font-size: 7px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.fixture-main h3 {
+  margin-top: 4px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.fixture-main em {
+  display: block;
+  margin-top: 3px;
+  color: var(--muted-2);
+  font-size: 9px;
+  font-style: normal;
+}
+
+.fixture-time {
+  color: var(--gold);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-align: right;
+}
+
+.fixture-time span {
+  display: block;
+  width: fit-content;
+  margin: 5px 0 0 auto;
+  padding: 2px 5px;
+  border: 1px solid var(--line-strong);
+  color: var(--gold);
+  font-size: 6px;
+  letter-spacing: 0.1em;
+}
+
+.match-center-aside {
+  position: sticky;
+  top: 110px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.reminder-card {
+  padding: 23px;
+  border: 1px solid var(--line-strong);
+  background:
+    radial-gradient(circle at 90% 0%, rgba(227, 189, 106, 0.1), transparent 45%),
+    var(--panel);
+}
+
+.reminder-card h2 {
+  margin-top: 12px;
+  font-family: var(--font-display);
+  font-size: 34px;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.reminder-card > p:not(.eyebrow) {
+  margin-top: 11px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.calendar-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.calendar-actions .button {
+  width: 100%;
+}
+
+.calendar-feedback {
+  min-height: 14px;
+  color: var(--muted-2);
+  font-size: 9px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.calendar-steps {
+  margin: 18px 0 0;
+  padding: 14px 0 0;
+  border-top: 1px solid var(--line);
+  list-style: none;
+  counter-reset: calendar-step;
+}
+
+.calendar-steps li {
+  display: grid;
+  grid-template-columns: 20px minmax(0, 1fr);
+  gap: 7px;
+  padding: 7px 0;
+  color: var(--muted-2);
+  font-size: 9px;
+  line-height: 1.6;
+  counter-increment: calendar-step;
+}
+
+.calendar-steps li::before {
+  content: "0" counter(calendar-step);
+  color: var(--gold);
+  font-family: var(--font-mono);
+  font-size: 7px;
+  letter-spacing: 0.08em;
+}
+
+.calendar-facts {
+  display: grid;
+  gap: 1px;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.calendar-facts > div {
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr);
+  gap: 3px 10px;
+  align-items: center;
+  padding: 13px 15px;
+  background: var(--bg);
+}
+
+.calendar-facts svg {
+  grid-row: 1 / 3;
+  width: 15px;
+  height: 15px;
+  color: var(--gold);
+}
+
+.calendar-facts span {
+  font-size: 11px;
+}
+
+.calendar-facts em {
+  color: var(--muted-2);
+  font-size: 8px;
+  font-style: normal;
+}
+
+.match-source {
+  padding: 19px;
+  border: 1px solid var(--line);
+}
+
+.match-source > p:not(.eyebrow) {
+  margin-top: 8px;
+  color: var(--muted-2);
+  font-size: 9px;
+  line-height: 1.75;
+}
+
+.match-source a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+  color: var(--gold);
+  font-size: 10px;
+}
+
+.match-source a svg {
+  width: 13px;
+  height: 13px;
+}
+
 /* Footer */
 
 .site-footer {
@@ -4223,6 +4525,63 @@ svg {
 
   .live-strip-left strong {
     font-size: 7px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .match-center-grid {
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 44px;
+  }
+}
+
+@media (max-width: 860px) {
+  .match-center-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .match-center-aside {
+    position: static;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+  }
+
+  .match-source {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .matches-section {
+    padding: 54px 0 76px;
+  }
+
+  .match-block-head {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .fixture-row {
+    grid-template-columns: 54px minmax(0, 1fr) auto;
+    gap: 10px;
+  }
+
+  .fixture-main h3 {
+    font-size: 13px;
+  }
+
+  .fixture-time {
+    font-size: 10px;
+  }
+
+  .match-center-aside {
+    display: flex;
+  }
+
+  .reminder-card h2 {
+    font-size: 30px;
   }
 }
 

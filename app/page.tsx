@@ -27,7 +27,7 @@ const ROADMAP = [
   {
     phase: "01",
     title: "Atlas 内容底座",
-    detail: "时间线、名场面检索、来源标注、分享卡、Live 数据层。",
+    detail: "时间线、名场面检索、来源标注、分享卡、Live 数据层、赛程日历。",
     status: "现在",
   },
   {

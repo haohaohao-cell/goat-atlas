@@ -153,6 +153,36 @@ async function syncFromApiFootball(existing) {
       };
     });
 
+  const upcomingFixtures = fixtures
+    .filter((fixture) => {
+      const short = fixture.fixture?.status?.short;
+      return (
+        new Date(fixture.fixture?.date ?? 0).getTime() > Date.now() &&
+        !["CANC", "PST", "ABD", "AWD", "WO"].includes(short)
+      );
+    })
+    .sort((a, b) =>
+      String(a.fixture?.date ?? "").localeCompare(String(b.fixture?.date ?? "")),
+    )
+    .slice(0, 6)
+    .map((fixture) => {
+      const homeId = Number(fixture.teams?.home?.id);
+      const isHome = teamId ? homeId === teamId : true;
+      const kickoff = String(fixture.fixture?.date ?? "");
+
+      return {
+        date: kickoff.slice(0, 10),
+        time: kickoff.slice(11, 16) || undefined,
+        competition: fixture.league?.name ?? "Unknown competition",
+        opponent: isHome
+          ? (fixture.teams?.away?.name ?? "Unknown opponent")
+          : (fixture.teams?.home?.name ?? "Unknown opponent"),
+        venue: fixture.fixture?.venue?.name ?? undefined,
+        home: isHome,
+        sourceUrl: "https://www.api-football.com/",
+      };
+    });
+
   if (!stats.length && !recentMatches.length) {
     throw new Error("API-Football returned no stats or matches.");
   }
@@ -186,6 +216,7 @@ async function syncFromApiFootball(existing) {
     sourceUrl: "https://www.api-football.com/",
     stats,
     recentMatches,
+    fixtures: upcomingFixtures,
     latest: generatedLatest.length
       ? generatedLatest
       : (existing?.latest ?? []),
@@ -225,6 +256,7 @@ async function syncFromWikipedia(existing) {
     sourceUrl: wiki.sourceUrl,
     stats: wiki.stats,
     recentMatches: wiki.recentMatches,
+    fixtures: wiki.fixtures,
     latest,
   };
 }

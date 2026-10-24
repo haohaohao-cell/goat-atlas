@@ -251,6 +251,11 @@ export default function LivePage() {
                   <ArrowUpRight />
                 </a>
               ) : null}
+
+              <Link className="live-source-link" href="/matches">
+                赛程与提醒
+                <ArrowUpRight />
+              </Link>
             </div>
 
             <div className="live-how">

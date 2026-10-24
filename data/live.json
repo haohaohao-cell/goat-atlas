@@ -1,6 +1,6 @@
 {
   "updatedAt": "2026-10-23T15:44:00.000Z",
-  "checkedAt": "2026-10-24T10:13:05.260Z",
+  "checkedAt": "2026-10-24T11:05:20.567Z",
   "provider": "Wikipedia (fallback)",
   "status": "fallback",
   "season": "2026-27",
@@ -153,6 +153,56 @@
       "goals": 0,
       "ronaldoGoals": [],
       "venue": "Prince Turki bin Abdulaziz Stadium",
+      "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
+    }
+  ],
+  "fixtures": [
+    {
+      "date": "2026-10-29",
+      "competition": "Pro League",
+      "opponent": "Al-Kholood",
+      "venue": "Al-Awwal Park",
+      "home": true,
+      "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
+    },
+    {
+      "date": "2026-11-05",
+      "competition": "Pro League",
+      "opponent": "Al-Hazem",
+      "venue": "Al-Hazem Club Stadium",
+      "home": false,
+      "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
+    },
+    {
+      "date": "2026-11-20",
+      "competition": "Pro League",
+      "opponent": "Al Qadsiah",
+      "venue": "Al-Awwal Park",
+      "home": true,
+      "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
+    },
+    {
+      "date": "2026-11-26",
+      "competition": "Pro League",
+      "opponent": "Al-Shabab",
+      "venue": "Al-Awwal Park",
+      "home": true,
+      "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
+    },
+    {
+      "date": "2026-11-30",
+      "competition": "King's Cup",
+      "opponent": "Al-Kholood",
+      "venue": "Al-Awwal Park",
+      "home": true,
+      "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
+    },
+    {
+      "date": "2026-12-03",
+      "competition": "Pro League",
+      "opponent": "Al-Fayha",
+      "venue": "Majmaah Sports City Stadium",
+      "home": false,
       "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
     }
   ],

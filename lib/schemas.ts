@@ -104,6 +104,16 @@ const liveMatchSchema = z.object({
   sourceUrl: z.string().optional(),
 });
 
+const liveFixtureSchema = z.object({
+  date: z.string().min(1),
+  time: z.string().optional(),
+  competition: z.string().min(1),
+  opponent: z.string().min(1),
+  venue: z.string().optional(),
+  home: z.boolean(),
+  sourceUrl: z.string().optional(),
+});
+
 const liveMilestoneSchema = z.object({
   date: z.string().min(1),
   title: z.string().min(1),
@@ -120,5 +130,6 @@ export const liveSchema = z.object({
   sourceUrl: z.string().optional(),
   stats: z.array(liveStatSchema),
   recentMatches: z.array(liveMatchSchema),
+  fixtures: z.array(liveFixtureSchema),
   latest: z.array(liveMilestoneSchema),
 });

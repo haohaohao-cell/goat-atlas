@@ -116,6 +116,16 @@ export interface LiveMilestone {
   detail: string;
 }
 
+export interface LiveFixture {
+  date: string;
+  time?: string;
+  competition: string;
+  opponent: string;
+  venue?: string;
+  home: boolean;
+  sourceUrl?: string;
+}
+
 export interface LiveData {
   updatedAt: string;
   checkedAt: string;
@@ -126,5 +136,6 @@ export interface LiveData {
   sourceUrl?: string;
   stats: LiveStat[];
   recentMatches: LiveMatch[];
+  fixtures: LiveFixture[];
   latest: LiveMilestone[];
 }

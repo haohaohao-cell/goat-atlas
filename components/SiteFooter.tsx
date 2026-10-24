@@ -21,6 +21,7 @@ export function SiteFooter() {
           <Link href="/atlas">Atlas 图鉴</Link>
           <Link href="/story">Story 故事</Link>
           <Link href="/live">Live 数据</Link>
+          <Link href="/matches">Matches 赛程</Link>
           <Link href="/about">About 关于</Link>
         </div>
 

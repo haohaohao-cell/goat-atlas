@@ -206,8 +206,9 @@ function parseSeasonMatches(seasonWikitext, sourceUrl, now = new Date()) {
     .map(({ block, start }) => {
       const fields = templateFields(block);
       const date = parseMatchDate(fields.date ?? "");
-      if (!date || new Date(`${date}T23:59:59Z`) > now) return null;
+      if (!date) return null;
 
+      const isUpcoming = date > now.toISOString().slice(0, 10);
       const team1 = cleanTeam(fields.team1 ?? "");
       const team2 = cleanTeam(fields.team2 ?? "");
       const alNassrIsHome = /Al-Nassr/i.test(team1);
@@ -236,19 +237,21 @@ function parseSeasonMatches(seasonWikitext, sourceUrl, now = new Date()) {
 
       return {
         date,
+        time: cleanWiki(fields.time ?? "") || undefined,
         competition: section || round || "Al-Nassr",
         opponent: opponent || "Unknown opponent",
         score,
         result,
         goals,
         ronaldoGoals,
+        isHome: alNassrIsHome,
+        isUpcoming,
         venue: cleanWiki(fields.stadium ?? "") || undefined,
         sourceUrl,
       };
     })
     .filter(Boolean)
-    .sort((a, b) => b.date.localeCompare(a.date))
-    .slice(0, 10);
+    .sort((a, b) => b.date.localeCompare(a.date));
 }
 
 export function parseWikipediaWikitext(
@@ -298,9 +301,28 @@ export function parseWikipediaWikitext(
       )}`
     : SOURCE_URL;
 
-  const recentMatches = seasonWikitext
+  const allMatches = seasonWikitext
     ? parseSeasonMatches(seasonWikitext, seasonPageUrl)
     : [];
+
+  const recentMatches = allMatches
+    .filter((match) => !match.isUpcoming)
+    .slice(0, 10)
+    .map(({ isUpcoming, time, isHome, ...match }) => match);
+
+  const fixtures = allMatches
+    .filter((match) => match.isUpcoming)
+    .sort((a, b) => a.date.localeCompare(b.date))
+    .slice(0, 6)
+    .map((match) => ({
+      date: match.date,
+      time: match.time,
+      competition: match.competition,
+      opponent: match.opponent,
+      venue: match.venue,
+      home: match.isHome,
+      sourceUrl: match.sourceUrl,
+    }));
 
   const latest = recentMatches
     .filter((match) => match.goals > 0)
@@ -330,6 +352,7 @@ export function parseWikipediaWikitext(
     seasonPageUrl,
     stats,
     recentMatches,
+    fixtures,
     latest,
     club: club.name,
     note: "免费方案使用 Wikipedia：提供当前生涯总量、赛果、进球者和分钟，不含助攻；联赛总量为 Wikipedia infobox 口径。",

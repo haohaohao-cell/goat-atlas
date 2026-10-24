@@ -8,8 +8,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const base = siteConfig.url;
   const withSlash = (path: string) => `${base}${path}/`;
 
-  const staticRoutes = ["", "/atlas", "/story", "/about", "/live"].map(
-    (route) => ({
+  const staticRoutes = [
+    "",
+    "/atlas",
+    "/story",
+    "/about",
+    "/live",
+    "/matches",
+  ].map((route) => ({
       url: route === "" ? `${base}/` : withSlash(route),
       lastModified: new Date(),
       changeFrequency: "monthly" as const,

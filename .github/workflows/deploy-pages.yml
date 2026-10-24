@@ -69,6 +69,9 @@ jobs:
       - name: Validate data
         run: pnpm validate
 
+      - name: Generate match calendar
+        run: pnpm calendar
+
       - name: Build static export
         run: pnpm build
 

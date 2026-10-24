@@ -75,6 +75,7 @@ for (const field of [
   "note",
   "stats",
   "recentMatches",
+  "fixtures",
   "latest",
 ]) {
   if (live[field] === undefined) errors.push(`live.json missing "${field}"`);
@@ -95,6 +96,15 @@ for (const stat of live.stats ?? []) {
     ) {
       errors.push(`Invalid live stat "${field}"`);
     }
+  }
+}
+
+for (const fixture of live.fixtures ?? []) {
+  for (const field of ["date", "competition", "opponent"]) {
+    if (!fixture[field]) errors.push(`live fixture missing "${field}"`);
+  }
+  if (typeof fixture.home !== "boolean") {
+    errors.push(`Invalid fixture home flag: ${fixture.opponent}`);
   }
 }
 
