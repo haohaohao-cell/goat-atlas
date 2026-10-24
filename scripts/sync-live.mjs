@@ -1,7 +1,9 @@
 import { readFile, writeFile } from "node:fs/promises";
+import { fetchWikipediaSnapshot } from "./providers/wikipedia.mjs";
 
 const LIVE_PATH = new URL("../data/live.json", import.meta.url);
-const API_BASE = process.env.API_FOOTBALL_BASE ?? "https://v3.football.api-sports.io";
+const API_BASE =
+  process.env.API_FOOTBALL_BASE ?? "https://v3.football.api-sports.io";
 const API_KEY = process.env.API_FOOTBALL_KEY?.trim();
 const PLAYER_ID = Number(process.env.API_FOOTBALL_PLAYER_ID ?? 874);
 
@@ -58,20 +60,10 @@ async function readExisting() {
   }
 }
 
-async function main() {
-  if (!API_KEY) {
-    console.log(
-      "API_FOOTBALL_KEY is not set. Keeping the curated snapshot and exiting.",
-    );
-    return;
-  }
-
+async function syncFromApiFootball(existing) {
   const season = seasonFromDate();
-  const existing = await readExisting();
 
-  const players = await request(
-    `/players?id=${PLAYER_ID}&season=${season}`,
-  );
+  const players = await request(`/players?id=${PLAYER_ID}&season=${season}`);
   const player = players[0];
 
   if (!player) {
@@ -149,7 +141,7 @@ async function main() {
     });
 
   if (!stats.length && !recentMatches.length) {
-    throw new Error("API-Football returned no stats or matches; keeping old data.");
+    throw new Error("API-Football returned no stats or matches.");
   }
 
   const generatedLatest = recentMatches
@@ -163,7 +155,7 @@ async function main() {
       }`,
     }));
 
-  const next = {
+  return {
     updatedAt: new Date().toISOString(),
     checkedAt: new Date().toISOString(),
     provider: "API-Football",
@@ -173,8 +165,67 @@ async function main() {
     sourceUrl: "https://www.api-football.com/",
     stats,
     recentMatches,
-    latest: generatedLatest.length ? generatedLatest : (existing?.latest ?? []),
+    latest: generatedLatest.length
+      ? generatedLatest
+      : (existing?.latest ?? []),
   };
+}
+
+async function syncFromWikipedia(existing) {
+  const wiki = await fetchWikipediaSnapshot();
+
+  const statsLine = wiki.stats
+    .map((stat) => `${stat.team} ${stat.appearances} 场 ${stat.goals} 球`)
+    .join("；");
+
+  const marker = {
+    date: wiki.updatedAt.slice(0, 10),
+    title: `数据更新至 ${wiki.season} 赛季`,
+    detail: `Wikipedia：${statsLine}。`,
+  };
+
+  const latest = wiki.latest.length
+    ? wiki.latest
+    : [
+        marker,
+        ...(existing?.latest ?? []).filter(
+          (item) =>
+            !(item.date === marker.date && item.title.startsWith("数据更新至")),
+        ),
+      ].slice(0, 4);
+
+  return {
+    updatedAt: wiki.updatedAt,
+    checkedAt: new Date().toISOString(),
+    provider: wiki.provider,
+    status: "fallback",
+    season: wiki.season,
+    note: wiki.note,
+    sourceUrl: wiki.sourceUrl,
+    stats: wiki.stats,
+    recentMatches: wiki.recentMatches,
+    latest,
+  };
+}
+
+async function main() {
+  const existing = await readExisting();
+  let next = null;
+
+  if (API_KEY) {
+    try {
+      next = await syncFromApiFootball(existing);
+    } catch (error) {
+      console.warn(`API-Football unavailable: ${error.message}`);
+      console.warn("Falling back to Wikipedia current-season data.");
+    }
+  } else {
+    console.warn("API_FOOTBALL_KEY is not set. Using Wikipedia fallback.");
+  }
+
+  if (!next) {
+    next = await syncFromWikipedia(existing);
+  }
 
   if (existing && comparable(existing) === comparable(next)) {
     console.log("Live data unchanged; nothing to write.");
@@ -183,7 +234,7 @@ async function main() {
 
   await writeFile(LIVE_PATH, `${JSON.stringify(next, null, 2)}\n`, "utf8");
   console.log(
-    `Live data updated: ${stats.length} stat rows, ${recentMatches.length} matches.`,
+    `Live data updated via ${next.provider}: ${next.stats.length} stat rows.`,
   );
 }
 

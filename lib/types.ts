@@ -81,15 +81,15 @@ export interface EraWithMoments extends Era {
   moments: Moment[];
 }
 
-export type LiveStatus = "live" | "snapshot" | "unconfigured";
+export type LiveStatus = "live" | "fallback" | "snapshot" | "unconfigured";
 
 export interface LiveStat {
   competition: string;
   team: string;
   appearances: number;
   goals: number;
-  assists: number;
-  minutes: number;
+  assists?: number;
+  minutes?: number;
 }
 
 export interface LiveMatch {

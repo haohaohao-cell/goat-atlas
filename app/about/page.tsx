@@ -196,8 +196,9 @@ export default function AboutPage() {
               这是一份策展式样本，不是完整数据库。26 条记录覆盖了职业生涯的关键坐标，
               但远未穷尽所有比赛和进球。收录标准偏向“有叙事价值、可被验证、能代表一个阶段”。
               当前策展数据截至 2025 年 6 月。最新赛季、最近比赛和里程碑由 Live
-              数据层承载：配置 API key 后，GitHub Actions 每 6 小时自动同步，
-              不会自动改写 Atlas 里的策展故事。
+              数据层承载：GitHub Actions 每 6 小时自动同步；API-Football 免费版
+              不覆盖当前赛季时，会自动回退到 Wikipedia 的当前数据。
+              自动数据不会改写 Atlas 里的策展故事。
             </p>
           </div>
         </div>

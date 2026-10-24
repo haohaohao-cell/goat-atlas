@@ -174,8 +174,9 @@ pnpm dev
 `data/live.json` 是唯一的自动数据入口。`.github/workflows/deploy-pages.yml` 会：
 
 1. 每 6 小时运行一次 `pnpm sync:live`，调用 API-Football 拉取本赛季统计和最近比赛。
-2. 只有数据变化时才提交 `chore: sync live data`，避免无意义 commit。
-3. 重新构建静态站点并部署到 GitHub Pages。
+2. API-Football 不可用时，自动回退到 Wikipedia 的当前生涯数据与最近比赛。
+3. 只有数据变化时才提交 `chore: sync live data`，避免无意义 commit。
+4. 重新构建静态站点并部署到 GitHub Pages。
 
 配置 API key：
 
@@ -187,9 +188,10 @@ gh secret set API_FOOTBALL_KEY --repo haohaohao-cell/goat-atlas
 
 说明：
 
-- 免费 key 的赛季范围和请求额度有限；如果当前赛季不可用，同步脚本会保留上一条快照，不会把页面写成空白。
+- **API-Football 免费版只开放 2022–2024 赛季**，当前赛季需要付费套餐。因此现在默认走 Wikipedia 回退：当前生涯数据 + 2026–27 赛季最近比赛。
+- Wikipedia 回退只提供联赛/国家队总量和比赛结果；助攻、分钟、逐场事件要等 API-Football 付费套餐。
 - 自动数据只进入 Live 页，**不会自动改写 Atlas 里的策展故事**。新里程碑值得长期收藏时，再由编辑整理进 `moments.json`。
-- 数据源默认是 [API-Football](https://www.api-football.com/)，球员 ID 固定为 `874`，可用 `API_FOOTBALL_PLAYER_ID` / `API_FOOTBALL_SEASON` 覆盖。
+- 数据源默认是 [API-Football](https://www.api-football.com/)，回退源是 [Wikipedia](https://en.wikipedia.org/wiki/Cristiano_Ronaldo)。球员 ID 固定为 `874`，可用 `API_FOOTBALL_PLAYER_ID` / `API_FOOTBALL_SEASON` 覆盖。
 
 ## 数据与许可
 

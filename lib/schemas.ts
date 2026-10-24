@@ -82,8 +82,8 @@ const liveStatSchema = z.object({
   team: z.string().min(1),
   appearances: z.number().nonnegative(),
   goals: z.number().nonnegative(),
-  assists: z.number().nonnegative(),
-  minutes: z.number().nonnegative(),
+  assists: z.number().nonnegative().optional(),
+  minutes: z.number().nonnegative().optional(),
 });
 
 const liveMatchSchema = z.object({
@@ -107,7 +107,7 @@ export const liveSchema = z.object({
   updatedAt: z.string().min(1),
   checkedAt: z.string().min(1),
   provider: z.string().min(1),
-  status: z.enum(["live", "snapshot", "unconfigured"]),
+  status: z.enum(["live", "fallback", "snapshot", "unconfigured"]),
   season: z.string().min(1),
   note: z.string().min(1),
   sourceUrl: z.string().optional(),

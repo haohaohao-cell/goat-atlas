@@ -80,7 +80,7 @@ for (const field of [
   if (live[field] === undefined) errors.push(`live.json missing "${field}"`);
 }
 
-if (!["live", "snapshot", "unconfigured"].includes(live.status)) {
+if (!["live", "fallback", "snapshot", "unconfigured"].includes(live.status)) {
   errors.push(`Invalid live status: ${live.status}`);
 }
 
@@ -89,7 +89,10 @@ for (const stat of live.stats ?? []) {
     if (!stat[field]) errors.push(`live stat missing "${field}"`);
   }
   for (const field of ["appearances", "goals", "assists", "minutes"]) {
-    if (typeof stat[field] !== "number" || stat[field] < 0) {
+    if (
+      stat[field] !== undefined &&
+      (typeof stat[field] !== "number" || stat[field] < 0)
+    ) {
       errors.push(`Invalid live stat "${field}"`);
     }
   }

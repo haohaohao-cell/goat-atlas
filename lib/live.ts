@@ -6,6 +6,7 @@ export const live = liveSchema.parse(liveJson) as LiveData;
 
 export function liveStatusLabel(status: LiveData["status"]): string {
   if (status === "live") return "自动同步中";
+  if (status === "fallback") return "维基同步";
   if (status === "snapshot") return "策展快照";
   return "等待配置";
 }

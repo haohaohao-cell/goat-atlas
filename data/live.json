@@ -1,28 +1,147 @@
 {
-  "updatedAt": "2025-06-08T00:00:00.000Z",
-  "checkedAt": "2025-06-08T00:00:00.000Z",
-  "provider": "Curated snapshot",
-  "status": "snapshot",
-  "season": "2024-25",
-  "note": "当前为策展快照，数据截至 2025 年 6 月。配置 API_FOOTBALL_KEY 后，GitHub Actions 会每 6 小时自动同步最新赛季数据。",
-  "sourceUrl": "https://www.api-football.com/",
-  "stats": [],
-  "recentMatches": [],
+  "updatedAt": "2026-10-23T15:44:00.000Z",
+  "checkedAt": "2026-10-24T09:56:13.023Z",
+  "provider": "Wikipedia (fallback)",
+  "status": "fallback",
+  "season": "2026-27",
+  "note": "API-Football 免费套餐不覆盖当前赛季，当前使用 Wikipedia 的当前生涯数据与最近比赛回退；联赛数据为 Wikipedia infobox 口径。",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Cristiano_Ronaldo",
+  "stats": [
+    {
+      "competition": "Saudi Pro League（联赛）",
+      "team": "Al-Nassr",
+      "appearances": 116,
+      "goals": 107
+    },
+    {
+      "competition": "International（国家队）",
+      "team": "Portugal",
+      "appearances": 234,
+      "goals": 146
+    }
+  ],
+  "recentMatches": [
+    {
+      "date": "2026-10-23",
+      "competition": "Pro League",
+      "opponent": "Al Faisaly",
+      "score": "3-1",
+      "result": "W",
+      "goals": 0,
+      "venue": "Majmaah Sports City Stadium",
+      "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
+    },
+    {
+      "date": "2026-10-20",
+      "competition": "Pro League",
+      "opponent": "Neom",
+      "score": "1-0",
+      "result": "W",
+      "goals": 0,
+      "venue": "Al-Awwal Park",
+      "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
+    },
+    {
+      "date": "2026-10-09",
+      "competition": "Pro League",
+      "opponent": "Al-Diriyah",
+      "score": "3-0",
+      "result": "W",
+      "goals": 2,
+      "venue": "Al-Awwal Park",
+      "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
+    },
+    {
+      "date": "2026-09-12",
+      "competition": "Pro League",
+      "opponent": "Al-Khaleej",
+      "score": "1-1",
+      "result": "D",
+      "goals": 0,
+      "venue": "Prince Mohamed bin Fahd Stadium",
+      "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
+    },
+    {
+      "date": "2026-09-09",
+      "competition": "Pro League",
+      "opponent": "Abha",
+      "score": "2-1",
+      "result": "W",
+      "goals": 2,
+      "venue": "Al-Awwal Park",
+      "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
+    },
+    {
+      "date": "2026-09-05",
+      "competition": "Pro League",
+      "opponent": "Al-Ittihad",
+      "score": "1-2",
+      "result": "L",
+      "goals": 0,
+      "venue": "King Abdullah Sports City Stadium",
+      "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
+    },
+    {
+      "date": "2026-08-28",
+      "competition": "Pro League",
+      "opponent": "Al Taawoun",
+      "score": "2-1",
+      "result": "W",
+      "goals": 2,
+      "venue": "Al-Awwal Park",
+      "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
+    },
+    {
+      "date": "2026-08-25",
+      "competition": "Pro League",
+      "opponent": "Al-Ettifaq",
+      "score": "3-2",
+      "result": "W",
+      "goals": 0,
+      "venue": "Al-Ettifaq Club Stadium",
+      "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
+    },
+    {
+      "date": "2026-08-21",
+      "competition": "Pro League",
+      "opponent": "Al-Riyadh",
+      "score": "4-0",
+      "result": "W",
+      "goals": 2,
+      "venue": "Prince Turki bin Abdulaziz Stadium",
+      "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
+    },
+    {
+      "date": "2026-08-18",
+      "competition": "King's Cup",
+      "opponent": "Al-Diriyah",
+      "score": "4-1",
+      "result": "W",
+      "goals": 0,
+      "venue": "Prince Turki bin Abdulaziz Stadium",
+      "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
+    }
+  ],
   "latest": [
     {
-      "date": "2025-06-08",
-      "title": "欧国联冠军，国家队第二冠",
-      "detail": "决赛破门，葡萄牙点球击败西班牙，第二次夺得欧国联冠军。"
+      "date": "2026-10-09",
+      "title": "对阵 Al-Diriyah 进球",
+      "detail": "Pro League · 3-0 · 2 球"
     },
     {
-      "date": "2024-09-05",
-      "title": "职业生涯第 900 球",
-      "detail": "对阵克罗地亚破门，成为足坛历史上首位打进 900 球的球员。"
+      "date": "2026-09-09",
+      "title": "对阵 Abha 进球",
+      "detail": "Pro League · 2-1 · 2 球"
     },
     {
-      "date": "2022-12-30",
-      "title": "加盟利雅得胜利",
-      "detail": "开启亚洲篇章，也让沙特联赛进入全球视野。"
+      "date": "2026-08-28",
+      "title": "对阵 Al Taawoun 进球",
+      "detail": "Pro League · 2-1 · 2 球"
+    },
+    {
+      "date": "2026-08-21",
+      "title": "对阵 Al-Riyadh 进球",
+      "detail": "Pro League · 4-0 · 2 球"
     }
   ]
 }

@@ -83,8 +83,12 @@ export default function LivePage() {
                           <td>{stat.team}</td>
                           <td>{stat.appearances}</td>
                           <td className="is-gold">{stat.goals}</td>
-                          <td>{stat.assists}</td>
-                          <td>{stat.minutes.toLocaleString("en-US")}</td>
+                          <td>{stat.assists ?? "—"}</td>
+                          <td>
+                            {stat.minutes != null
+                              ? stat.minutes.toLocaleString("en-US")
+                              : "—"}
+                          </td>
                         </tr>
                       ))}
                     </tbody>
@@ -179,6 +183,8 @@ export default function LivePage() {
             <div className="live-meta-card">
               <p className="eyebrow">DATA STATUS</p>
               <h2>{liveStatusLabel(live.status)}</h2>
+              <p className="live-note">{live.note}</p>
+
               <dl>
                 <div>
                   <dt>Provider</dt>
