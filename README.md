@@ -359,12 +359,20 @@ BOT_DRY_RUN=1 BOT_MODE=check BOT_TODAY=2026-10-28 node scripts/bot.mjs
 | 阶段 | 内容 | 状态 |
 | --- | --- | --- |
 | Phase 1 | 内容底座：时间线、检索、详情、来源、分享卡 | ✅ 已完成 |
-| Phase 1.5 | Live 数据层 + 6 小时自动同步 | ✅ 免费方案已启用 |
+| Phase 1.5 | Live 数据层 + 6 小时自动同步 | ✅ 已完成（免费 Wikipedia fallback） |
 | Phase 2 | 每日问答、GOAT 对比器 | ✅ 已完成 |
-| Phase 3 | “历史上的今天”、里程碑追踪、提醒 bot、多语言 | 进行中（Today + 里程碑 + 入口页完成；翻译暂缓） |
+| Phase 3 | “历史上的今天”、里程碑追踪、提醒 bot、多语言 | ✅ MVP 已完成（Bot 单频道；翻译暂缓） |
+| Phase 3.5 | 发布准备：题库扩容、PWA 离线、分享与反馈 | 下一步 |
 | Phase 4 | 球迷社区（先用 GitHub Discussions / 现成社群） | 等待时机 |
+| Phase 5 | 多球员 Atlas、小程序、App | 长期 |
 
 完整说明见 [About 页面](app/about/page.tsx) 和 [CONTRIBUTING.md](CONTRIBUTING.md)。
+
+当前不建议继续堆页面。发布前先收口三件事：
+
+1. 题库从 20 题扩到 60 题，避免约 4 天就重复。
+2. 补 service worker，或把“PWA”口径改成“可添加到主屏幕”。
+3. 补最小分发反馈：至少知道哪些页面有人看。
 
 ## 部署
 
