@@ -276,7 +276,28 @@ Bot 是可选层，不配置也能正常部署。它复用同一套数据，不�
 - **每 6 小时**：检查未来 48 小时内的比赛，赛前发一次提醒。
 - **状态**：`data/bot-state.json` 记录已发送的日期/比赛，避免重复；这个文件的提交不会触发 Pages 重新部署。
 
-### 1. Telegram
+### 1. ntfy（免注册，最省事）
+
+如果 Discord 的手机验证被限流，直接用 ntfy。它不需要账号、不需要服务器、不需要手机号。
+
+1. 选一个足够长的 topic，例如 `goat-atlas-cr7-7f3a9c2e`。  
+   **topic 就是密码**，别人知道就能订阅和发消息，别用太简单的。
+2. 在 GitHub 仓库 **Settings → Secrets and variables → Actions** 添加：
+
+```text
+NTFY_TOPIC=goat-atlas-cr7-7f3a9c2e
+```
+
+3. 手机装 **ntfy** App，或电脑打开：
+
+```text
+https://ntfy.sh/goat-atlas-cr7-7f3a9c2e
+```
+
+在 App 里订阅同一个 topic，或在网页里允许通知。
+4. 自建 ntfy 服务器时，再加一个 `NTFY_SERVER`，否则默认 `https://ntfy.sh`。
+
+### 2. Telegram
 
 1. 找 `@BotFather` 创建 bot，拿到 `TELEGRAM_BOT_TOKEN`。
 2. 给 bot 发一条消息，然后访问  
@@ -284,11 +305,11 @@ Bot 是可选层，不配置也能正常部署。它复用同一套数据，不�
    找到 `chat.id`，填入 `TELEGRAM_CHAT_ID`。
 3. 在 GitHub 仓库 **Settings → Secrets and variables → Actions** 添加这两个 secret。
 
-### 2. Discord（可选）
+### 3. Discord（可选）
 
 在频道 **Integrations → Webhooks** 创建 webhook，把 URL 填入 `DISCORD_WEBHOOK_URL`。
 
-### 3. 测试
+### 4. 测试
 
 在 Actions 里手动运行 **Bot notifications**：
 
@@ -306,9 +327,9 @@ BOT_DRY_RUN=1 BOT_MODE=check BOT_TODAY=2026-10-28 node scripts/bot.mjs
 
 `BOT_TODAY` 只用于测试，不会写进线上数据。
 
-### 4. 不配置会怎样
+### 5. 不配置会怎样
 
-没有 `TELEGRAM_BOT_TOKEN` / `TELEGRAM_CHAT_ID` / `DISCORD_WEBHOOK_URL` 时，脚本只打印“未配置”，不会报错、不会写状态。整个站点和自动同步继续正常工作。
+没有 `NTFY_TOPIC` / `TELEGRAM_BOT_TOKEN` / `TELEGRAM_CHAT_ID` / `DISCORD_WEBHOOK_URL` 时，脚本只打印“未配置”，不会报错、不会写状态。整个站点和自动同步继续正常工作。
 
 ## “历史上的今天”怎么不硬编
 

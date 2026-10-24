@@ -180,6 +180,33 @@ async function sendDiscord(text) {
   return { configured: true, ok: true };
 }
 
+async function sendNtfy(text) {
+  const topic = process.env.NTFY_TOPIC?.trim();
+  if (!topic) return { configured: false, ok: false };
+
+  const server = (
+    process.env.NTFY_SERVER?.trim() || "https://ntfy.sh"
+  ).replace(/\/$/, "");
+
+  const response = await fetch(`${server}/${encodeURIComponent(topic)}`, {
+    method: "POST",
+    headers: {
+      "content-type": "text/plain; charset=utf-8",
+      title: "GOAT Atlas",
+      tags: "soccer,goat",
+      click: SITE_URL,
+    },
+    body: text,
+    signal: AbortSignal.timeout(20_000),
+  });
+
+  if (!response.ok) {
+    throw new Error(`ntfy HTTP ${response.status}`);
+  }
+
+  return { configured: true, ok: true };
+}
+
 async function deliver(text, label) {
   if (DRY_RUN) {
     console.log(`\n--- ${label} (dry run) ---\n${text}\n`);
@@ -189,11 +216,12 @@ async function deliver(text, label) {
   const configured = Boolean(
     (process.env.TELEGRAM_BOT_TOKEN?.trim() &&
       process.env.TELEGRAM_CHAT_ID?.trim()) ||
-      process.env.DISCORD_WEBHOOK_URL?.trim(),
+      process.env.DISCORD_WEBHOOK_URL?.trim() ||
+      process.env.NTFY_TOPIC?.trim(),
   );
   if (!configured) {
     console.log(
-      "No bot channels configured. Set TELEGRAM_BOT_TOKEN + TELEGRAM_CHAT_ID or DISCORD_WEBHOOK_URL.",
+      "No bot channels configured. Set TELEGRAM_BOT_TOKEN + TELEGRAM_CHAT_ID, DISCORD_WEBHOOK_URL, or NTFY_TOPIC.",
     );
     return false;
   }
@@ -201,6 +229,7 @@ async function deliver(text, label) {
   const results = await Promise.allSettled([
     sendTelegram(text),
     sendDiscord(text),
+    sendNtfy(text),
   ]);
   let delivered = false;
 
