@@ -68,7 +68,7 @@ export default function PlayPage() {
             <h2>GOAT 对比器</h2>
             <p>
               C 罗 vs 梅西，6 个可核实指标。
-              默认等权，权重由你拉。
+              默认 3 : 3，权重由你拉。
             </p>
             <div className="play-card-foot">
               <span>3 : 3 · 50 / 50</span>

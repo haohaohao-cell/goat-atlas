@@ -139,7 +139,7 @@ export function CompareTool({ data }: { data: CompareData }) {
 
       <div className="compare-toolbar">
         <p>
-          默认等权：<strong>{ronaldoWins}</strong> : <strong>{messiWins}</strong>
+          默认权重：<strong>{ronaldoWins}</strong> : <strong>{messiWins}</strong>
           {ties ? ` · ${ties} 项持平` : ""}。
           <span> 调权重，看结论怎么变。</span>
         </p>

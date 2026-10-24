@@ -1,6 +1,6 @@
 {
   "asOf": "2026-10-24",
-  "note": "只比较可核实、相对稳定的职业生涯指标。默认等权，权重由你调整；这不是客观真理，而是一面镜子。",
+  "note": "只比较可核实、相对稳定的职业生涯指标。默认权重让六项合计 100，权重由你调整；这不是客观真理，而是一面镜子。",
   "players": [
     {
       "id": "ronaldo",
@@ -37,6 +37,7 @@
       "unit": "座",
       "defaultWeight": 15,
       "values": { "ronaldo": 5, "messi": 8 },
+
       "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or"
     },
     {
@@ -44,7 +45,7 @@
       "label": "欧冠冠军",
       "short": "UEFA Champions League",
       "unit": "座",
-      "defaultWeight": 15,
+      "defaultWeight": 20,
       "values": { "ronaldo": 5, "messi": 4 },
       "source": "https://en.wikipedia.org/wiki/UEFA_Champions_League"
     },
@@ -53,7 +54,7 @@
       "label": "世界杯冠军",
       "short": "FIFA World Cup",
       "unit": "座",
-      "defaultWeight": 15,
+      "defaultWeight": 20,
       "values": { "ronaldo": 0, "messi": 1 },
       "source": "https://en.wikipedia.org/wiki/FIFA_World_Cup"
     },

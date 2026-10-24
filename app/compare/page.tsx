@@ -18,8 +18,8 @@ const PRINCIPLES = [
     body: "金球奖、欧冠、世界杯、欧洲金靴、欧冠历史进球、国家队进球。都是可核实、不会每天变的数字。",
   },
   {
-    title: "默认等权",
-    body: "6 个维度各 15 分，默认 3 : 3。没有偷偷给任何一方加权。",
+    title: "默认权重公开",
+    body: "金球 15、欧冠 20、世界杯 20、金靴 15、欧冠进球 15、国家队进球 15，合计 100。默认 3 : 3。",
   },
   {
     title: "权重可调",
@@ -43,7 +43,7 @@ export default function ComparePage() {
           <div className="page-hero-bottom">
             <p>
               “谁更强”没有标准答案，但可以把指标摊开。
-              默认等权，权重由你调；每一行都能点回来源。
+              默认权重，随时可调；每一行都能点回来源。
             </p>
             <div className="page-hero-meta">
               <span>2 位球员</span>
