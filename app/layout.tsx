@@ -28,11 +28,6 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: siteConfig.url,
-    languages: {
-      "zh-CN": siteConfig.url,
-      en: absoluteUrl("/en/"),
-      pt: absoluteUrl("/pt/"),
-    },
   },
   openGraph: {
     type: "website",

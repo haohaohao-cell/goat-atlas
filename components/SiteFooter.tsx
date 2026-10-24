@@ -14,6 +14,11 @@ export function SiteFooter() {
             <br />
             每一个瞬间，都应该有出处。
           </p>
+          <div className="footer-languages">
+            <Link href="/en">EN overview</Link>
+            <span>·</span>
+            <Link href="/pt">PT overview</Link>
+          </div>
         </div>
 
         <div className="footer-col">

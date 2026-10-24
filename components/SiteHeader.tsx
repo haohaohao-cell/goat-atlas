@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { GithubIcon, MenuIcon, CloseIcon } from "./Icons";
 import { Logo } from "./Logo";
-import { LanguageSwitcher } from "./LanguageSwitcher";
 import { siteConfig } from "@/lib/site";
 
 const NAV = [
@@ -56,8 +55,6 @@ export function SiteHeader() {
               <em>{item.cn}</em>
             </Link>
           ))}
-
-          <LanguageSwitcher />
 
           {siteConfig.githubUrl ? (
             <a

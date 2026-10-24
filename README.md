@@ -61,7 +61,7 @@ C 罗是第一号展馆；数据结构从第一天起就是多球员设计。
 - **GOAT 对比器**：6 个可核实指标，默认权重公开，权重可调
 - **历史上的今天**：日期精确匹配才叫 On This Day，没有匹配就展示“今日坐标”
 - **里程碑追踪**：国家队 150 球、250 场、Al-Nassr 联赛 120 球/场等进度
-- **多语言入口**：英文 / 葡语 overview + 全站语言切换 + hreflang
+- **多语言入口**：英文 / 葡语 overview（页脚入口，非全站翻译）
 - **来源标注**：每条记录至少一个可点击来源
 - **PWA**：可添加到主屏幕，带 manifest 和图标
 - **响应式**：手机、平板、桌面一套代码
@@ -137,7 +137,6 @@ components/
   MatchCalendarActions.tsx # 日历下载 / 订阅链接复制
   QuizGame.tsx             # 每日问答、连击、结果卡
   CompareTool.tsx          # 加权对比器
-  LanguageSwitcher.tsx     # 中文 / EN / PT
   LocalizedHome.tsx        # 英文 / 葡语 overview
   MomentCard.tsx
   EraCard.tsx
@@ -273,10 +272,11 @@ gh secret set API_FOOTBALL_KEY --repo haohaohao-cell/goat-atlas
 
 ## 多语言现在到哪一步
 
-- **已上线**：英文 `/en/`、葡语 `/pt/` overview，全站语言切换，`hreflang` 和本地化 metadata。
+- **入口页 only**：英文 `/en/`、葡语 `/pt/` overview，页脚有轻量入口；Header 语言切换已撤掉。
+- **hreflang only on entry pages**：只有 `/en/`、`/pt/` 输出多语言 alternate，中文深页不再声明英文版。
 - **仍以中文为主**：26 条名场面的长文、问答题库、故事叙述目前是中文。
 - **不直接机翻上线**：深度内容需要逐条校对，避免把错误翻译写进“有出处”的 Atlas。
-- 下一步是逐条翻译 Atlas 内容，而不是先堆更多空页面。
+- 目前冻结翻译，优先扩充 Atlas 数据，而不是堆更多空页面。
 
 ## 数据与许可
 
@@ -293,7 +293,7 @@ gh secret set API_FOOTBALL_KEY --repo haohaohao-cell/goat-atlas
 | Phase 1 | 内容底座：时间线、检索、详情、来源、分享卡 | ✅ 已完成 |
 | Phase 1.5 | Live 数据层 + 6 小时自动同步 | ✅ 免费方案已启用 |
 | Phase 2 | 每日问答、GOAT 对比器 | ✅ 已完成 |
-| Phase 3 | “历史上的今天”、里程碑追踪、提醒 bot、更多语言 | 进行中（Today + 里程碑 + 多语言入口已完成） |
+| Phase 3 | “历史上的今天”、里程碑追踪、提醒 bot、多语言 | 进行中（Today + 里程碑 + 入口页完成；翻译暂缓） |
 | Phase 4 | 球迷社区（先用 GitHub Discussions / 现成社群） | 等待时机 |
 
 完整说明见 [About 页面](app/about/page.tsx) 和 [CONTRIBUTING.md](CONTRIBUTING.md)。
