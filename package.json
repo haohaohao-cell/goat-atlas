@@ -4,6 +4,11 @@
   "private": true,
   "packageManager": "pnpm@11.28.5",
   "description": "An open, source-backed career atlas for Cristiano Ronaldo — and eventually every footballer.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/haohaohao-cell/goat-atlas.git"
+  },
+  "homepage": "https://haohaohao-cell.github.io/goat-atlas/",
   "scripts": {
     "dev": "next dev --webpack",
     "build": "next build --webpack",

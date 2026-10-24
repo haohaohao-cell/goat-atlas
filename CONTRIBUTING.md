@@ -1,5 +1,8 @@
 # Contributing to GOAT Atlas
 
+线上地址：<https://haohaohao-cell.github.io/goat-atlas/>  
+代码仓库：<https://github.com/haohaohao-cell/goat-atlas>
+
 谢谢你来。这个项目最需要的不是更多代码，而是更准确的数据、更好的问题，以及愿意花时间核对细节的球迷。
 
 ## 你可以贡献什么

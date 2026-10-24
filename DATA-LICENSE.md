@@ -36,7 +36,5 @@ for verification and does not re-host third-party media.
 
 ## Attribution example
 
-> Data from [GOAT Atlas](https://github.com/your-name/goat-atlas), licensed
+> Data from [GOAT Atlas](https://github.com/haohaohao-cell/goat-atlas), licensed
 > under CC BY-SA 4.0. Changes were made.
-
-Replace the URL with your deployed repository or site.

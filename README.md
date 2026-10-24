@@ -4,6 +4,9 @@
 
 **An open, source-backed career atlas for Cristiano Ronaldo — and eventually every footballer.**
 
+🔗 **Live site:** <https://haohaohao-cell.github.io/goat-atlas/>  
+💻 **Repository:** <https://github.com/haohaohao-cell/goat-atlas>
+
 `Next.js 16` · `TypeScript` · `26 moments` · `6 chapters` · `23 sources` · `MIT + CC BY-SA 4.0`
 
 ![GOAT Atlas preview](docs/preview.webp)
@@ -211,6 +214,8 @@ gh secret set API_FOOTBALL_KEY --repo <owner>/goat-atlas
 ## 部署
 
 ### GitHub Pages（当前默认）
+
+当前线上地址：<https://haohaohao-cell.github.io/goat-atlas/>
 
 仓库已包含 `.github/workflows/deploy-pages.yml`：
 
