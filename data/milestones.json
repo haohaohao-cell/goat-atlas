@@ -6,11 +6,11 @@
       "id": "career-1000-goals",
       "title": "职业生涯 1000 球",
       "category": "Career",
-      "current": 982,
+      "current": 981,
       "target": 1000,
       "unit": "球",
       "featured": true,
-      "description": "俱乐部 836 球 + 国家队 146 球 = 982 球。距离 1000 球还差 18 球。",
+      "description": "俱乐部 835 球 + 国家队 146 球 = 981 球。距离 1000 球还差 19 球。",
       "source": "https://en.wikipedia.org/wiki/Cristiano_Ronaldo#Career_statistics",
       "breakdown": [
         {
@@ -35,7 +35,7 @@
         },
         {
           "label": "Al-Nassr",
-          "value": 135
+          "value": 134
         },
         {
           "label": "Portugal",
@@ -67,7 +67,7 @@
       "id": "al-nassr-120-league-goals",
       "title": "Al-Nassr 120 个联赛进球",
       "category": "Al-Nassr",
-      "current": 107,
+      "current": 106,
       "target": 120,
       "unit": "球",
       "description": "只统计沙特联赛，不含杯赛和亚冠。",
