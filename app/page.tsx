@@ -38,9 +38,9 @@ const ROADMAP = [
   },
   {
     phase: "03",
-    title: "里程碑提醒 + 历史上的今天",
-    detail: "Discord / Telegram bot，推送有上下文的 C 罗时刻。",
-    status: "计划中",
+    title: "历史上的今天 + 里程碑提醒",
+    detail: "Today 已上线；下一步是带上下文的里程碑提醒与多语言。",
+    status: "进行中",
   },
   {
     phase: "04",

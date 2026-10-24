@@ -22,6 +22,7 @@ export function SiteFooter() {
           <Link href="/story">Story 故事</Link>
           <Link href="/live">Live 数据</Link>
           <Link href="/matches">Matches 赛程</Link>
+          <Link href="/today">Today 今日</Link>
           <Link href="/play">Play 玩法</Link>
           <Link href="/about">About 关于</Link>
         </div>

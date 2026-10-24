@@ -28,8 +28,8 @@ export default function PlayPage() {
           </h1>
           <div className="page-hero-bottom">
             <p>
-              一种是记忆，一种是争论，一种是别错过下一场。
-              三个入口，都不需要注册。
+              一种是记忆，一种是争论，一种是今天，一种是别错过下一场。
+              四个入口，都不需要注册。
             </p>
             <div className="page-hero-meta">
               <span>5 题 / 天</span>
@@ -76,9 +76,26 @@ export default function PlayPage() {
             </div>
           </Link>
 
-          <Link className="play-card is-matches" href="/matches">
+          <Link className="play-card is-today" href="/today">
             <div className="play-card-top">
               <span>03</span>
+              <em>TODAY</em>
+            </div>
+            <SparkIcon />
+            <h2>历史上的今天</h2>
+            <p>
+              按日期看 C 罗的历史瞬间。
+              没有精确匹配时，就给你一个当天的坐标。
+            </p>
+            <div className="play-card-foot">
+              <span>每天更新 · 有出处</span>
+              <ArrowUpRight />
+            </div>
+          </Link>
+
+          <Link className="play-card is-matches" href="/matches">
+            <div className="play-card-top">
+              <span>04</span>
               <em>REMIND</em>
             </div>
             <CalendarIcon />

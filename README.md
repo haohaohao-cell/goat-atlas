@@ -27,6 +27,8 @@
 
 ![Daily Quiz](docs/quiz.webp)
 
+![On This Day](docs/today.webp)
+
 ---
 
 ## 为什么做这个
@@ -52,6 +54,7 @@ C 罗是第一号展馆；数据结构从第一天起就是多球员设计。
 - **日历订阅**：`matches.ics` 可导入 Google Calendar / Apple Calendar / Outlook
 - **每日问答**：每天 5 题，答题解析、连续天数、结果分享卡
 - **GOAT 对比器**：6 个可核实指标，默认权重公开，权重可调
+- **历史上的今天**：日期精确匹配才叫 On This Day，没有匹配就展示“今日坐标”
 - **来源标注**：每条记录至少一个可点击来源
 - **PWA**：可添加到主屏幕，带 manifest 和图标
 - **响应式**：手机、平板、桌面一套代码
@@ -113,6 +116,7 @@ app/
   play/page.tsx            # 玩法入口
   quiz/page.tsx            # 每日 5 题
   compare/page.tsx         # GOAT 对比器
+  today/page.tsx           # 历史上的今天 / 今日坐标
   about/page.tsx           # 项目、数据原则、路线图
   manifest.ts              # PWA manifest
   sitemap.ts / robots.ts   # SEO
@@ -137,6 +141,7 @@ lib/
   live.ts                  # Live 数据加载
   quiz.ts                  # 每日出题
   compare.ts               # 对比数据加载
+  today.ts                 # 日期匹配 / 今日坐标
   schemas.ts               # Zod schema
   types.ts
 scripts/
@@ -243,6 +248,13 @@ gh secret set API_FOOTBALL_KEY --repo haohaohao-cell/goat-atlas
 
 这条路径没有账号体系、没有服务器、没有推送费用，缺点是不是“进球后几十秒”的实时推送。
 
+## “历史上的今天”怎么不硬编
+
+- 只有 `data/moments.json` 里存在同月同日记录时，才显示“历史上的今天”。
+- 没有精确匹配时，页面会明确写“今天没有收录”，然后展示一个按日期确定的“今日坐标”。
+- 当前 26 条数据决定命中率不会高；随着 Atlas 变厚，这个页面会越来越有内容。
+- 分享卡、详情页和来源链接都复用同一套数据，不另写一份。
+
 ## 数据与许可
 
 - **代码**：[MIT](LICENSE)
@@ -258,7 +270,7 @@ gh secret set API_FOOTBALL_KEY --repo haohaohao-cell/goat-atlas
 | Phase 1 | 内容底座：时间线、检索、详情、来源、分享卡 | ✅ 已完成 |
 | Phase 1.5 | Live 数据层 + 6 小时自动同步 | ✅ 免费方案已启用 |
 | Phase 2 | 每日问答、GOAT 对比器 | ✅ 已完成 |
-| Phase 3 | “历史上的今天”、里程碑提醒 bot、更多语言 | 下一步 |
+| Phase 3 | “历史上的今天”、里程碑提醒 bot、更多语言 | 进行中（Today 已完成） |
 | Phase 4 | 球迷社区（先用 GitHub Discussions / 现成社群） | 等待时机 |
 
 完整说明见 [About 页面](app/about/page.tsx) 和 [CONTRIBUTING.md](CONTRIBUTING.md)。
