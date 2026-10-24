@@ -179,3 +179,20 @@ export interface CompareData {
   players: ComparePlayer[];
   metrics: CompareMetric[];
 }
+
+export interface Milestone {
+  id: string;
+  title: string;
+  category: string;
+  current: number;
+  target: number;
+  unit: string;
+  description: string;
+  source: string;
+}
+
+export interface MilestonesData {
+  asOf: string;
+  note: string;
+  items: Milestone[];
+}

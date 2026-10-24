@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getDailyQuestions, getQuizDateKey } from "@/lib/quiz";
 import { compare } from "@/lib/compare";
 import { live } from "@/lib/live";
+import { milestoneProgress, sortedMilestones } from "@/lib/milestones";
 import { ArrowUpRight, CalendarIcon, SparkIcon } from "@/components/Icons";
 import { absoluteUrl } from "@/lib/site";
 
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
 
 export default function PlayPage() {
   const questions = getDailyQuestions(getQuizDateKey(), 5);
+  const closestMilestones = sortedMilestones().slice(0, 3);
 
   return (
     <>
@@ -110,6 +112,24 @@ export default function PlayPage() {
             </div>
           </Link>
         </div>
+
+        <Link className="play-milestones" href="/milestones">
+          <div>
+            <p className="eyebrow">MILESTONE WATCH</p>
+            <h2>还差几球，到下一个整数？</h2>
+            <p>不预测日期，只把可核实的差距摊开。赛程日历里也会带上这份观察。</p>
+          </div>
+          <div className="play-milestone-numbers">
+            {closestMilestones.map((milestone) => (
+              <span key={milestone.id}>
+                <strong>{milestoneProgress(milestone).remaining}</strong>
+                <em>{milestone.unit}</em>
+                <small>{milestone.title}</small>
+              </span>
+            ))}
+          </div>
+          <ArrowUpRight />
+        </Link>
       </section>
     </>
   );

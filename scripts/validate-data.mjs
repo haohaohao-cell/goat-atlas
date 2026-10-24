@@ -8,6 +8,7 @@ const moments = read("moments.json");
 const live = read("live.json");
 const quiz = read("quiz.json");
 const compare = read("compare.json");
+const milestones = read("milestones.json");
 
 const errors = [];
 const required = [
@@ -166,6 +167,24 @@ for (const metric of compare.metrics ?? []) {
     }
   }
   if (!metric.source) errors.push(`Compare metric ${metric.id} missing source`);
+}
+
+const milestoneIds = new Set();
+for (const milestone of milestones.items ?? []) {
+  if (milestoneIds.has(milestone.id)) {
+    errors.push(`Duplicate milestone id: ${milestone.id}`);
+  }
+  milestoneIds.add(milestone.id);
+  if (
+    typeof milestone.current !== "number" ||
+    typeof milestone.target !== "number" ||
+    milestone.current < 0 ||
+    milestone.target <= 0 ||
+    milestone.current > milestone.target
+  ) {
+    errors.push(`Invalid milestone range: ${milestone.id}`);
+  }
+  if (!milestone.source) errors.push(`Milestone ${milestone.id} missing source`);
 }
 
 if (errors.length) {

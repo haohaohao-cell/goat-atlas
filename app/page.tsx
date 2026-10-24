@@ -39,7 +39,7 @@ const ROADMAP = [
   {
     phase: "03",
     title: "历史上的今天 + 里程碑提醒",
-    detail: "Today 已上线；下一步是带上下文的里程碑提醒与多语言。",
+    detail: "Today 与里程碑追踪已上线；下一步是多语言与带上下文的提醒。",
     status: "进行中",
   },
   {

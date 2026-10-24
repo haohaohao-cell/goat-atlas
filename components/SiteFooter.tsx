@@ -23,6 +23,7 @@ export function SiteFooter() {
           <Link href="/live">Live 数据</Link>
           <Link href="/matches">Matches 赛程</Link>
           <Link href="/today">Today 今日</Link>
+          <Link href="/milestones">Milestones 里程碑</Link>
           <Link href="/play">Play 玩法</Link>
           <Link href="/about">About 关于</Link>
         </div>

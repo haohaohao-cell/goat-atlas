@@ -160,6 +160,23 @@ export const compareSchema = z.object({
   metrics: z.array(compareMetricSchema).min(1),
 });
 
+const milestoneSchema = z.object({
+  id: z.string().min(1),
+  title: z.string().min(1),
+  category: z.string().min(1),
+  current: z.number().nonnegative(),
+  target: z.number().positive(),
+  unit: z.string().min(1),
+  description: z.string().min(1),
+  source: z.string().min(1),
+});
+
+export const milestonesSchema = z.object({
+  asOf: z.string().min(1),
+  note: z.string().min(1),
+  items: z.array(milestoneSchema).min(1),
+});
+
 export const liveSchema = z.object({
   updatedAt: z.string().min(1),
   checkedAt: z.string().min(1),

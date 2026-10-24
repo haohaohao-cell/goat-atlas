@@ -1,6 +1,7 @@
 import { readFile, writeFile } from "node:fs/promises";
 
 const LIVE_PATH = new URL("../data/live.json", import.meta.url);
+const MILESTONES_PATH = new URL("../data/milestones.json", import.meta.url);
 const OUT_PATH = new URL("../public/matches.ics", import.meta.url);
 const TIMEZONE = "Asia/Riyadh";
 
@@ -40,7 +41,16 @@ function slug(value) {
 }
 
 const live = JSON.parse(await readFile(LIVE_PATH, "utf8"));
+const milestoneData = JSON.parse(await readFile(MILESTONES_PATH, "utf8"));
 const fixtures = live.fixtures ?? [];
+const milestoneWatch = (milestoneData.items ?? [])
+  .map((item) => {
+    const remaining = Math.max(item.target - item.current, 0);
+    return remaining > 0
+      ? `${item.title}还差 ${remaining} ${item.unit}`
+      : `${item.title}已达成`;
+  })
+  .join("；");
 const now = new Date()
   .toISOString()
   .replace(/[-:]/g, "")
@@ -53,7 +63,7 @@ const lines = [
   "CALSCALE:GREGORIAN",
   "METHOD:PUBLISH",
   "X-WR-CALNAME:GOAT Atlas · C罗赛程",
-  "X-WR-CALDESC:Al-Nassr 赛程与 C 罗比赛提醒",
+  `X-WR-CALDESC:Al-Nassr 赛程、C 罗比赛提醒与里程碑观察`,
   `X-WR-TIMEZONE:${TIMEZONE}`,
 ];
 
@@ -83,7 +93,7 @@ for (const fixture of fixtures) {
   lines.push(`SUMMARY:${escapeIcs(summary)}`);
   lines.push(
     `DESCRIPTION:${escapeIcs(
-      `${fixture.competition} · ${fixture.home ? "主场" : "客场"}${fixture.venue ? ` · ${fixture.venue}` : ""} · GOAT Atlas 赛程提醒`,
+      `${fixture.competition} · ${fixture.home ? "主场" : "客场"}${fixture.venue ? ` · ${fixture.venue}` : ""}\nGOAT Atlas 赛程提醒\n里程碑观察：${milestoneWatch}`,
     )}`,
   );
   if (fixture.venue) lines.push(`LOCATION:${escapeIcs(fixture.venue)}`);

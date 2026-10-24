@@ -29,6 +29,8 @@
 
 ![On This Day](docs/today.webp)
 
+![Milestone Watch](docs/milestones.webp)
+
 ---
 
 ## 为什么做这个
@@ -55,6 +57,7 @@ C 罗是第一号展馆；数据结构从第一天起就是多球员设计。
 - **每日问答**：每天 5 题，答题解析、连续天数、结果分享卡
 - **GOAT 对比器**：6 个可核实指标，默认权重公开，权重可调
 - **历史上的今天**：日期精确匹配才叫 On This Day，没有匹配就展示“今日坐标”
+- **里程碑追踪**：国家队 150 球、250 场、Al-Nassr 联赛 120 球/场等进度
 - **来源标注**：每条记录至少一个可点击来源
 - **PWA**：可添加到主屏幕，带 manifest 和图标
 - **响应式**：手机、平板、桌面一套代码
@@ -117,6 +120,7 @@ app/
   quiz/page.tsx            # 每日 5 题
   compare/page.tsx         # GOAT 对比器
   today/page.tsx           # 历史上的今天 / 今日坐标
+  milestones/page.tsx      # 里程碑进度
   about/page.tsx           # 项目、数据原则、路线图
   manifest.ts              # PWA manifest
   sitemap.ts / robots.ts   # SEO
@@ -136,12 +140,14 @@ data/
   live.json                # 最新赛季 / 比赛 / 同步状态
   quiz.json                # 每日问答题库
   compare.json             # GOAT 对比指标
+  milestones.json          # 里程碑目标与当前进度
 lib/
   data.ts                  # 数据加载、排序、关联
   live.ts                  # Live 数据加载
   quiz.ts                  # 每日出题
   compare.ts               # 对比数据加载
   today.ts                 # 日期匹配 / 今日坐标
+  milestones.ts            # 里程碑进度计算
   schemas.ts               # Zod schema
   types.ts
 scripts/
@@ -236,6 +242,7 @@ gh secret set API_FOOTBALL_KEY --repo haohaohao-cell/goat-atlas
 - Wikipedia 回退只提供联赛/国家队总量和比赛结果；助攻、分钟、逐场事件要等 API-Football 付费套餐。
 - 自动数据只进入 Live 页，**不会自动改写 Atlas 里的策展故事**。新里程碑值得长期收藏时，再由编辑整理进 `moments.json`。
 - 数据源默认是 [API-Football](https://www.api-football.com/)，回退源是 [Wikipedia](https://en.wikipedia.org/wiki/Cristiano_Ronaldo)。球员 ID 固定为 `874`，可用 `API_FOOTBALL_PLAYER_ID` / `API_FOOTBALL_SEASON` 覆盖。
+- 里程碑页面只追踪可核实的国家队 / 俱乐部联赛累计数据，不估算生涯总进球，也不预测达成日期。
 
 ## 赛前提醒怎么工作
 
@@ -243,7 +250,7 @@ gh secret set API_FOOTBALL_KEY --repo haohaohao-cell/goat-atlas
 
 1. `scripts/generate-calendar.mjs` 从 `data/live.json` 的 `fixtures` 生成 `public/matches.ics`。
 2. 用户下载文件，或把 `https://haohaohao-cell.github.io/goat-atlas/matches.ics` 添加到 Google Calendar。
-3. 日历 App 在赛前 1 天和 12 小时（有开球时间时再加 1 小时）提醒。
+3. 日历 App 在赛前 1 天和 12 小时（有开球时间时再加 1 小时）提醒；事件描述里会带当前里程碑差距。
 4. 页面上的赛后战报由每 6 小时的 Live 同步更新。
 
 这条路径没有账号体系、没有服务器、没有推送费用，缺点是不是“进球后几十秒”的实时推送。
@@ -270,7 +277,7 @@ gh secret set API_FOOTBALL_KEY --repo haohaohao-cell/goat-atlas
 | Phase 1 | 内容底座：时间线、检索、详情、来源、分享卡 | ✅ 已完成 |
 | Phase 1.5 | Live 数据层 + 6 小时自动同步 | ✅ 免费方案已启用 |
 | Phase 2 | 每日问答、GOAT 对比器 | ✅ 已完成 |
-| Phase 3 | “历史上的今天”、里程碑提醒 bot、更多语言 | 进行中（Today 已完成） |
+| Phase 3 | “历史上的今天”、里程碑追踪、提醒 bot、更多语言 | 进行中（Today + 里程碑已完成） |
 | Phase 4 | 球迷社区（先用 GitHub Discussions / 现成社群） | 等待时机 |
 
 完整说明见 [About 页面](app/about/page.tsx) 和 [CONTRIBUTING.md](CONTRIBUTING.md)。

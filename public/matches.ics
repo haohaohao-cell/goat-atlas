@@ -4,15 +4,15 @@ PRODID:-//GOAT Atlas//Cristiano Ronaldo Match Calendar//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:GOAT Atlas · C罗赛程
-X-WR-CALDESC:Al-Nassr 赛程与 C 罗比赛提醒
+X-WR-CALDESC:Al-Nassr 赛程、C 罗比赛提醒与里程碑观察
 X-WR-TIMEZONE:Asia/Riyadh
 BEGIN:VEVENT
 UID:goat-atlas-2026-10-29-al-kholood@haohaohao-cell.github.io
-DTSTAMP:20261024T120904Z
+DTSTAMP:20261024T121618Z
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
 SUMMARY:Al-Nassr vs Al-Kholood
-DESCRIPTION:Pro League · 主场 · Al-Awwal Park · GOAT Atlas 赛程提醒
+DESCRIPTION:Pro League · 主场 · Al-Awwal Park\nGOAT Atlas 赛程提醒\n里程碑观察：国家队 150 球还差 4 球；国家队 250 场还差 16 场；Al-Nassr 120 个联赛进球还差 13 球；Al-Nassr 120 场联赛还差 4 场
 LOCATION:Al-Awwal Park
 URL:https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season
 BEGIN:VALARM
@@ -28,11 +28,11 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:goat-atlas-2026-11-05-al-hazem@haohaohao-cell.github.io
-DTSTAMP:20261024T120904Z
+DTSTAMP:20261024T121618Z
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
 SUMMARY:Al-Hazem vs Al-Nassr
-DESCRIPTION:Pro League · 客场 · Al-Hazem Club Stadium · GOAT Atlas 赛程提醒
+DESCRIPTION:Pro League · 客场 · Al-Hazem Club Stadium\nGOAT Atlas 赛程提醒\n里程碑观察：国家队 150 球还差 4 球；国家队 250 场还差 16 场；Al-Nassr 120 个联赛进球还差 13 球；Al-Nassr 120 场联赛还差 4 场
 LOCATION:Al-Hazem Club Stadium
 URL:https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season
 BEGIN:VALARM
@@ -48,11 +48,11 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:goat-atlas-2026-11-20-al-qadsiah@haohaohao-cell.github.io
-DTSTAMP:20261024T120904Z
+DTSTAMP:20261024T121618Z
 DTSTART;VALUE=DATE:20261120
 DTEND;VALUE=DATE:20261121
 SUMMARY:Al-Nassr vs Al Qadsiah
-DESCRIPTION:Pro League · 主场 · Al-Awwal Park · GOAT Atlas 赛程提醒
+DESCRIPTION:Pro League · 主场 · Al-Awwal Park\nGOAT Atlas 赛程提醒\n里程碑观察：国家队 150 球还差 4 球；国家队 250 场还差 16 场；Al-Nassr 120 个联赛进球还差 13 球；Al-Nassr 120 场联赛还差 4 场
 LOCATION:Al-Awwal Park
 URL:https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season
 BEGIN:VALARM
@@ -68,11 +68,11 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:goat-atlas-2026-11-26-al-shabab@haohaohao-cell.github.io
-DTSTAMP:20261024T120904Z
+DTSTAMP:20261024T121618Z
 DTSTART;VALUE=DATE:20261126
 DTEND;VALUE=DATE:20261127
 SUMMARY:Al-Nassr vs Al-Shabab
-DESCRIPTION:Pro League · 主场 · Al-Awwal Park · GOAT Atlas 赛程提醒
+DESCRIPTION:Pro League · 主场 · Al-Awwal Park\nGOAT Atlas 赛程提醒\n里程碑观察：国家队 150 球还差 4 球；国家队 250 场还差 16 场；Al-Nassr 120 个联赛进球还差 13 球；Al-Nassr 120 场联赛还差 4 场
 LOCATION:Al-Awwal Park
 URL:https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season
 BEGIN:VALARM
@@ -88,11 +88,11 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:goat-atlas-2026-11-30-al-kholood@haohaohao-cell.github.io
-DTSTAMP:20261024T120904Z
+DTSTAMP:20261024T121618Z
 DTSTART;VALUE=DATE:20261130
 DTEND;VALUE=DATE:20261201
 SUMMARY:Al-Nassr vs Al-Kholood
-DESCRIPTION:King's Cup · 主场 · Al-Awwal Park · GOAT Atlas 赛程提醒
+DESCRIPTION:King's Cup · 主场 · Al-Awwal Park\nGOAT Atlas 赛程提醒\n里程碑观察：国家队 150 球还差 4 球；国家队 250 场还差 16 场；Al-Nassr 120 个联赛进球还差 13 球；Al-Nassr 120 场联赛还差 4 场
 LOCATION:Al-Awwal Park
 URL:https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season
 BEGIN:VALARM
@@ -108,11 +108,11 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:goat-atlas-2026-12-03-al-fayha@haohaohao-cell.github.io
-DTSTAMP:20261024T120904Z
+DTSTAMP:20261024T121618Z
 DTSTART;VALUE=DATE:20261203
 DTEND;VALUE=DATE:20261204
 SUMMARY:Al-Fayha vs Al-Nassr
-DESCRIPTION:Pro League · 客场 · Majmaah Sports City Stadium · GOAT Atlas 赛程提醒
+DESCRIPTION:Pro League · 客场 · Majmaah Sports City Stadium\nGOAT Atlas 赛程提醒\n里程碑观察：国家队 150 球还差 4 球；国家队 250 场还差 16 场；Al-Nassr 120 个联赛进球还差 13 球；Al-Nassr 120 场联赛还差 4 场
 LOCATION:Majmaah Sports City Stadium
 URL:https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season
 BEGIN:VALARM
