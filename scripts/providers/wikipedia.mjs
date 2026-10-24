@@ -4,6 +4,10 @@ const WIKI_API = "https://en.wikipedia.org/w/api.php";
 const PAGE = "Cristiano_Ronaldo";
 const SOURCE_URL = "https://en.wikipedia.org/wiki/Cristiano_Ronaldo";
 
+// Sporting CP, Manchester United (both spells), Real Madrid and Juventus.
+// Only Al-Nassr and Portugal are expected to change.
+export const HISTORICAL_CLUB_GOALS = 5 + 118 + 450 + 101 + 27;
+
 const COMPETITION_BY_CLUB = {
   "Al-Nassr": "Saudi Pro League（联赛）",
   "Manchester United": "Premier League（联赛）",
@@ -252,6 +256,103 @@ function parseSeasonMatches(seasonWikitext, sourceUrl, now = new Date()) {
     })
     .filter(Boolean)
     .sort((a, b) => b.date.localeCompare(a.date));
+}
+
+function numbersFromLine(line) {
+  return (line.match(/\d[\d,]*/g) ?? []).map((value) =>
+    Number(value.replaceAll(",", "")),
+  );
+}
+
+function parseArticleDate(text) {
+  const match = text.match(
+    /\{\{updated\|match played (\d{1,2}) ([A-Za-z]+) (\d{4})\}\}/i,
+  );
+  if (!match) return null;
+
+  const [, day, monthName, year] = match;
+  const month = MONTHS[monthName];
+  if (month === undefined) return null;
+
+  return `${year}-${String(month + 1).padStart(2, "0")}-${String(
+    Number(day),
+  ).padStart(2, "0")}`;
+}
+
+export function parseCareerGoals(wikitext) {
+  const careerStart = wikitext.search(
+    /^==\s*Career statistics\s*==\s*$/m,
+  );
+  if (careerStart === -1) {
+    throw new Error("Could not find the Career statistics section.");
+  }
+
+  const careerText = wikitext.slice(careerStart);
+  const clubTotalMatch = careerText.match(
+    /!\s*colspan\s*=\s*["']?3["']?\s*\|\s*Career total[^\n]*\r?\n([^\n]+)/i,
+  );
+  if (!clubTotalMatch) {
+    throw new Error("Could not find the club career total row.");
+  }
+
+  const clubNumbers = numbersFromLine(clubTotalMatch[1]);
+  const clubGoals = clubNumbers.at(-1);
+  if (!Number.isFinite(clubGoals)) {
+    throw new Error("Could not parse the club career total.");
+  }
+
+  const internationalStart = careerText.search(
+    /^===\s*International\s*===\s*$/m,
+  );
+  const honoursStart = careerText.search(/^==\s*Honours\s*==\s*$/m);
+  if (internationalStart === -1) {
+    throw new Error("Could not find the International stats section.");
+  }
+
+  const internationalText = careerText.slice(
+    internationalStart,
+    honoursStart > internationalStart ? honoursStart : undefined,
+  );
+  const seniorText = internationalText.split(
+    /!\s*colspan\s*=\s*["']?2["']?\s*\|\s*Career total/i,
+  )[0];
+  const totalBlocks = [
+    ...seniorText.matchAll(/!\s*Total\s*\r?\n((?:![^\n]*\r?\n?)+)/gi),
+  ];
+  const seniorBlock = totalBlocks.at(-1);
+  if (!seniorBlock) {
+    throw new Error("Could not find the senior international total row.");
+  }
+
+  const internationalNumbers = numbersFromLine(seniorBlock[1]);
+  const internationalGoals = internationalNumbers.at(-1);
+  if (!Number.isFinite(internationalGoals)) {
+    throw new Error("Could not parse the senior international total.");
+  }
+
+  const alNassrGoals = clubGoals - HISTORICAL_CLUB_GOALS;
+  if (alNassrGoals < 0) {
+    throw new Error(
+      `Club total ${clubGoals} is below the fixed historical total ${HISTORICAL_CLUB_GOALS}.`,
+    );
+  }
+
+  return {
+    clubGoals,
+    internationalGoals,
+    total: clubGoals + internationalGoals,
+    alNassrGoals,
+    asOf: parseArticleDate(careerText),
+    sourceUrl: `${SOURCE_URL}#Career_statistics`,
+  };
+}
+
+export async function fetchWikipediaCareerStats() {
+  const wikitext = process.env.WIKIPEDIA_WIKITEXT_FILE
+    ? await readFile(process.env.WIKIPEDIA_WIKITEXT_FILE, "utf8")
+    : await fetchPageWikitext(PAGE);
+
+  return parseCareerGoals(wikitext);
 }
 
 export function parseWikipediaWikitext(

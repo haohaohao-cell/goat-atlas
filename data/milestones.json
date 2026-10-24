@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-10-24",
+  "asOf": "2026-10-23",
   "note": "只追踪 Wikipedia 生涯统计表 / 国家队页面可核实的数据；俱乐部与国家队拆分公开，不估算、不预测达成日期。",
   "items": [
     {
@@ -13,13 +13,34 @@
       "description": "俱乐部 836 球 + 国家队 146 球 = 982 球。距离 1000 球还差 18 球。",
       "source": "https://en.wikipedia.org/wiki/Cristiano_Ronaldo#Career_statistics",
       "breakdown": [
-        { "label": "Sporting CP", "value": 5 },
-        { "label": "Man United 2003–09", "value": 118 },
-        { "label": "Real Madrid", "value": 450 },
-        { "label": "Juventus", "value": 101 },
-        { "label": "Man United 2021–22", "value": 27 },
-        { "label": "Al-Nassr", "value": 135 },
-        { "label": "Portugal", "value": 146 }
+        {
+          "label": "Sporting CP",
+          "value": 5
+        },
+        {
+          "label": "Man United 2003–09",
+          "value": 118
+        },
+        {
+          "label": "Real Madrid",
+          "value": 450
+        },
+        {
+          "label": "Juventus",
+          "value": 101
+        },
+        {
+          "label": "Man United 2021–22",
+          "value": 27
+        },
+        {
+          "label": "Al-Nassr",
+          "value": 135
+        },
+        {
+          "label": "Portugal",
+          "value": 146
+        }
       ]
     },
     {
@@ -29,7 +50,7 @@
       "current": 146,
       "target": 150,
       "unit": "球",
-      "description": "距离 150 球还差 4 球。每一次国家队进球都会把这个数字往前推。",
+      "description": "每一次国家队进球都会把这个数字往前推。",
       "source": "https://en.wikipedia.org/wiki/List_of_international_goals_scored_by_Cristiano_Ronaldo"
     },
     {
@@ -39,7 +60,7 @@
       "current": 234,
       "target": 250,
       "unit": "场",
-      "description": "距离 250 场还差 16 场。这是出场数的整数节点，不是纪录本身。",
+      "description": "这是出场数的整数节点，不是纪录本身。",
       "source": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps"
     },
     {
@@ -49,7 +70,7 @@
       "current": 107,
       "target": 120,
       "unit": "球",
-      "description": "距离 120 个联赛进球还差 13 球。只统计沙特联赛，不含杯赛和亚冠。",
+      "description": "只统计沙特联赛，不含杯赛和亚冠。",
       "source": "https://en.wikipedia.org/wiki/Cristiano_Ronaldo"
     },
     {
@@ -59,7 +80,7 @@
       "current": 116,
       "target": 120,
       "unit": "场",
-      "description": "距离 120 场联赛还差 4 场。下一个主场比赛日可能就会接近。",
+      "description": "下一个主场比赛日可能就会接近。",
       "source": "https://en.wikipedia.org/wiki/Cristiano_Ronaldo"
     }
   ]

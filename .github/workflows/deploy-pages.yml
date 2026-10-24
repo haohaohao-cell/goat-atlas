@@ -53,16 +53,20 @@ jobs:
           API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
         run: pnpm sync:live
 
-      - name: Commit live data
+      - name: Sync milestone data
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: pnpm sync:milestones
+
+      - name: Commit synced data
         if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/live.json
+          git add data/live.json data/milestones.json
           if git diff --cached --quiet; then
-            echo "No live data changes."
+            echo "No synced data changes."
           else
-            git commit -m "chore: sync live data"
+            git commit -m "chore: sync live and milestone data"
             git push
           fi
 

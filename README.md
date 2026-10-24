@@ -161,6 +161,7 @@ lib/
 scripts/
   validate-data.mjs        # CI 数据校验
   sync-live.mjs            # API-Football / Wikipedia → data/live.json
+  sync-milestones.mjs      # Wikipedia 生涯统计表 → data/milestones.json
   generate-calendar.mjs    # data/live.json → public/matches.ics
   generate-assets.py       # 生成 OG 图和 PWA 图标（可选）
 ```
@@ -229,12 +230,13 @@ pnpm dev
 - 每分钟/每场完整事件流
 - 进球级秒级推送
 
-`data/live.json` 是唯一的自动数据入口。`.github/workflows/deploy-pages.yml` 会：
+`data/live.json` 与 `data/milestones.json` 是自动数据入口。`.github/workflows/deploy-pages.yml` 会：
 
 1. 每 6 小时运行一次 `pnpm sync:live`，调用 API-Football 拉取本赛季统计和最近比赛。
 2. API-Football 不可用时，自动回退到 Wikipedia 的当前生涯数据与最近比赛。
-3. 只有数据变化时才提交 `chore: sync live data`，避免无意义 commit。
-4. 重新构建静态站点并部署到 GitHub Pages。
+3. 运行 `pnpm sync:milestones`，从 Wikipedia 生涯统计表更新 1000 球总数和 Al-Nassr / 国家队进度。
+4. 只有数据变化时才提交 `chore: sync live and milestone data`，避免无意义 commit。
+5. 重新构建静态站点并部署到 GitHub Pages。
 
 配置 API key：
 
@@ -248,9 +250,9 @@ gh secret set API_FOOTBALL_KEY --repo haohaohao-cell/goat-atlas
 
 - **API-Football 免费版只开放 2022–2024 赛季**，当前赛季需要付费套餐。因此现在默认走 Wikipedia 回退：当前生涯数据 + 2026–27 赛季最近比赛。
 - Wikipedia 回退只提供联赛/国家队总量和比赛结果；助攻、分钟、逐场事件要等 API-Football 付费套餐。
-- 自动数据只进入 Live 页，**不会自动改写 Atlas 里的策展故事**。新里程碑值得长期收藏时，再由编辑整理进 `moments.json`。
+- 自动数据会进入 Live 和里程碑页，**不会自动改写 Atlas 里的策展故事**。新里程碑值得长期收藏时，再由编辑整理进 `moments.json`。
 - 数据源默认是 [API-Football](https://www.api-football.com/)，回退源是 [Wikipedia](https://en.wikipedia.org/wiki/Cristiano_Ronaldo)。球员 ID 固定为 `874`，可用 `API_FOOTBALL_PLAYER_ID` / `API_FOOTBALL_SEASON` 覆盖。
-- 里程碑页面使用 Wikipedia 生涯统计表口径：俱乐部 836 球 + 国家队 146 球 = **982 球**，距离 1000 球还差 18 球。拆分公开，不预测达成日期；不同来源口径可能不同。
+- 里程碑页面使用 Wikipedia 生涯统计表口径：俱乐部 836 球 + 国家队 146 球 = **982 球**，距离 1000 球还差 18 球。`sync:milestones` 会在每次同步时更新总数和 Al-Nassr / 国家队进度；解析失败则保留上一次已验证的 ledger，不会写坏数据。
 
 ## 赛前提醒怎么工作
 

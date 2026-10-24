@@ -12,7 +12,7 @@ import { absoluteUrl, withBasePath } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Milestones · 里程碑追踪",
   description:
-    "C 罗职业生涯 1000 球进度：俱乐部 836 + 国家队 146 = 982，还差 18 球。另含国家队与 Al-Nassr 里程碑。",
+    "每 6 小时自动同步的 C 罗职业生涯 1000 球进度、国家队与 Al-Nassr 里程碑。俱乐部与国家队拆分公开，只追踪可核实数据。",
   alternates: { canonical: absoluteUrl("/milestones/") },
 };
 
@@ -23,6 +23,7 @@ export default function MilestonesPage() {
   const career = milestones.items.find(
     (milestone) => milestone.id === "career-1000-goals",
   );
+  const careerProgress = career ? milestoneProgress(career) : null;
   const breakdownTotal =
     career?.breakdown?.reduce((total, item) => total + item.value, 0) ?? 0;
   const internationalTotal =
@@ -140,22 +141,26 @@ export default function MilestonesPage() {
                 <div className="career-ledger-foot">
                   <span>Total senior goals</span>
                   <strong>{career.current}</strong>
-                  <em>还差 {career.target - career.current} 球到 1000</em>
+                  <em>
+                    还差 {careerProgress?.remaining ?? 0} 球到 {career.target}
+                  </em>
                 </div>
               </div>
             ) : null}
 
             <div className="milestone-method">
               <p className="eyebrow">SOURCE & METHOD</p>
-              <h2>为什么是 982？</h2>
+              <h2>为什么是 {career?.current ?? "—"}？</h2>
               <p>
-                俱乐部 836 球 + 国家队 146 球 = 982 球。俱乐部部分包含
-                Sporting CP、曼联（两段）、皇马、尤文和 Al-Nassr 的正式比赛；
-                只使用 Wikipedia 生涯统计表口径，不估算、不预测日期。
+                俱乐部 {clubTotal} 球 + 国家队 {internationalTotal} 球 ={" "}
+                {career?.current ?? "—"} 球。俱乐部部分包含 Sporting CP、
+                曼联（两段）、皇马、尤文和 Al-Nassr 的正式比赛；只使用
+                Wikipedia 生涯统计表口径，不估算、不预测日期。
               </p>
               <p>
-                1000 球还差 18 球。不同来源可能有不同统计口径，所以这里把拆分摊开，
-                而不是只给一个总数。当前数据截至 {formatDate(milestones.asOf)}。
+                {career?.target ?? 1000} 球还差 {careerProgress?.remaining ?? "—"}{" "}
+                球。不同来源可能有不同统计口径，所以这里把拆分摊开，而不是只给一个总数。
+                当前数据截至 {formatDate(milestones.asOf)}，由每次同步自动更新。
               </p>
             </div>
           </div>
