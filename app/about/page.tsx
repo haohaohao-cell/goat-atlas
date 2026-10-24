@@ -7,14 +7,14 @@ import {
   SourceIcon,
   SparkIcon,
 } from "@/components/Icons";
-import { siteConfig } from "@/lib/site";
+import { absoluteUrl, siteConfig } from "@/lib/site";
 import { stats } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "About · 项目、数据与路线图",
   description:
     "GOAT Atlas 是一个开源的 C 罗职业生涯图鉴。了解它的数据原则、技术选择、路线图和参与方式。",
-  alternates: { canonical: "/about" },
+  alternates: { canonical: absoluteUrl("/about/") },
 };
 
 const FORM_FACTOR = [
@@ -45,8 +45,8 @@ const ROADMAP = [
   {
     phase: "Phase 1",
     title: "内容底座",
-    status: "进行中",
-    body: "26 个名场面、6 个章节、时间线、检索、详情页、分享卡、PWA manifest。目标：让一个球迷在 30 秒内找到他想看的瞬间。",
+    status: "已完成",
+    body: "26 个名场面、6 个章节、时间线、检索、详情页、分享卡、PWA manifest，以及 Live 数据页。目标：让一个球迷在 30 秒内找到他想看的瞬间。",
   },
   {
     phase: "Phase 2",
@@ -195,7 +195,9 @@ export default function AboutPage() {
             <p>
               这是一份策展式样本，不是完整数据库。26 条记录覆盖了职业生涯的关键坐标，
               但远未穷尽所有比赛和进球。收录标准偏向“有叙事价值、可被验证、能代表一个阶段”。
-              当前数据截至 2025 年 6 月，后续会扩展赛季汇总、完整进球索引和更多来源。
+              当前策展数据截至 2025 年 6 月。最新赛季、最近比赛和里程碑由 Live
+              数据层承载：配置 API key 后，GitHub Actions 每 6 小时自动同步，
+              不会自动改写 Atlas 里的策展故事。
             </p>
           </div>
         </div>

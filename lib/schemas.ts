@@ -76,3 +76,42 @@ export const playerSchema = z.object({
 });
 
 export const momentsSchema = z.array(momentSchema).min(1);
+
+const liveStatSchema = z.object({
+  competition: z.string().min(1),
+  team: z.string().min(1),
+  appearances: z.number().nonnegative(),
+  goals: z.number().nonnegative(),
+  assists: z.number().nonnegative(),
+  minutes: z.number().nonnegative(),
+});
+
+const liveMatchSchema = z.object({
+  date: z.string().min(1),
+  competition: z.string().min(1),
+  opponent: z.string().min(1),
+  score: z.string().min(1),
+  result: z.enum(["W", "D", "L"]),
+  goals: z.number().nonnegative(),
+  venue: z.string().optional(),
+  sourceUrl: z.string().optional(),
+});
+
+const liveMilestoneSchema = z.object({
+  date: z.string().min(1),
+  title: z.string().min(1),
+  detail: z.string().min(1),
+});
+
+export const liveSchema = z.object({
+  updatedAt: z.string().min(1),
+  checkedAt: z.string().min(1),
+  provider: z.string().min(1),
+  status: z.enum(["live", "snapshot", "unconfigured"]),
+  season: z.string().min(1),
+  note: z.string().min(1),
+  sourceUrl: z.string().optional(),
+  stats: z.array(liveStatSchema),
+  recentMatches: z.array(liveMatchSchema),
+  latest: z.array(liveMilestoneSchema),
+});

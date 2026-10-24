@@ -10,6 +10,7 @@
     "start": "next start",
     "typegen": "next typegen",
     "typecheck": "next typegen && tsc --noEmit",
+    "sync:live": "node scripts/sync-live.mjs",
     "validate": "node scripts/validate-data.mjs"
   },
   "dependencies": {

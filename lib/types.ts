@@ -80,3 +80,44 @@ export interface AtlasStats {
 export interface EraWithMoments extends Era {
   moments: Moment[];
 }
+
+export type LiveStatus = "live" | "snapshot" | "unconfigured";
+
+export interface LiveStat {
+  competition: string;
+  team: string;
+  appearances: number;
+  goals: number;
+  assists: number;
+  minutes: number;
+}
+
+export interface LiveMatch {
+  date: string;
+  competition: string;
+  opponent: string;
+  score: string;
+  result: "W" | "D" | "L";
+  goals: number;
+  venue?: string;
+  sourceUrl?: string;
+}
+
+export interface LiveMilestone {
+  date: string;
+  title: string;
+  detail: string;
+}
+
+export interface LiveData {
+  updatedAt: string;
+  checkedAt: string;
+  provider: string;
+  status: LiveStatus;
+  season: string;
+  note: string;
+  sourceUrl?: string;
+  stats: LiveStat[];
+  recentMatches: LiveMatch[];
+  latest: LiveMilestone[];
+}

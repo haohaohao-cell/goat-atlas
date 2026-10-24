@@ -14,6 +14,7 @@ import { tagLabel } from "@/lib/tags";
 import { MomentCard } from "@/components/MomentCard";
 import { ShareCard } from "@/components/ShareCard";
 import { ArrowLeft, ArrowUpRight, SourceIcon } from "@/components/Icons";
+import { absoluteUrl } from "@/lib/site";
 
 export const dynamicParams = false;
 
@@ -34,7 +35,7 @@ export async function generateMetadata({
   return {
     title: moment.title,
     description: moment.summary,
-    alternates: { canonical: `/atlas/${moment.slug}` },
+    alternates: { canonical: absoluteUrl(`/atlas/${moment.slug}/`) },
     openGraph: {
       type: "article",
       title: `${moment.title} | GOAT Atlas`,
@@ -42,7 +43,7 @@ export async function generateMetadata({
       publishedTime: `${moment.date}T00:00:00.000Z`,
       images: [
         {
-          url: "/og.png",
+          url: absoluteUrl("/og.png"),
           width: 1200,
           height: 630,
           alt: moment.title,

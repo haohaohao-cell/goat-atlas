@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { StoryExperience } from "@/components/StoryExperience";
 import { erasWithMoments, stats } from "@/lib/data";
+import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Story · 二十二年，六个章节",
   description:
     "沿着时间线读 C 罗的职业生涯：里斯本、曼彻斯特、马德里、都灵、回家，以及利雅得。不是集锦，是故事。",
-  alternates: { canonical: "/story" },
+  alternates: { canonical: `${siteConfig.url}/story/` },
 };
 
 export default function StoryPage() {

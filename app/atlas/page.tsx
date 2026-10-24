@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { AtlasExplorer } from "@/components/AtlasExplorer";
 import { moments, player, stats } from "@/lib/data";
+import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Atlas · 名场面检索",
   description:
     "按年份、章节、类型、对手和关键词检索 C 罗职业生涯的 26 个名场面。每一条记录都附有来源。",
-  alternates: { canonical: "/atlas" },
+  alternates: { canonical: `${siteConfig.url}/atlas/` },
 };
 
 export default function AtlasPage() {

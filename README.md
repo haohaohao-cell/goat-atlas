@@ -12,9 +12,9 @@
 | --- | --- |
 | ![Atlas](docs/atlas.webp) | ![Story](docs/story.webp) |
 
-<p align="center">
-  <img src="docs/share-card.webp" alt="分享卡" width="320" />
-</p>
+| Live 数据 | 分享卡 |
+| --- | --- |
+| ![Live](docs/live.webp) | ![分享卡](docs/share-card.webp) |
 
 ---
 
@@ -36,6 +36,7 @@ C 罗是第一号展馆；数据结构从第一天起就是多球员设计。
 - **Story 故事模式**：六个章节，从里斯本到利雅得
 - **详情页**：比分、时间、球场、背景故事、为什么重要、来源链接
 - **分享卡**：一键生成 4:5 图片，支持 Web Share / 下载 / 复制链接
+- **Live 数据**：最新赛季、最近比赛、里程碑；支持 GitHub Actions 每 6 小时自动同步
 - **来源标注**：每条记录至少一个可点击来源
 - **PWA**：可添加到主屏幕，带 manifest 和图标
 - **响应式**：手机、平板、桌面一套代码
@@ -78,6 +79,7 @@ pnpm validate    # 校验 data/*.json
 pnpm typecheck   # TypeScript 类型检查
 pnpm build       # 生产构建
 pnpm start       # 启动生产服务
+pnpm sync:live   # 从 API-Football 同步 Live 数据（需要 API key）
 ```
 
 > 构建默认使用 webpack（`next build --webpack`）。原因是 Next 16 + pnpm 在部分 Windows 环境下 Turbopack 解析 `next` 链接会失败；等上游稳定后可以切回 Turbopack。
@@ -90,6 +92,7 @@ app/
   atlas/page.tsx           # Atlas 检索
   atlas/[slug]/page.tsx    # 名场面详情
   story/page.tsx           # 故事模式
+  live/page.tsx            # Live 数据、最近比赛、同步状态
   about/page.tsx           # 项目、数据原则、路线图
   manifest.ts              # PWA manifest
   sitemap.ts / robots.ts   # SEO
@@ -103,12 +106,15 @@ components/Icons.tsx
 data/
   player.json              # 球员、俱乐部、章节
   moments.json             # 26 条名场面记录
+  live.json                # 最新赛季 / 比赛 / 同步状态
 lib/
   data.ts                  # 数据加载、排序、关联
+  live.ts                  # Live 数据加载
   schemas.ts               # Zod schema
   types.ts
 scripts/
   validate-data.mjs        # CI 数据校验
+  sync-live.mjs            # API-Football → data/live.json
   generate-assets.py       # 生成 OG 图和 PWA 图标（可选）
 ```
 
@@ -160,6 +166,28 @@ pnpm dev
 
 详细说明见 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
+## Live 数据怎么更新
+
+`data/live.json` 是唯一的自动数据入口。`.github/workflows/deploy-pages.yml` 会：
+
+1. 每 6 小时运行一次 `pnpm sync:live`，调用 API-Football 拉取本赛季统计和最近比赛。
+2. 只有数据变化时才提交 `chore: sync live data`，避免无意义 commit。
+3. 重新构建静态站点并部署到 GitHub Pages。
+
+配置 API key：
+
+```bash
+gh secret set API_FOOTBALL_KEY --repo <owner>/goat-atlas
+```
+
+或者在 GitHub 仓库的 **Settings → Secrets and variables → Actions** 中添加 `API_FOOTBALL_KEY`。
+
+说明：
+
+- 免费 key 的赛季范围和请求额度有限；如果当前赛季不可用，同步脚本会保留上一条快照，不会把页面写成空白。
+- 自动数据只进入 Live 页，**不会自动改写 Atlas 里的策展故事**。新里程碑值得长期收藏时，再由编辑整理进 `moments.json`。
+- 数据源默认是 [API-Football](https://www.api-football.com/)，球员 ID 固定为 `874`，可用 `API_FOOTBALL_PLAYER_ID` / `API_FOOTBALL_SEASON` 覆盖。
+
 ## 数据与许可
 
 - **代码**：[MIT](LICENSE)
@@ -173,6 +201,7 @@ pnpm dev
 | 阶段 | 内容 | 状态 |
 | --- | --- | --- |
 | Phase 1 | 内容底座：时间线、检索、详情、来源、分享卡 | ✅ 已完成 |
+| Phase 1.5 | Live 数据层 + 6 小时自动同步 | ✅ 骨架完成，配置 key 后启用 |
 | Phase 2 | 每日问答、球员对比、更多语言 | 下一步 |
 | Phase 3 | “历史上的今天”、里程碑提醒 bot | 计划中 |
 | Phase 4 | 球迷社区（先用 GitHub Discussions / 现成社群） | 等待时机 |
@@ -181,7 +210,20 @@ pnpm dev
 
 ## 部署
 
-推荐 Vercel：
+### GitHub Pages（当前默认）
+
+仓库已包含 `.github/workflows/deploy-pages.yml`：
+
+- push 到 `main` 自动构建并部署
+- 每 6 小时同步 Live 数据并重新部署
+- 静态导出由 `GITHUB_PAGES=true` 触发，输出到 `out/`
+- 子路径由 `NEXT_PUBLIC_BASE_PATH=/<repo-name>` 处理
+
+首次使用时，在仓库 **Settings → Pages → Build and deployment** 选择 **GitHub Actions**。
+
+### Vercel（可选）
+
+项目没有绑定 GitHub Pages，也可以直接导入 Vercel：
 
 1. 把仓库导入 Vercel。
 2. Framework 选择 Next.js，构建命令保持 `pnpm build`。
@@ -192,7 +234,7 @@ NEXT_PUBLIC_SITE_URL=https://your-domain.com
 NEXT_PUBLIC_GITHUB_URL=https://github.com/your-name/goat-atlas
 ```
 
-`NEXT_PUBLIC_GITHUB_URL` 可选；不设置时页面不会显示 GitHub 入口。
+Vercel 构建不设置 `GITHUB_PAGES`，因此不会启用 `basePath` 和静态导出。`NEXT_PUBLIC_GITHUB_URL` 可选；不设置时页面不会显示 GitHub 入口。
 
 ## 免责声明
 

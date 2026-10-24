@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { erasWithMoments, featuredMoments, player, stats } from "@/lib/data";
+import { live, liveStatusLabel, liveUpdatedDate } from "@/lib/live";
+import { formatDate } from "@/lib/format";
 import { EraCard } from "@/components/EraCard";
 import { MomentCard } from "@/components/MomentCard";
 import { Reveal } from "@/components/Reveal";
@@ -25,7 +27,7 @@ const ROADMAP = [
   {
     phase: "01",
     title: "Atlas 内容底座",
-    detail: "时间线、名场面检索、来源标注、分享卡。",
+    detail: "时间线、名场面检索、来源标注、分享卡、Live 数据层。",
     status: "现在",
   },
   {
@@ -178,6 +180,18 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <Link className="live-strip" href="/live">
+        <span className="live-strip-left">
+          <span className="live-dot" aria-hidden="true" />
+          <strong>LIVE DATA</strong>
+          <span>{liveStatusLabel(live.status)}</span>
+        </span>
+        <span className="live-strip-right">
+          更新于 {formatDate(liveUpdatedDate())}
+          <ArrowUpRight />
+        </span>
+      </Link>
 
       <section className="section chapters-section">
         <div className="container">

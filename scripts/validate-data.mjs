@@ -5,6 +5,7 @@ const read = (name) =>
 
 const player = read("player.json");
 const moments = read("moments.json");
+const live = read("live.json");
 
 const errors = [];
 const required = [
@@ -63,6 +64,44 @@ for (const [index, moment] of moments.entries()) {
   if (ids.has(moment.id)) errors.push(`Duplicate id: ${moment.id}`);
   slugs.add(moment.slug);
   ids.add(moment.id);
+}
+
+for (const field of [
+  "updatedAt",
+  "checkedAt",
+  "provider",
+  "status",
+  "season",
+  "note",
+  "stats",
+  "recentMatches",
+  "latest",
+]) {
+  if (live[field] === undefined) errors.push(`live.json missing "${field}"`);
+}
+
+if (!["live", "snapshot", "unconfigured"].includes(live.status)) {
+  errors.push(`Invalid live status: ${live.status}`);
+}
+
+for (const stat of live.stats ?? []) {
+  for (const field of ["competition", "team"]) {
+    if (!stat[field]) errors.push(`live stat missing "${field}"`);
+  }
+  for (const field of ["appearances", "goals", "assists", "minutes"]) {
+    if (typeof stat[field] !== "number" || stat[field] < 0) {
+      errors.push(`Invalid live stat "${field}"`);
+    }
+  }
+}
+
+for (const match of live.recentMatches ?? []) {
+  for (const field of ["date", "competition", "opponent", "score", "result"]) {
+    if (!match[field]) errors.push(`live match missing "${field}"`);
+  }
+  if (!["W", "D", "L"].includes(match.result)) {
+    errors.push(`Invalid live match result: ${match.result}`);
+  }
 }
 
 if (errors.length) {
