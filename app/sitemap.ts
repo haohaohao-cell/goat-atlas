@@ -20,6 +20,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/compare",
     "/today",
     "/milestones",
+    "/en",
+    "/pt",
   ].map((route) => ({
       url: route === "" ? `${base}/` : withSlash(route),
       lastModified: new Date(),

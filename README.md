@@ -5,11 +5,14 @@
 **An open, source-backed career atlas for Cristiano Ronaldo — and eventually every footballer.**
 
 🔗 **Live site:** <https://haohaohao-cell.github.io/goat-atlas/>  
+🌐 **English:** <https://haohaohao-cell.github.io/goat-atlas/en/> · **Português:** <https://haohaohao-cell.github.io/goat-atlas/pt/>  
 💻 **Repository:** <https://github.com/haohaohao-cell/goat-atlas>
 
 `Next.js 16` · `TypeScript` · `26 moments` · `6 chapters` · `23 sources` · `MIT + CC BY-SA 4.0`
 
 ![GOAT Atlas preview](docs/preview.webp)
+
+![English overview](docs/en.webp)
 
 | Atlas 检索 | Story 故事 |
 | --- | --- |
@@ -58,6 +61,7 @@ C 罗是第一号展馆；数据结构从第一天起就是多球员设计。
 - **GOAT 对比器**：6 个可核实指标，默认权重公开，权重可调
 - **历史上的今天**：日期精确匹配才叫 On This Day，没有匹配就展示“今日坐标”
 - **里程碑追踪**：国家队 150 球、250 场、Al-Nassr 联赛 120 球/场等进度
+- **多语言入口**：英文 / 葡语 overview + 全站语言切换 + hreflang
 - **来源标注**：每条记录至少一个可点击来源
 - **PWA**：可添加到主屏幕，带 manifest 和图标
 - **响应式**：手机、平板、桌面一套代码
@@ -121,6 +125,8 @@ app/
   compare/page.tsx         # GOAT 对比器
   today/page.tsx           # 历史上的今天 / 今日坐标
   milestones/page.tsx      # 里程碑进度
+  en/page.tsx              # English overview
+  pt/page.tsx              # Portuguese overview
   about/page.tsx           # 项目、数据原则、路线图
   manifest.ts              # PWA manifest
   sitemap.ts / robots.ts   # SEO
@@ -131,6 +137,8 @@ components/
   MatchCalendarActions.tsx # 日历下载 / 订阅链接复制
   QuizGame.tsx             # 每日问答、连击、结果卡
   CompareTool.tsx          # 加权对比器
+  LanguageSwitcher.tsx     # 中文 / EN / PT
+  LocalizedHome.tsx        # 英文 / 葡语 overview
   MomentCard.tsx
   EraCard.tsx
 components/Icons.tsx
@@ -148,6 +156,7 @@ lib/
   compare.ts               # 对比数据加载
   today.ts                 # 日期匹配 / 今日坐标
   milestones.ts            # 里程碑进度计算
+  i18n.ts                  # 英文 / 葡语文案
   schemas.ts               # Zod schema
   types.ts
 scripts/
@@ -262,6 +271,13 @@ gh secret set API_FOOTBALL_KEY --repo haohaohao-cell/goat-atlas
 - 当前 26 条数据决定命中率不会高；随着 Atlas 变厚，这个页面会越来越有内容。
 - 分享卡、详情页和来源链接都复用同一套数据，不另写一份。
 
+## 多语言现在到哪一步
+
+- **已上线**：英文 `/en/`、葡语 `/pt/` overview，全站语言切换，`hreflang` 和本地化 metadata。
+- **仍以中文为主**：26 条名场面的长文、问答题库、故事叙述目前是中文。
+- **不直接机翻上线**：深度内容需要逐条校对，避免把错误翻译写进“有出处”的 Atlas。
+- 下一步是逐条翻译 Atlas 内容，而不是先堆更多空页面。
+
 ## 数据与许可
 
 - **代码**：[MIT](LICENSE)
@@ -277,7 +293,7 @@ gh secret set API_FOOTBALL_KEY --repo haohaohao-cell/goat-atlas
 | Phase 1 | 内容底座：时间线、检索、详情、来源、分享卡 | ✅ 已完成 |
 | Phase 1.5 | Live 数据层 + 6 小时自动同步 | ✅ 免费方案已启用 |
 | Phase 2 | 每日问答、GOAT 对比器 | ✅ 已完成 |
-| Phase 3 | “历史上的今天”、里程碑追踪、提醒 bot、更多语言 | 进行中（Today + 里程碑已完成） |
+| Phase 3 | “历史上的今天”、里程碑追踪、提醒 bot、更多语言 | 进行中（Today + 里程碑 + 多语言入口已完成） |
 | Phase 4 | 球迷社区（先用 GitHub Discussions / 现成社群） | 等待时机 |
 
 完整说明见 [About 页面](app/about/page.tsx) 和 [CONTRIBUTING.md](CONTRIBUTING.md)。
