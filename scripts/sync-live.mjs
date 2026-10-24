@@ -100,9 +100,11 @@ async function main() {
     )[0]?.team;
   const teamId = primaryTeam?.id ? Number(primaryTeam.id) : null;
 
-  const fixtures = await request(
-    `/fixtures?player=${PLAYER_ID}&season=${season}`,
-  );
+  // API-Football does not expose a player filter on /fixtures. Use the
+  // player's primary team (club or national team) and inspect goal events.
+  const fixtures = teamId
+    ? await request(`/fixtures?team=${teamId}&season=${season}`)
+    : [];
 
   const recentMatches = fixtures
     .filter((fixture) => {
