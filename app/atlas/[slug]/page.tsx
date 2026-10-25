@@ -13,6 +13,7 @@ import { formatDateLong, getYear } from "@/lib/format";
 import { tagLabel } from "@/lib/tags";
 import { MomentCard } from "@/components/MomentCard";
 import { ShareCard } from "@/components/ShareCard";
+import { VideoEmbed } from "@/components/VideoEmbed";
 import { ArrowLeft, ArrowUpRight, SourceIcon } from "@/components/Icons";
 import {
   correctionIssueUrl,
@@ -137,6 +138,13 @@ export default async function MomentPage({
                   height={moment.media.height}
                   loading="lazy"
                 />
+              ) : moment.media.provider === "youtube" &&
+                moment.media.videoId ? (
+                <VideoEmbed
+                  videoId={moment.media.videoId}
+                  title={moment.media.alt}
+                  channel={moment.media.credit}
+                />
               ) : (
                 <a
                   className="detail-media-video"
@@ -146,7 +154,7 @@ export default async function MomentPage({
                 >
                   <span aria-hidden="true">▶</span>
                   <strong>{moment.media.alt}</strong>
-                  <em>在官方频道观看 · 不在站内托管</em>
+                  <em>在官方频道观看 · 外链，站内不托管</em>
                 </a>
               )}
               <figcaption>

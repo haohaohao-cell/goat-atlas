@@ -91,7 +91,8 @@ GitHub 账号：`haohaohao-cell`
 | 来源分级 | 官方 **5** / 媒体 **28** / 百科 **54**（共 87 条链接，按域名自动分级） |
 | 本赛季动态 | 8 条（人工策展，每条带来源） |
 | 章节插画 | 6 张原创 SVG（CC BY-SA 4.0） |
-| 影像档案 | 4 张 CC BY / CC BY-SA 照片（资料图，逐张署名） |
+| 影像档案 | 7 张 CC BY / CC BY-SA 照片（资料图，逐张署名） |
+| 官方视频 | 3 个节点挂官方频道外链；`videoId` 可切换为点击加载嵌入 |
 
 ### 生涯进球口径
 
@@ -271,7 +272,8 @@ scripts/
 | 来源分级 | ✅ | 官方 / 媒体 / 百科；详情页显示分级、域名与单源提示 |
 | 本赛季动态 | ✅ | 8 条人工策展，首页 + Live；每条带来源 |
 | 原创插画 / 许可页 | ✅ | 6 张 SVG 章节插画；`/credits/` 说明素材政策 |
-| 影像档案 | ✅ | 4 张 CC 授权照片；逐张作者/许可/原始页，标注资料图 |
+| 影像档案 | ✅ | 7 张 CC 授权照片；逐张作者/许可/原始页，标注资料图 |
+| 官方视频 | ✅ | 3 个节点外链官方频道；有 `videoId` 时点击加载播放器 |
 | 多语言 | ⚠️ | 仅入口页，非全站 |
 | Bot | ✅ | 单频道，已真实收到 ntfy 消息 |
 | PWA | ✅ | manifest + service worker；已访问页面断网可开，不预缓存全站 |
@@ -375,7 +377,8 @@ scripts/
 - 本赛季动态：`data/updates.json` + 首页与 Live 区块
 - 六张原创章节 SVG 插画 + `/credits/` 素材与许可页
 - `media` 字段（图片/视频）与详情页渲染、校验规则
-- Commons 许可审计 workflow + 4 张 CC 授权照片的“影像档案” `/gallery/`
+- Commons 许可审计 workflow + 7 张 CC 授权照片的“影像档案” `/gallery/`
+- 3 个节点挂官方视频频道外链；`VideoEmbed` 支持验证过的 `videoId` 点击加载
 
 ---
 
@@ -412,6 +415,7 @@ scripts/
 - **不要**把“本赛季动态”写成新闻流：只收可核实事实，转会传闻不进列表。
 - **不要**从懂球帝、门户、Getty / Reuters / 俱乐部图库下载图片进仓库；只能外链。站内图片只收 CC0 / CC BY / CC BY-SA，并且必须能回溯作者、许可、原始文件页。
 - **不要**把资料图写成“某场比赛的照片”；`gallery.json` 的 caption 必须保留“资料图”说明。
+- **不要**猜 YouTube videoId 或把非官方频道当官方；嵌入门槛是：官方频道 + oEmbed 能验证 + 不是猜的 ID。
 - **不要**在 push 被拒时强推；Bot workflow 会提交 `data/bot-state.json`，先 `git pull --rebase`。
 - PowerShell 下 `Get-Content` 可能把 UTF-8 显示成乱码，不代表文件坏了；用 read 工具或 Node 读取。
 - `public/matches.ics` 每次 build 会重新生成，出现 CRLF warning 正常。

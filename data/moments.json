@@ -210,7 +210,16 @@
       "label": "冠军",
       "value": "欧冠"
     },
-    "sources": [
+        "media": {
+      "type": "video",
+      "src": "https://www.youtube.com/@UEFA",
+      "alt": "2008 年欧冠决赛 · UEFA 官方频道",
+      "credit": "UEFA",
+      "license": "官方频道外链（站内不托管）",
+      "sourceUrl": "https://www.youtube.com/@UEFA"
+    },
+
+"sources": [
       {
         "label": "2008 UEFA Champions League final — Wikipedia",
         "url": "https://en.wikipedia.org/wiki/2008_UEFA_Champions_League_final"
@@ -637,7 +646,16 @@
       "label": "进球",
       "value": "3"
     },
-    "sources": [
+        "media": {
+      "type": "video",
+      "src": "https://www.youtube.com/@FIFA",
+      "alt": "2018 世界杯 葡萄牙 3-3 西班牙 · FIFA 官方频道",
+      "credit": "FIFA",
+      "license": "官方频道外链（站内不托管）",
+      "sourceUrl": "https://www.youtube.com/@FIFA"
+    },
+
+"sources": [
       {
         "label": "2018 FIFA World Cup Group B — Wikipedia",
         "url": "https://en.wikipedia.org/wiki/2018_FIFA_World_Cup_Group_B"
@@ -849,7 +867,16 @@
       "label": "联赛",
       "value": "沙特职业联赛"
     },
-    "sources": [
+        "media": {
+      "type": "video",
+      "src": "https://www.youtube.com/@AlNassrFC",
+      "alt": "Al Nassr 官方频道",
+      "credit": "Al Nassr",
+      "license": "官方频道外链（站内不托管）",
+      "sourceUrl": "https://www.youtube.com/@AlNassrFC"
+    },
+
+"sources": [
       {
         "label": "Al Nassr FC — Wikipedia",
         "url": "https://en.wikipedia.org/wiki/Al_Nassr_FC"

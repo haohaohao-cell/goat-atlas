@@ -233,6 +233,8 @@ export interface MomentMedia {
   sourceUrl: string;
   width?: number;
   height?: number;
+  provider?: "youtube";
+  videoId?: string;
 }
 
 export interface GalleryItem {

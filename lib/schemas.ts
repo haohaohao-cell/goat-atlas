@@ -52,6 +52,8 @@ export const momentSchema = z.object({
       sourceUrl: z.string().min(1),
       width: z.number().positive().optional(),
       height: z.number().positive().optional(),
+      provider: z.enum(["youtube"]).optional(),
+      videoId: z.string().min(1).optional(),
     })
     .optional(),
 });

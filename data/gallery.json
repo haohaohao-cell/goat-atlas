@@ -53,6 +53,45 @@
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cristiano_Ronaldo_0895.jpg",
       "width": 1600,
       "height": 1067
+    },
+    {
+      "id": "al-nassr-2023",
+      "src": "/media/gal-al-nassr.webp",
+      "alt": "C 罗身穿 Al Nassr 深蓝色球衣手持足球",
+      "caption": "Al Nassr 时期：2023 年 9 月亚冠对阵 Persepolis。资料图。",
+      "era": "riyadh",
+      "credit": "Mehdi Marizad",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cristiano_Ronaldo_with_Al_Nassr,_19_September_2023_-_77.jpg",
+      "width": 1050,
+      "height": 700
+    },
+    {
+      "id": "ucl-2018-suit",
+      "src": "/media/gal-ucl-2018.webp",
+      "alt": "C 罗身穿深色西装，在 2018 年欧冠决赛后",
+      "caption": "2018 年欧冠决赛后。资料图。",
+      "era": "madrid",
+      "credit": "Fotografías Archimadrid.es",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cristiano_Ronaldo_after_2018_UEFA_Champions_League_Final.jpg",
+      "width": 480,
+      "height": 720
+    },
+    {
+      "id": "portugal-2018",
+      "src": "/media/gal-portugal-2018.webp",
+      "alt": "C 罗身穿葡萄牙红色球衣的近景",
+      "caption": "2018 年世界杯期间的葡萄牙队。资料图。",
+      "era": "madrid",
+      "credit": "Анна Нэсси",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cristiano_Ronaldo_2018.jpg",
+      "width": 613,
+      "height": 920
     }
   ]
 }
