@@ -64,7 +64,7 @@ C 罗是第一号展馆。当前代码仍是单球员结构（`player.json` 是�
 - **里程碑追踪**：职业生涯 1000 球（每 6 小时自动同步，当前 981 = 俱乐部 835 + 国家队 146）、国家队 150 球、250 场、Al-Nassr 联赛 120 球/场等进度
 - **多语言入口**：英文 / 葡语 overview（页脚入口，非全站翻译）
 - **Bot 通知**：ntfy / Telegram / Discord 单频道广播，每日摘要与赛前提醒，GitHub Actions 定时发送
-- **来源标注**：每条记录至少一个可点击来源
+- **来源分级**：每条记录至少一个可点击来源，按官方 / 媒体 / 百科标注；单源记录会显式提示
 - **PWA**：manifest + service worker，可添加到主屏幕；已访问过的页面断网时仍能打开（不预缓存全站）
 - **响应式**：手机、平板、桌面一套代码
 - **静态优先**：所有页面构建时生成，部署成本接近于零
@@ -108,6 +108,7 @@ pnpm build       # 生产构建（会生成 matches.ics）
 pnpm start       # 启动生产服务
 pnpm calendar    # 单独生成 public/matches.ics
 pnpm sync:live   # 同步 Live 数据（API-Football / Wikipedia 回退）
+pnpm check:links # 检查 data/*.json 里的来源链接（需要正常外网）
 ```
 
 > 构建默认使用 webpack（`next build --webpack`）。原因是 Next 16 + pnpm 在部分 Windows 环境下 Turbopack 解析 `next` 链接会失败；等上游稳定后可以切回 Turbopack。
@@ -164,11 +165,13 @@ lib/
   compare.ts               # 对比数据加载
   today.ts                 # 日期匹配 / 今日坐标
   milestones.ts            # 里程碑进度计算
+  sources.ts               # 来源分级（官方 / 媒体 / 百科）与纠错链接
   i18n.ts                  # 英文 / 葡语文案
   schemas.ts               # Zod schema
   types.ts
 scripts/
   validate-data.mjs        # CI 数据校验
+  check-links.mjs          # 来源链接检查（每周 CI）
   sync-live.mjs            # API-Football / Wikipedia → data/live.json
   sync-milestones.mjs      # Wikipedia 生涯统计表 → data/milestones.json
   generate-calendar.mjs    # data/live.json → public/matches.ics
@@ -217,10 +220,20 @@ pnpm dev
 质量标准：
 
 - 日期使用 `YYYY-MM-DD`
-- 至少一个可点击来源
+- 至少一个可点击来源；优先官方（赛事组织 / 俱乐部 / 联赛），其次媒体，Wikipedia 只做索引与交叉核对
+- 来源类型由 `lib/sources.ts` 按域名自动分级，也可以在数据里用 `"tier": "official" | "media" | "reference" | "other"` 覆盖
+- 中文媒体（包括懂球帝）可以作为二级来源补充，但不替代官方或一手报道
 - 区分**事实**（比分、时间）和**叙事**（为什么重要）
 - 不确定的内容标注“待核实”，不要编
 - 不搬运未授权的比赛照片或转播画面
+
+新增或修改来源后，可以在有正常外网的环境跑：
+
+```bash
+pnpm check:links
+```
+
+它会检查 `data/*.json` 里的所有链接，输出 `link-report.md`；CI 每周也会自动跑一次并开 issue。
 
 详细说明见 [CONTRIBUTING.md](CONTRIBUTING.md)。
 

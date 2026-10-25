@@ -8,7 +8,11 @@ import {
   SparkIcon,
 } from "@/components/Icons";
 import { absoluteUrl, siteConfig } from "@/lib/site";
-import { stats } from "@/lib/data";
+import { moments, stats } from "@/lib/data";
+import {
+  SOURCE_TIER_META,
+  sourceTierCounts,
+} from "@/lib/sources";
 
 export const metadata: Metadata = {
   title: "About · 项目、数据与路线图",
@@ -72,7 +76,7 @@ const PRINCIPLES = [
   {
     icon: <SourceIcon />,
     title: "来源优先",
-    body: "每条记录至少一个可点击来源。优先 Wikipedia / Wikidata、官方比赛报告和可核验的公开资料，不把二手转述当事实。",
+    body: "每条记录至少一个可点击来源。优先官方比赛报告和可核验的一手资料，Wikipedia / Wikidata 用于索引与交叉核对，不把二手转述当事实。",
   },
   {
     icon: <SparkIcon />,
@@ -87,6 +91,10 @@ const PRINCIPLES = [
 ];
 
 export default function AboutPage() {
+  const tierCounts = sourceTierCounts(
+    moments.flatMap((moment) => moment.sources),
+  );
+
   return (
     <>
       <section className="page-hero about-hero">
@@ -200,6 +208,34 @@ export default function AboutPage() {
               API-Football 免费版不覆盖当前赛季时，会自动回退到 Wikipedia。
               免费方案不含助攻，也不会自动改写 Atlas 里的策展故事。
             </p>
+          </div>
+
+          <div className="data-note source-tier-note">
+            <h3>来源分级：官方 &gt; 媒体 &gt; 百科</h3>
+            <p>
+              每条记录至少一个来源，并按来源类型标注。官方指赛事组织、俱乐部或联赛；
+              媒体指通讯社与媒体的现场报道；百科（维基百科等）只用于索引和交叉核对，
+              不单独作为“已证实”。中文媒体（包括懂球帝）会作为二级来源补充，
+              但不会替代官方或一手报道。
+            </p>
+            <div className="source-tier-legend">
+              {(
+                ["official", "media", "reference", "other"] as const
+              ).map((tier) => {
+                const meta = SOURCE_TIER_META[tier];
+                const count = tierCounts[tier];
+                return (
+                  <div
+                    key={tier}
+                    className={`source-tier-stat ${meta.className}`}
+                  >
+                    <strong>{count}</strong>
+                    <span>{meta.label}</span>
+                    <em>{meta.hint}</em>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>

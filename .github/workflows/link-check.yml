@@ -1,0 +1,59 @@
+name: Link check
+
+on:
+  schedule:
+    # 每周一 06:00 UTC（北京 14:00）
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Check source links
+        id: check
+        continue-on-error: true
+        run: node scripts/check-links.mjs --report link-report.md
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: link-report
+          path: link-report.md
+          if-no-files-found: ignore
+
+      - name: Open or update issue
+        if: steps.check.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TITLE="来源链接需要修复"
+          if [ -f link-report.md ]; then
+            BODY=$(cat link-report.md)
+          else
+            BODY="链接检查失败，但没有生成报告。"
+          fi
+          EXISTING=$(gh issue list --state open --search "$TITLE in:title" --json number --jq '.[0].number')
+          if [ -n "$EXISTING" ]; then
+            gh issue comment "$EXISTING" --body "$BODY"
+          else
+            gh issue create --title "$TITLE" --body "$BODY"
+          fi
+
+      - name: Fail when links are broken
+        if: steps.check.outcome == 'failure'
+        run: exit 1

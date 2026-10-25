@@ -11,6 +11,7 @@ export const momentKindSchema = z.enum([
 const sourceSchema = z.object({
   label: z.string().min(1),
   url: z.string().min(1),
+  tier: z.enum(["official", "media", "reference", "other"]).optional(),
 });
 
 const statSchema = z.object({

@@ -88,6 +88,7 @@ GitHub 账号：`haohaohao-cell`
 | 距离 1000 球 | **19** |
 | Today 精确覆盖 | 72 个不同月日 / 365 ≈ **19.7%** |
 | 问答重复周期（期望） | 约 **12 天**（60 题 ÷ 5 题/天；每天独立洗牌，不保证不重复） |
+| 来源分级 | 官方 **4** / 媒体 **28** / 百科 **55**（共 87 条链接，按域名自动分级） |
 
 ### 生涯进球口径
 
@@ -252,6 +253,7 @@ scripts/
 | GOAT 对比 | ✅ | 6 指标，默认 3:3 / 50:50，权重可调 |
 | Today | ✅ | 有精确日期就展示，没有就“今日坐标” |
 | 里程碑 | ✅ | 981/1000，自动同步 |
+| 来源分级 | ✅ | 官方 / 媒体 / 百科；详情页显示分级、域名与单源提示 |
 | 多语言 | ⚠️ | 仅入口页，非全站 |
 | Bot | ✅ | 单频道，已真实收到 ntfy 消息 |
 | PWA | ✅ | manifest + service worker；已访问页面断网可开，不预缓存全站 |
@@ -282,6 +284,13 @@ scripts/
 - typecheck
 - build
 
+### `link-check.yml`
+
+- 每周一 `06:00 UTC` + `workflow_dispatch`
+- `node scripts/check-links.mjs --report link-report.md`
+- 404/410/5xx 或网络错误 → 失败，并自动开 / 更新 issue「来源链接需要修复」
+- 401/403/429 视为“被反爬拦截”，只警告，不判死链
+
 ### `bot.yml`
 
 - 每天 `00:00 UTC`（北京 08:00）发 daily digest
@@ -309,11 +318,11 @@ scripts/
 
 2. **没有 analytics / RSS / JSON-LD**：不知道谁在看、无法被 feed 订阅、SEO 结构化数据缺失。
 3. **详情页 OG 是通用图**：分享链接预览没有每条 moment 的独立图。
-4. **没有链接检查器**：78 个来源没有自动检测失效。
-5. **sitemap 静态页 lastModified 用构建时间**，不是真实更新时间。
-6. **Today 精确覆盖率 19.7%**：大多数日期走“今日坐标”，这是设计，不是 bug。
-7. **内容分布不均**：2015 只有 1 条，2019 2 条，2024 2 条。
-8. **Bot 单频道**：不是公共多用户 bot。
+4. **sitemap 静态页 lastModified 用构建时间**，不是真实更新时间。
+5. **Today 精确覆盖率 19.7%**：大多数日期走“今日坐标”，这是设计，不是 bug。
+6. **内容分布不均**：2015 只有 1 条，2019 2 条，2024 2 条。
+7. **Bot 单频道**：不是公共多用户 bot。
+8. **85 条记录只有 1 个来源**（其中 55 条只有 Wikipedia）：单源、百科级，需要逐步补官方或媒体第二来源。
 
 ### P2
 
@@ -338,6 +347,9 @@ scripts/
 - Roadmap 更新：Phase 3 完成，新增 Phase 3.5/5
 - Bot 真实发送测试通过（ntfy）
 - 题库 20 → 60（q21–q60 全部复用 moments 里已验证的来源）
+- 来源分级：官方 / 媒体 / 百科，详情页显示分级、域名、单源提示与预填纠错 issue
+- 链接检查器 + 每周 `link-check.yml`
+- 首页新增 981/1000 生涯进球 ledger，首页数据改为跟随 milestones
 - 修正 q17 题干年份（2023 → 2022 年底）、README 多球员/ntfy/PWA 口径
 - PWA 补 service worker：导航 network-first、静态资源 cache-first、`/offline/` 回退
 
@@ -370,6 +382,8 @@ scripts/
 - **不要**重新加 Header 语言切换；已经决定只保留 `/en`、`/pt` 入口。
 - **不要**用旧的 Wikipedia fixture 跑 `sync:milestones`，会把 981 回退成旧值；要跑就用当前线上页面。
 - **不要**为了凑题写没有出处的冷知识；新增 quiz 题先确认 `source` 能打开、且与 `data/moments.json` 不矛盾。
+- **不要**把媒体标成“官方”，也不要把懂球帝这类中文转述当唯一来源；它只能做二级来源。
+- **不要**在本地用 `pnpm check:links` 的死链结果直接下结论：这台机器 DNS 被污染，真实结果以 GitHub Actions 的 `link-check` 为准。
 - **不要**在 push 被拒时强推；Bot workflow 会提交 `data/bot-state.json`，先 `git pull --rebase`。
 - PowerShell 下 `Get-Content` 可能把 UTF-8 显示成乱码，不代表文件坏了；用 read 工具或 Node 读取。
 - `public/matches.ics` 每次 build 会重新生成，出现 CRLF warning 正常。

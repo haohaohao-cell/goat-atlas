@@ -14,7 +14,14 @@ import { tagLabel } from "@/lib/tags";
 import { MomentCard } from "@/components/MomentCard";
 import { ShareCard } from "@/components/ShareCard";
 import { ArrowLeft, ArrowUpRight, SourceIcon } from "@/components/Icons";
-import { absoluteUrl } from "@/lib/site";
+import {
+  correctionIssueUrl,
+  SOURCE_TIER_META,
+  sourceHost,
+  sourceTier,
+  sourceTierCounts,
+} from "@/lib/sources";
+import { absoluteUrl, siteConfig } from "@/lib/site";
 
 export const dynamicParams = false;
 
@@ -66,6 +73,16 @@ export default async function MomentPage({
   const era = getEra(moment.era);
   const { previous, next } = getMomentNeighbors(moment.slug);
   const related = getRelatedMoments(moment, 3);
+  const tierCounts = sourceTierCounts(moment.sources);
+  const correctionUrl = siteConfig.githubUrl
+    ? correctionIssueUrl({
+        githubUrl: siteConfig.githubUrl,
+        slug: moment.slug,
+        title: moment.title,
+        date: moment.date,
+        sources: moment.sources,
+      })
+    : null;
 
   return (
     <article className="detail">
@@ -128,21 +145,56 @@ export default async function MomentPage({
             <div className="detail-source-head">
               <SourceIcon />
               <h2>来源与校验</h2>
+              <span className="detail-source-count">
+                {moment.sources.length} 个来源
+              </span>
             </div>
             <p>
               这条记录由社区整理，尽量保留可核验的原始来源。发现事实错误，
               欢迎带着链接来纠正。
             </p>
-            <ul>
-              {moment.sources.map((source) => (
-                <li key={source.url}>
-                  <a href={source.url} target="_blank" rel="noreferrer">
-                    {source.label}
-                    <ArrowUpRight />
-                  </a>
-                </li>
-              ))}
+            <ul className="source-list">
+              {moment.sources.map((source) => {
+                const tier = sourceTier(source.url, source.tier);
+                const meta = SOURCE_TIER_META[tier];
+                return (
+                  <li key={source.url} className="source-item">
+                    <span
+                      className={`source-tier ${meta.className}`}
+                      title={meta.hint}
+                    >
+                      {meta.label}
+                    </span>
+                    <a href={source.url} target="_blank" rel="noreferrer">
+                      {source.label}
+                      <ArrowUpRight />
+                    </a>
+                    <span className="source-host">{sourceHost(source.url)}</span>
+                  </li>
+                );
+              })}
             </ul>
+            <p className="source-legend">
+              来源分级：官方（赛事组织 / 俱乐部 / 联赛）&gt; 媒体（通讯社与媒体报道）&gt;
+              百科（维基百科等索引，用于交叉核对）。
+              {tierCounts.official > 0
+                ? ` 本条含 ${tierCounts.official} 个官方来源。`
+                : " 本条暂无官方来源，欢迎补充。"}
+              {moment.sources.length === 1
+                ? " 本条目前只有 1 个来源，属于单源记录。"
+                : ""}
+            </p>
+            {correctionUrl ? (
+              <a
+                className="text-button"
+                href={correctionUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
+                发现错误？带着来源提 issue
+                <ArrowUpRight />
+              </a>
+            ) : null}
             <Link className="text-button" href="/about#contribute">
               参与纠错 / 补充来源
             </Link>

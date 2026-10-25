@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { erasWithMoments, featuredMoments, player, stats } from "@/lib/data";
 import { live, liveStatusLabel, liveUpdatedDate } from "@/lib/live";
+import { milestones, milestoneProgress } from "@/lib/milestones";
 import { formatDate } from "@/lib/format";
 import { EraCard } from "@/components/EraCard";
 import { MomentCard } from "@/components/MomentCard";
@@ -39,8 +40,14 @@ const ROADMAP = [
   {
     phase: "03",
     title: "历史上的今天 + 里程碑提醒",
-    detail: "Today、里程碑与英/葡入口已上线；翻译暂缓，下一步扩充数据。",
-    status: "进行中",
+    detail: "Today、里程碑、单频道 Bot 与英/葡入口已上线；题库扩到 60 题。",
+    status: "已完成",
+  },
+  {
+    phase: "3.5",
+    title: "发布准备",
+    detail: "PWA 离线、来源分级与链接检查已到位；接下来是小范围发布与反馈。",
+    status: "现在",
   },
   {
     phase: "04",
@@ -52,6 +59,16 @@ const ROADMAP = [
 
 export default function HomePage() {
   const featured = featuredMoments.slice(0, 4);
+  const career = milestones.items.find(
+    (item) => item.id === "career-1000-goals",
+  );
+  const careerProgress = career ? milestoneProgress(career) : null;
+  const breakdown = career?.breakdown ?? [];
+  const nationalGoals =
+    breakdown.find((item) => item.label === "Portugal")?.value ?? 0;
+  const clubGoals = breakdown
+    .filter((item) => item.label !== "Portugal")
+    .reduce((total, item) => total + item.value, 0);
 
   return (
     <>
@@ -99,6 +116,27 @@ export default function HomePage() {
                 <span>个来源</span>
               </div>
             </div>
+
+            {career && careerProgress ? (
+              <Link className="hero-ledger" href="/milestones">
+                <div className="hero-ledger-top">
+                  <span>CAREER GOALS</span>
+                  <strong>
+                    {career.current}
+                    <em>/ {career.target}</em>
+                  </strong>
+                </div>
+                <div className="hero-ledger-track" aria-hidden="true">
+                  <span style={{ width: `${careerProgress.percent}%` }} />
+                </div>
+                <div className="hero-ledger-foot">
+                  <span>
+                    俱乐部 {clubGoals} + 国家队 {nationalGoals}
+                  </span>
+                  <span>距 1000 球还差 {careerProgress.remaining} 球</span>
+                </div>
+              </Link>
+            ) : null}
           </div>
 
           <div className="hero-art" aria-hidden="true">
@@ -174,9 +212,12 @@ export default function HomePage() {
             <em>BALLON D&apos;OR</em>
           </div>
           <div className="stat-item">
-            <strong>900</strong>
-            <span>生涯进球里程碑</span>
-            <em>GOALS · 2024</em>
+            <strong>{career?.current ?? 981}</strong>
+            <span>生涯进球</span>
+            <em>
+              CAREER GOALS
+              {careerProgress ? ` · 距 1000 差 ${careerProgress.remaining}` : ""}
+            </em>
           </div>
         </div>
       </section>

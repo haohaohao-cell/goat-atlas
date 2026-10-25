@@ -1,8 +1,11 @@
 export type MomentKind = "goal" | "trophy" | "award" | "debut" | "moment";
 
+export type SourceTier = "official" | "media" | "reference" | "other";
+
 export interface Source {
   label: string;
   url: string;
+  tier?: SourceTier;
 }
 
 export interface MomentStat {
