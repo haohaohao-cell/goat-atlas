@@ -7128,3 +7128,295 @@ svg {
     display: none;
   }
 }
+
+/* Season log */
+
+.updates-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.update-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 22px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+}
+
+.update-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.update-date {
+  color: var(--muted-2);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+}
+
+.update-kind {
+  padding: 2px 7px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted-2);
+  font-family: var(--font-mono);
+  font-size: 8px;
+  font-style: normal;
+  letter-spacing: 0.1em;
+  line-height: 1.6;
+}
+
+.update-kind.is-milestone {
+  color: var(--gold-bright);
+  border-color: rgba(227, 189, 106, 0.45);
+}
+
+.update-kind.is-title {
+  color: var(--gold);
+  border-color: var(--line-strong);
+}
+
+.update-kind.is-record {
+  color: #b9c7d4;
+  border-color: rgba(185, 199, 212, 0.28);
+}
+
+.update-card h3 {
+  margin-top: 14px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.update-card p {
+  flex: 1;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.update-card a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-start;
+  margin-top: 16px;
+  color: var(--muted-2);
+  font-size: 10px;
+}
+
+.update-card a:hover {
+  color: var(--gold);
+}
+
+.updates-list {
+  margin-top: 16px;
+}
+
+.update-row {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr) auto;
+  gap: 20px;
+  align-items: start;
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+}
+
+.update-row-date {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  align-items: flex-start;
+}
+
+.update-row-date > span {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+}
+
+.update-row-main h3 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.update-row-main p {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.update-row-source {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding-top: 2px;
+  color: var(--muted-2);
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.update-row-source:hover {
+  color: var(--gold);
+}
+
+@media (max-width: 860px) {
+  .updates-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .update-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .update-row-date {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+/* Era artwork & media */
+
+.detail-era-art {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+  width: min(52%, 700px);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 55%);
+  mask-image: linear-gradient(90deg, transparent 0%, #000 55%);
+}
+
+.detail-media {
+  margin: 0 0 32px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+}
+
+.detail-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.detail-media figcaption {
+  padding: 10px 14px;
+  border-top: 1px solid var(--line);
+  color: var(--muted-2);
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+.detail-media-video {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 30px;
+}
+
+.detail-media-video > span {
+  color: var(--gold);
+  font-size: 18px;
+}
+
+.detail-media-video strong {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.detail-media-video em {
+  color: var(--muted-2);
+  font-size: 10px;
+  font-style: normal;
+  letter-spacing: 0.04em;
+}
+
+.credits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.credit-card {
+  padding: 16px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+}
+
+.credit-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  background: #0a0908;
+}
+
+.credit-card h3 {
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.credit-card p {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.credit-card > span {
+  display: inline-block;
+  margin-top: 8px;
+  color: var(--gold);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+}
+
+.credits-policy {
+  margin-top: 26px;
+}
+
+.credits-policy ul {
+  margin: 12px 0 0;
+  padding-left: 18px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 2;
+}
+
+@media (max-width: 860px) {
+  .detail-era-art {
+    width: 100%;
+    opacity: 0.22;
+    -webkit-mask-image: linear-gradient(180deg, #000 0%, transparent 78%);
+    mask-image: linear-gradient(180deg, #000 0%, transparent 78%);
+  }
+
+  .credits-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .credits-grid {
+    grid-template-columns: 1fr;
+  }
+}

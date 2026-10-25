@@ -22,6 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/milestones",
     "/en",
     "/pt",
+    "/credits",
   ].map((route) => ({
       url: route === "" ? `${base}/` : withSlash(route),
       lastModified: new Date(),

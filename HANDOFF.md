@@ -89,6 +89,8 @@ GitHub 账号：`haohaohao-cell`
 | Today 精确覆盖 | 72 个不同月日 / 365 ≈ **19.7%** |
 | 问答重复周期（期望） | 约 **12 天**（60 题 ÷ 5 题/天；每天独立洗牌，不保证不重复） |
 | 来源分级 | 官方 **5** / 媒体 **28** / 百科 **54**（共 87 条链接，按域名自动分级） |
+| 本赛季动态 | 8 条（人工策展，每条带来源） |
+| 章节插画 | 6 张原创 SVG（CC BY-SA 4.0） |
 
 ### 生涯进球口径
 
@@ -197,6 +199,7 @@ app/
   today/                   历史上的今天
   milestones/              里程碑
   about/                   关于 + roadmap
+  credits/                 素材与许可
   offline/                 离线回退页
   en/ pt/                  英文/葡语 overview
 components/
@@ -211,10 +214,12 @@ components/
   Icons.tsx
 public/
   sw.js                    service worker（导航 network-first / 静态 cache-first）
+  art/era-*.svg            六张原创章节插画（构建时生成）
 data/
   player.json              单球员资料 + 6 个章节
-  moments.json             86 条名场面
+  moments.json             86 条名场面（可选 media 字段）
   live.json                当前赛季 / 比赛 / fixtures
+  updates.json             本赛季动态（8 条，人工策展）
   milestones.json          里程碑 + 1000 球 ledger
   quiz.json                60 题
   compare.json             6 个对比指标
@@ -222,10 +227,12 @@ data/
 lib/
   data.ts                  moments/player 加载、排序、关联
   live.ts
+  updates.ts
   quiz.ts
   compare.ts
   today.ts
   milestones.ts
+  sources.ts               来源分级（官方/媒体/百科）
   schemas.ts
   types.ts
   site.ts                  basePath / absoluteUrl
@@ -254,6 +261,8 @@ scripts/
 | Today | ✅ | 有精确日期就展示，没有就“今日坐标” |
 | 里程碑 | ✅ | 981/1000，自动同步 |
 | 来源分级 | ✅ | 官方 / 媒体 / 百科；详情页显示分级、域名与单源提示 |
+| 本赛季动态 | ✅ | 8 条人工策展，首页 + Live；每条带来源 |
+| 原创插画 / 许可页 | ✅ | 6 张 SVG 章节插画；`/credits/` 说明素材政策 |
 | 多语言 | ⚠️ | 仅入口页，非全站 |
 | Bot | ✅ | 单频道，已真实收到 ntfy 消息 |
 | PWA | ✅ | manifest + service worker；已访问页面断网可开，不预缓存全站 |
@@ -354,6 +363,9 @@ scripts/
 - 首页新增 981/1000 生涯进球 ledger，首页数据改为跟随 milestones
 - 修正 q17 题干年份（2023 → 2022 年底）、README 多球员/ntfy/PWA 口径
 - PWA 补 service worker：导航 network-first、静态资源 cache-first、`/offline/` 回退
+- 本赛季动态：`data/updates.json` + 首页与 Live 区块
+- 六张原创章节 SVG 插画 + `/credits/` 素材与许可页
+- `media` 字段（图片/视频）与详情页渲染、校验规则
 
 ---
 
@@ -386,6 +398,8 @@ scripts/
 - **不要**为了凑题写没有出处的冷知识；新增 quiz 题先确认 `source` 能打开、且与 `data/moments.json` 不矛盾。
 - **不要**把媒体标成“官方”，也不要把懂球帝这类中文转述当唯一来源；它只能做二级来源。
 - **不要**在本地用 `pnpm check:links` 的死链结果直接下结论：这台机器 DNS 被污染，真实结果以 GitHub Actions 的 `link-check` 为准。
+- **不要**给 `media` 填没有 `credit` / `license` / `sourceUrl` 的图片或视频；缺一项 `validate` 不会放过，`/credits/` 也要求可追溯。
+- **不要**把“本赛季动态”写成新闻流：只收可核实事实，转会传闻不进列表。
 - **不要**在 push 被拒时强推；Bot workflow 会提交 `data/bot-state.json`，先 `git pull --rebase`。
 - PowerShell 下 `Get-Content` 可能把 UTF-8 显示成乱码，不代表文件坏了；用 read 工具或 Node 读取。
 - `public/matches.ics` 每次 build 会重新生成，出现 CRLF warning 正常。

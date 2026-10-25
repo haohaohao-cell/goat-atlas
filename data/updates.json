@@ -1,0 +1,62 @@
+{
+  "asOf": "2026-10-25",
+  "note": "只记录可核实的事实：比分与最近比赛由 Live 同步，这里补充编辑摘要。转会传闻、未证实伤病不进这个列表。",
+  "items": [
+    {
+      "date": "2026-10-23",
+      "kind": "match",
+      "title": "联赛客场 3-1 击败 Al Faisaly",
+      "summary": "Al Nassr 客场取胜，C 罗没有进球。",
+      "source": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
+    },
+    {
+      "date": "2026-10-20",
+      "kind": "match",
+      "title": "主场 1-0 小胜 Neom",
+      "summary": "Al Nassr 主场拿下三分，C 罗没有进球。",
+      "source": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
+    },
+    {
+      "date": "2026-10-09",
+      "kind": "match",
+      "title": "3-0 击败 Al-Diriyah，C 罗第 23 分钟破门",
+      "summary": "本赛季联赛进球继续累积，Al Nassr 主场零封对手。",
+      "source": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
+    },
+    {
+      "date": "2026-08-23",
+      "kind": "milestone",
+      "title": "Al Nassr 生涯第 100 球",
+      "summary": "在沙特超级杯对 Al Ahli 的比赛中打进 Al Nassr 生涯第 100 球，但球队未能夺冠。",
+      "source": "https://www.thenationalnews.com/sport/football/2025/08/23/cristiano-ronaldo-scores-100th-goal-for-al-nassr-but-al-ahli-lift-saudi-super-cup-title/"
+    },
+    {
+      "date": "2026-07-06",
+      "kind": "match",
+      "title": "世界杯 0-1 负于西班牙",
+      "summary": "葡萄牙止步，本届世界杯结束。",
+      "source": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/portugal-spain-match-report-highlights"
+    },
+    {
+      "date": "2026-07-02",
+      "kind": "record",
+      "title": "世界杯淘汰赛首球",
+      "summary": "葡萄牙 2-1 击败克罗地亚，C 罗打进个人世界杯淘汰赛阶段首球。",
+      "source": "https://www.espn.com/soccer/story/_/id/49253213/portugal-ronaldo-survive-late-scare-croatia-world-cup"
+    },
+    {
+      "date": "2026-06-23",
+      "kind": "record",
+      "title": "六届世界杯，六届进球",
+      "summary": "成为首位在六届世界杯都有进球的球员。",
+      "source": "https://apnews.com/article/ronaldo-world-cup-score-b511151c5a78afb738e8249c07d30aef"
+    },
+    {
+      "date": "2026-05-21",
+      "kind": "title",
+      "title": "随 Al Nassr 夺得沙特联赛冠军",
+      "summary": "队史七年来首个沙特联赛冠军。",
+      "source": "https://saudigazette.com.sa/article/661519/sports/cristiano-ronaldo-leads-al-nassr-to-first-saudi-title-in-seven-years"
+    }
+  ]
+}

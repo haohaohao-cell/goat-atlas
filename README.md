@@ -53,9 +53,11 @@ C 罗是第一号展馆。当前代码仍是单球员结构（`player.json` 是�
 
 - **Atlas 检索**：按章节、类型、对手、关键词筛选 86 个名场面
 - **Story 故事模式**：六个章节，从里斯本到利雅得
-- **详情页**：比分、时间、球场、背景故事、为什么重要、来源链接
+- **详情页**：比分、时间、球场、背景故事、为什么重要、来源分级与纠错入口
 - **分享卡**：一键生成 4:5 图片，支持 Web Share / 下载 / 复制链接
 - **Live 数据**：最新赛季、最近比赛、C 罗进球分钟、里程碑；免费方案已启用，GitHub Actions 每 6 小时自动同步
+- **本赛季动态**：只收可核实事实（比赛、里程碑、冠军、纪录），每条带来源
+- **原创章节插画**：6 张 SVG 线稿用于详情页，随项目以 CC BY-SA 4.0 发布，见 `/credits/`
 - **Match Center**：近期赛程、赛后战报、赛前提醒
 - **日历订阅**：`matches.ics` 可导入 Google Calendar / Apple Calendar / Outlook
 - **每日问答**：每天 5 题（60 题题库），答题解析、连续天数、结果分享卡
@@ -107,6 +109,7 @@ pnpm typecheck   # TypeScript 类型检查
 pnpm build       # 生产构建（会生成 matches.ics）
 pnpm start       # 启动生产服务
 pnpm calendar    # 单独生成 public/matches.ics
+pnpm art         # 单独生成六张章节 SVG
 pnpm sync:live   # 同步 Live 数据（API-Football / Wikipedia 回退）
 pnpm check:links # 检查 data/*.json 里的来源链接（需要正常外网）
 ```
@@ -131,6 +134,7 @@ app/
   en/page.tsx              # English overview
   pt/page.tsx              # Portuguese overview
   about/page.tsx           # 项目、数据原则、路线图
+  credits/page.tsx         # 素材与许可
   offline/page.tsx         # 离线回退页
   manifest.ts              # PWA manifest
   sitemap.ts / robots.ts   # SEO
@@ -149,11 +153,13 @@ components/Icons.tsx
 public/
   sw.js                    # service worker：导航 network-first，静态资源 cache-first
   matches.ics              # 构建时生成
+  art/era-*.svg            # 六张原创章节插画（构建时生成）
   icons/ og.png            # PWA 图标 / OG 图
 data/
   player.json              # 球员、俱乐部、章节
   moments.json             # 86 条名场面记录
   live.json                # 最新赛季 / 比赛 / 同步状态
+  updates.json             # 本赛季动态（人工策展，每条带来源）
   quiz.json                # 每日问答题库
   compare.json             # GOAT 对比指标
   milestones.json          # 里程碑目标与当前进度
@@ -161,6 +167,7 @@ data/
 lib/
   data.ts                  # 数据加载、排序、关联
   live.ts                  # Live 数据加载
+  updates.ts               # 本赛季动态加载
   quiz.ts                  # 每日出题
   compare.ts               # 对比数据加载
   today.ts                 # 日期匹配 / 今日坐标
@@ -175,6 +182,7 @@ scripts/
   sync-live.mjs            # API-Football / Wikipedia → data/live.json
   sync-milestones.mjs      # Wikipedia 生涯统计表 → data/milestones.json
   generate-calendar.mjs    # data/live.json → public/matches.ics
+  generate-era-art.mjs     # 六张章节 SVG 插画
   bot.mjs                  # Telegram / Discord 每日摘要与赛前提醒
   generate-assets.py       # 生成 OG 图和 PWA 图标（可选）
 ```
@@ -226,6 +234,23 @@ pnpm dev
 - 区分**事实**（比分、时间）和**叙事**（为什么重要）
 - 不确定的内容标注“待核实”，不要编
 - 不搬运未授权的比赛照片或转播画面
+- 图片 / 视频必须同时提供 `credit`、`license`、`sourceUrl`，缺一项就不要加；规则见 [credits 页](app/credits/page.tsx)
+- “本赛季动态”只收可核实的事实，转会传闻和未证实伤病不进列表
+
+图片 / 视频使用 `media` 字段（可选）：
+
+```json
+"media": {
+  "type": "image",
+  "src": "/media/example.jpg",
+  "alt": "图片说明",
+  "credit": "作者 / 机构",
+  "license": "CC BY-SA 4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:...",
+  "width": 1200,
+  "height": 800
+}
+```
 
 新增或修改来源后，可以在有正常外网的环境跑：
 

@@ -9,6 +9,7 @@ const live = read("live.json");
 const quiz = read("quiz.json");
 const compare = read("compare.json");
 const milestones = read("milestones.json");
+const updates = read("updates.json");
 
 const errors = [];
 const required = [
@@ -61,6 +62,16 @@ for (const [index, moment] of moments.entries()) {
   for (const source of moment.sources ?? []) {
     if (!source.label || !source.url) {
       errors.push(`Invalid source on ${moment.slug}`);
+    }
+  }
+  if (moment.media) {
+    for (const field of ["type", "src", "alt", "credit", "license", "sourceUrl"]) {
+      if (!moment.media[field]) {
+        errors.push(`Media on ${moment.slug} missing "${field}"`);
+      }
+    }
+    if (!["image", "video"].includes(moment.media.type)) {
+      errors.push(`Media on ${moment.slug} has invalid type`);
     }
   }
   if (slugs.has(moment.slug)) errors.push(`Duplicate slug: ${moment.slug}`);
@@ -170,8 +181,7 @@ for (const metric of compare.metrics ?? []) {
 }
 
 const milestoneIds = new Set();
-for (const milestone of milestones.items ?? []) {
-  if (milestoneIds.has(milestone.id)) {
+for (const milestone of milestones.items ?? []) {  if (milestoneIds.has(milestone.id)) {
     errors.push(`Duplicate milestone id: ${milestone.id}`);
   }
   milestoneIds.add(milestone.id);
@@ -195,6 +205,22 @@ for (const milestone of milestones.items ?? []) {
         `Milestone ${milestone.id} breakdown ${sum} != current ${milestone.current}`,
       );
     }
+  }
+}
+
+const updateKinds = new Set(["match", "milestone", "title", "record"]);
+for (const [index, item] of (updates.items ?? []).entries()) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(item.date ?? "")) {
+    errors.push(`updates[${index}] invalid date`);
+  }
+  if (!updateKinds.has(item.kind)) {
+    errors.push(`updates[${index}] invalid kind: ${item.kind}`);
+  }
+  for (const field of ["title", "summary"]) {
+    if (!item[field]) errors.push(`updates[${index}] missing "${field}"`);
+  }
+  if (!/^https?:\/\//.test(item.source ?? "")) {
+    errors.push(`updates[${index}] source must be an http(s) URL`);
   }
 }
 

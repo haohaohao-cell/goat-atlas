@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { moments } from "@/lib/data";
 import { live, liveStatusLabel, liveUpdatedDate } from "@/lib/live";
+import { sortedUpdates, UPDATE_KIND_LABEL, updates } from "@/lib/updates";
 import { formatDate, formatDateLong } from "@/lib/format";
 import { MomentCard } from "@/components/MomentCard";
 import { ArrowUpRight, GithubIcon, SourceIcon, SparkIcon } from "@/components/Icons";
@@ -111,6 +112,44 @@ export default function LivePage() {
                   </div>
                 </div>
               )}
+            </div>
+
+            <div className="live-block" id="updates">
+              <div className="live-block-head">
+                <p className="eyebrow">SEASON LOG · {updates.asOf}</p>
+                <h2>本赛季动态</h2>
+              </div>
+              <p className="live-table-note">
+                只收可核实的事实；比分与最近比赛由 Live 同步，动态补充编辑摘要。
+              </p>
+              <div className="updates-list">
+                {sortedUpdates().map((item) => (
+                  <article
+                    className="update-row"
+                    key={`${item.date}-${item.title}`}
+                  >
+                    <div className="update-row-date">
+                      <span>{formatDate(item.date)}</span>
+                      <em className={`update-kind is-${item.kind}`}>
+                        {UPDATE_KIND_LABEL[item.kind]}
+                      </em>
+                    </div>
+                    <div className="update-row-main">
+                      <h3>{item.title}</h3>
+                      <p>{item.summary}</p>
+                    </div>
+                    <a
+                      className="update-row-source"
+                      href={item.source}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      来源
+                      <ArrowUpRight />
+                    </a>
+                  </article>
+                ))}
+              </div>
             </div>
 
             <div className="live-block">

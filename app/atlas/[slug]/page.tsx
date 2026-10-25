@@ -21,7 +21,7 @@ import {
   sourceTier,
   sourceTierCounts,
 } from "@/lib/sources";
-import { absoluteUrl, siteConfig } from "@/lib/site";
+import { absoluteUrl, siteConfig, withBasePath } from "@/lib/site";
 
 export const dynamicParams = false;
 
@@ -87,6 +87,13 @@ export default async function MomentPage({
   return (
     <article className="detail">
       <header className="detail-hero">
+        <div
+          className="detail-era-art"
+          aria-hidden="true"
+          style={{
+            backgroundImage: `url("${withBasePath(`/art/era-${moment.era}.svg`)}")`,
+          }}
+        />
         <div className="container">
           <div className="detail-top">
             <Link className="detail-back" href="/atlas">
@@ -120,6 +127,37 @@ export default async function MomentPage({
 
       <div className="container detail-grid">
         <div className="detail-main">
+          {moment.media ? (
+            <figure className="detail-media">
+              {moment.media.type === "image" ? (
+                <img
+                  src={withBasePath(moment.media.src)}
+                  alt={moment.media.alt}
+                  width={moment.media.width}
+                  height={moment.media.height}
+                  loading="lazy"
+                />
+              ) : (
+                <a
+                  className="detail-media-video"
+                  href={moment.media.src}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span aria-hidden="true">▶</span>
+                  <strong>{moment.media.alt}</strong>
+                  <em>在官方频道观看 · 不在站内托管</em>
+                </a>
+              )}
+              <figcaption>
+                {moment.media.credit} · {moment.media.license} ·{" "}
+                <a href={moment.media.sourceUrl} target="_blank" rel="noreferrer">
+                  素材来源
+                </a>
+              </figcaption>
+            </figure>
+          ) : null}
+
           <section className="detail-block">
             <p className="eyebrow">THE STORY</p>
             <h2>发生了什么</h2>

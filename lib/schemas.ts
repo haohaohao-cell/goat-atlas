@@ -42,6 +42,18 @@ export const momentSchema = z.object({
   era: z.string().min(1),
   stat: statSchema.optional(),
   sources: z.array(sourceSchema).min(1),
+  media: z
+    .object({
+      type: z.enum(["image", "video"]),
+      src: z.string().min(1),
+      alt: z.string().min(1),
+      credit: z.string().min(1),
+      license: z.string().min(1),
+      sourceUrl: z.string().min(1),
+      width: z.number().positive().optional(),
+      height: z.number().positive().optional(),
+    })
+    .optional(),
 });
 
 export const eraSchema = z.object({
@@ -199,4 +211,18 @@ export const liveSchema = z.object({
   recentMatches: z.array(liveMatchSchema),
   fixtures: z.array(liveFixtureSchema),
   latest: z.array(liveMilestoneSchema),
+});
+
+export const updateItemSchema = z.object({
+  date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+  kind: z.enum(["match", "milestone", "title", "record"]),
+  title: z.string().min(1),
+  summary: z.string().min(1),
+  source: z.string().min(1),
+});
+
+export const updatesSchema = z.object({
+  asOf: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+  note: z.string().min(1),
+  items: z.array(updateItemSchema).min(1),
 });

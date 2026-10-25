@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Manchester chapter illustration">
+  <g fill="none" stroke="#e3bd6a" stroke-width="1">
+    <circle cx="880" cy="430" r="340" stroke-opacity="0.10" />
+    <circle cx="880" cy="430" r="250" stroke-opacity="0.16" />
+    <circle cx="880" cy="430" r="160" stroke-opacity="0.08" />
+    <path d="M 500 800 A 450 450 0 0 1 1200 800" stroke-opacity="0.18" />
+    <path d="M 560 800 A 390 390 0 0 1 1160 800" stroke-opacity="0.10" />
+    <line x1="120" y1="120" x2="120" y2="800" stroke-opacity="0.16" />
+    <line x1="120" y1="800" x2="1120" y2="800" stroke-opacity="0.16" />
+    <g>
+      <line x1="1062" y1="140" x2="1080" y2="140" stroke-opacity="0.26" />
+      <line x1="1072" y1="192" x2="1080" y2="192" stroke-opacity="0.12" />
+      <line x1="1072" y1="244" x2="1080" y2="244" stroke-opacity="0.12" />
+      <line x1="1072" y1="296" x2="1080" y2="296" stroke-opacity="0.12" />
+      <line x1="1062" y1="348" x2="1080" y2="348" stroke-opacity="0.26" />
+      <line x1="1072" y1="400" x2="1080" y2="400" stroke-opacity="0.12" />
+      <line x1="1072" y1="452" x2="1080" y2="452" stroke-opacity="0.12" />
+      <line x1="1072" y1="504" x2="1080" y2="504" stroke-opacity="0.12" />
+      <line x1="1062" y1="556" x2="1080" y2="556" stroke-opacity="0.26" />
+      <line x1="1072" y1="608" x2="1080" y2="608" stroke-opacity="0.12" />
+      <line x1="1072" y1="660" x2="1080" y2="660" stroke-opacity="0.12" />
+      <line x1="1072" y1="712" x2="1080" y2="712" stroke-opacity="0.12" />
+      <line x1="1062" y1="764" x2="1080" y2="764" stroke-opacity="0.26" />
+    </g>
+  </g>
+
+  <text x="880" y="600" text-anchor="middle" font-family="'Bodoni 72', Didot, 'Times New Roman', serif" font-size="540" fill="none" stroke="#e3bd6a" stroke-opacity="0.13" stroke-width="1.5">7</text>
+
+  <text x="120" y="836" font-family="'SFMono-Regular', Consolas, monospace" font-size="14" letter-spacing="6" fill="#9b9386" fill-opacity="0.8">CHAPTER 02 · MANCHESTER · 2003—2009</text>
+  <text x="120" y="862" font-family="'SFMono-Regular', Consolas, monospace" font-size="12" letter-spacing="4" fill="#9b9386" fill-opacity="0.55">GOAT ATLAS · SIX CHAPTERS, ONE CAREER</text>
+</svg>

@@ -36,6 +36,7 @@ export interface Moment {
   era: string;
   stat?: MomentStat;
   sources: Source[];
+  media?: MomentMedia;
 }
 
 export interface Era {
@@ -205,4 +206,31 @@ export interface MilestonesData {
   asOf: string;
   note: string;
   items: Milestone[];
+}
+
+export type UpdateKind = "match" | "milestone" | "title" | "record";
+
+export interface UpdateItem {
+  date: string;
+  kind: UpdateKind;
+  title: string;
+  summary: string;
+  source: string;
+}
+
+export interface UpdatesData {
+  asOf: string;
+  note: string;
+  items: UpdateItem[];
+}
+
+export interface MomentMedia {
+  type: "image" | "video";
+  src: string;
+  alt: string;
+  credit: string;
+  license: string;
+  sourceUrl: string;
+  width?: number;
+  height?: number;
 }

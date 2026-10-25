@@ -2,6 +2,7 @@ import Link from "next/link";
 import { erasWithMoments, featuredMoments, player, stats } from "@/lib/data";
 import { live, liveStatusLabel, liveUpdatedDate } from "@/lib/live";
 import { milestones, milestoneProgress } from "@/lib/milestones";
+import { sortedUpdates, UPDATE_KIND_LABEL, updates } from "@/lib/updates";
 import { formatDate } from "@/lib/format";
 import { EraCard } from "@/components/EraCard";
 import { MomentCard } from "@/components/MomentCard";
@@ -69,6 +70,7 @@ export default function HomePage() {
   const clubGoals = breakdown
     .filter((item) => item.label !== "Portugal")
     .reduce((total, item) => total + item.value, 0);
+  const latestUpdates = sortedUpdates().slice(0, 3);
 
   return (
     <>
@@ -233,6 +235,44 @@ export default function HomePage() {
           <ArrowUpRight />
         </span>
       </Link>
+
+      <section className="section updates-section">
+        <div className="container">
+          <Reveal>
+            <div className="section-head">
+              <div>
+                <p className="eyebrow">SEASON LOG · {updates.asOf}</p>
+                <h2>最近在发生什么。</h2>
+              </div>
+              <Link className="section-link" href="/live#updates">
+                查看全部动态
+                <ArrowUpRight />
+              </Link>
+            </div>
+          </Reveal>
+
+          <div className="updates-grid">
+            {latestUpdates.map((item, index) => (
+              <Reveal key={`${item.date}-${item.title}`} delay={index * 50}>
+                <article className="update-card">
+                  <div className="update-top">
+                    <span className="update-date">{formatDate(item.date)}</span>
+                    <span className={`update-kind is-${item.kind}`}>
+                      {UPDATE_KIND_LABEL[item.kind]}
+                    </span>
+                  </div>
+                  <h3>{item.title}</h3>
+                  <p>{item.summary}</p>
+                  <a href={item.source} target="_blank" rel="noreferrer">
+                    来源
+                    <ArrowUpRight />
+                  </a>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <section className="section chapters-section">
         <div className="container">

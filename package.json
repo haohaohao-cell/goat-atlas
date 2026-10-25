@@ -12,9 +12,10 @@
   "scripts": {
     "dev": "next dev --webpack",
     "build": "next build --webpack",
-    "prebuild": "node scripts/generate-calendar.mjs",
+    "prebuild": "node scripts/generate-calendar.mjs && node scripts/generate-era-art.mjs",
     "start": "next start",
     "calendar": "node scripts/generate-calendar.mjs",
+    "art": "node scripts/generate-era-art.mjs",
     "typegen": "next typegen",
     "typecheck": "next typegen && tsc --noEmit",
     "sync:live": "node scripts/sync-live.mjs",
