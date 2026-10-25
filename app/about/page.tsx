@@ -22,7 +22,7 @@ const FORM_FACTOR = [
     number: "01",
     title: "Web + PWA",
     tag: "现在",
-    body: "一套响应式网站，手机和桌面共用。PWA 支持添加到主屏幕，先解决“打开就能看”的问题。",
+    body: "一套响应式网站，手机和桌面共用。PWA 支持添加到主屏幕，已访问过的页面在断网时也能打开。",
     points: ["SEO 可被搜索", "分享链接零门槛", "迭代不需要审核"],
   },
   {
@@ -58,7 +58,7 @@ const ROADMAP = [
     phase: "Phase 3",
     title: "习惯与提醒",
     status: "已完成",
-    body: "“历史上的今天”、里程碑追踪和单频道 Bot 已经上线；英文/葡语入口保留，翻译暂缓。下一步转向发布准备：题库扩容、PWA 收口和反馈闭环。",
+    body: "“历史上的今天”、里程碑追踪和单频道 Bot 已经上线；英文/葡语入口保留，翻译暂缓。题库已扩到 60 题、PWA 已补 service worker，下一步转向小范围分发与反馈闭环。",
   },
   {
     phase: "Phase 4",
@@ -302,7 +302,7 @@ export default function AboutPage() {
               ["Zod", "构建时数据校验"],
               ["CSS", "无 UI 框架，完全可控"],
               ["Vercel", "零配置部署"],
-              ["PWA", "可添加到主屏幕"],
+              ["PWA", "安装 + 离线缓存"],
             ].map(([name, detail]) => (
               <div className="tech-item" key={name}>
                 <strong>{name}</strong>

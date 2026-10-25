@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { ServiceWorkerRegister } from "@/components/ServiceWorkerRegister";
 import { absoluteUrl, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -102,6 +103,7 @@ export default function RootLayout({
         <SiteHeader />
         <main id="main">{children}</main>
         <SiteFooter />
+        <ServiceWorkerRegister />
       </body>
     </html>
   );

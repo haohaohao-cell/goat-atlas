@@ -1,6 +1,6 @@
 # GOAT Atlas 交接文档
 
-> 最后更新：2026-10-24  
+> 最后更新：2026-10-25  
 > 当前 main commit：以 `git log -1 --oneline` 为准  
 > 用途：新开对话时，让新 agent 快速接上项目，不需要重新摸索。
 
@@ -32,9 +32,9 @@
 - 不再盲目堆 Atlas 页面，先做发布前收口
 
 当前优先级：
-1. 题库从 20 题扩到 60 题
-2. PWA 补 service worker，或改掉“PWA”口径
-3. 发布前文档/数据一致性
+1. 小范围发布 + 收 5–10 条反馈
+2. 发布后：analytics / RSS / JSON-LD
+3. 补内容缺口：2015 / 2019 / 2024
 
 先告诉我你读到了什么、当前状态是否一致，再开始改代码。
 ```
@@ -77,7 +77,7 @@ GitHub 账号：`haohaohao-cell`
 | Moments | **86** |
 | 唯一来源 | **78** |
 | 章节 | 6 |
-| 问答题库 | 20 |
+| 问答题库 | 60 |
 | 对比指标 | 6 |
 | Live fixtures | 6 |
 | 最近比赛 | 10 |
@@ -87,7 +87,7 @@ GitHub 账号：`haohaohao-cell`
 | 生涯总进球 | **981** |
 | 距离 1000 球 | **19** |
 | Today 精确覆盖 | 72 个不同月日 / 365 ≈ **19.7%** |
-| 问答不重复周期 | 约 **4 天**（20 题 ÷ 5 题/天） |
+| 问答重复周期（期望） | 约 **12 天**（60 题 ÷ 5 题/天；每天独立洗牌，不保证不重复） |
 
 ### 生涯进球口径
 
@@ -196,6 +196,7 @@ app/
   today/                   历史上的今天
   milestones/              里程碑
   about/                   关于 + roadmap
+  offline/                 离线回退页
   en/ pt/                  英文/葡语 overview
 components/
   AtlasExplorer.tsx
@@ -204,14 +205,17 @@ components/
   QuizGame.tsx
   CompareTool.tsx
   MatchCalendarActions.tsx
+  ServiceWorkerRegister.tsx
   MomentCard.tsx / EraCard.tsx
   Icons.tsx
+public/
+  sw.js                    service worker（导航 network-first / 静态 cache-first）
 data/
   player.json              单球员资料 + 6 个章节
   moments.json             86 条名场面
   live.json                当前赛季 / 比赛 / fixtures
   milestones.json          里程碑 + 1000 球 ledger
-  quiz.json                20 题
+  quiz.json                60 题
   compare.json             6 个对比指标
   bot-state.json           Bot 已发送状态
 lib/
@@ -244,13 +248,13 @@ scripts/
 | Live | ⚠️ | 6 小时同步，Wikipedia fallback，无助攻 |
 | Match Center | ✅ | 赛程、最近比赛、进球分钟 |
 | 日历 ICS | ✅ | 6 个 fixture，赛前提醒，描述带里程碑 |
-| 每日问答 | ⚠️ | 可用，但 20 题只够约 4 天 |
+| 每日问答 | ✅ | 60 题，每天 5 题，约 12 天期望周期 |
 | GOAT 对比 | ✅ | 6 指标，默认 3:3 / 50:50，权重可调 |
 | Today | ✅ | 有精确日期就展示，没有就“今日坐标” |
 | 里程碑 | ✅ | 981/1000，自动同步 |
 | 多语言 | ⚠️ | 仅入口页，非全站 |
 | Bot | ✅ | 单频道，已真实收到 ntfy 消息 |
-| PWA | ⚠️ | manifest + 图标，**没有 service worker** |
+| PWA | ✅ | manifest + service worker；已访问页面断网可开，不预缓存全站 |
 | 社区 | ❌ | 未开始 |
 | 多球员 | ❌ | 单球员结构 |
 | 小程序 / App | ❌ | 未开始，按计划后置 |
@@ -299,25 +303,23 @@ scripts/
 
 ### P0
 
-1. **Quiz 只有 20 题**：5 题/天，约 4 天循环，影响复访。
-2. **PWA 没有 service worker**：manifest + 图标有，离线/完整安装不成立。
-3. **单球员结构**：`player.json` 是单对象，`lib/data.ts` 直接导出 `player`，没有 `players[]` / `playerId`，无法扩展其他球员。
+1. **单球员结构**：`player.json` 是单对象，`lib/data.ts` 直接导出 `player`，没有 `players[]` / `playerId`，无法扩展其他球员。
 
 ### P1
 
-4. **没有 analytics / RSS / JSON-LD**：不知道谁在看、无法被 feed 订阅、SEO 结构化数据缺失。
-5. **详情页 OG 是通用图**：分享链接预览没有每条 moment 的独立图。
-6. **没有链接检查器**：78 个来源没有自动检测失效。
-7. **sitemap 静态页 lastModified 用构建时间**，不是真实更新时间。
-8. **Today 精确覆盖率 19.7%**：大多数日期走“今日坐标”，这是设计，不是 bug。
-9. **内容分布不均**：2015 只有 1 条，2019 2 条，2024 2 条。
-10. **Bot 单频道**：不是公共多用户 bot。
+2. **没有 analytics / RSS / JSON-LD**：不知道谁在看、无法被 feed 订阅、SEO 结构化数据缺失。
+3. **详情页 OG 是通用图**：分享链接预览没有每条 moment 的独立图。
+4. **没有链接检查器**：78 个来源没有自动检测失效。
+5. **sitemap 静态页 lastModified 用构建时间**，不是真实更新时间。
+6. **Today 精确覆盖率 19.7%**：大多数日期走“今日坐标”，这是设计，不是 bug。
+7. **内容分布不均**：2015 只有 1 条，2019 2 条，2024 2 条。
+8. **Bot 单频道**：不是公共多用户 bot。
 
 ### P2
 
-11. 没有 E2E / Lighthouse / 可访问性审计。
-12. `sync:milestones` 依赖 Wikipedia 生涯统计表，解析器脆弱，没有第二来源。
-13. 多语言入口页面的内容仍然很少。
+9. 没有 E2E / Lighthouse / 可访问性审计。
+10. `sync:milestones` 依赖 Wikipedia 生涯统计表，解析器脆弱，没有第二来源。
+11. 多语言入口页面的内容仍然很少。
 
 ---
 
@@ -335,6 +337,9 @@ scripts/
 - 数据审计：修正世界杯轮次、localized 计数、2025 过期标签
 - Roadmap 更新：Phase 3 完成，新增 Phase 3.5/5
 - Bot 真实发送测试通过（ntfy）
+- 题库 20 → 60（q21–q60 全部复用 moments 里已验证的来源）
+- 修正 q17 题干年份（2023 → 2022 年底）、README 多球员/ntfy/PWA 口径
+- PWA 补 service worker：导航 network-first、静态资源 cache-first、`/offline/` 回退
 
 ---
 
@@ -342,19 +347,17 @@ scripts/
 
 ### 发布前（推荐）
 
-1. Quiz 20 → 60 题
-2. PWA 补 service worker，或改口径
-3. 小范围发布 + 收 5–10 条反馈
+1. 小范围发布 + 收 5–10 条反馈
 
 ### 发布后
 
-4. analytics（GoatCounter / Plausible）
-5. RSS + JSON-LD
-6. 每页 OG 图
-7. 补 2015 / 2019 / 2024
-8. 多球员架构
-9. 公共 bot / 社区
-10. 小程序 / App
+1. analytics（GoatCounter / Plausible）
+2. RSS + JSON-LD
+3. 每页 OG 图
+4. 补 2015 / 2019 / 2024
+5. 多球员架构
+6. 公共 bot / 社区
+7. 小程序 / App
 
 ---
 
@@ -362,10 +365,11 @@ scripts/
 
 - **不要**把 `982` 硬写回去；当前源表是 981。
 - **不要**声称“进球级实时推送”或“有助攻”。
-- **不要**声称 PWA 可离线；没有 service worker。
+- **不要**声称“全站离线可用”或“首次访问即可离线”；service worker 只缓存访问过的页面。
 - **不要**把 Bot 说成公共多用户 bot；它是单频道广播。
 - **不要**重新加 Header 语言切换；已经决定只保留 `/en`、`/pt` 入口。
 - **不要**用旧的 Wikipedia fixture 跑 `sync:milestones`，会把 981 回退成旧值；要跑就用当前线上页面。
+- **不要**为了凑题写没有出处的冷知识；新增 quiz 题先确认 `source` 能打开、且与 `data/moments.json` 不矛盾。
 - **不要**在 push 被拒时强推；Bot workflow 会提交 `data/bot-state.json`，先 `git pull --rebase`。
 - PowerShell 下 `Get-Content` 可能把 UTF-8 显示成乱码，不代表文件坏了；用 read 工具或 Node 读取。
 - `public/matches.ics` 每次 build 会重新生成，出现 CRLF warning 正常。

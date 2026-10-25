@@ -9,7 +9,7 @@
 💻 **Repository:** <https://github.com/haohaohao-cell/goat-atlas>  
 📘 **Handoff:** [HANDOFF.md](HANDOFF.md)
 
-`Next.js 16` · `TypeScript` · `86 moments` · `6 chapters` · `78 sources` · `MIT + CC BY-SA 4.0`
+`Next.js 16` · `TypeScript` · `86 moments` · `6 chapters` · `78 sources` · `60 quiz questions` · `MIT + CC BY-SA 4.0`
 
 ![GOAT Atlas preview](docs/preview.webp)
 
@@ -47,7 +47,7 @@
 
 GOAT Atlas 把名场面、数据、上下文和来源放在同一个页面上。你可以把它当成一部可滚动的传记，也可以把它当成一个可检索的数据库。
 
-C 罗是第一号展馆；数据结构从第一天起就是多球员设计。
+C 罗是第一号展馆。当前代码仍是单球员结构（`player.json` 是单对象），多球员抽象排在 Phase 5。
 
 ## 现在有什么
 
@@ -58,14 +58,14 @@ C 罗是第一号展馆；数据结构从第一天起就是多球员设计。
 - **Live 数据**：最新赛季、最近比赛、C 罗进球分钟、里程碑；免费方案已启用，GitHub Actions 每 6 小时自动同步
 - **Match Center**：近期赛程、赛后战报、赛前提醒
 - **日历订阅**：`matches.ics` 可导入 Google Calendar / Apple Calendar / Outlook
-- **每日问答**：每天 5 题，答题解析、连续天数、结果分享卡
+- **每日问答**：每天 5 题（60 题题库），答题解析、连续天数、结果分享卡
 - **GOAT 对比器**：6 个可核实指标，默认权重公开，权重可调
 - **历史上的今天**：日期精确匹配才叫 On This Day，没有匹配就展示“今日坐标”
 - **里程碑追踪**：职业生涯 1000 球（每 6 小时自动同步，当前 981 = 俱乐部 835 + 国家队 146）、国家队 150 球、250 场、Al-Nassr 联赛 120 球/场等进度
 - **多语言入口**：英文 / 葡语 overview（页脚入口，非全站翻译）
-- **Bot 通知**：Telegram / Discord 的每日摘要与赛前提醒，GitHub Actions 定时发送
+- **Bot 通知**：ntfy / Telegram / Discord 单频道广播，每日摘要与赛前提醒，GitHub Actions 定时发送
 - **来源标注**：每条记录至少一个可点击来源
-- **PWA**：可添加到主屏幕，带 manifest 和图标
+- **PWA**：manifest + service worker，可添加到主屏幕；已访问过的页面断网时仍能打开（不预缓存全站）
 - **响应式**：手机、平板、桌面一套代码
 - **静态优先**：所有页面构建时生成，部署成本接近于零
 
@@ -130,6 +130,7 @@ app/
   en/page.tsx              # English overview
   pt/page.tsx              # Portuguese overview
   about/page.tsx           # 项目、数据原则、路线图
+  offline/page.tsx         # 离线回退页
   manifest.ts              # PWA manifest
   sitemap.ts / robots.ts   # SEO
 components/
@@ -140,9 +141,14 @@ components/
   QuizGame.tsx             # 每日问答、连击、结果卡
   CompareTool.tsx          # 加权对比器
   LocalizedHome.tsx        # 英文 / 葡语 overview
+  ServiceWorkerRegister.tsx # 注册 /sw.js（仅生产）
   MomentCard.tsx
   EraCard.tsx
 components/Icons.tsx
+public/
+  sw.js                    # service worker：导航 network-first，静态资源 cache-first
+  matches.ics              # 构建时生成
+  icons/ og.png            # PWA 图标 / OG 图
 data/
   player.json              # 球员、俱乐部、章节
   moments.json             # 86 条名场面记录
@@ -363,17 +369,17 @@ BOT_DRY_RUN=1 BOT_MODE=check BOT_TODAY=2026-10-28 node scripts/bot.mjs
 | Phase 1.5 | Live 数据层 + 6 小时自动同步 | ✅ 已完成（免费 Wikipedia fallback） |
 | Phase 2 | 每日问答、GOAT 对比器 | ✅ 已完成 |
 | Phase 3 | “历史上的今天”、里程碑追踪、提醒 bot、多语言 | ✅ MVP 已完成（Bot 单频道；翻译暂缓） |
-| Phase 3.5 | 发布准备：题库扩容、PWA 离线、分享与反馈 | 下一步 |
+| Phase 3.5 | 发布准备：题库扩容、PWA 离线（已完成）、分享与反馈 | 进行中 |
 | Phase 4 | 球迷社区（先用 GitHub Discussions / 现成社群） | 等待时机 |
 | Phase 5 | 多球员 Atlas、小程序、App | 长期 |
 
 完整说明见 [About 页面](app/about/page.tsx) 和 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
-当前不建议继续堆页面。发布前先收口三件事：
+当前不建议继续堆页面。发布前只剩一件事：
 
-1. 题库从 20 题扩到 60 题，避免约 4 天就重复。
-2. 补 service worker，或把“PWA”口径改成“可添加到主屏幕”。
-3. 补最小分发反馈：至少知道哪些页面有人看。
+1. 补最小分发反馈：至少知道哪些页面有人看。
+
+题库已从 20 题扩到 60 题（每天 5 题，约 12 天的期望周期；每天独立洗牌，不保证不重复）。PWA 已补 `public/sw.js`：导航 network-first、静态资源 cache-first，断网时回退到已缓存页面或 `/offline/`。
 
 ## 部署
 

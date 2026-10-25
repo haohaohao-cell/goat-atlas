@@ -161,7 +161,7 @@
   },
   {
     "id": "q17",
-    "question": "2023 年 C 罗加盟了哪家沙特俱乐部？",
+    "question": "2022 年 12 月底，C 罗加盟了哪家沙特俱乐部？",
     "options": ["利雅得新月", "吉达联合", "利雅得胜利", "吉达国民"],
     "answer": 2,
     "explanation": "2022 年 12 月 30 日，利雅得胜利宣布 C 罗加盟，他开启了职业生涯的亚洲篇章。",
@@ -198,5 +198,405 @@
     "source": "https://en.wikipedia.org/wiki/2013_Ballon_d%27Or",
     "difficulty": "medium",
     "tags": ["金球奖"]
+  },
+  {
+    "id": "q21",
+    "question": "2003 年 8 月，C 罗代表葡萄牙体育在何塞·阿尔瓦拉德球场踢了一场友谊赛，随后被哪家俱乐部签下？",
+    "options": ["切尔西", "皇家马德里", "阿森纳", "曼联"],
+    "answer": 3,
+    "explanation": "2003 年 8 月 6 日，葡萄牙体育与曼联进行新球场揭幕友谊赛，C 罗的表现打动弗格森，曼联随后签下他。",
+    "source": "https://en.wikipedia.org/wiki/Cristiano_Ronaldo",
+    "difficulty": "medium",
+    "tags": ["里斯本", "转会"]
+  },
+  {
+    "id": "q22",
+    "question": "2004 年足总杯决赛，曼联 3-0 击败哪支球队，C 罗赢得加盟后的第一座奖杯？",
+    "options": ["埃弗顿", "米尔沃尔", "西汉姆联", "朴茨茅斯"],
+    "answer": 1,
+    "explanation": "加的夫千年球场，曼联 3-0 击败米尔沃尔，C 罗首开纪录，收获个人曼联生涯第一座冠军。",
+    "source": "https://en.wikipedia.org/wiki/2004_FA_Cup_final",
+    "difficulty": "easy",
+    "tags": ["足总杯", "曼联", "奖杯"]
+  },
+  {
+    "id": "q23",
+    "question": "2006 年联赛杯决赛，曼联 4-0 击败哪支球队，C 罗打进一球？",
+    "options": ["博尔顿", "布莱克本", "维冈竞技", "纽卡斯尔联"],
+    "answer": 2,
+    "explanation": "加的夫千年球场，曼联 4-0 大胜维冈竞技，鲁尼梅开二度，C 罗和萨哈各入一球。",
+    "source": "http://news.bbc.co.uk/sport2/hi/football/league_cup/4752806.stm",
+    "difficulty": "medium",
+    "tags": ["联赛杯", "曼联", "奖杯"]
+  },
+  {
+    "id": "q24",
+    "question": "2007 年欧冠 1/4 决赛次回合，曼联在老特拉福德以多少比分击败罗马？",
+    "options": ["4-1", "5-2", "6-0", "7-1"],
+    "answer": 3,
+    "explanation": "曼联 7-1 大胜罗马，两回合总比分 8-3 晋级。C 罗梅开二度，这场胜利是弗格森曼联欧洲赛场的代表作之一。",
+    "source": "http://news.bbc.co.uk/sport2/hi/football/europe/6534975.stm",
+    "difficulty": "medium",
+    "tags": ["欧冠", "曼联", "罗马"]
+  },
+  {
+    "id": "q25",
+    "question": "2008 年 1 月，C 罗在曼联 6-0 大胜哪支球队的比赛中上演曼联生涯首个帽子戏法？",
+    "options": ["博尔顿", "雷丁", "富勒姆", "纽卡斯尔联"],
+    "answer": 3,
+    "explanation": "老特拉福德，曼联 6-0 击败纽卡斯尔联，C 罗完成曼联生涯首个帽子戏法。那个赛季他各项赛事打进 42 球。",
+    "source": "http://news.bbc.co.uk/sport2/hi/football/eng_prem/7172817.stm",
+    "difficulty": "medium",
+    "tags": ["英超", "曼联", "帽子戏法"]
+  },
+  {
+    "id": "q26",
+    "question": "2007-08 赛季，C 罗在英超联赛打进多少球？",
+    "options": ["29", "31", "34", "26"],
+    "answer": 1,
+    "explanation": "2007-08 赛季 C 罗英超出场 34 次打进 31 球，各项赛事 42 球，帮助曼联拿下英超和欧冠双冠。",
+    "source": "https://en.wikipedia.org/wiki/2007%E2%80%9308_Manchester_United_F.C._season",
+    "difficulty": "medium",
+    "tags": ["英超", "曼联", "进球"]
+  },
+  {
+    "id": "q27",
+    "question": "2009 年欧冠 1/4 决赛，C 罗在波尔图主场打进的制胜球距离球门约多少码？",
+    "options": ["55 码", "25 码", "40 码", "30 码"],
+    "answer": 2,
+    "explanation": "2009 年 4 月 15 日，曼联客场 1-0 击败波尔图，C 罗在约 40 码外起脚破门，这球常被列为欧冠经典远射。",
+    "source": "http://news.bbc.co.uk/sport2/mobile/football/europe/7976970.stm",
+    "difficulty": "medium",
+    "tags": ["欧冠", "曼联", "远射"]
+  },
+  {
+    "id": "q28",
+    "question": "2009 年欧冠决赛在罗马进行，曼联 0-2 输给哪支球队？",
+    "options": ["利物浦", "拜仁慕尼黑", "切尔西", "巴塞罗那"],
+    "answer": 3,
+    "explanation": "罗马奥林匹克球场，巴萨 2-0 击败曼联，梅西头球锁定胜局。这是 C 罗曼联生涯的最后一场欧冠决赛。",
+    "source": "https://en.wikipedia.org/wiki/2009_UEFA_Champions_League_final",
+    "difficulty": "easy",
+    "tags": ["欧冠", "曼联", "决赛"]
+  },
+  {
+    "id": "q29",
+    "question": "2009 年 8 月，C 罗皇马西甲首秀对阵拉科鲁尼亚，他用什么方式取得进球？",
+    "options": ["点球", "禁区外远射", "头球", "任意球"],
+    "answer": 0,
+    "explanation": "2009 年 8 月 29 日，皇马 3-2 击败拉科鲁尼亚，C 罗罚入点球，开启皇马生涯。",
+    "source": "http://news.bbc.co.uk/sport2/hi/football/europe/8229070.stm",
+    "difficulty": "medium",
+    "tags": ["皇马", "西甲", "首秀"]
+  },
+  {
+    "id": "q30",
+    "question": "2010 年夏天，哪位教练入主皇马，成为 C 罗皇马时期的重要转折？",
+    "options": ["安切洛蒂", "穆里尼奥", "贝尼特斯", "齐达内"],
+    "answer": 1,
+    "explanation": "2010 年 5 月，穆里尼奥在带领国际米兰夺得三冠王后加盟皇马，球队随后在 2011-12 赛季以 100 分夺得西甲。",
+    "source": "https://en.wikipedia.org/wiki/2010%E2%80%9311_Real_Madrid_CF_season",
+    "difficulty": "easy",
+    "tags": ["皇马", "教练"]
+  },
+  {
+    "id": "q31",
+    "question": "2010 年 10 月，C 罗单场打进 4 球，皇马 6-1 击败哪支球队？",
+    "options": ["赫塔菲", "希洪竞技", "桑坦德竞技", "马拉加"],
+    "answer": 2,
+    "explanation": "伯纳乌，皇马 6-1 大胜桑坦德竞技，C 罗独中四元。",
+    "source": "http://news.bbc.co.uk/sport2/hi/football/europe/9121629.stm",
+    "difficulty": "medium",
+    "tags": ["皇马", "西甲", "大四喜"]
+  },
+  {
+    "id": "q32",
+    "question": "2010 年 11 月，皇马在诺坎普以 0-5 输给哪支球队？",
+    "options": ["瓦伦西亚", "马德里竞技", "塞维利亚", "巴塞罗那"],
+    "answer": 3,
+    "explanation": "2010 年 11 月 29 日，巴萨在诺坎普 5-0 击败皇马，这是穆里尼奥执教皇马时期最惨痛的一场国家德比。",
+    "source": "https://en.wikipedia.org/wiki/2010%E2%80%9311_La_Liga",
+    "difficulty": "medium",
+    "tags": ["皇马", "国家德比"]
+  },
+  {
+    "id": "q33",
+    "question": "2011 年欧冠 1/4 决赛首回合，皇马 4-0 击败哪支球队，C 罗头球破门？",
+    "options": ["托特纳姆热刺", "里昂", "罗马", "沙尔克 04"],
+    "answer": 0,
+    "explanation": "伯纳乌，皇马 4-0 击败热刺，C 罗开场 4 分钟头球破门，阿德巴约梅开二度，迪马利亚锁定比分。",
+    "source": "https://en.wikipedia.org/wiki/2010%E2%80%9311_UEFA_Champions_League_knockout_phase",
+    "difficulty": "medium",
+    "tags": ["欧冠", "皇马", "热刺"]
+  },
+  {
+    "id": "q34",
+    "question": "2012 年西班牙超级杯，皇马总比分 4-4 与巴萨战平，靠什么规则夺冠？",
+    "options": ["点球大战", "客场进球", "加时赛进球", "联赛排名"],
+    "answer": 1,
+    "explanation": "首回合皇马客场 2-3 失利，次回合主场 2-1 取胜，总比分 4-4，皇马凭客场进球更多夺冠。",
+    "source": "https://en.wikipedia.org/wiki/2012_Supercopa_de_Espa%C3%B1a",
+    "difficulty": "medium",
+    "tags": ["皇马", "超级杯", "巴萨"]
+  },
+  {
+    "id": "q35",
+    "question": "2013 年欧冠 1/8 决赛次回合，曼联的哪名球员被红牌罚下，成为比赛转折点？",
+    "options": ["维迪奇", "费迪南德", "纳尼", "鲁尼"],
+    "answer": 2,
+    "explanation": "老特拉福德，纳尼因危险动作被直接红牌罚下，皇马随后连入两球，2-1 取胜并以总比分 3-2 晋级。",
+    "source": "https://en.wikipedia.org/wiki/2012%E2%80%9313_UEFA_Champions_League_knockout_phase",
+    "difficulty": "hard",
+    "tags": ["欧冠", "皇马", "曼联"]
+  },
+  {
+    "id": "q36",
+    "question": "2013 年国王杯决赛在伯纳乌进行，皇马加时 1-2 输给哪支球队？",
+    "options": ["巴塞罗那", "塞维利亚", "毕尔巴鄂竞技", "马德里竞技"],
+    "answer": 3,
+    "explanation": "马竞在加时赛由米兰达头球绝杀，2-1 击败皇马夺冠。",
+    "source": "https://en.wikipedia.org/wiki/2013_Copa_del_Rey_final",
+    "difficulty": "medium",
+    "tags": ["国王杯", "皇马", "马竞"]
+  },
+  {
+    "id": "q37",
+    "question": "2014 年欧冠半决赛次回合，皇马客场 4-0 大胜拜仁，C 罗打进几球？",
+    "options": ["2 球", "3 球", "0 球", "1 球"],
+    "answer": 0,
+    "explanation": "安联球场，拉莫斯和 C 罗各进两球，皇马 4-0 取胜，总比分 5-0 晋级决赛。",
+    "source": "https://en.wikipedia.org/wiki/2013%E2%80%9314_UEFA_Champions_League",
+    "difficulty": "medium",
+    "tags": ["欧冠", "皇马", "拜仁"]
+  },
+  {
+    "id": "q38",
+    "question": "2015 年 4 月，C 罗单场打进 5 球，皇马 9-1 大胜哪支球队？",
+    "options": ["埃尔切", "格拉纳达", "科尔多瓦", "巴列卡诺"],
+    "answer": 1,
+    "explanation": "伯纳乌，皇马 9-1 大胜格拉纳达，C 罗独中五元，贝尔、本泽马等也有进球。",
+    "source": "https://en.wikipedia.org/wiki/2014%E2%80%9315_La_Liga",
+    "difficulty": "medium",
+    "tags": ["皇马", "西甲", "五子登科"]
+  },
+  {
+    "id": "q39",
+    "question": "2018 年夏天，C 罗离开皇马，加盟哪支意甲球队？",
+    "options": ["国际米兰", "AC 米兰", "尤文图斯", "那不勒斯"],
+    "answer": 2,
+    "explanation": "2018 年 7 月，C 罗以约 1 亿欧元转会尤文图斯，结束九年皇马生涯。",
+    "source": "https://en.wikipedia.org/wiki/Cristiano_Ronaldo",
+    "difficulty": "easy",
+    "tags": ["尤文", "转会"]
+  },
+  {
+    "id": "q40",
+    "question": "2018 年 11 月欧冠小组赛，C 罗代表尤文攻破了哪支旧主球队的球门？",
+    "options": ["葡萄牙体育", "利雅得胜利", "皇家马德里", "曼联"],
+    "answer": 3,
+    "explanation": "都灵安联球场，C 罗对阵旧主曼联打进一球，但曼联 2-1 完成逆转。",
+    "source": "https://en.wikipedia.org/wiki/2018%E2%80%9319_UEFA_Champions_League_group_stage",
+    "difficulty": "medium",
+    "tags": ["欧冠", "尤文", "曼联"]
+  },
+  {
+    "id": "q41",
+    "question": "2019 年 10 月，尤文 2-1 绝杀热那亚，C 罗的制胜球是什么方式？",
+    "options": ["点球", "远射", "任意球", "头球"],
+    "answer": 0,
+    "explanation": "尤文在少一人的情况下获得点球，C 罗在补时阶段罚入，2-1 绝杀热那亚。",
+    "source": "https://onefootball.com/en/news/juventus-2-1-genoa-ronaldo-penalty-gives-10-man-champions-late-winner-27837116",
+    "difficulty": "medium",
+    "tags": ["尤文", "意甲", "绝杀"]
+  },
+  {
+    "id": "q42",
+    "question": "2020 年 1 月，C 罗对卡利亚里上演意甲首个帽子戏法，尤文以多少比分取胜？",
+    "options": ["3-0", "4-0", "4-1", "5-1"],
+    "answer": 1,
+    "explanation": "尤文主场 4-0 击败卡利亚里，C 罗上演加盟尤文后的首个意甲帽子戏法。",
+    "source": "https://en.wikipedia.org/wiki/2019%E2%80%9320_Juventus_F.C._season",
+    "difficulty": "medium",
+    "tags": ["尤文", "意甲", "帽子戏法"]
+  },
+  {
+    "id": "q43",
+    "question": "2019-20 赛季，尤文图斯完成意甲几连冠？",
+    "options": ["七连冠", "八连冠", "九连冠", "十连冠"],
+    "answer": 2,
+    "explanation": "2019-20 赛季尤文图斯夺得意甲冠军，完成九连冠。这也是 C 罗在尤文拿到的第二个联赛冠军。",
+    "source": "https://www.rte.ie/sport/soccer/2020/0726/1155644-juventus-win-ninth-successive-serie-a-title/",
+    "difficulty": "easy",
+    "tags": ["尤文", "意甲", "冠军"]
+  },
+  {
+    "id": "q44",
+    "question": "2020 年欧冠 1/8 决赛，尤文次回合 2-1 击败里昂，为何仍被淘汰？",
+    "options": ["点球大战失利", "总比分落后", "球员违规", "客场进球少"],
+    "answer": 3,
+    "explanation": "首回合尤文客场 0-1 失利，次回合主场 2-1 取胜，总比分 2-2，里昂凭客场进球晋级。",
+    "source": "https://en.wikipedia.org/wiki/2019%E2%80%9320_UEFA_Champions_League_knockout_phase",
+    "difficulty": "hard",
+    "tags": ["欧冠", "尤文", "里昂"]
+  },
+  {
+    "id": "q45",
+    "question": "2021 年欧冠小组赛，C 罗在第 95 分钟绝杀哪支球队，帮助曼联 2-1 取胜？",
+    "options": ["比利亚雷亚尔", "亚特兰大", "年轻人", "本菲卡"],
+    "answer": 0,
+    "explanation": "老特拉福德，C 罗在补时阶段接林加德回做破门，曼联 2-1 绝杀比利亚雷亚尔。",
+    "source": "https://www.uefa.com/uefachampionsleague/match/2032730--man-utd-vs-villarreal/events/",
+    "difficulty": "medium",
+    "tags": ["欧冠", "曼联", "绝杀"]
+  },
+  {
+    "id": "q46",
+    "question": "2022 年 3 月，C 罗对热刺上演帽子戏法，曼联以多少比分取胜？",
+    "options": ["3-1", "3-2", "4-2", "2-1"],
+    "answer": 1,
+    "explanation": "老特拉福德，C 罗上演帽子戏法，曼联 3-2 击败热刺。",
+    "source": "https://en.wikipedia.org/wiki/2021%E2%80%9322_Premier_League",
+    "difficulty": "medium",
+    "tags": ["英超", "曼联", "帽子戏法"]
+  },
+  {
+    "id": "q47",
+    "question": "2021 年欧洲杯小组赛，葡萄牙 3-0 击败匈牙利，C 罗打进几球？",
+    "options": ["0 球", "1 球", "2 球", "3 球"],
+    "answer": 2,
+    "explanation": "布达佩斯，C 罗在第 87 分钟和补时阶段连入两球，葡萄牙 3-0 取胜。",
+    "source": "https://www.uefa.com/uefaeuro/history/news/026a-128701020958-fdd14ccc3a2c-1000--hungary-0-3-portugal-record-breaking-ronaldo-s-late-double-seal/",
+    "difficulty": "easy",
+    "tags": ["欧洲杯", "葡萄牙"]
+  },
+  {
+    "id": "q48",
+    "question": "2020 年 9 月，C 罗打进国家队第 100 球，对手是哪支球队？",
+    "options": ["克罗地亚", "法国", "西班牙", "瑞典"],
+    "answer": 3,
+    "explanation": "欧国联葡萄牙 2-0 击败瑞典，C 罗包办两球，第二球是他国家队第 100 球。",
+    "source": "https://en.wikipedia.org/wiki/2020%E2%80%9321_UEFA_Nations_League",
+    "difficulty": "medium",
+    "tags": ["葡萄牙", "100球", "欧国联"]
+  },
+  {
+    "id": "q49",
+    "question": "2021 年欧洲杯小组赛，葡萄牙 2-2 战平法国，C 罗的两个进球都来自什么方式？",
+    "options": ["点球", "任意球", "远射", "头球"],
+    "answer": 0,
+    "explanation": "布达佩斯，C 罗两度罚入点球，葡萄牙 2-2 战平法国，以小组第三出线。",
+    "source": "https://en.wikipedia.org/wiki/UEFA_Euro_2020_Group_F",
+    "difficulty": "medium",
+    "tags": ["欧洲杯", "葡萄牙", "法国"]
+  },
+  {
+    "id": "q50",
+    "question": "2022 年世界杯 1/4 决赛，葡萄牙 0-1 输给哪支球队？",
+    "options": ["法国", "摩洛哥", "克罗地亚", "英格兰"],
+    "answer": 1,
+    "explanation": "卡塔尔世界杯 1/4 决赛，摩洛哥 1-0 淘汰葡萄牙，成为首支闯入世界杯四强的非洲球队。",
+    "source": "https://en.wikipedia.org/wiki/2022_FIFA_World_Cup_knockout_stage",
+    "difficulty": "easy",
+    "tags": ["世界杯", "葡萄牙", "摩洛哥"]
+  },
+  {
+    "id": "q51",
+    "question": "2023 年 1 月，C 罗 Al Nassr 首秀的对手是哪支球队？",
+    "options": ["Al-Ittihad", "Al-Fateh", "Al-Ettifaq", "Al-Hilal"],
+    "answer": 2,
+    "explanation": "2023 年 1 月 22 日，C 罗在沙特联赛对 Al-Ettifaq 的比赛中完成首秀，Al Nassr 1-0 取胜。",
+    "source": "https://www.bbc.com/sport/football/64368434",
+    "difficulty": "hard",
+    "tags": ["利雅得胜利", "首秀"]
+  },
+  {
+    "id": "q52",
+    "question": "2023 年 2 月，C 罗打进 Al Nassr 生涯首球，对手是哪支球队？",
+    "options": ["Al-Ettifaq", "Al-Taawoun", "Al-Raed", "Al-Fateh"],
+    "answer": 3,
+    "explanation": "对 Al-Fateh 的联赛，C 罗在补时阶段罚入点球，打进加盟 Al Nassr 后的首球，比赛 2-2 收场。",
+    "source": "https://www.rte.ie/sport/soccer/2023/0204/1353749-ronaldo-opens-his-account-for-al-nassr/",
+    "difficulty": "hard",
+    "tags": ["利雅得胜利", "首球"]
+  },
+  {
+    "id": "q53",
+    "question": "2023 年 8 月，C 罗随 Al Nassr 赢得哪项赛事冠军？",
+    "options": ["阿拉伯俱乐部冠军杯", "沙特超级杯", "亚足联冠军联赛", "沙特国王杯"],
+    "answer": 0,
+    "explanation": "阿拉伯俱乐部冠军杯决赛，Al Nassr 加时 2-1 击败 Al-Hilal，C 罗梅开二度，收获加盟后的首座冠军。",
+    "source": "https://azertag.az/en/xeber/Ronaldo_wins_first_title_at_Al_Nassr_with_brace_in_Arab_Club_Champions_Cup_final-2727610",
+    "difficulty": "medium",
+    "tags": ["利雅得胜利", "冠军"]
+  },
+  {
+    "id": "q54",
+    "question": "2024 年 11 月，葡萄牙 5-1 大胜波兰，C 罗创造了什么纪录？",
+    "options": ["国家队历史最多出场", "国家队历史最多胜场", "国家队最年长进球者", "国家队历史最多进球"],
+    "answer": 1,
+    "explanation": "欧国联葡萄牙 5-1 波兰，C 罗成为国家队历史胜场最多的球员。",
+    "source": "https://www.sportsmole.co.uk/football/portugal/uefa-nations-league/news/still-rewriting-history-ronaldo-breaks-international-record-in-portugal-win_558229.html",
+    "difficulty": "medium",
+    "tags": ["葡萄牙", "纪录", "欧国联"]
+  },
+  {
+    "id": "q55",
+    "question": "2025 年 1 月，C 罗成为首位达成多少场俱乐部胜利的球员？",
+    "options": ["750 场", "600 场", "700 场", "650 场"],
+    "answer": 2,
+    "explanation": "C 罗成为首位俱乐部正式比赛胜场达到 700 场的球员。",
+    "source": "https://www.tbsnews.net/sports/ronaldo-becomes-first-player-reach-700-club-victories-1057216",
+    "difficulty": "medium",
+    "tags": ["利雅得胜利", "纪录"]
+  },
+  {
+    "id": "q56",
+    "question": "2026 年世界杯，C 罗成为首位在几届世界杯都有进球的球员？",
+    "options": ["7 届", "4 届", "5 届", "6 届"],
+    "answer": 3,
+    "explanation": "2022 年他已经成为首位在五届世界杯进球的球员，2026 年把纪录扩大到六届。",
+    "source": "https://apnews.com/article/ronaldo-world-cup-score-b511151c5a78afb738e8249c07d30aef",
+    "difficulty": "medium",
+    "tags": ["世界杯", "纪录"]
+  },
+  {
+    "id": "q57",
+    "question": "2026 年世界杯，葡萄牙 2-1 击败哪支球队，C 罗打进个人世界杯淘汰赛首球？",
+    "options": ["克罗地亚", "乌拉圭", "韩国", "摩洛哥"],
+    "answer": 0,
+    "explanation": "葡萄牙 2-1 击败克罗地亚，C 罗打进个人世界杯淘汰赛阶段的首个进球。",
+    "source": "https://www.espn.com/soccer/story/_/id/49253213/portugal-ronaldo-survive-late-scare-croatia-world-cup",
+    "difficulty": "medium",
+    "tags": ["世界杯", "葡萄牙", "克罗地亚"]
+  },
+  {
+    "id": "q58",
+    "question": "2026 年世界杯，葡萄牙 0-1 输给哪支球队？",
+    "options": ["阿根廷", "西班牙", "英格兰", "法国"],
+    "answer": 1,
+    "explanation": "2026 年 7 月，葡萄牙 0-1 负于西班牙，止步世界杯。",
+    "source": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/portugal-spain-match-report-highlights",
+    "difficulty": "easy",
+    "tags": ["世界杯", "葡萄牙", "西班牙"]
+  },
+  {
+    "id": "q59",
+    "question": "C 罗职业生涯一共获得几座金球奖？",
+    "options": ["7 座", "4 座", "5 座", "6 座"],
+    "answer": 2,
+    "explanation": "C 罗在 2008、2013、2014、2016、2017 年五次获得金球奖。",
+    "source": "https://en.wikipedia.org/wiki/Ballon_d%27Or",
+    "difficulty": "easy",
+    "tags": ["金球奖", "纪录"]
+  },
+  {
+    "id": "q60",
+    "question": "C 罗职业生涯一共获得几座欧冠冠军？",
+    "options": ["6 座", "3 座", "4 座", "5 座"],
+    "answer": 3,
+    "explanation": "C 罗随曼联在 2008 年夺冠，随皇马在 2014、2016、2017、2018 年夺冠，共五座欧冠。",
+    "source": "https://en.wikipedia.org/wiki/UEFA_Champions_League",
+    "difficulty": "easy",
+    "tags": ["欧冠", "纪录"]
   }
 ]

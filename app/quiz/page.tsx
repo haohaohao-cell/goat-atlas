@@ -4,6 +4,7 @@ import {
   getDailyQuestions,
   getQuizDateKey,
   getQuizDateLabel,
+  quizQuestions,
 } from "@/lib/quiz";
 import { QuizGame } from "@/components/QuizGame";
 import { ArrowUpRight, GithubIcon } from "@/components/Icons";
@@ -41,6 +42,7 @@ export default function QuizPage() {
             <div className="page-hero-meta">
               <span>5 题</span>
               <span>约 2 分钟</span>
+              <span>{quizQuestions.length} 题题库</span>
               <span>每天更新</span>
             </div>
           </div>
