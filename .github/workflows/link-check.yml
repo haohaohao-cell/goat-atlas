@@ -5,6 +5,11 @@ on:
     # 每周一 06:00 UTC（北京 14:00）
     - cron: "0 6 * * 1"
   workflow_dispatch:
+    inputs:
+      urls:
+        description: "只检查这些 URL（逗号或换行分隔）；留空则检查 data/*.json"
+        required: false
+        type: string
 
 permissions:
   contents: read
@@ -26,7 +31,18 @@ jobs:
       - name: Check source links
         id: check
         continue-on-error: true
-        run: node scripts/check-links.mjs --report link-report.md
+        env:
+          EXTRA_URLS: ${{ inputs.urls }}
+        run: |
+          if [ -n "$EXTRA_URLS" ]; then
+            args=()
+            while IFS= read -r url; do
+              [ -n "$url" ] && args+=(--url "$url")
+            done < <(printf '%s' "$EXTRA_URLS" | tr ',' '\n')
+            node scripts/check-links.mjs "${args[@]}" --report link-report.md
+          else
+            node scripts/check-links.mjs --report link-report.md
+          fi
 
       - name: Upload report
         if: always()
