@@ -37,6 +37,9 @@ pnpm-debug.log*
 link-report.md
 link-report.json
 
+# media audit workspace (CI artifact, not committed)
+media-audit/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

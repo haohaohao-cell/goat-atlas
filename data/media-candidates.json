@@ -1,0 +1,11 @@
+{
+  "note": "只在 Wikimedia Commons 上挑选自由许可图片。标题必须能在 commons.wikimedia.org 找到；脚本会核对 LicenseShortName，只有 CC0 / Public domain / CC BY / CC BY-SA 才会下载。",
+  "titles": [
+    "File:Cristiano Ronaldo 0895.jpg",
+    "File:Cristiano Ronaldo WC2022 - 01.jpg",
+    "File:Cristiano Ronaldo entrenando (crop) (cropped).jpg",
+    "File:Cristiano Ronaldo with Al Nassr, 19 September 2023 - 85.jpg",
+    "File:Cristiano RonaldoEn el Real Madrid.JPG",
+    "File:Cristiano-ronaldo-juventus-2019 (cropped).jpg"
+  ]
+}

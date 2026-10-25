@@ -22,7 +22,8 @@
     "sync:milestones": "node scripts/sync-milestones.mjs",
     "bot": "node scripts/bot.mjs",
     "validate": "node scripts/validate-data.mjs",
-    "check:links": "node scripts/check-links.mjs"
+    "check:links": "node scripts/check-links.mjs",
+    "audit:media": "node scripts/audit-media.mjs"
   },
   "dependencies": {
     "html-to-image": "^1.11.13",
