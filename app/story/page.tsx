@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { StoryExperience } from "@/components/StoryExperience";
 import { erasWithMoments, stats } from "@/lib/data";
+import { gallery } from "@/lib/gallery";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -41,7 +42,7 @@ export default function StoryPage() {
         </div>
       </section>
 
-      <StoryExperience eras={erasWithMoments} />
+      <StoryExperience eras={erasWithMoments} gallery={gallery.items} />
     </>
   );
 }

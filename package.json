@@ -23,7 +23,8 @@
     "bot": "node scripts/bot.mjs",
     "validate": "node scripts/validate-data.mjs",
     "check:links": "node scripts/check-links.mjs",
-    "audit:media": "node scripts/audit-media.mjs"
+    "audit:media": "node scripts/audit-media.mjs",
+    "verify:video": "node scripts/verify-video.mjs"
   },
   "dependencies": {
     "html-to-image": "^1.11.13",

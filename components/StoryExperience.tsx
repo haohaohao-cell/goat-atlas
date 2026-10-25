@@ -2,12 +2,19 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
-import type { EraWithMoments } from "@/lib/types";
+import type { EraWithMoments, GalleryItem } from "@/lib/types";
 import { KIND_META } from "@/lib/kinds";
 import { formatDate, getYear } from "@/lib/format";
+import { withBasePath } from "@/lib/site";
 import { ArrowUpRight } from "./Icons";
 
-export function StoryExperience({ eras }: { eras: EraWithMoments[] }) {
+export function StoryExperience({
+  eras,
+  gallery,
+}: {
+  eras: EraWithMoments[];
+  gallery: GalleryItem[];
+}) {
   const [active, setActive] = useState(eras[0]?.id ?? "");
 
   const activeIndex = useMemo(
@@ -69,7 +76,10 @@ export function StoryExperience({ eras }: { eras: EraWithMoments[] }) {
       </aside>
 
       <div className="story-flow">
-        {eras.map((era) => (
+        {eras.map((era) => {
+          const photos = gallery.filter((item) => item.era === era.id);
+
+          return (
           <section
             key={era.id}
             id={`era-${era.id}`}
@@ -87,6 +97,25 @@ export function StoryExperience({ eras }: { eras: EraWithMoments[] }) {
                 <p className="story-chapter-club">{era.club}</p>
               </div>
             </header>
+
+            {photos.length ? (
+              <div className="story-gallery">
+                {photos.map((photo) => (
+                  <figure className="story-gallery-item" key={photo.id}>
+                    <img
+                      src={withBasePath(photo.src)}
+                      alt={photo.alt}
+                      width={photo.width}
+                      height={photo.height}
+                      loading="lazy"
+                    />
+                    <figcaption>
+                      {photo.credit} · {photo.license}
+                    </figcaption>
+                  </figure>
+                ))}
+              </div>
+            ) : null}
 
             <div className="story-moments">
               {era.moments.map((moment) => (
@@ -129,7 +158,8 @@ export function StoryExperience({ eras }: { eras: EraWithMoments[] }) {
               ))}
             </div>
           </section>
-        ))}
+          );
+        })}
 
         <div className="story-end">
           <p className="eyebrow">END OF THE STORY — FOR NOW</p>
