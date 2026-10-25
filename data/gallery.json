@@ -1,0 +1,58 @@
+{
+  "asOf": "2026-10-25",
+  "note": "只收录 Wikimedia Commons 上 CC BY / CC BY-SA 授权的图片，逐张核对作者与许可；下载后统一转成 WebP 并等比缩放。所有图片都是资料图，不对应某一场具体比赛。",
+  "items": [
+    {
+      "id": "madrid-back",
+      "src": "/media/gal-madrid.webp",
+      "alt": "C 罗身穿皇家马德里白色球衣、背号 7 的背影",
+      "caption": "皇家马德里时期：伯纳乌的 7 号背影。资料图，不对应某一场具体比赛。",
+      "era": "madrid",
+      "credit": "Ruben Ortega",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cristiano_RonaldoEn_el_Real_Madrid.JPG",
+      "width": 1200,
+      "height": 1708
+    },
+    {
+      "id": "juventus-2019",
+      "src": "/media/gal-juventus.webp",
+      "alt": "C 罗身穿尤文图斯黑白球衣站在球场上",
+      "caption": "尤文图斯时期：2019 年意甲赛场。资料图。",
+      "era": "turin",
+      "credit": "原图：Anton Zaitsev；裁剪：WikiGusta",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cristiano-ronaldo-juventus-2019_(cropped).jpg",
+      "width": 502,
+      "height": 900
+    },
+    {
+      "id": "portugal-2022",
+      "src": "/media/gal-portugal-2022.webp",
+      "alt": "C 罗身穿葡萄牙红色球衣，佩戴队长袖标",
+      "caption": "2022 年世界杯期间的葡萄牙队。资料图。",
+      "era": "riyadh",
+      "credit": "Hossein Zohrevand",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cristiano_Ronaldo_WC2022_-_01.jpg",
+      "width": 357,
+      "height": 449
+    },
+    {
+      "id": "portugal-white",
+      "src": "/media/gal-portugal-white.webp",
+      "alt": "C 罗身穿葡萄牙白色球衣在比赛中奔跑",
+      "caption": "葡萄牙国家队白色球衣。资料图。",
+      "era": "riyadh",
+      "credit": "YantsImages",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cristiano_Ronaldo_0895.jpg",
+      "width": 1600,
+      "height": 1067
+    }
+  ]
+}

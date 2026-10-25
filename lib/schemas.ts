@@ -226,3 +226,23 @@ export const updatesSchema = z.object({
   note: z.string().min(1),
   items: z.array(updateItemSchema).min(1),
 });
+
+export const galleryItemSchema = z.object({
+  id: z.string().regex(/^[a-z0-9-]+$/),
+  src: z.string().min(1),
+  alt: z.string().min(1),
+  caption: z.string().min(1),
+  era: z.string().min(1),
+  credit: z.string().min(1),
+  license: z.string().min(1),
+  licenseUrl: z.string().url(),
+  sourceUrl: z.string().url(),
+  width: z.number().positive(),
+  height: z.number().positive(),
+});
+
+export const gallerySchema = z.object({
+  asOf: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+  note: z.string().min(1),
+  items: z.array(galleryItemSchema).min(1),
+});

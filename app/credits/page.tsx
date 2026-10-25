@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { moments, player } from "@/lib/data";
+import { gallery } from "@/lib/gallery";
 import { absoluteUrl, withBasePath } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -81,8 +82,18 @@ export default function CreditsPage() {
 
           <div className="data-note credits-policy">
             <h3>当前第三方图片 / 视频</h3>
-            {mediaMoments.length ? (
+            {gallery.items.length || mediaMoments.length ? (
               <ul>
+                {gallery.items.map((item) => (
+                  <li key={item.id}>
+                    <a href={item.sourceUrl} target="_blank" rel="noreferrer">
+                      {item.caption}
+                    </a>
+                    {" — "}
+                    {item.credit} · {item.license} ·{" "}
+                    <Link href="/gallery">影像档案</Link>
+                  </li>
+                ))}
                 {mediaMoments.map((moment) => (
                   <li key={moment.slug}>
                     <Link href={`/atlas/${moment.slug}`}>{moment.title}</Link>

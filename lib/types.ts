@@ -234,3 +234,23 @@ export interface MomentMedia {
   width?: number;
   height?: number;
 }
+
+export interface GalleryItem {
+  id: string;
+  src: string;
+  alt: string;
+  caption: string;
+  era: string;
+  credit: string;
+  license: string;
+  licenseUrl: string;
+  sourceUrl: string;
+  width: number;
+  height: number;
+}
+
+export interface GalleryData {
+  asOf: string;
+  note: string;
+  items: GalleryItem[];
+}

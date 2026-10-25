@@ -1,4 +1,5 @@
-import { readFileSync } from "node:fs";
+import { readFileSync, existsSync } from "node:fs";
+import { join } from "node:path";
 
 const read = (name) =>
   JSON.parse(readFileSync(new URL(`../data/${name}`, import.meta.url), "utf8"));
@@ -10,6 +11,7 @@ const quiz = read("quiz.json");
 const compare = read("compare.json");
 const milestones = read("milestones.json");
 const updates = read("updates.json");
+const gallery = read("gallery.json");
 
 const errors = [];
 const required = [
@@ -221,6 +223,23 @@ for (const [index, item] of (updates.items ?? []).entries()) {
   }
   if (!/^https?:\/\//.test(item.source ?? "")) {
     errors.push(`updates[${index}] source must be an http(s) URL`);
+  }
+}
+
+const galleryIds = new Set();
+const allowedLicenses = /^(CC0|Public domain|PD|CC BY(?:-SA)?\s?\d)/i;
+for (const [index, item] of (gallery.items ?? []).entries()) {
+  if (galleryIds.has(item.id)) errors.push(`Duplicate gallery id: ${item.id}`);
+  galleryIds.add(item.id);
+  if (!eraIds.has(item.era)) errors.push(`Gallery ${item.id} has unknown era`);
+  if (!allowedLicenses.test(item.license ?? "")) {
+    errors.push(`Gallery ${item.id} has unaccepted license: ${item.license}`);
+  }
+  for (const field of ["src", "alt", "caption", "credit", "licenseUrl", "sourceUrl"]) {
+    if (!item[field]) errors.push(`Gallery ${item.id} missing "${field}"`);
+  }
+  if (item.src && !existsSync(join(process.cwd(), "public", item.src))) {
+    errors.push(`Gallery ${item.id} file not found: public${item.src}`);
   }
 }
 

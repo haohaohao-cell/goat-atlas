@@ -58,6 +58,7 @@ C 罗是第一号展馆。当前代码仍是单球员结构（`player.json` 是�
 - **Live 数据**：最新赛季、最近比赛、C 罗进球分钟、里程碑；免费方案已启用，GitHub Actions 每 6 小时自动同步
 - **本赛季动态**：只收可核实事实（比赛、里程碑、冠军、纪录），每条带来源
 - **原创章节插画**：6 张 SVG 线稿用于详情页，随项目以 CC BY-SA 4.0 发布，见 `/credits/`
+- **影像档案**：4 张 CC BY / CC BY-SA 授权照片，逐张署名并明确标注“资料图”，见 `/gallery/`
 - **Match Center**：近期赛程、赛后战报、赛前提醒
 - **日历订阅**：`matches.ics` 可导入 Google Calendar / Apple Calendar / Outlook
 - **每日问答**：每天 5 题（60 题题库），答题解析、连续天数、结果分享卡
@@ -112,6 +113,7 @@ pnpm calendar    # 单独生成 public/matches.ics
 pnpm art         # 单独生成六张章节 SVG
 pnpm sync:live   # 同步 Live 数据（API-Football / Wikipedia 回退）
 pnpm check:links # 检查 data/*.json 里的来源链接（需要正常外网）
+pnpm audit:media # 核对 Commons 候选图许可并下载（需要正常外网）
 ```
 
 > 构建默认使用 webpack（`next build --webpack`）。原因是 Next 16 + pnpm 在部分 Windows 环境下 Turbopack 解析 `next` 链接会失败；等上游稳定后可以切回 Turbopack。
@@ -135,6 +137,7 @@ app/
   pt/page.tsx              # Portuguese overview
   about/page.tsx           # 项目、数据原则、路线图
   credits/page.tsx         # 素材与许可
+  gallery/page.tsx         # 影像档案（CC 授权照片）
   offline/page.tsx         # 离线回退页
   manifest.ts              # PWA manifest
   sitemap.ts / robots.ts   # SEO
@@ -154,12 +157,15 @@ public/
   sw.js                    # service worker：导航 network-first，静态资源 cache-first
   matches.ics              # 构建时生成
   art/era-*.svg            # 六张原创章节插画（构建时生成）
+  media/gal-*.webp         # 影像档案（CC 授权，已压缩）
   icons/ og.png            # PWA 图标 / OG 图
 data/
   player.json              # 球员、俱乐部、章节
   moments.json             # 86 条名场面记录
   live.json                # 最新赛季 / 比赛 / 同步状态
   updates.json             # 本赛季动态（人工策展，每条带来源）
+  gallery.json             # 影像档案（许可、作者、原始文件页）
+  media-candidates.json    # Commons 候选图（CI 审计输入）
   quiz.json                # 每日问答题库
   compare.json             # GOAT 对比指标
   milestones.json          # 里程碑目标与当前进度
@@ -168,6 +174,7 @@ lib/
   data.ts                  # 数据加载、排序、关联
   live.ts                  # Live 数据加载
   updates.ts               # 本赛季动态加载
+  gallery.ts               # 影像档案加载
   quiz.ts                  # 每日出题
   compare.ts               # 对比数据加载
   today.ts                 # 日期匹配 / 今日坐标
@@ -183,6 +190,7 @@ scripts/
   sync-milestones.mjs      # Wikipedia 生涯统计表 → data/milestones.json
   generate-calendar.mjs    # data/live.json → public/matches.ics
   generate-era-art.mjs     # 六张章节 SVG 插画
+  audit-media.mjs          # Commons 图片许可核验 + 下载（CI）
   bot.mjs                  # Telegram / Discord 每日摘要与赛前提醒
   generate-assets.py       # 生成 OG 图和 PWA 图标（可选）
 ```
@@ -259,6 +267,18 @@ pnpm check:links
 ```
 
 它会检查 `data/*.json` 里的所有链接，输出 `link-report.md`；CI 每周也会自动跑一次并开 issue。
+
+### 图片怎么加
+
+只接受明确 CC 授权的图片（CC0 / CC BY / CC BY-SA）。流程：
+
+1. 把 Commons 文件标题加进 `data/media-candidates.json`；
+2. 手动跑 **Media audit** workflow（或 `pnpm audit:media`）；
+3. 看 `media-audit/report.md`：只有许可证通过的图才会被下载；
+4. 压缩成 WebP 放进 `public/media/`，在 `data/gallery.json` 写清 `credit / license / licenseUrl / sourceUrl`；
+5. `pnpm validate` 会检查文件存在、许可白名单和必填字段。
+
+懂球帝、门户、Getty / Reuters / 俱乐部图库的图片**只外链，不下载**；比赛画面和转播镜头不进入站内。
 
 详细说明见 [CONTRIBUTING.md](CONTRIBUTING.md)。
 

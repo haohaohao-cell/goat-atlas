@@ -36,6 +36,7 @@ export function SiteFooter() {
         <div className="footer-col">
           <h3>Project</h3>
           <Link href="/about#roadmap">Roadmap</Link>
+          <Link href="/gallery">影像档案</Link>
           <Link href="/about#data">数据原则</Link>
           <Link href="/credits">素材与许可</Link>
           <Link href="/about#contribute">参与贡献</Link>
