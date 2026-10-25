@@ -29,6 +29,9 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: siteConfig.url,
+    types: {
+      "application/rss+xml": absoluteUrl("/feed.xml"),
+    },
   },
   openGraph: {
     type: "website",
@@ -97,6 +100,12 @@ export default function RootLayout({
   return (
     <html lang="zh-CN">
       <body>
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="GOAT Atlas RSS"
+          href={absoluteUrl("/feed.xml")}
+        />
         <a className="skip-link" href="#main">
           跳到主要内容
         </a>

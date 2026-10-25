@@ -69,6 +69,9 @@ C 罗是第一号展馆。当前代码仍是单球员结构（`player.json` 是�
 - **多语言入口**：英文 / 葡语 overview（页脚入口，非全站翻译）
 - **Bot 通知**：ntfy / Telegram / Discord 单频道广播，每日摘要与赛前提醒，GitHub Actions 定时发送
 - **来源分级**：每条记录至少一个可点击来源，按官方 / 媒体 / 百科标注；单源记录会显式提示
+- **RSS**：`/feed.xml` 输出最新 30 条 moments，页脚和 `<link rel="alternate">` 都可发现
+- **结构化数据**：首页 WebSite + Person，详情页 Article + BreadcrumbList（JSON-LD）
+- **OG 图**：首页 + 6 个章节各一张（1200×630），详情页按章节复用
 - **PWA**：manifest + service worker，可添加到主屏幕；已访问过的页面断网时仍能打开（不预缓存全站）
 - **响应式**：手机、平板、桌面一套代码
 - **静态优先**：所有页面构建时生成，部署成本接近于零
@@ -142,6 +145,7 @@ app/
   gallery/page.tsx         # 影像档案（CC 授权照片）
   offline/page.tsx         # 离线回退页
   manifest.ts              # PWA manifest
+  feed.xml/route.ts        # RSS（静态导出）
   sitemap.ts / robots.ts   # SEO
 components/
   AtlasExplorer.tsx        # 搜索 + 筛选（客户端）
@@ -152,6 +156,7 @@ components/
   CompareTool.tsx          # 加权对比器
   LocalizedHome.tsx        # 英文 / 葡语 overview
   ServiceWorkerRegister.tsx # 注册 /sw.js（仅生产）
+  JsonLd.tsx               # JSON-LD 输出
   MomentCard.tsx
   EraCard.tsx
 components/Icons.tsx
@@ -159,6 +164,7 @@ public/
   sw.js                    # service worker：导航 network-first，静态资源 cache-first
   matches.ics              # 构建时生成
   art/era-*.svg            # 六张原创章节插画（构建时生成）
+  og/                      # 首页 + 6 章 OG 图
   media/gal-*.webp         # 影像档案（CC 授权，已压缩）
   icons/ og.png            # PWA 图标 / OG 图
 data/
@@ -181,6 +187,8 @@ lib/
   compare.ts               # 对比数据加载
   today.ts                 # 日期匹配 / 今日坐标
   milestones.ts            # 里程碑进度计算
+  content.ts               # 内容最后更新日期（sitemap 用）
+  structured-data.ts       # WebSite / Person / Article / Breadcrumb JSON-LD
   sources.ts               # 来源分级（官方 / 媒体 / 百科）与纠错链接
   i18n.ts                  # 英文 / 葡语文案
   schemas.ts               # Zod schema
@@ -192,6 +200,7 @@ scripts/
   sync-milestones.mjs      # Wikipedia 生涯统计表 → data/milestones.json
   generate-calendar.mjs    # data/live.json → public/matches.ics
   generate-era-art.mjs     # 六张章节 SVG 插画
+  generate-og.py           # 首页 + 6 章 OG 图（可选，需 Pillow）
   audit-media.mjs          # Commons 图片许可核验 + 下载（CI）
   verify-video.mjs         # YouTube oEmbed 验证
   bot.mjs                  # Telegram / Discord 每日摘要与赛前提醒

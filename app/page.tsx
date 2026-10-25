@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { erasWithMoments, featuredMoments, player, stats } from "@/lib/data";
 import { live, liveStatusLabel, liveUpdatedDate } from "@/lib/live";
 import { milestones, milestoneProgress } from "@/lib/milestones";
@@ -6,6 +7,7 @@ import { sortedUpdates, UPDATE_KIND_LABEL, updates } from "@/lib/updates";
 import { formatDate } from "@/lib/format";
 import { EraCard } from "@/components/EraCard";
 import { MomentCard } from "@/components/MomentCard";
+import { JsonLd } from "@/components/JsonLd";
 import { Reveal } from "@/components/Reveal";
 import {
   ArrowRight,
@@ -14,7 +16,25 @@ import {
   SourceIcon,
   SparkIcon,
 } from "@/components/Icons";
-import { siteConfig } from "@/lib/site";
+import { absoluteUrl, siteConfig } from "@/lib/site";
+import { websiteGraph } from "@/lib/structured-data";
+
+export const metadata: Metadata = {
+  alternates: { canonical: absoluteUrl("/") },
+  openGraph: {
+    images: [
+      {
+        url: absoluteUrl("/og/home.png"),
+        width: 1200,
+        height: 630,
+        alt: "GOAT Atlas — C 罗职业生涯图鉴",
+      },
+    ],
+  },
+  twitter: {
+    images: [absoluteUrl("/og/home.png")],
+  },
+};
 
 const TICKER = [
   "SPORTING CP",
@@ -74,6 +94,7 @@ export default function HomePage() {
 
   return (
     <>
+      <JsonLd data={websiteGraph()} />
       <section className="hero">
         <div className="hero-grid-bg" aria-hidden="true" />
         <div className="container hero-grid">

@@ -274,6 +274,8 @@ scripts/
 | 原创插画 / 许可页 | ✅ | 6 张 SVG 章节插画；`/credits/` 说明素材政策 |
 | 影像档案 | ✅ | 7 张 CC 授权照片；逐张作者/许可/原始页，标注资料图 |
 | 官方视频 | ✅ | 3 个外链 + 1 个 FIFA 嵌入；点击加载 nocookie 播放器 |
+| RSS / JSON-LD | ✅ | `/feed.xml` 30 条；首页 WebSite+Person，详情 Article+Breadcrumb |
+| OG 图 | ✅ | 首页 + 6 章各一张 1200×630，详情页按章节复用 |
 | 多语言 | ⚠️ | 仅入口页，非全站 |
 | Bot | ✅ | 单频道，已真实收到 ntfy 消息 |
 | PWA | ✅ | manifest + service worker；已访问页面断网可开，不预缓存全站 |
@@ -349,19 +351,18 @@ scripts/
 
 ### P1
 
-2. **没有 analytics / RSS / JSON-LD**：不知道谁在看、无法被 feed 订阅、SEO 结构化数据缺失。
-3. **详情页 OG 是通用图**：分享链接预览没有每条 moment 的独立图。
-4. **sitemap 静态页 lastModified 用构建时间**，不是真实更新时间。
-5. **Today 精确覆盖率 19.7%**：大多数日期走“今日坐标”，这是设计，不是 bug。
-6. **内容分布不均**：2015 只有 1 条，2019 2 条，2024 2 条。
-7. **Bot 单频道**：不是公共多用户 bot。
-8. **85 条记录只有 1 个来源**（其中 55 条只有 Wikipedia）：单源、百科级，需要逐步补官方或媒体第二来源。
+2. **没有 analytics**：不知道谁在看、哪些页面有复访。
+3. **详情页 OG 按章节复用**：还没有每条 moment 的独立 OG 图。
+4. **Today 精确覆盖率 19.7%**：大多数日期走“今日坐标”，这是设计，不是 bug。
+5. **内容分布不均**：2015 只有 1 条，2019 2 条，2024 2 条。
+6. **Bot 单频道**：不是公共多用户 bot。
+7. **85 条记录只有 1 个来源**（其中 55 条只有 Wikipedia）：单源、百科级，需要逐步补官方或媒体第二来源。
 
 ### P2
 
-9. 没有 E2E / Lighthouse / 可访问性审计。
-10. `sync:milestones` 依赖 Wikipedia 生涯统计表，解析器脆弱，没有第二来源。
-11. 多语言入口页面的内容仍然很少。
+8. 没有 E2E / Lighthouse / 可访问性审计。
+9. `sync:milestones` 依赖 Wikipedia 生涯统计表，解析器脆弱，没有第二来源。
+10. 多语言入口页面的内容仍然很少。
 
 ---
 
@@ -392,6 +393,8 @@ scripts/
 - Commons 许可审计 workflow + 7 张 CC 授权照片的“影像档案” `/gallery/`
 - 3 个节点挂官方视频频道外链；`VideoEmbed` 支持验证过的 `videoId` 点击加载
 - 7 张授权图按章节挂进 Story；FIFA 官方 2018 集锦（`4rp2aLQl7vg`）已点亮嵌入
+- RSS `/feed.xml`（30 条）+ 首页/详情 JSON-LD + 首页与 6 章 OG 图
+- sitemap lastModified 改为内容日期（不再用构建时间）
 
 ---
 

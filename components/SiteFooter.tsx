@@ -39,6 +39,7 @@ export function SiteFooter() {
           <Link href="/gallery">影像档案</Link>
           <Link href="/about#data">数据原则</Link>
           <Link href="/credits">素材与许可</Link>
+          <a href={`${siteConfig.basePath}/feed.xml`}>RSS 订阅</a>
           <Link href="/about#contribute">参与贡献</Link>
         </div>
 

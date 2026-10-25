@@ -14,6 +14,7 @@ import { tagLabel } from "@/lib/tags";
 import { MomentCard } from "@/components/MomentCard";
 import { ShareCard } from "@/components/ShareCard";
 import { VideoEmbed } from "@/components/VideoEmbed";
+import { JsonLd } from "@/components/JsonLd";
 import { ArrowLeft, ArrowUpRight, SourceIcon } from "@/components/Icons";
 import {
   correctionIssueUrl,
@@ -23,6 +24,7 @@ import {
   sourceTierCounts,
 } from "@/lib/sources";
 import { absoluteUrl, siteConfig, withBasePath } from "@/lib/site";
+import { momentGraph } from "@/lib/structured-data";
 
 export const dynamicParams = false;
 
@@ -51,12 +53,16 @@ export async function generateMetadata({
       publishedTime: `${moment.date}T00:00:00.000Z`,
       images: [
         {
-          url: absoluteUrl("/og.png"),
+          url: absoluteUrl(`/og/era-${moment.era}.png`),
           width: 1200,
           height: 630,
           alt: moment.title,
         },
       ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      images: [absoluteUrl(`/og/era-${moment.era}.png`)],
     },
   };
 }
@@ -87,6 +93,7 @@ export default async function MomentPage({
 
   return (
     <article className="detail">
+      <JsonLd data={momentGraph(moment)} />
       <header className="detail-hero">
         <div
           className="detail-era-art"

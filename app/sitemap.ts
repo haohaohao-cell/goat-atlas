@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { moments } from "@/lib/data";
+import { latestContentDate } from "@/lib/content";
 import { siteConfig } from "@/lib/site";
 
 export const dynamic = "force-static";
@@ -7,6 +8,7 @@ export const dynamic = "force-static";
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = siteConfig.url;
   const withSlash = (path: string) => `${base}${path}/`;
+  const contentUpdated = new Date(`${latestContentDate()}T00:00:00Z`);
 
   const staticRoutes = [
     "",
@@ -26,7 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/gallery",
   ].map((route) => ({
       url: route === "" ? `${base}/` : withSlash(route),
-      lastModified: new Date(),
+      lastModified: contentUpdated,
       changeFrequency: "monthly" as const,
       priority: route === "" ? 1 : 0.8,
     }),
