@@ -88,7 +88,7 @@ GitHub 账号：`haohaohao-cell`
 | 距离 1000 球 | **19** |
 | Today 精确覆盖 | 72 个不同月日 / 365 ≈ **19.7%** |
 | 问答重复周期（期望） | 约 **12 天**（60 题 ÷ 5 题/天；每天独立洗牌，不保证不重复） |
-| 来源分级 | 官方 **4** / 媒体 **28** / 百科 **55**（共 87 条链接，按域名自动分级） |
+| 来源分级 | 官方 **5** / 媒体 **28** / 百科 **54**（共 87 条链接，按域名自动分级） |
 
 ### 生涯进球口径
 
@@ -287,7 +287,8 @@ scripts/
 ### `link-check.yml`
 
 - 每周一 `06:00 UTC` + `workflow_dispatch`
-- `node scripts/check-links.mjs --report link-report.md`
+- 默认 `node scripts/check-links.mjs --report link-report.md`
+- `workflow_dispatch` 可传 `urls`（逗号分隔），只验证候选链接，换来源前先跑一遍
 - 404/410/5xx 或网络错误 → 失败，并自动开 / 更新 issue「来源链接需要修复」
 - 401/403/429 视为“被反爬拦截”，只警告，不判死链
 
@@ -349,6 +350,7 @@ scripts/
 - 题库 20 → 60（q21–q60 全部复用 moments 里已验证的来源）
 - 来源分级：官方 / 媒体 / 百科，详情页显示分级、域名、单源提示与预填纠错 issue
 - 链接检查器 + 每周 `link-check.yml`
+- 替换 5 条失效/弱来源：2025 欧国联决赛 → UEFA、阿拉伯冠军杯 → BBC、Al Nassr 第 100 球 → The National、热那亚绝杀 → CGTN、波兰 5-1 → Goal.com
 - 首页新增 981/1000 生涯进球 ledger，首页数据改为跟随 milestones
 - 修正 q17 题干年份（2023 → 2022 年底）、README 多球员/ntfy/PWA 口径
 - PWA 补 service worker：导航 network-first、静态资源 cache-first、`/offline/` 回退

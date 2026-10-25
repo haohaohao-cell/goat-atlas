@@ -95,7 +95,7 @@
     "options": ["法国", "德国", "西班牙", "克罗地亚"],
     "answer": 2,
     "explanation": "2025 年 6 月 8 日，葡萄牙与西班牙 2-2 战平，点球大战 5-3 取胜，第二次夺得欧国联冠军。C 罗在决赛中破门。",
-    "source": "https://en.wikipedia.org/wiki/2025_UEFA_Nations_League_finals",
+    "source": "https://www.uefa.com/uefanationsleague/news/029a-1df446a2d81d-0bc47d9324a5-1000/",
     "difficulty": "medium",
     "tags": ["葡萄牙", "欧国联"]
   },
@@ -405,7 +405,7 @@
     "options": ["点球", "远射", "任意球", "头球"],
     "answer": 0,
     "explanation": "尤文在少一人的情况下获得点球，C 罗在补时阶段罚入，2-1 绝杀热那亚。",
-    "source": "https://onefootball.com/en/news/juventus-2-1-genoa-ronaldo-penalty-gives-10-man-champions-late-winner-27837116",
+    "source": "https://news.cgtn.com/news/2019-10-31/Ronaldo-s-last-gasp-penalty-sinks-10-man-Genoa-LeuzJHYS1W/index.html",
     "difficulty": "medium",
     "tags": ["尤文", "意甲", "绝杀"]
   },
@@ -525,7 +525,7 @@
     "options": ["阿拉伯俱乐部冠军杯", "沙特超级杯", "亚足联冠军联赛", "沙特国王杯"],
     "answer": 0,
     "explanation": "阿拉伯俱乐部冠军杯决赛，Al Nassr 加时 2-1 击败 Al-Hilal，C 罗梅开二度，收获加盟后的首座冠军。",
-    "source": "https://azertag.az/en/xeber/Ronaldo_wins_first_title_at_Al_Nassr_with_brace_in_Arab_Club_Champions_Cup_final-2727610",
+    "source": "https://www.bbc.com/sport/football/66489396",
     "difficulty": "medium",
     "tags": ["利雅得胜利", "冠军"]
   },
@@ -535,7 +535,7 @@
     "options": ["国家队历史最多出场", "国家队历史最多胜场", "国家队最年长进球者", "国家队历史最多进球"],
     "answer": 1,
     "explanation": "欧国联葡萄牙 5-1 波兰，C 罗成为国家队历史胜场最多的球员。",
-    "source": "https://www.sportsmole.co.uk/football/portugal/uefa-nations-league/news/still-rewriting-history-ronaldo-breaks-international-record-in-portugal-win_558229.html",
+    "source": "https://www.goal.com/en-in/lists/history-cristiano-ronaldo-surpasses-ex-real-madrid-team-mate-international-record-portugal-victory-poland/blt6e78db23527d0753",
     "difficulty": "medium",
     "tags": ["葡萄牙", "纪录", "欧国联"]
   },
