@@ -59,7 +59,7 @@ C 罗是第一号展馆。当前代码仍是单球员结构（`player.json` 是�
 - **本赛季动态**：只收可核实事实（比赛、里程碑、冠军、纪录），每条带来源
 - **原创章节插画**：6 张 SVG 线稿用于详情页，随项目以 CC BY-SA 4.0 发布，见 `/credits/`
 - **影像档案**：7 张 CC BY / CC BY-SA 授权照片，逐张署名并明确标注“资料图”，见 `/gallery/`
-- **官方视频**：详情页可挂官方频道外链；有验证过的 `videoId` 时点击加载 YouTube 播放器，站内不托管视频
+- **官方视频**：2018 世界杯 3-3 西班牙已嵌入 FIFA 官方集锦（点击加载、站内不托管）；其他节点挂官方频道外链
 - **Match Center**：近期赛程、赛后战报、赛前提醒
 - **日历订阅**：`matches.ics` 可导入 Google Calendar / Apple Calendar / Outlook
 - **每日问答**：每天 5 题（60 题题库），答题解析、连续天数、结果分享卡
@@ -115,6 +115,7 @@ pnpm art         # 单独生成六张章节 SVG
 pnpm sync:live   # 同步 Live 数据（API-Football / Wikipedia 回退）
 pnpm check:links # 检查 data/*.json 里的来源链接（需要正常外网）
 pnpm audit:media # 核对 Commons 候选图许可并下载（需要正常外网）
+pnpm verify:video <url> # 用 YouTube oEmbed 验证视频标题与频道
 ```
 
 > 构建默认使用 webpack（`next build --webpack`）。原因是 Next 16 + pnpm 在部分 Windows 环境下 Turbopack 解析 `next` 链接会失败；等上游稳定后可以切回 Turbopack。
@@ -192,6 +193,7 @@ scripts/
   generate-calendar.mjs    # data/live.json → public/matches.ics
   generate-era-art.mjs     # 六张章节 SVG 插画
   audit-media.mjs          # Commons 图片许可核验 + 下载（CI）
+  verify-video.mjs         # YouTube oEmbed 验证
   bot.mjs                  # Telegram / Discord 每日摘要与赛前提醒
   generate-assets.py       # 生成 OG 图和 PWA 图标（可选）
 ```

@@ -92,7 +92,7 @@ GitHub 账号：`haohaohao-cell`
 | 本赛季动态 | 8 条（人工策展，每条带来源） |
 | 章节插画 | 6 张原创 SVG（CC BY-SA 4.0） |
 | 影像档案 | 7 张 CC BY / CC BY-SA 照片（资料图，逐张署名） |
-| 官方视频 | 3 个节点挂官方频道外链；`videoId` 可切换为点击加载嵌入 |
+| 官方视频 | 3 个外链 + 1 个 FIFA 官方嵌入（2018 3-3 西班牙，`4rp2aLQl7vg`） |
 
 ### 生涯进球口径
 
@@ -261,7 +261,7 @@ scripts/
 | --- | --- | --- |
 | Atlas 检索 / 详情 | ✅ | 86 条，按章节/类型/对手/关键词筛选 |
 | 分享卡 | ✅ | 4:5 图片，Web Share / 下载 / 复制 |
-| Story | ✅ | 6 章节滚动叙事 |
+| Story | ✅ | 6 章节滚动叙事 + 章节授权图 |
 | Live | ⚠️ | 6 小时同步，Wikipedia fallback，无助攻 |
 | Match Center | ✅ | 赛程、最近比赛、进球分钟 |
 | 日历 ICS | ✅ | 6 个 fixture，赛前提醒，描述带里程碑 |
@@ -273,7 +273,7 @@ scripts/
 | 本赛季动态 | ✅ | 8 条人工策展，首页 + Live；每条带来源 |
 | 原创插画 / 许可页 | ✅ | 6 张 SVG 章节插画；`/credits/` 说明素材政策 |
 | 影像档案 | ✅ | 7 张 CC 授权照片；逐张作者/许可/原始页，标注资料图 |
-| 官方视频 | ✅ | 3 个节点外链官方频道；有 `videoId` 时点击加载播放器 |
+| 官方视频 | ✅ | 3 个外链 + 1 个 FIFA 嵌入；点击加载 nocookie 播放器 |
 | 多语言 | ⚠️ | 仅入口页，非全站 |
 | Bot | ✅ | 单频道，已真实收到 ntfy 消息 |
 | PWA | ✅ | manifest + service worker；已访问页面断网可开，不预缓存全站 |
@@ -311,6 +311,18 @@ scripts/
 - `workflow_dispatch` 可传 `urls`（逗号分隔），只验证候选链接，换来源前先跑一遍
 - 404/410/5xx 或网络错误 → 失败，并自动开 / 更新 issue「来源链接需要修复」
 - 401/403/429 视为“被反爬拦截”，只警告，不判死链
+
+### `verify-video.yml`
+
+- 手动触发，输入 YouTube watch URL
+- 用 oEmbed 返回标题 / 频道 / 缩略图；404 视为无效
+- 只有验证过的官方视频才写 `provider: youtube` + `videoId`，再交给 `VideoEmbed` 点击加载
+
+### `media-audit.yml`
+
+- 手动触发，读 `data/media-candidates.json`
+- Commons API 核对许可，只下载 CC0 / PD / CC BY / CC BY-SA
+- 产物 `media-audit/` 作为 artifact，不进仓库
 
 ### `bot.yml`
 
@@ -379,6 +391,7 @@ scripts/
 - `media` 字段（图片/视频）与详情页渲染、校验规则
 - Commons 许可审计 workflow + 7 张 CC 授权照片的“影像档案” `/gallery/`
 - 3 个节点挂官方视频频道外链；`VideoEmbed` 支持验证过的 `videoId` 点击加载
+- 7 张授权图按章节挂进 Story；FIFA 官方 2018 集锦（`4rp2aLQl7vg`）已点亮嵌入
 
 ---
 
