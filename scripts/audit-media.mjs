@@ -91,12 +91,24 @@ for (let start = 0; start < titles.length; start += 10) {
     const filePage = info.descriptionurl;
     const original = info.url;
 
-    if (!license || REJECTED.test(license) || !ALLOWED.test(license)) {
+    const accepted =
+      Boolean(license) &&
+      !REJECTED.test(license) &&
+      (ALLOWED.test(license) ||
+        (/^Attribution$/i.test(license) &&
+          /creativecommons\.org\/licenses\/by\//i.test(licenseUrl)));
+    const normalizedLicense = /^Attribution$/i.test(license)
+      ? "CC BY (LicenseUrl)"
+      : license;
+
+    if (!accepted) {
       results.push({
         title,
         status: "rejected",
         reason: `许可不接受：${license || "未知"}`,
         license,
+        licenseUrl,
+        artist,
         filePage,
       });
       continue;
@@ -118,7 +130,7 @@ for (let start = 0; start < titles.length; start += 10) {
     results.push({
       title,
       status: downloaded ? "ok" : "download-failed",
-      license,
+      license: normalizedLicense,
       licenseUrl,
       artist,
       credit,
