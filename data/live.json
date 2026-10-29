@@ -1,6 +1,6 @@
 {
   "updatedAt": "2026-10-23T15:44:00.000Z",
-  "checkedAt": "2026-10-24T20:34:38.797Z",
+  "checkedAt": "2026-10-29T05:26:19.580Z",
   "provider": "Wikipedia (fallback)",
   "status": "fallback",
   "season": "2026-27",
@@ -21,6 +21,17 @@
     }
   ],
   "recentMatches": [
+    {
+      "date": "2026-10-29",
+      "competition": "Pro League",
+      "opponent": "Al-Kholood",
+      "score": "-",
+      "result": "D",
+      "goals": 0,
+      "ronaldoGoals": [],
+      "venue": "Al-Awwal Park",
+      "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
+    },
     {
       "date": "2026-10-23",
       "competition": "Pro League",
@@ -143,28 +154,9 @@
       ],
       "venue": "Prince Turki bin Abdulaziz Stadium",
       "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
-    },
-    {
-      "date": "2026-08-18",
-      "competition": "King's Cup",
-      "opponent": "Al-Diriyah",
-      "score": "4-1",
-      "result": "W",
-      "goals": 0,
-      "ronaldoGoals": [],
-      "venue": "Prince Turki bin Abdulaziz Stadium",
-      "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
     }
   ],
   "fixtures": [
-    {
-      "date": "2026-10-29",
-      "competition": "Pro League",
-      "opponent": "Al-Kholood",
-      "venue": "Al-Awwal Park",
-      "home": true,
-      "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
-    },
     {
       "date": "2026-11-05",
       "competition": "Pro League",
@@ -203,6 +195,14 @@
       "opponent": "Al-Fayha",
       "venue": "Majmaah Sports City Stadium",
       "home": false,
+      "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
+    },
+    {
+      "date": "2026-12-10",
+      "competition": "Pro League",
+      "opponent": "Al-Hilal",
+      "venue": "Al-Awwal Park",
+      "home": true,
       "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
     }
   ],
