@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-23T15:44:00.000Z",
-  "checkedAt": "2026-10-29T05:26:19.580Z",
+  "updatedAt": "2026-10-29T21:00:00.000Z",
+  "checkedAt": "2026-10-29T22:40:13.464Z",
   "provider": "Wikipedia (fallback)",
   "status": "fallback",
   "season": "2026-27",
@@ -10,8 +10,8 @@
     {
       "competition": "Saudi Pro League（联赛）",
       "team": "Al-Nassr",
-      "appearances": 116,
-      "goals": 106
+      "appearances": 117,
+      "goals": 109
     },
     {
       "competition": "International（国家队）",
@@ -25,10 +25,16 @@
       "date": "2026-10-29",
       "competition": "Pro League",
       "opponent": "Al-Kholood",
-      "score": "-",
-      "result": "D",
-      "goals": 0,
-      "ronaldoGoals": [],
+      "score": "5-3",
+      "result": "W",
+      "goals": 1,
+      "ronaldoGoals": [
+        {
+          "minute": "66",
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
       "venue": "Al-Awwal Park",
       "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
     },
@@ -208,6 +214,11 @@
   ],
   "latest": [
     {
+      "date": "2026-10-29",
+      "title": "对阵 Al-Kholood 进球",
+      "detail": "Pro League · 5-3 · 1 球（66'）"
+    },
+    {
       "date": "2026-10-09",
       "title": "对阵 Al-Diriyah 进球",
       "detail": "Pro League · 3-0 · 1 球（23'）"
@@ -221,11 +232,6 @@
       "date": "2026-08-28",
       "title": "对阵 Al Taawoun 进球",
       "detail": "Pro League · 2-1 · 1 球（50'）"
-    },
-    {
-      "date": "2026-08-21",
-      "title": "对阵 Al-Riyadh 进球",
-      "detail": "Pro League · 4-0 · 1 球（83'）"
     }
   ]
 }

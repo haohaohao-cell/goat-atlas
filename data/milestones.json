@@ -1,16 +1,16 @@
 {
-  "asOf": "2026-10-23",
+  "asOf": "2026-10-29",
   "note": "只追踪 Wikipedia 生涯统计表 / 国家队页面可核实的数据；俱乐部与国家队拆分公开，不估算、不预测达成日期。",
   "items": [
     {
       "id": "career-1000-goals",
       "title": "职业生涯 1000 球",
       "category": "Career",
-      "current": 981,
+      "current": 984,
       "target": 1000,
       "unit": "球",
       "featured": true,
-      "description": "俱乐部 835 球 + 国家队 146 球 = 981 球。距离 1000 球还差 19 球。",
+      "description": "俱乐部 838 球 + 国家队 146 球 = 984 球。距离 1000 球还差 16 球。",
       "source": "https://en.wikipedia.org/wiki/Cristiano_Ronaldo#Career_statistics",
       "breakdown": [
         {
@@ -35,7 +35,7 @@
         },
         {
           "label": "Al-Nassr",
-          "value": 134
+          "value": 137
         },
         {
           "label": "Portugal",
@@ -67,7 +67,7 @@
       "id": "al-nassr-120-league-goals",
       "title": "Al-Nassr 120 个联赛进球",
       "category": "Al-Nassr",
-      "current": 106,
+      "current": 109,
       "target": 120,
       "unit": "球",
       "description": "只统计沙特联赛，不含杯赛和亚冠。",
@@ -77,7 +77,7 @@
       "id": "al-nassr-120-league-apps",
       "title": "Al-Nassr 120 场联赛",
       "category": "Al-Nassr",
-      "current": 116,
+      "current": 117,
       "target": 120,
       "unit": "场",
       "description": "下一个主场比赛日可能就会接近。",
