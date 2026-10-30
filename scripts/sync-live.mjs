@@ -78,7 +78,15 @@ async function applyMatchCorrections(data) {
   const items = corrections?.items ?? [];
   if (!items.length) return data;
 
+  const today = new Date().toISOString().slice(0, 10);
+
   for (const correction of items) {
+    if (correction.until && correction.until < today) {
+      console.warn(
+        `Correction for ${correction.date} ${correction.opponent} expired on ${correction.until}; skipped.`,
+      );
+      continue;
+    }
     const match = data.recentMatches?.find(
       (item) =>
         item.date === correction.date &&

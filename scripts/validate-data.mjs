@@ -245,6 +245,9 @@ for (const [index, item] of (corrections.items ?? []).entries()) {
   if (!/^https?:\/\//.test(item.source ?? "")) {
     errors.push(`corrections[${index}] source must be an http(s) URL`);
   }
+  if (item.until && !/^\d{4}-\d{2}-\d{2}$/.test(item.until)) {
+    errors.push(`corrections[${index}] invalid until date`);
+  }
   const key = `${item.date}|${item.opponent}`;
   if (correctionKeys.has(key)) {
     errors.push(`duplicate correction: ${key}`);
@@ -254,7 +257,9 @@ for (const [index, item] of (corrections.items ?? []).entries()) {
     (entry) => entry.date === item.date && entry.opponent === item.opponent,
   );
   if (!match) {
-    errors.push(`corrections[${index}] has no matching live match`);
+    console.warn(
+      `corrections[${index}] match ${item.date} ${item.opponent} is outside the current recentMatches window; it will not be applied.`,
+    );
   }
 }
 
