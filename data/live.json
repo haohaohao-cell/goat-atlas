@@ -44,8 +44,14 @@
       "opponent": "Al Faisaly",
       "score": "3-1",
       "result": "W",
-      "goals": 0,
-      "ronaldoGoals": [],
+      "goals": 1,
+      "ronaldoGoals": [
+        {
+          "minute": "49",
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
       "venue": "Majmaah Sports City Stadium",
       "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
     },
@@ -219,6 +225,11 @@
       "detail": "Pro League · 5-3 · 1 球（66'）"
     },
     {
+      "date": "2026-10-23",
+      "title": "对阵 Al Faisaly 进球",
+      "detail": "Pro League · 3-1 · 1 球（49'）"
+    },
+    {
       "date": "2026-10-09",
       "title": "对阵 Al-Diriyah 进球",
       "detail": "Pro League · 3-0 · 1 球（23'）"
@@ -227,11 +238,6 @@
       "date": "2026-09-09",
       "title": "对阵 Abha 进球",
       "detail": "Pro League · 2-1 · 1 球（22'）"
-    },
-    {
-      "date": "2026-08-28",
-      "title": "对阵 Al Taawoun 进球",
-      "detail": "Pro League · 2-1 · 1 球（50'）"
     }
   ]
 }

@@ -10,6 +10,7 @@ const live = read("live.json");
 const quiz = read("quiz.json");
 const compare = read("compare.json");
 const milestones = read("milestones.json");
+const corrections = read("match-corrections.json");
 const updates = read("updates.json");
 const gallery = read("gallery.json");
 
@@ -223,6 +224,37 @@ for (const [index, item] of (updates.items ?? []).entries()) {
   }
   if (!/^https?:\/\//.test(item.source ?? "")) {
     errors.push(`updates[${index}] source must be an http(s) URL`);
+  }
+}
+
+const correctionKeys = new Set();
+for (const [index, item] of (corrections.items ?? []).entries()) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(item.date ?? "")) {
+    errors.push(`corrections[${index}] invalid date`);
+  }
+  if (!item.opponent) errors.push(`corrections[${index}] missing opponent`);
+  if (!Number.isInteger(item.goals) || item.goals < 0) {
+    errors.push(`corrections[${index}] invalid goals`);
+  }
+  if (
+    !Array.isArray(item.ronaldoGoals) ||
+    item.ronaldoGoals.length !== item.goals
+  ) {
+    errors.push(`corrections[${index}] ronaldoGoals must match goals`);
+  }
+  if (!/^https?:\/\//.test(item.source ?? "")) {
+    errors.push(`corrections[${index}] source must be an http(s) URL`);
+  }
+  const key = `${item.date}|${item.opponent}`;
+  if (correctionKeys.has(key)) {
+    errors.push(`duplicate correction: ${key}`);
+  }
+  correctionKeys.add(key);
+  const match = (live.recentMatches ?? []).find(
+    (entry) => entry.date === item.date && entry.opponent === item.opponent,
+  );
+  if (!match) {
+    errors.push(`corrections[${index}] has no matching live match`);
   }
 }
 

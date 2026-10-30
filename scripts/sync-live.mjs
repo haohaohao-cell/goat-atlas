@@ -2,6 +2,7 @@ import { readFile, writeFile } from "node:fs/promises";
 import { fetchWikipediaSnapshot } from "./providers/wikipedia.mjs";
 
 const LIVE_PATH = new URL("../data/live.json", import.meta.url);
+const CORRECTIONS_PATH = new URL("../data/match-corrections.json", import.meta.url);
 const API_BASE =
   process.env.API_FOOTBALL_BASE ?? "https://v3.football.api-sports.io";
 const API_KEY = process.env.API_FOOTBALL_KEY?.trim();
@@ -58,6 +59,58 @@ async function readExisting() {
   } catch {
     return null;
   }
+}
+
+async function readCorrections() {
+  try {
+    return JSON.parse(await readFile(CORRECTIONS_PATH, "utf8"));
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * 上游比赛页有时晚于官方改判。这里把 data/match-corrections.json 里的
+ * 目标值套到 recentMatches / latest 上，保证同步不会把已确认的改判改回去。
+ */
+async function applyMatchCorrections(data) {
+  const corrections = await readCorrections();
+  const items = corrections?.items ?? [];
+  if (!items.length) return data;
+
+  for (const correction of items) {
+    const match = data.recentMatches?.find(
+      (item) =>
+        item.date === correction.date &&
+        item.opponent === correction.opponent,
+    );
+    if (match) {
+      match.goals = correction.goals;
+      match.ronaldoGoals = correction.ronaldoGoals;
+    }
+  }
+
+  const correctedLatest = (data.recentMatches ?? [])
+    .filter((match) => match.goals > 0)
+    .slice(0, 4)
+    .map((match) => {
+      const minutes = (match.ronaldoGoals ?? [])
+        .map((goal) => goal.minute)
+        .filter(Boolean);
+      return {
+        date: match.date,
+        title: `对阵 ${match.opponent} 进球`,
+        detail: `${match.competition} · ${match.score} · ${match.goals} 球${
+          minutes.length
+            ? `（${minutes.map((minute) => `${minute}'`).join("、")}）`
+            : ""
+        }`,
+      };
+    });
+
+  if (correctedLatest.length) data.latest = correctedLatest;
+
+  return data;
 }
 
 async function syncFromApiFootball(existing) {
@@ -279,6 +332,8 @@ async function main() {
   if (!next) {
     next = await syncFromWikipedia(existing);
   }
+
+  next = await applyMatchCorrections(next);
 
   if (existing && comparable(existing) === comparable(next)) {
     console.log("Live data unchanged; nothing to write.");

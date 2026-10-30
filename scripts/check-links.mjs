@@ -67,6 +67,11 @@ function collectSources() {
   for (const match of live.recentMatches ?? []) add(match.sourceUrl, `live:match:${match.date}`);
   for (const fixture of live.fixtures ?? []) add(fixture.sourceUrl, `live:fixture:${fixture.date}`);
 
+  const corrections = readData("match-corrections.json");
+  for (const item of corrections.items ?? []) {
+    add(item.source, `corrections:${item.date}`);
+  }
+
   return items;
 }
 

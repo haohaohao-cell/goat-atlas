@@ -106,7 +106,7 @@ def home():
 
     draw.text(
         (76, 462),
-        "86 MOMENTS  ·  6 CHAPTERS  ·  78 SOURCES  ·  981 GOALS",
+        "86 MOMENTS  ·  6 CHAPTERS  ·  78 SOURCES  ·  985 GOALS",
         font=font(MONO, 16),
         fill=MUTED,
     )

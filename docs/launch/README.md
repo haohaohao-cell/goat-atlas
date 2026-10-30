@@ -1,6 +1,6 @@
 # GOAT Atlas 发布素材与文案（v1）
 
-> 生成日期：2026-10-25  
+> 生成日期：2026-10-30  
 > 站点：<https://haohaohao-cell.github.io/goat-atlas/>  
 > 仓库：<https://github.com/haohaohao-cell/goat-atlas>
 
@@ -41,7 +41,7 @@
 
 > 不是集锦站，也不是又一个致敬页。GOAT Atlas 把 C 罗的 86 个名场面按 6 个章节排成一张可以检索的地图：比分、日期、球场、背景故事，以及每条记录对应的来源。
 >
-> 来源做了分级：官方（赛事组织 / 俱乐部 / 联赛）> 媒体 > 百科。单源记录会明确标出来，不会假装“已证实”。目前 981 球（俱乐部 835 + 国家队 146），距离 1000 球还差 19 球。
+> 来源做了分级：官方（赛事组织 / 俱乐部 / 联赛）> 媒体 > 百科。单源记录会明确标出来，不会假装“已证实”。目前 985 球（俱乐部 839 + 国家队 146），距离 1000 球还差 15 球。
 >
 > 另外还有：每天 5 题的 60 题题库、历史上的今天、1000 球进度、7 张 CC 授权照片的影像档案，以及一个可以点开看的 FIFA 官方 2018 集锦。免费、开源、没有广告。
 >
@@ -63,7 +63,7 @@
 
 > Most Ronaldo content is either a highlight reel or a stats table. I wanted a map: 86 moments across 6 chapters, each with score, date, venue, context, and a clickable source.
 >
-> Sources are tiered: official (competition / club / league) > media > reference. Single-source entries are labelled as such instead of pretending to be confirmed. Right now it tracks 981 career goals (835 club + 146 Portugal), 19 short of 1000.
+> Sources are tiered: official (competition / club / league) > media > reference. Single-source entries are labelled as such instead of pretending to be confirmed. Right now it tracks 985 career goals (839 club + 146 Portugal), 15 short of 1000.
 >
 > Also included: a 60-question daily quiz, an on-this-day page, milestone tracking, 7 CC-licensed photos with full attribution, and a click-to-load FIFA embed for the 2018 Spain hat-trick.
 >
@@ -81,7 +81,7 @@
 >
 > A source-first Cristiano Ronaldo atlas — every entry links to its evidence, with official/media/reference tiers.
 >
-> 60-question daily quiz, 1000-goal tracker (981), CC photo archive, FIFA 2018 embed.
+> 60-question daily quiz, 1000-goal tracker (985), CC photo archive, FIFA 2018 embed.
 >
 > Free & open source: https://haohaohao-cell.github.io/goat-atlas/
 
@@ -120,7 +120,7 @@ Hashtags（可选，别堆）：`#CR7 #Ronaldo #Football`
 
 ---
 
-## 九、当前数据口径（2026-10-25）
+## 九、当前数据口径（2026-10-30）
 
 | 指标 | 值 |
 | --- | ---: |
@@ -128,8 +128,8 @@ Hashtags（可选，别堆）：`#CR7 #Ronaldo #Football`
 | 章节 | 6 |
 | 唯一来源 | 78 |
 | 来源分级 | 官方 5 / 媒体 28 / 百科 54 |
-| 生涯总进球 | 981（俱乐部 835 + 国家队 146） |
-| 距 1000 球 | 19 |
+| 生涯总进球 | 985（俱乐部 839 + 国家队 146） |
+| 距 1000 球 | 15 |
 | 问答题库 | 60 |
 | 影像档案 | 7 张 CC 授权照片 |
 | 官方视频 | 1 个 FIFA 嵌入 + 3 个官方频道外链 |

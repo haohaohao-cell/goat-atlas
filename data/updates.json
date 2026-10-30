@@ -1,12 +1,19 @@
 {
-  "asOf": "2026-10-25",
+  "asOf": "2026-10-30",
   "note": "只记录可核实的事实：比分与最近比赛由 Live 同步，这里补充编辑摘要。转会传闻、未证实伤病不进这个列表。",
   "items": [
+    {
+      "date": "2026-10-30",
+      "kind": "milestone",
+      "title": "生涯总进球更新为 985",
+      "summary": "对 Al Faisaly 第 49 分钟的进球赛后改判给 C 罗；加上之后的比赛，源表当前为 985 球，距离 1000 球还差 15 球。",
+      "source": "https://en.wikipedia.org/wiki/Cristiano_Ronaldo#Career_statistics"
+    },
     {
       "date": "2026-10-23",
       "kind": "match",
       "title": "联赛客场 3-1 击败 Al Faisaly",
-      "summary": "Al Nassr 客场取胜，C 罗没有进球。",
+      "summary": "Al Nassr 客场取胜；C 罗第 49 分钟的进球在赛后改判给他。",
       "source": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
     },
     {

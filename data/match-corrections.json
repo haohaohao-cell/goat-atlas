@@ -1,0 +1,20 @@
+{
+  "asOf": "2026-10-30",
+  "note": "赛后官方改判，但上游比赛页尚未更新时使用。sync-live 会在每次同步后套用这里的目标值；等上游页面更新、数据一致后，可以删除对应条目。",
+  "items": [
+    {
+      "date": "2026-10-23",
+      "opponent": "Al Faisaly",
+      "goals": 1,
+      "ronaldoGoals": [
+        {
+          "minute": "49",
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "reason": "赛后判定 C 罗第 49 分钟的进球有效，记在他名下",
+      "source": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
+    }
+  ]
+}

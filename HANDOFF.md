@@ -84,26 +84,26 @@ GitHub 账号：`haohaohao-cell`
 | Live provider | Wikipedia (fallback) |
 | Live status | fallback |
 | 赛季 | 2026-27 |
-| 生涯总进球 | **981** |
-| 距离 1000 球 | **19** |
+| 生涯总进球 | **985** |
+| 距离 1000 球 | **15** |
 | Today 精确覆盖 | 72 个不同月日 / 365 ≈ **19.7%** |
 | 问答重复周期（期望） | 约 **12 天**（60 题 ÷ 5 题/天；每天独立洗牌，不保证不重复） |
 | 来源分级 | 官方 **5** / 媒体 **28** / 百科 **54**（共 87 条链接，按域名自动分级） |
-| 本赛季动态 | 8 条（人工策展，每条带来源） |
+| 本赛季动态 | 9 条（人工策展，每条带来源） |
 | 章节插画 | 6 张原创 SVG（CC BY-SA 4.0） |
 | 影像档案 | 7 张 CC BY / CC BY-SA 照片（资料图，逐张署名） |
 | 官方视频 | 3 个外链 + 1 个 FIFA 官方嵌入（2018 3-3 西班牙，`4rp2aLQl7vg`） |
 
 ### 生涯进球口径
 
-- 俱乐部：**835**
+- 俱乐部：**839**
 - 葡萄牙国家队：**146**
-- 合计：**981**
+- 合计：**985**
 - 历史俱乐部固定值：**701**（Sporting 5 + 曼联 118 + 皇马 450 + 尤文 101 + 曼联二期 27）
-- Al-Nassr 全赛事：**134**
-- 目标：1000，还差 19
+- Al-Nassr 全赛事：**138**
+- 目标：1000，还差 15
 
-注意：曾经手工填过 982（836 + 146），后来 `sync:milestones` 从 Wikipedia 生涯统计表抓到 835，自动修正为 981。**以页面/自动同步为准，不要硬改回 982。**
+注意：历史上出现过 982 → 981 的回退（同一进球被源表去掉）。2026-10-30 的 985 是源表当前值：Al Faisaly 第 49 分钟进球改判 + 之后的比赛。**不要把数字写死**；比赛级改判先更新 `data/match-corrections.json`，再让 `sync:live` 套用。
 
 ---
 
@@ -223,7 +223,8 @@ data/
   player.json              单球员资料 + 6 个章节
   moments.json             86 条名场面（可选 media 字段）
   live.json                当前赛季 / 比赛 / fixtures
-  updates.json             本赛季动态（8 条，人工策展）
+  updates.json             本赛季动态（9 条，人工策展）
+  match-corrections.json   比赛级改判（sync:live 每次套用）
   gallery.json             影像档案（许可 / 作者 / 原始文件页）
   media-candidates.json    Commons 候选图（审计输入）
   milestones.json          里程碑 + 1000 球 ledger
@@ -268,9 +269,9 @@ scripts/
 | 每日问答 | ✅ | 60 题，每天 5 题，约 12 天期望周期 |
 | GOAT 对比 | ✅ | 6 指标，默认 3:3 / 50:50，权重可调 |
 | Today | ✅ | 有精确日期就展示，没有就“今日坐标” |
-| 里程碑 | ✅ | 981/1000，自动同步 |
+| 里程碑 | ✅ | 985/1000，自动同步；比赛级改判走 `match-corrections.json` |
 | 来源分级 | ✅ | 官方 / 媒体 / 百科；详情页显示分级、域名与单源提示 |
-| 本赛季动态 | ✅ | 8 条人工策展，首页 + Live；每条带来源 |
+| 本赛季动态 | ✅ | 9 条人工策展，首页 + Live；每条带来源 |
 | 原创插画 / 许可页 | ✅ | 6 张 SVG 章节插画；`/credits/` 说明素材政策 |
 | 影像档案 | ✅ | 7 张 CC 授权照片；逐张作者/许可/原始页，标注资料图 |
 | 官方视频 | ✅ | 3 个外链 + 1 个 FIFA 嵌入；点击加载 nocookie 播放器 |
@@ -375,7 +376,7 @@ scripts/
 - 新增 2013–2018 皇马 10 条
 - 新增 2018–2022 尤文/回归 10 条
 - 新增 2023–2026 Al Nassr/世界杯 10 条
-- 1000 球里程碑 + 自动同步（当前 981）
+- 1000 球里程碑 + 自动同步（当前 985）
 - Today / Milestones / Bot / ntfy
 - 数据审计：修正世界杯轮次、localized 计数、2025 过期标签
 - Roadmap 更新：Phase 3 完成，新增 Phase 3.5/5
@@ -384,7 +385,7 @@ scripts/
 - 来源分级：官方 / 媒体 / 百科，详情页显示分级、域名、单源提示与预填纠错 issue
 - 链接检查器 + 每周 `link-check.yml`
 - 替换 5 条失效/弱来源：2025 欧国联决赛 → UEFA、阿拉伯冠军杯 → BBC、Al Nassr 第 100 球 → The National、热那亚绝杀 → CGTN、波兰 5-1 → Goal.com
-- 首页新增 981/1000 生涯进球 ledger，首页数据改为跟随 milestones
+- 首页新增 985/1000 生涯进球 ledger，首页数据改为跟随 milestones
 - 修正 q17 题干年份（2023 → 2022 年底）、README 多球员/ntfy/PWA 口径
 - PWA 补 service worker：导航 network-first、静态资源 cache-first、`/offline/` 回退
 - 本赛季动态：`data/updates.json` + 首页与 Live 区块
@@ -393,6 +394,7 @@ scripts/
 - Commons 许可审计 workflow + 7 张 CC 授权照片的“影像档案” `/gallery/`
 - 3 个节点挂官方视频频道外链；`VideoEmbed` 支持验证过的 `videoId` 点击加载
 - 7 张授权图按章节挂进 Story；FIFA 官方 2018 集锦（`4rp2aLQl7vg`）已点亮嵌入
+- 2026-10-30：Al Faisaly 第 49 分钟进球赛后改判给 C 罗；新增 `match-corrections.json`，源表同步到 985 球 / 还差 15 球
 - RSS `/feed.xml`（30 条）+ 首页/详情 JSON-LD + 首页与 6 章 OG 图
 - sitemap lastModified 改为内容日期（不再用构建时间）
 
@@ -418,12 +420,12 @@ scripts/
 
 ## 13. 重要坑
 
-- **不要**把 `982` 硬写回去；当前源表是 981。
+- **不要**把 `985` 写死；以 `sync` 为准。比赛级改判写 `data/match-corrections.json`，不要只改 `live.json`（会被同步覆盖）。
 - **不要**声称“进球级实时推送”或“有助攻”。
 - **不要**声称“全站离线可用”或“首次访问即可离线”；service worker 只缓存访问过的页面。
 - **不要**把 Bot 说成公共多用户 bot；它是单频道广播。
 - **不要**重新加 Header 语言切换；已经决定只保留 `/en`、`/pt` 入口。
-- **不要**用旧的 Wikipedia fixture 跑 `sync:milestones`，会把 981 回退成旧值；要跑就用当前线上页面。
+- **不要**用旧的 Wikipedia fixture 跑 `sync:milestones`，会把 985 回退成旧值；要跑就用当前线上页面。
 - **不要**为了凑题写没有出处的冷知识；新增 quiz 题先确认 `source` 能打开、且与 `data/moments.json` 不矛盾。
 - **不要**把媒体标成“官方”，也不要把懂球帝这类中文转述当唯一来源；它只能做二级来源。
 - **不要**在本地用 `pnpm check:links` 的死链结果直接下结论：这台机器 DNS 被污染，真实结果以 GitHub Actions 的 `link-check` 为准。
