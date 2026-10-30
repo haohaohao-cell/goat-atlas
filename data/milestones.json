@@ -6,11 +6,11 @@
       "id": "career-1000-goals",
       "title": "职业生涯 1000 球",
       "category": "Career",
-      "current": 984,
+      "current": 985,
       "target": 1000,
       "unit": "球",
       "featured": true,
-      "description": "俱乐部 838 球 + 国家队 146 球 = 984 球。距离 1000 球还差 16 球。",
+      "description": "俱乐部 839 球 + 国家队 146 球 = 985 球。距离 1000 球还差 15 球。",
       "source": "https://en.wikipedia.org/wiki/Cristiano_Ronaldo#Career_statistics",
       "breakdown": [
         {
@@ -35,7 +35,7 @@
         },
         {
           "label": "Al-Nassr",
-          "value": 137
+          "value": 138
         },
         {
           "label": "Portugal",
