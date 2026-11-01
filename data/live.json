@@ -1,6 +1,6 @@
 {
   "updatedAt": "2026-10-29T21:00:00.000Z",
-  "checkedAt": "2026-10-29T22:40:13.464Z",
+  "checkedAt": "2026-11-01T13:05:00.411Z",
   "provider": "Wikipedia (fallback)",
   "status": "fallback",
   "season": "2026-27",
@@ -11,7 +11,7 @@
       "competition": "Saudi Pro League（联赛）",
       "team": "Al-Nassr",
       "appearances": 117,
-      "goals": 109
+      "goals": 110
     },
     {
       "competition": "International（国家队）",
