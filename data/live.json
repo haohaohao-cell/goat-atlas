@@ -1,6 +1,6 @@
 {
   "updatedAt": "2026-10-29T21:00:00.000Z",
-  "checkedAt": "2026-11-01T13:05:00.411Z",
+  "checkedAt": "2026-11-05T06:15:32.913Z",
   "provider": "Wikipedia (fallback)",
   "status": "fallback",
   "season": "2026-27",
@@ -21,6 +21,17 @@
     }
   ],
   "recentMatches": [
+    {
+      "date": "2026-11-05",
+      "competition": "Pro League",
+      "opponent": "Al-Hazem",
+      "score": "-",
+      "result": "D",
+      "goals": 0,
+      "ronaldoGoals": [],
+      "venue": "Al-Hazem Club Stadium",
+      "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
+    },
     {
       "date": "2026-10-29",
       "competition": "Pro League",
@@ -149,34 +160,9 @@
       "ronaldoGoals": [],
       "venue": "Al-Ettifaq Club Stadium",
       "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
-    },
-    {
-      "date": "2026-08-21",
-      "competition": "Pro League",
-      "opponent": "Al-Riyadh",
-      "score": "4-0",
-      "result": "W",
-      "goals": 1,
-      "ronaldoGoals": [
-        {
-          "minute": "83",
-          "penalty": false,
-          "ownGoal": false
-        }
-      ],
-      "venue": "Prince Turki bin Abdulaziz Stadium",
-      "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
     }
   ],
   "fixtures": [
-    {
-      "date": "2026-11-05",
-      "competition": "Pro League",
-      "opponent": "Al-Hazem",
-      "venue": "Al-Hazem Club Stadium",
-      "home": false,
-      "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
-    },
     {
       "date": "2026-11-20",
       "competition": "Pro League",
