@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-29T21:00:00.000Z",
-  "checkedAt": "2026-11-20T00:32:08.915Z",
+  "updatedAt": "2026-11-20T20:30:00.000Z",
+  "checkedAt": "2026-11-20T23:54:27.529Z",
   "provider": "Wikipedia (fallback)",
   "status": "fallback",
   "season": "2026-27",
@@ -10,8 +10,8 @@
     {
       "competition": "Saudi Pro League（联赛）",
       "team": "Al-Nassr",
-      "appearances": 117,
-      "goals": 110
+      "appearances": 118,
+      "goals": 111
     },
     {
       "competition": "International（国家队）",
@@ -24,12 +24,18 @@
     {
       "date": "2026-11-20",
       "competition": "Pro League",
-      "opponent": "Al Qadsiah",
-      "score": "-",
-      "result": "D",
-      "goals": 0,
-      "ronaldoGoals": [],
-      "venue": "Al-Awwal Park",
+      "opponent": "Al-Ahli",
+      "score": "1-3",
+      "result": "L",
+      "goals": 1,
+      "ronaldoGoals": [
+        {
+          "minute": "14",
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "venue": "King Abdullah Sports City Stadium",
       "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
     },
     {
@@ -164,7 +170,23 @@
   ],
   "fixtures": [
     {
-      "date": "2026-11-26",
+      "date": "2026-11-28",
+      "competition": "Pro League",
+      "opponent": "Al-Hazem",
+      "venue": "Al-Hazem Club Stadium",
+      "home": false,
+      "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
+    },
+    {
+      "date": "2026-12-04",
+      "competition": "Pro League",
+      "opponent": "Al Qadsiah",
+      "venue": "Al-Awwal Park",
+      "home": true,
+      "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
+    },
+    {
+      "date": "2026-12-12",
       "competition": "Pro League",
       "opponent": "Al-Shabab",
       "venue": "Al-Awwal Park",
@@ -172,15 +194,7 @@
       "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
     },
     {
-      "date": "2026-11-30",
-      "competition": "King's Cup",
-      "opponent": "Al-Kholood",
-      "venue": "Al-Awwal Park",
-      "home": true,
-      "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
-    },
-    {
-      "date": "2026-12-03",
+      "date": "2026-12-16",
       "competition": "Pro League",
       "opponent": "Al-Fayha",
       "venue": "Majmaah Sports City Stadium",
@@ -188,7 +202,15 @@
       "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
     },
     {
-      "date": "2026-12-10",
+      "date": "2026-12-20",
+      "competition": "Super Cup",
+      "opponent": "Al-Kholood",
+      "venue": "Jaber Al-Ahmad International Stadium",
+      "home": true,
+      "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
+    },
+    {
+      "date": "2027-01-01",
       "competition": "Pro League",
       "opponent": "Al-Hilal",
       "venue": "Al-Awwal Park",
@@ -197,6 +219,11 @@
     }
   ],
   "latest": [
+    {
+      "date": "2026-11-20",
+      "title": "对阵 Al-Ahli 进球",
+      "detail": "Pro League · 1-3 · 1 球（14'）"
+    },
     {
       "date": "2026-10-29",
       "title": "对阵 Al-Kholood 进球",
@@ -211,11 +238,6 @@
       "date": "2026-10-09",
       "title": "对阵 Al-Diriyah 进球",
       "detail": "Pro League · 3-0 · 1 球（23'）"
-    },
-    {
-      "date": "2026-09-09",
-      "title": "对阵 Abha 进球",
-      "detail": "Pro League · 2-1 · 1 球（22'）"
     }
   ]
 }
