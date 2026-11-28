@@ -1,6 +1,6 @@
 {
   "updatedAt": "2026-11-20T20:30:00.000Z",
-  "checkedAt": "2026-11-23T07:09:36.369Z",
+  "checkedAt": "2026-11-28T07:26:04.734Z",
   "provider": "Wikipedia (fallback)",
   "status": "fallback",
   "season": "2026-27",
@@ -21,6 +21,17 @@
     }
   ],
   "recentMatches": [
+    {
+      "date": "2026-11-28",
+      "competition": "Pro League",
+      "opponent": "Al-Hazem",
+      "score": "-",
+      "result": "D",
+      "goals": 0,
+      "ronaldoGoals": [],
+      "venue": "Al-Hazem Club Stadium",
+      "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
+    },
     {
       "date": "2026-11-20",
       "competition": "Pro League",
@@ -155,28 +166,9 @@
       ],
       "venue": "Al-Awwal Park",
       "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
-    },
-    {
-      "date": "2026-08-25",
-      "competition": "Pro League",
-      "opponent": "Al-Ettifaq",
-      "score": "3-2",
-      "result": "W",
-      "goals": 0,
-      "ronaldoGoals": [],
-      "venue": "Al-Ettifaq Club Stadium",
-      "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
     }
   ],
   "fixtures": [
-    {
-      "date": "2026-11-28",
-      "competition": "Pro League",
-      "opponent": "Al-Hazem",
-      "venue": "Al-Hazem Club Stadium",
-      "home": false,
-      "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
-    },
     {
       "date": "2026-12-04",
       "competition": "Pro League",
@@ -215,6 +207,14 @@
       "opponent": "Al-Hilal",
       "venue": "Al-Awwal Park",
       "home": true,
+      "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
+    },
+    {
+      "date": "2027-01-07",
+      "competition": "Pro League",
+      "opponent": "Al-Fateh",
+      "venue": "Prince Abdullah bin Jalawi Stadium",
+      "home": false,
       "sourceUrl": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Al-Nassr_FC_season"
     }
   ],
